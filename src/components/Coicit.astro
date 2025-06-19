@@ -1,0 +1,64 @@
+---
+import Header from '../components/Header.jsx'
+import Footer from './Footer.astro'
+---
+
+<section class="relative min-h-screen overflow-hidden bg-[#010d1f] flex items-center justify-center">
+  <!-- Capa oscura encima del fondo -->
+  <Header client:load/>
+  <!-- Contenido principal -->
+  <div class="relative z-10 max-w-screen-xl w-full px-4 py-16 sm:px-6 sm:py-24 lg:px-8 lg:py-32 mx-auto">
+    <div class="max-w-prose mx-auto text-center">
+      <h1 class="text-xl font-bold text-white sm:text-5xl opacity-90">Pronto</h1>
+
+      <img src="/img/coicit/log.webp" alt="logo congreso" class="mx-auto max-w-320px lg:max-w-lg ">
+
+      <p class="text-lg font-semibold text-white mb-4 opacity-70">
+        Congreso: Del 14 al 17 de octubre de 2025
+      </p>
+
+      <!-- Cuenta regresiva -->
+      <div id="countdown" class="text-white text-2xl font-bold mb-6 flex justify-center gap-4">
+        <div><span id="days">--</span> días</div>
+        <div><span id="hours">--</span> hrs</div>
+        <div><span id="minutes">--</span> min</div>
+        <div><span id="seconds">--</span> seg</div>
+      </div>
+    </div>
+  </div>
+</section>
+<Footer/>
+
+<!-- Script de la cuenta regresiva -->
+<script>
+  const countdown = () => {
+    const targetDate = new Date("2025-10-14T00:00:00").getTime();
+    const now = new Date().getTime();
+    const difference = targetDate - now;
+
+    if (difference <= 0) {
+      const countdownEl = document.getElementById("countdown");
+      if (countdownEl) {
+        countdownEl.innerHTML = "¡Ya comenzó el congreso!";
+      }
+      return;
+    }
+
+    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((difference / 1000 / 60) % 60);
+    const seconds = Math.floor((difference / 1000) % 60);
+
+    const daysEl = document.getElementById("days");
+    if (daysEl) daysEl.innerText = days.toString();
+    const hoursEl = document.getElementById("hours");
+    if (hoursEl) hoursEl.innerText = hours.toString().padStart(2, '0');
+    const minutesEl = document.getElementById("minutes");
+    if (minutesEl) minutesEl.innerText = minutes.toString().padStart(2, '0');
+    const secondsEl = document.getElementById("seconds");
+    if (secondsEl) secondsEl.innerText = seconds.toString().padStart(2, '0');
+  };
+
+  setInterval(countdown, 1000);
+  countdown();
+</script>
