@@ -1,9 +1,8 @@
 import React from "react";
 import { useWiciLanguage } from "./WiciLanguageContext";
 
-// Agrega aquí los patrocinadores, puedes sumar más si hay más imágenes en la carpeta
 const sponsors = [
-  { src: "/img/wici/Patrocinadores/Firma_TEC.svg.webp", alt: "Firma TEC" },
+  { src: "/img/wici/Patrocinadores/Firma_TEC.webp", alt: "Firma TEC" },
   { src: "/img/wici/Patrocinadores/Grupo_OEG.webp", alt: "Grupo OEG" },
   { src: "/img/wici/Patrocinadores/Logo_ESALAB.webp", alt: "ESALAB" },
   { src: "/img/wici/Patrocinadores/Logo_Robotsis.webp", alt: "Robotsis" },
