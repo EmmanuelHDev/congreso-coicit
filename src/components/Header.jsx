@@ -37,7 +37,7 @@ const Header = () => {
                 <li><a className="text-white transition hover:text-[#e0b02e]" href="#">Programa</a></li>
                 <li><a className="text-white transition hover:text-[#e0b02e]" href="#">Áreas temáticas</a></li>
                 <li><a className="text-white transition hover:text-[#e0b02e]" href="/WiciPages">WICI</a></li>
-                <li><a className="text-white transition hover:text-[#e0b02e]" href="#">I Transfer I</a></li>
+                <li><a className="text-white transition hover:text-[#e0b02e]" href="#">I Transfer T</a></li>
                 <li><a className="text-white transition hover:text-[#e0b02e]" href="#">Tour</a></li>
                 <li><a className="text-white transition hover:text-[#e0b02e]" href="#">Ubicación</a></li>
               </ul>
@@ -97,7 +97,7 @@ const Header = () => {
               <li><a onClick={handleLinkClick} className="text-white transition hover:text-black" href="#">Programa</a></li>
               <li><a onClick={handleLinkClick} className="text-white transition hover:text-black" href="#">Áreas temáticas</a></li>
               <li><a onClick={handleLinkClick} className="text-white transition hover:text-black" href="/WiciPages">WICI</a></li>
-              <li><a onClick={handleLinkClick} className="text-white transition hover:text-black" href="#">I Transfer I</a></li>
+              <li><a onClick={handleLinkClick} className="text-white transition hover:text-black" href="#">I Transfer T</a></li>
               <li><a onClick={handleLinkClick} className="text-white transition hover:text-black" href="#">Tour</a></li>
               <li><a onClick={handleLinkClick} className="text-white transition hover:text-black" href="#">Ubicación</a></li>
             </ul>
