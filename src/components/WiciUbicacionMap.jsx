@@ -77,7 +77,7 @@ const WiciUbicacionMap = () => {
       <footer className="bg-[#e0b02e]">
         <div className="mx-auto max-w-5xl px-4 py-4 sm:px-6 lg:px-8 flex justify-center items-center">
           <span className="text-white font-medium text-sm text-center w-full">
-            © 2024 Universidad Tecnológica de Panamá | All Rights Reserved by UTP
+            © 2025 Universidad Tecnológica de Panamá | All Rights Reserved by UTP
           </span>
         </div>
       </footer>
