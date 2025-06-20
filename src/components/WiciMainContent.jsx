@@ -12,7 +12,8 @@ const WiciMainContent = () => {
         {/* Contenido posicionado a la izquierda */}
         <div className="absolute z-10 text-white px-4 left-1 lg:left-16 top-1/2 -translate-y-1/2 w-[310px] md:w-[592px] h-[312px] flex flex-col justify-center text-left bg-black/50 rounded-2xl">
           <h1 className="text-2xl md:text-4xl font-bold leading-snug">
-            {t.hero.titulo} <strong className="text-[#e0b02e]">{t.hero.nombre}</strong>
+            {t.hero.titulo}{" "}
+            <strong className="text-[#e0b02e]">{t.hero.nombre}</strong>
           </h1>
           <p className="text-base mt-2">{t.hero.ubicacion}</p>
           <p className="mt-4 text-lg">{t.hero.fecha}</p>
@@ -20,63 +21,45 @@ const WiciMainContent = () => {
       </section>
       <section className="px-4 py-8 md:px-8 lg:px-16 bg-white">
         <div className="max-w-screen-md mx-auto">
-          <h2 className="text-[#e0b02e] text-2xl font-bold mb-4">{t.call.titulo}</h2>
-          <p className="text-gray-800 leading-relaxed">
-            {t.call.texto}
-          </p>
+          <h2 className="text-[#e0b02e] text-2xl font-bold mb-4">
+            {t.call.titulo}
+          </h2>
+          <p className="text-gray-800 leading-relaxed">{t.call.texto}</p>
         </div>
       </section>
       <section className="px-4 py-8 md:px-8 lg:px-16 bg-white">
         <div className="max-w-screen-md mx-auto">
-          <h2 className="text-[#e0b02e] text-2xl font-bold mb-4">{t.temas.titulo}</h2>
+          <h2 className="text-[#e0b02e] text-2xl font-bold mb-4">
+            {t.temas.titulo}
+          </h2>
           <p className="text-gray-800 leading-relaxed">{t.temas.texto}</p>
-          <ul className="mt-8 grid gap-4 grid-cols-2 lg:grid-cols-5">
-            <li>
-              <a href="#" className="flex flex-col items-center overflow-hidden">
-                <img src="/img/wici/infraestructura.png" alt="" className="w-9 h-9" />
+          <ul className="mt-8 grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+            {t.areasTematicas.map((area, i) => (
+              <li
+                key={i}
+                className="flex flex-col items-center overflow-hidden"
+              >
+                <img
+                  src={area.img}
+                  alt={area.titulo}
+                  className="w-16 h-16 object-contain"
+                />
                 <div className="relative bg-white pt-3">
-                  <h3 className="text-center text-gray-800 leading-relaxed">{t.temas.infraestructura}</h3>
+                  <h3 className="text-center text-gray-800 font-semibold leading-relaxed">
+                    {area.titulo}
+                  </h3>
                 </div>
-              </a>
-            </li>
-            <li>
-              <a href="#" className="flex flex-col items-center overflow-hidden">
-                <img src="/img/wici/energia-verde.png" alt="" className="w-9 h-9" />
-                <div className="relative bg-white pt-3">
-                  <h3 className="text-center text-gray-800 leading-relaxed">{t.temas.energia}</h3>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="#" className="flex flex-col items-center overflow-hidden">
-                <img src="/img/wici/planta.png" alt="" className="w-9 h-9" />
-                <div className="relative bg-white pt-3">
-                  <h3 className="text-center text-gray-800 leading-relaxed">{t.temas.automatizacion}</h3>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="#" className="flex flex-col items-center overflow-hidden">
-                <img src="/img/wici/idea-creativa.png" alt="" className="w-9 h-9" />
-                <div className="relative bg-white pt-3">
-                  <h3 className="text-center text-gray-800 leading-relaxed">{t.temas.ciencia}</h3>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="#" className="flex flex-col items-center overflow-hidden">
-                <img src="/img/wici/red-de-computadoras.png" alt="" className="w-9 h-9" />
-                <div className="relative bg-white pt-3">
-                  <h3 className="text-center text-gray-800 leading-relaxed">{t.temas.tic}</h3>
-                </div>
-              </a>
-            </li>
+              </li>
+            ))}
           </ul>
         </div>
       </section>
+
       <section className="px-4 py-8 md:px-8 lg:px-16 bg-white">
         <div className="max-w-screen-md mx-auto">
-          <h2 className="text-[#e0b02e] text-2xl font-bold mb-4">{t.lugar.titulo}</h2>
+          <h2 className="text-[#e0b02e] text-2xl font-bold mb-4">
+            {t.lugar.titulo}
+          </h2>
           <p className="text-gray-800 leading-relaxed">{t.lugar.texto}</p>
         </div>
       </section>
