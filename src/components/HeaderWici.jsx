@@ -36,12 +36,12 @@ const Header = () => {
             <div className="hidden md:block">
               <nav aria-label="Global">
                 <ul className="flex items-center gap-6 text-sm">
-                  <li><a className="text-[#022843] transition hover:text-white" href="#">{t.nav.inicio}</a></li>
+                  <li><a className="text-[#022843] transition hover:text-white" href="/WiciPages">{t.nav.inicio}</a></li>
                   <li><a className="text-[#022843] transition hover:text-white" href="#">{t.nav.comites}</a></li>
                   <li><a className="text-[#022843] transition hover:text-white" href="../Call-For-Paper-WICI-UTPVE2025.pdf" target="_blank" rel="noopener noreferrer">{t.nav.cfp}</a></li>
                   <li><a className="text-[#022843] transition hover:text-white" href="#">{t.nav.envios}</a></li>
                   <li><a className="text-[#022843] transition hover:text-white" href="#">{t.nav.registro}</a></li>
-                  <li><a className="text-[#022843] transition hover:text-white" href="#">{t.nav.ubicacion}</a></li>
+                  <li><a className="text-[#022843] transition hover:text-white" href="/WiciUbicacion">{t.nav.ubicacion}</a></li>
                 </ul>
               </nav>
             </div>
@@ -93,7 +93,7 @@ const Header = () => {
               <li><a onClick={handleLinkClick} className="transition hover:text-[#e0b02e]" href="/Call-For-Paper-WICI-UTPVE2025.pdf" target="_blank" rel="noopener noreferrer">{t.nav.cfp}</a></li>
               <li><a onClick={handleLinkClick} className="transition hover:text-[#e0b02e]" href="#">{t.nav.envios}</a></li>
               <li><a onClick={handleLinkClick} className="transition hover:text-[#e0b02e]" href="#">{t.nav.registro}</a></li>
-              <li><a onClick={handleLinkClick} className="transition hover:text-[#e0b02e]" href="#">{t.nav.ubicacion}</a></li>
+              <li><a onClick={handleLinkClick} className="transition hover:text-[#e0b02e]" href="/WiciUbicacion">{t.nav.ubicacion}</a></li>
             </ul>
           </nav>
         </div>
