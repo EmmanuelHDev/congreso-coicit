@@ -37,7 +37,7 @@ const Header = () => {
               <nav aria-label="Global">
                 <ul className="flex items-center gap-6 text-sm">
                   <li><a className="text-[#022843] transition hover:text-white" href="/WiciPages">{t.nav.inicio}</a></li>
-                  <li><a className="text-[#022843] transition hover:text-white" href="#">{t.nav.comites}</a></li>
+                  <li><a className="text-[#022843] transition hover:text-white" href="/comites">{t.nav.comites}</a></li>
                   <li><a className="text-[#022843] transition hover:text-white" href="../Call-For-Paper-WICI-UTPVE2025.pdf" target="_blank" rel="noopener noreferrer">{t.nav.cfp}</a></li>
                   <li><a className="text-[#022843] transition hover:text-white" href="#">{t.nav.envios}</a></li>
                   <li><a className="text-[#022843] transition hover:text-white" href="#">{t.nav.registro}</a></li>
