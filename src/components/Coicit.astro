@@ -4,355 +4,292 @@ import Footer from "./Footer.astro";
 ---
 
 <section
-  class="relative min-h-screen overflow-hidden bg-[#010d1f] flex items-center justify-center"
+  class="relative min-h-screen overflow-hidden bg-[#010d1f] flex flex-col items-center justify-start"
 >
   <Header client:load />
 
   <div
-    class="relative z-10 max-w-screen-xl w-full px-4 py-16 sm:px-6 sm:py-24 lg:px-8 lg:py-32 mx-auto"
+    class="relative w-full min-h-screen flex flex-col items-center justify-center z-10"
   >
-    <div class="max-w-prose mx-auto text-center">
-      <h1 class="text-xl font-bold text-white sm:text-5xl opacity-90">
-        Pronto
-      </h1>
-
-      <img
-        src="/img/coicit/COICIT-FINAL.webp"
-        alt="logo congreso"
-        class="mx-auto max-w-320px lg:max-w-lg"
-      />
-
-      <p class="text-lg font-semibold text-white mb-4 opacity-70">
-        Congreso: Del 14 al 17 de octubre de 2025
-      </p>
-
-      <div
-        id="countdown"
-        class="text-white text-2xl font-bold mb-6 flex justify-center gap-4"
-      >
-        <div><span id="days">--</span> días</div>
-        <div><span id="hours">--</span> hrs</div>
-        <div><span id="minutes">--</span> min</div>
-        <div><span id="seconds">--</span> seg</div>
-      </div>
-
-      <h2 class="text-2xl font-bold text-white mb-6 mt-12">Áreas de interés</h2>
-
-      <div class="w-full flex justify-center items-center mt-12">
-        <div class="grid gap-4 bento-grid">
-          <div
-            style="grid-area: cambio;"
-            class="rounded-2xl overflow-hidden relative shadow-lg group"
-          >
-            <img
-              src="/img/coicit/areas/13.png"
-              alt="Cambio Climático"
-              class="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
-            />
-            <div
-              class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent px-4 py-2"
-            >
-              <span
-                class="text-white text-base font-semibold drop-shadow text-center block"
-                >Cambio Climático</span
-              >
-            </div>
-          </div>
-          <div
-            style="grid-area: infraestructura;"
-            class="rounded-2xl overflow-hidden relative shadow-lg group"
-          >
-            <img
-              src="/img/coicit/areas/15.png"
-              alt="Infraestructura"
-              class="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
-            />
-            <div
-              class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent px-4 py-2"
-            >
-              <span
-                class="text-white text-base font-semibold drop-shadow text-center block"
-                >Infraestructura</span
-              >
-            </div>
-          </div>
-          <div
-            style="grid-area: nuevas;"
-            class="rounded-2xl overflow-hidden relative shadow-lg group"
-          >
-            <img
-              src="/img/coicit/areas/17.png"
-              alt="Nuevas Tecnologías"
-              class="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
-            />
-            <div
-              class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent px-4 py-2"
-            >
-              <span
-                class="text-white text-base font-semibold drop-shadow text-center block"
-                >Energías</span
-              >
-            </div>
-          </div>
-          <div
-            style="grid-area: economia;"
-            class="rounded-2xl overflow-hidden relative shadow-lg group"
-          >
-            <img
-              src="/img/coicit/areas/20.png"
-              alt="Economía Circular"
-              class="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
-            />
-            <div
-              class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent px-4 py-2"
-            >
-              <span
-                class="text-white text-base font-semibold drop-shadow text-center block"
-                >Ciencias e Ingeniería de materiales</span
-              >
-            </div>
-          </div>
-          <div
-            style="grid-area: desarrollo;"
-            class="rounded-2xl overflow-hidden relative shadow-lg group"
-          >
-            <img
-              src="/img/coicit/areas/14.png"
-              alt="Desarrollo Social"
-              class="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
-            />
-            <div
-              class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent px-4 py-2"
-            >
-              <span
-                class="text-white text-base font-semibold drop-shadow text-center block"
-                >Desarrollo Social</span
-              >
-            </div>
-          </div>
-          <div
-            style="grid-area: logistica;"
-            class="rounded-2xl overflow-hidden relative shadow-lg group"
-          >
-            <img
-              src="/img/coicit/areas/16.png"
-              alt="Logística y Transporte"
-              class="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
-            />
-            <div
-              class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent px-4 py-2"
-            >
-              <span
-                class="text-white text-base font-semibold drop-shadow text-center block"
-                >Logística y Transporte</span
-              >
-            </div>
-          </div>
-          <div
-            style="grid-area: energia;"
-            class="rounded-2xl overflow-hidden relative shadow-lg group"
-          >
-            <img
-              src="/img/coicit/areas/19.png"
-              alt="Energía"
-              class="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
-            />
-            <div
-              class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent px-4 py-2"
-            >
-              <span
-                class="text-white text-base font-semibold drop-shadow text-center block"
-                >Economía Circular</span
-              >
-            </div>
-          </div>
-          <div
-            style="grid-area: materiales;"
-            class="rounded-2xl overflow-hidden relative shadow-lg group"
-          >
-            <img
-              src="/img/coicit/areas/18.png"
-              alt="Ciencias e Ingeniería de Materiales"
-              class="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
-            />
-            <div
-              class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent px-4 py-2"
-            >
-              <span
-                class="text-white text-base font-semibold drop-shadow text-center block"
-                >Nuevas tecnologías de información y comunicación</span
-              >
-            </div>
-          </div>
-          <div
-            style="grid-area: innovacion;"
-            class="rounded-2xl overflow-hidden relative shadow-lg group"
-          >
-            <img
-              src="/img/coicit/areas/12.png"
-              alt="Innovación"
-              class="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
-            />
-            <div
-              class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent px-4 py-2"
-            >
-              <span
-                class="text-white text-base font-semibold drop-shadow text-center block"
-                >Innovación</span
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <h2 class="text-2xl font-bold text-white mb-6 mt-12">
-        Precio de Paquetes
-      </h2>
-      <div
-        class="info-paquetes space-y-4 mb-10 w-full max-w-5xl mx-auto text-left"
-      >
-        <div class="flex items-center gap-2 border-b border-gray-400 pb-2">
-          <span style="font-size:1.5rem;">💵</span>
-          <span class="font-semibold text-green-400 italic"
-            >Los precios de los paquetes será hasta el 30 de septiembre. A
-            partir del 01 de octubre todos los paquetes tienen un
-            incremento de B/10.00</span
-          >
-        </div>
-      </div>
-      <div class="paquetes-grid-custom mx-auto my-12">
-        <div class="paquete-item">
-          <img
-            src="/img/coicit/paquetes/Paquete_Docente_TiempoCompleto.webp"
-            alt="Docente Tiempo Completo"
-          />
-          <span class="paquete-desc"
-            >A partir del la fecha 01/10/2025 el costo del paquete es de
-            B/.70.00</span
-          >
-        </div>
-        <div class="paquete-item">
-          <img
-            src="/img/coicit/paquetes/Paquete_Docente_TiempoParcial.webp"
-            alt="Docente Tiempo Parcial"
-          />
-          <span class="paquete-desc"
-            >A partir del la fecha 01/10/2025 el costo del paquete es de
-            B/.60.00</span
-          >
-        </div>
-        <div class="paquete-item">
-          <img
-            src="/img/coicit/paquetes/Paquete_Estudiante_Egresado.webp"
-            alt="Estudiante/Egresado"
-          />
-          <span class="paquete-desc"
-            >A partir del la fecha 01/10/2025 el costo del paquete es de
-            B/.55.00</span
-          >
-        </div>
-        <div class="paquete-item">
-          <img
-            src="/img/coicit/paquetes/Paquete_Participantes_Externos.webp"
-            alt="Participantes Externos"
-          />
-          <span class="paquete-desc"
-            >A partir del la fecha 01/10/2025 el costo del paquete es de
-            B/.75.00</span
-          >
-        </div>
-        <div class="paquete-item">
-          <img
-            src="/img/coicit/paquetes/Paquete_Tour.webp"
-            alt="Tour Empresarial"
-          />
-          <span class="paquete-desc"
-            >A partir del la fecha 01/10/2025 el costo del paquete es de
-            B/.20.00</span
-          >
-        </div>
-      </div>
-
-      <style>
-        .paquetes-grid-custom {
-          display: grid;
-          gap: 2.5rem 2rem;
-          justify-content: center;
-          align-items: end;
-          max-width: 1200px;
-        }
-
-        .paquete-item {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: flex-end;
-          width: 100%;
-        }
-
-        .paquete-item img {
-          width: 100%;
-          max-width: 320px;
-          height: auto;
-          border-radius: 1rem;
-          box-shadow: 0 8px 24px #0002;
-          background: #fff;
-        }
-
-        .paquete-desc {
-          color: #fff;
-          margin-top: 1rem;
-          font-size: 1rem;
-          font-weight: 600;
-          text-align: center;
-        }
-
-        @media (min-width: 1024px) {
-          .paquetes-grid-custom {
-            grid-template-columns: repeat(3, minmax(250px, 1fr));
-            justify-content: center;
-          }
-          .paquetes-grid-custom:has(.paquete-item:nth-child(5):last-child)
-            .paquete-item:nth-child(5) {
-            grid-column: 2 / 3;
-          }
-        }
-
-        @media (max-width: 1023px) {
-          .paquetes-grid-custom {
-            grid-template-columns: repeat(2, minmax(150px, 1fr));
-            gap: 1.5rem 1rem;
-          }
-          .paquete-item img {
-            max-width: 260px;
-          }
-          .paquetes-grid-custom > .paquete-item:last-child:nth-child(odd) {
-            grid-column: 1 / -1;
-            justify-self: center;
-          }
-        }
-
-        @media (max-width: 640px) {
-          .paquetes-grid-custom {
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1rem;
-            padding: 0 0.5rem;
-          }
-          .paquete-item img {
-            max-width: 130px;
-          }
-          .paquete-desc {
-            font-size: 0.83rem;
-          }
-          .paquetes-grid-custom > .paquete-item:last-child:nth-child(odd) {
-            grid-column: 1 / -1;
-            justify-self: center;
-          }
-        }
-      </style>
+    <div class="banner-fondo-coicit"></div>
+    <div class="banner-overlay"></div>
+    <h1
+      class="text-xl font-bold text-white sm:text-5xl opacity-90 mt-12 z-10 relative"
+    >
+      Pronto
+    </h1>
+    <img
+      src="/img/coicit/COICIT-FINAL.webp"
+      alt="logo congreso"
+      class="mx-auto max-w-320px lg:max-w-lg z-10 relative"
+    />
+    <p class="text-lg font-semibold text-white mb-4 opacity-70 z-10 relative">
+      Congreso: Del 14 al 17 de octubre de 2025
+    </p>
+    <div
+      id="countdown"
+      class="text-white text-2xl font-bold mb-6 flex justify-center gap-4 z-10 relative"
+    >
+      <div><span id="days">--</span> días</div>
+      <div><span id="hours">--</span> hrs</div>
+      <div><span id="minutes">--</span> min</div>
+      <div><span id="seconds">--</span> seg</div>
     </div>
   </div>
 </section>
+
+<section class="video-section-coicit">
+  <div class="video-title-coicit">Video COICIT 2025</div>
+  <div class="video-iframe-wrapper-coicit">
+    <iframe
+      class="video-iframe-coicit"
+      src="https://www.youtube.com/embed/xtNuSUBnqHw"
+      title="Video COICIT 2025"
+      frameborder="0"
+      allowfullscreen></iframe>
+  </div>
+</section>
+
+<section
+  class="relative w-full px-4 py-16 sm:px-6 sm:py-24 lg:px-8 lg:py-32 bg-[#010d1f]"
+>
+  <div class="max-w-prose mx-auto text-center">
+    <h2 class="text-2xl font-bold text-white mb-6 mt-12">Áreas de interés</h2>
+
+    <div class="w-full flex justify-center items-center mt-12">
+      <div class="grid gap-4 bento-grid">
+        <div
+          style="grid-area: cambio;"
+          class="rounded-2xl overflow-hidden relative shadow-lg group"
+        >
+          <img
+            src="/img/coicit/areas/13.png"
+            alt="Cambio Climático"
+            class="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
+          />
+          <div
+            class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent px-4 py-2"
+          >
+            <span
+              class="text-white text-base font-semibold drop-shadow text-center block"
+              >Cambio Climático</span
+            >
+          </div>
+        </div>
+        <div
+          style="grid-area: infraestructura;"
+          class="rounded-2xl overflow-hidden relative shadow-lg group"
+        >
+          <img
+            src="/img/coicit/areas/15.png"
+            alt="Infraestructura"
+            class="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
+          />
+          <div
+            class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent px-4 py-2"
+          >
+            <span
+              class="text-white text-base font-semibold drop-shadow text-center block"
+              >Infraestructura</span
+            >
+          </div>
+        </div>
+        <div
+          style="grid-area: nuevas;"
+          class="rounded-2xl overflow-hidden relative shadow-lg group"
+        >
+          <img
+            src="/img/coicit/areas/17.png"
+            alt="Nuevas Tecnologías"
+            class="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
+          />
+          <div
+            class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent px-4 py-2"
+          >
+            <span
+              class="text-white text-base font-semibold drop-shadow text-center block"
+              >Energías</span
+            >
+          </div>
+        </div>
+        <div
+          style="grid-area: economia;"
+          class="rounded-2xl overflow-hidden relative shadow-lg group"
+        >
+          <img
+            src="/img/coicit/areas/20.png"
+            alt="Economía Circular"
+            class="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
+          />
+          <div
+            class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent px-4 py-2"
+          >
+            <span
+              class="text-white text-base font-semibold drop-shadow text-center block"
+              >Ciencias e Ingeniería de materiales</span
+            >
+          </div>
+        </div>
+        <div
+          style="grid-area: desarrollo;"
+          class="rounded-2xl overflow-hidden relative shadow-lg group"
+        >
+          <img
+            src="/img/coicit/areas/14.png"
+            alt="Desarrollo Social"
+            class="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
+          />
+          <div
+            class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent px-4 py-2"
+          >
+            <span
+              class="text-white text-base font-semibold drop-shadow text-center block"
+              >Desarrollo Social</span
+            >
+          </div>
+        </div>
+        <div
+          style="grid-area: logistica;"
+          class="rounded-2xl overflow-hidden relative shadow-lg group"
+        >
+          <img
+            src="/img/coicit/areas/16.png"
+            alt="Logística y Transporte"
+            class="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
+          />
+          <div
+            class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent px-4 py-2"
+          >
+            <span
+              class="text-white text-base font-semibold drop-shadow text-center block"
+              >Logística y Transporte</span
+            >
+          </div>
+        </div>
+        <div
+          style="grid-area: energia;"
+          class="rounded-2xl overflow-hidden relative shadow-lg group"
+        >
+          <img
+            src="/img/coicit/areas/19.png"
+            alt="Energía"
+            class="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
+          />
+          <div
+            class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent px-4 py-2"
+          >
+            <span
+              class="text-white text-base font-semibold drop-shadow text-center block"
+              >Economía Circular</span
+            >
+          </div>
+        </div>
+        <div
+          style="grid-area: materiales;"
+          class="rounded-2xl overflow-hidden relative shadow-lg group"
+        >
+          <img
+            src="/img/coicit/areas/18.png"
+            alt="Ciencias e Ingeniería de Materiales"
+            class="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
+          />
+          <div
+            class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent px-4 py-2"
+          >
+            <span
+              class="text-white text-base font-semibold drop-shadow text-center block"
+              >Nuevas tecnologías de información y comunicación</span
+            >
+          </div>
+        </div>
+        <div
+          style="grid-area: innovacion;"
+          class="rounded-2xl overflow-hidden relative shadow-lg group"
+        >
+          <img
+            src="/img/coicit/areas/12.png"
+            alt="Innovación"
+            class="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
+          />
+          <div
+            class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent px-4 py-2"
+          >
+            <span
+              class="text-white text-base font-semibold drop-shadow text-center block"
+              >Innovación</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="text-2xl font-bold text-white mb-6 mt-12">Precio de Paquetes</h2>
+    <div
+      class="info-paquetes space-y-4 mb-10 w-full max-w-5xl mx-auto text-left"
+    >
+      <div class="flex items-center gap-2 border-b border-gray-400 pb-2">
+        <span style="font-size:1.5rem;">💵</span>
+        <span class="font-semibold text-green-400 italic"
+          >Los precios de los paquetes será hasta el 30 de septiembre. A partir
+          del 01 de octubre todos los paquetes tienen un incremento de B/10.00</span
+        >
+      </div>
+    </div>
+    <div class="paquetes-grid-custom mx-auto my-12">
+      <div class="paquete-item">
+        <img
+          src="/img/coicit/paquetes/Paquete_Docente_TiempoCompleto.webp"
+          alt="Docente Tiempo Completo"
+        />
+        <div class="paquete-info">
+          <span class="paquete-fecha">A partir del 01/10/2025</span>
+          <span class="paquete-precio">B/. 70.00</span>
+        </div>
+      </div>
+      <div class="paquete-item">
+        <img
+          src="/img/coicit/paquetes/Paquete_Docente_TiempoParcial.webp"
+          alt="Docente Tiempo Parcial"
+        />
+        <div class="paquete-info">
+          <span class="paquete-fecha">A partir del 01/10/2025</span>
+          <span class="paquete-precio">B/. 60.00</span>
+        </div>
+      </div>
+      <div class="paquete-item">
+        <img
+          src="/img/coicit/paquetes/Paquete_Estudiante_Egresado.webp"
+          alt="Estudiante/Egresado"
+        />
+        <div class="paquete-info">
+          <span class="paquete-fecha">A partir del 01/10/2025</span>
+          <span class="paquete-precio">B/. 55.00</span>
+        </div>
+      </div>
+      <div class="paquete-item">
+        <img
+          src="/img/coicit/paquetes/Paquete_Participantes_Externos.webp"
+          alt="Participantes Externos"
+        />
+        <div class="paquete-info">
+          <span class="paquete-fecha">A partir del 01/10/2025</span>
+          <span class="paquete-precio">B/. 75.00</span>
+        </div>
+      </div>
+      <div class="paquete-item">
+        <img
+          src="/img/coicit/paquetes/Paquete_Tour.webp"
+          alt="Tour Empresarial"
+        />
+        <div class="paquete-info">
+          <span class="paquete-fecha">A partir del 01/10/2025</span>
+          <span class="paquete-precio">B/. 20.00</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <Footer />
 
 <script>
@@ -389,6 +326,63 @@ import Footer from "./Footer.astro";
 </script>
 
 <style>
+  .video-section-coicit {
+    width: 100%;
+    max-width: 100%;
+    background: #071429;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    z-index: 2;
+  }
+  .video-title-coicit {
+    color: #fff;
+    font-size: 1.5rem; 
+    font-weight: bold;
+    margin-bottom: 2rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  .video-iframe-wrapper-coicit {
+    width: 100%;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .video-iframe-coicit {
+    width: 100%;
+    height: 56vw;
+    max-width: 1000px;
+    max-height: 562px;
+    border-radius: 16px;
+    background: #000;
+    box-shadow: 0 8px 40px #0005;
+  }
+
+  @media (max-width: 640px) {
+    .video-iframe-wrapper-coicit {
+      max-width: 95vw;
+      padding: 0 1rem;
+    }
+    .video-iframe-coicit {
+      width: 100%;
+      max-width: 290px; 
+      height: 218px;
+      aspect-ratio: unset; 
+      max-height: 218px;
+      border-radius: 12px;
+    }
+  }
+
   .bento-grid {
     grid-template-columns: 320px 320px 320px 320px;
     grid-template-rows: 220px 220px 220px;
@@ -452,5 +446,139 @@ import Footer from "./Footer.astro";
     .my-12 {
       margin-top: 1.5rem;
     }
+  }
+  .paquetes-grid-custom {
+    display: grid;
+    gap: 2.5rem 2rem;
+    justify-content: center;
+    align-items: end;
+    max-width: 1200px;
+  }
+  .paquete-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+  }
+  .paquete-item img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    border-radius: 1rem;
+    box-shadow: 0 8px 24px #0002;
+    background: #fff;
+    transition:
+      transform 0.3s cubic-bezier(0.4, 2, 0.3, 1),
+      box-shadow 0.3s;
+  }
+  .paquete-item:hover img,
+  .paquete-item:focus-within img {
+    transform: scale(1.06) rotate(-2deg);
+    box-shadow: 0 12px 32px #0005;
+    z-index: 2;
+  }
+  .paquete-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+    gap: 0.15rem;
+  }
+  .paquete-fecha {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+  }
+  .paquete-precio {
+    color: #e0b02e;
+    font-size: 1.4rem;
+    font-weight: 800;
+    text-align: center;
+    margin-top: 0.2rem;
+  }
+  @media (min-width: 1024px) {
+    .paquetes-grid-custom {
+      grid-template-columns: repeat(3, minmax(250px, 1fr));
+      justify-content: center;
+    }
+    .paquetes-grid-custom:has(.paquete-item:nth-child(5):last-child)
+      .paquete-item:nth-child(5) {
+      grid-column: 2 / 3;
+    }
+  }
+  @media (max-width: 1023px) {
+    .paquetes-grid-custom {
+      grid-template-columns: repeat(2, minmax(150px, 1fr));
+      gap: 1.5rem 1rem;
+    }
+    .paquete-item img {
+      max-width: 260px;
+    }
+    .paquetes-grid-custom > .paquete-item:last-child:nth-child(odd) {
+      grid-column: 1 / -1;
+      justify-self: center;
+    }
+  }
+  @media (max-width: 640px) {
+    .paquetes-grid-custom {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      padding: 0 0.5rem;
+    }
+    .paquete-item img {
+      max-width: 130px;
+    }
+    .paquete-info {
+      max-width: 130px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .paquete-fecha,
+    .paquete-precio {
+      font-size: 0.93rem;
+      text-align: center;
+      word-break: break-word;
+    }
+    .paquete-precio {
+      font-size: 1.1rem;
+    }
+    .paquetes-grid-custom > .paquete-item:last-child:nth-child(odd) {
+      grid-column: 1 / -1;
+      justify-self: center;
+    }
+  }
+  .banner-fondo-coicit {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url("/img/coicit/Fondo_Coicit.webp") center center no-repeat;
+    background-size: cover;
+    opacity: 1;
+    z-index: 0;
+    pointer-events: none;
+  }
+  .banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #010d1f;
+    opacity: 0.55;
+    z-index: 1;
+    pointer-events: none;
+  }
+  .max-w-prose.mx-auto.text-center {
+    position: relative;
+    z-index: 1;
+    overflow: visible;
+  }
+  .max-w-prose.mx-auto.text-center::before {
+    display: none;
   }
 </style>
