@@ -1,4 +1,4 @@
----
+    ---
 import Header from "../components/Header.jsx";
 import Footer from "./Footer.astro";
 ---
@@ -247,7 +247,7 @@ import Footer from "./Footer.astro";
       >
     </div>
   </div>
-  <div class="paquetes-grid-custom mx-auto my-12">
+  <div class="paquetes-grid-custom mx-auto my-12 grid grid-cols-1 sm:grid-cols-2 gap-10">
     <div class="paquete-item">
       <img
         src="/img/coicit/paquetes/Paquete_Docente_TiempoCompleto.webp"
@@ -288,16 +288,7 @@ import Footer from "./Footer.astro";
         <span class="paquete-precio">B/. 75.00</span>
       </div>
     </div>
-    <!---<div class="paquete-item">
-      <img
-        src="/img/coicit/paquetes/Paquete_Tour.webp"
-        alt="Tour Empresarial"
-      />
-      <div class="paquete-info">
-        <span class="paquete-fecha">A partir del 01/10/2025</span>
-        <span class="paquete-precio">B/. 20.00</span>
-      </div>
-    </div>-->
+  
   </div>
 </section>
 
@@ -477,10 +468,11 @@ import Footer from "./Footer.astro";
   }
   .paquetes-grid-custom {
     display: grid;
+    grid-template-columns: repeat(2, minmax(150px, 1fr)); /* Siempre 2 columnas */
     gap: 2.5rem 2rem;
     justify-content: center;
     align-items: end;
-    max-width: 1200px;
+    max-width: 900px; /* Opcional: ajusta el ancho máximo */
   }
   .paquete-item {
     display: flex;
@@ -526,16 +518,6 @@ import Footer from "./Footer.astro";
     text-align: center;
     margin-top: 0.2rem;
   }
-  @media (min-width: 1024px) {
-    .paquetes-grid-custom {
-      grid-template-columns: repeat(3, minmax(250px, 1fr));
-      justify-content: center;
-    }
-    .paquetes-grid-custom:has(.paquete-item:nth-child(5):last-child)
-      .paquete-item:nth-child(5) {
-      grid-column: 2 / 3;
-    }
-  }
   @media (max-width: 1023px) {
     .paquetes-grid-custom {
       grid-template-columns: repeat(2, minmax(150px, 1fr));
@@ -551,9 +533,9 @@ import Footer from "./Footer.astro";
   }
   @media (max-width: 640px) {
     .paquetes-grid-custom {
-      grid-template-columns: repeat(2, 1fr);
       gap: 1rem;
       padding: 0 0.5rem;
+      max-width: 100%;
     }
     .paquete-item img {
       max-width: 130px;
@@ -610,3 +592,4 @@ import Footer from "./Footer.astro";
     display: none;
   }
 </style>
+
