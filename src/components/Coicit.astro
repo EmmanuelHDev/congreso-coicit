@@ -1,4 +1,4 @@
-    ---
+---
 import Header from "../components/Header.jsx";
 import Footer from "./Footer.astro";
 ---
@@ -289,6 +289,17 @@ import Footer from "./Footer.astro";
       </div>
     </div>
   
+  </div>
+</section>
+
+<!-- Patrocinadores Section -->
+<section class="patrocinadores-section">
+  <h2 class="patrocinadores-title">Patrocinadores</h2>
+  <div class="patrocinadores-logos">
+    <img src="/public/img/wici/Patrocinadores/Firma_TEC.webp" alt="TEC Costa Rica" />
+    <img src="/public/img/wici/Patrocinadores/Grupo_OEG.webp" alt="Ontology Engineering Group" />
+    <img src="/public/img/wici/Patrocinadores/Logo_ESALAB.webp" alt="ESA LAB" />
+    <img src="/public/img/wici/Patrocinadores/Logo_Robotsis.webp" alt="Robotics UTP" />
   </div>
 </section>
 
@@ -590,6 +601,62 @@ import Footer from "./Footer.astro";
   }
   .max-w-prose.mx-auto.text-center::before {
     display: none;
+  }
+
+  .patrocinadores-section {
+    background: linear-gradient(145deg, #07182e 0%, #0f2946 50%, #17395b 100%);
+    padding: 3rem 1rem 2rem 1rem;
+    text-align: center;
+  }
+  .patrocinadores-title {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+  }
+  .patrocinadores-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .patrocinadores-logos img {
+    background: #fff;
+    border-radius: 1.2rem;
+    padding: 0.5rem 1.2rem;
+    height: 100px;
+    max-width: 220px;
+    object-fit: contain;
+    box-shadow: 0 4px 16px #0002;
+    transition: transform 0.2s;
+  }
+  .patrocinadores-logos img:hover {
+    transform: scale(1.07);
+    box-shadow: 0 8px 32px #0003;
+  }
+  @media (max-width: 900px) {
+    .patrocinadores-logos {
+      gap: 1.2rem;
+    }
+    .patrocinadores-logos img {
+      height: 70px;
+      max-width: 140px;
+      padding: 0.4rem 0.7rem;
+    }
+  }
+  @media (max-width: 600px) {
+    .patrocinadores-logos {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+    .patrocinadores-title {
+      font-size: 1.3rem;
+    }
+    .patrocinadores-section {
+      padding: 2rem 0.5rem 1rem 0.5rem;
+    }
   }
 </style>
 
