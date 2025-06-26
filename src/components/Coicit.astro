@@ -53,8 +53,8 @@ import Footer from "./Footer.astro";
 <section
   class="relative w-full px-4 py-16 sm:px-6 sm:py-24 lg:px-8 lg:py-32 bg-[#010d1f]"
 >
-  <div class="max-w-prose mx-auto text-center">
-    <h2 class="text-2xl font-bold text-white mb-6 mt-12">Áreas de interés</h2>
+  <div class="max-w-prose mx-auto text-center mt-8">
+    <h2 class="text-2xl font-bold text-white mb-6">Áreas de interés</h2>
 
     <div class="w-full flex justify-center items-center mt-12">
       <div class="grid gap-4 bento-grid">
@@ -222,69 +222,71 @@ import Footer from "./Footer.astro";
         </div>
       </div>
     </div>
-
+  </div>
+</section>
+<div class="separador-sombra"></div>
+<section class="paquetes-section">
+  <div class="max-w-prose mx-auto text-center">
     <h2 class="text-2xl font-bold text-white mb-6 mt-12">Precio de Paquetes</h2>
-    <div
-      class="info-paquetes space-y-4 mb-10 w-full max-w-5xl mx-auto text-left"
-    >
-      <div class="flex items-center gap-2 border-b border-gray-400 pb-2">
-        <span style="font-size:1.5rem;">💵</span>
-        <span class="font-semibold text-green-400 italic"
-          >Los precios de los paquetes será hasta el 30 de septiembre. A partir
-          del 01 de octubre todos los paquetes tienen un incremento de B/10.00</span
-        >
+  </div>
+  <div class="info-paquetes space-y-4 mb-10 w-full max-w-5xl mx-auto text-left">
+    <div class="flex items-center gap-2 border-b border-gray-400 pb-2">
+      <span style="font-size:1.5rem;">💵</span>
+      <span class="font-semibold text-green-400 italic"
+        >Los precios de los paquetes será hasta el 30 de septiembre. A partir
+        del 01 de octubre todos los paquetes tienen un incremento de B/10.00</span
+      >
+    </div>
+  </div>
+  <div class="paquetes-grid-custom mx-auto my-12">
+    <div class="paquete-item">
+      <img
+        src="/img/coicit/paquetes/Paquete_Docente_TiempoCompleto.webp"
+        alt="Docente Tiempo Completo"
+      />
+      <div class="paquete-info">
+        <span class="paquete-fecha">A partir del 01/10/2025</span>
+        <span class="paquete-precio">B/. 70.00</span>
       </div>
     </div>
-    <div class="paquetes-grid-custom mx-auto my-12">
-      <div class="paquete-item">
-        <img
-          src="/img/coicit/paquetes/Paquete_Docente_TiempoCompleto.webp"
-          alt="Docente Tiempo Completo"
-        />
-        <div class="paquete-info">
-          <span class="paquete-fecha">A partir del 01/10/2025</span>
-          <span class="paquete-precio">B/. 70.00</span>
-        </div>
+    <div class="paquete-item">
+      <img
+        src="/img/coicit/paquetes/Paquete_Docente_TiempoParcial.webp"
+        alt="Docente Tiempo Parcial"
+      />
+      <div class="paquete-info">
+        <span class="paquete-fecha">A partir del 01/10/2025</span>
+        <span class="paquete-precio">B/. 60.00</span>
       </div>
-      <div class="paquete-item">
-        <img
-          src="/img/coicit/paquetes/Paquete_Docente_TiempoParcial.webp"
-          alt="Docente Tiempo Parcial"
-        />
-        <div class="paquete-info">
-          <span class="paquete-fecha">A partir del 01/10/2025</span>
-          <span class="paquete-precio">B/. 60.00</span>
-        </div>
+    </div>
+    <div class="paquete-item">
+      <img
+        src="/img/coicit/paquetes/Paquete_Estudiante_Egresado.webp"
+        alt="Estudiante/Egresado"
+      />
+      <div class="paquete-info">
+        <span class="paquete-fecha">A partir del 01/10/2025</span>
+        <span class="paquete-precio">B/. 55.00</span>
       </div>
-      <div class="paquete-item">
-        <img
-          src="/img/coicit/paquetes/Paquete_Estudiante_Egresado.webp"
-          alt="Estudiante/Egresado"
-        />
-        <div class="paquete-info">
-          <span class="paquete-fecha">A partir del 01/10/2025</span>
-          <span class="paquete-precio">B/. 55.00</span>
-        </div>
+    </div>
+    <div class="paquete-item">
+      <img
+        src="/img/coicit/paquetes/Paquete_Participantes_Externos.webp"
+        alt="Participantes Externos"
+      />
+      <div class="paquete-info">
+        <span class="paquete-fecha">A partir del 01/10/2025</span>
+        <span class="paquete-precio">B/. 75.00</span>
       </div>
-      <div class="paquete-item">
-        <img
-          src="/img/coicit/paquetes/Paquete_Participantes_Externos.webp"
-          alt="Participantes Externos"
-        />
-        <div class="paquete-info">
-          <span class="paquete-fecha">A partir del 01/10/2025</span>
-          <span class="paquete-precio">B/. 75.00</span>
-        </div>
-      </div>
-      <div class="paquete-item">
-        <img
-          src="/img/coicit/paquetes/Paquete_Tour.webp"
-          alt="Tour Empresarial"
-        />
-        <div class="paquete-info">
-          <span class="paquete-fecha">A partir del 01/10/2025</span>
-          <span class="paquete-precio">B/. 20.00</span>
-        </div>
+    </div>
+    <div class="paquete-item">
+      <img
+        src="/img/coicit/paquetes/Paquete_Tour.webp"
+        alt="Tour Empresarial"
+      />
+      <div class="paquete-info">
+        <span class="paquete-fecha">A partir del 01/10/2025</span>
+        <span class="paquete-precio">B/. 20.00</span>
       </div>
     </div>
   </div>
@@ -326,10 +328,21 @@ import Footer from "./Footer.astro";
 </script>
 
 <style>
+  .areas-interes-section {
+    width: 100%;
+    padding: 4rem 1rem;
+    background: #010d1f;
+  }
+
+  .paquetes-section {
+    width: 100%;
+    padding: 4rem 1rem;
+    background: linear-gradient(to bottom, #0a1223, #142849, #1d375d);
+  }
   .video-section-coicit {
     width: 100%;
     max-width: 100%;
-    background: #071429;
+    background: linear-gradient(145deg, #01132e 0%, #0e1f3d 35%, #1a3260 100%);
     padding-top: 3rem;
     padding-bottom: 3rem;
     display: flex;
@@ -339,9 +352,10 @@ import Footer from "./Footer.astro";
     overflow-x: hidden;
     z-index: 2;
   }
+
   .video-title-coicit {
     color: #fff;
-    font-size: 1.5rem; 
+    font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 2rem;
     text-align: center;
@@ -375,9 +389,9 @@ import Footer from "./Footer.astro";
     }
     .video-iframe-coicit {
       width: 100%;
-      max-width: 290px; 
+      max-width: 290px;
       height: 218px;
-      aspect-ratio: unset; 
+      aspect-ratio: unset;
       max-height: 218px;
       border-radius: 12px;
     }
@@ -467,7 +481,7 @@ import Footer from "./Footer.astro";
     height: auto;
     border-radius: 1rem;
     box-shadow: 0 8px 24px #0002;
-    background: #fff;
+    background: linear-gradient(to bottom right, #1c2b44, #0a0f1d);
     transition:
       transform 0.3s cubic-bezier(0.4, 2, 0.3, 1),
       box-shadow 0.3s;
@@ -556,7 +570,7 @@ import Footer from "./Footer.astro";
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: url("/img/coicit/Fondo_Coicit.webp") center center no-repeat;
+    background: url("/img/coicit/Fondofinal.webp") center center no-repeat;
     background-size: cover;
     opacity: 1;
     z-index: 0;
