@@ -58,7 +58,7 @@ const Header = () => {
                   <li>
                     <a
                       className="text-[#022843] transition hover:text-white"
-                      href="#"
+                      href="/comites"
                     >
                       {t.nav.comites}
                     </a>
@@ -200,7 +200,7 @@ const Header = () => {
                 <a
                   onClick={handleLinkClick}
                   className="transition hover:text-[#e0b02e]"
-                  href="#"
+                  href="/comites"
                 >
                   {t.nav.comites}
                 </a>
