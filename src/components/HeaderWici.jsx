@@ -28,16 +28,10 @@ const Header = () => {
     <header className="w-full fixed top-0 z-50">
       <div className="bg-[#e0b02e] text-white text-xs px-4 py-2 flex justify-center gap-6 sm:justify-end sm:gap-8">
         <a
-          href="mailto:sipe@utp.ac.pa"
+          href="mailto:congreso.ve@utp.ac.pa"
           className="hover:text-yellow-400 transition"
         >
-          sipe@utp.ac.pa
-        </a>
-        <a
-          href="mailto:cristian.pinzon@utp.ac.pa"
-          className="hover:text-yellow-400 transition"
-        >
-          cristian.pinzon@utp.ac.pa
+          congreso.ve@utp.ac.pa
         </a>
       </div>
 

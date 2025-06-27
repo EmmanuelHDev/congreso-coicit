@@ -70,8 +70,6 @@ const WiciMainContent = () => {
           <p className="text-gray-800 leading-relaxed">{t.lugar.texto}</p>
         </div>
       </section>
-
-      {/* Sección de Colaboradores */}
       <section className="bg-[#e0b02e] py-12 px-4">
         <h2 className="text-3xl font-bold text-center text-white mb-10">
           {lang === "es" ? "Colaboradores" : "Collaborates"}
