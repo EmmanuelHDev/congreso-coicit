@@ -20,6 +20,10 @@ const Header = () => {
 
   const handleLinkClick = () => setIsMobileMenuOpen(false);
 
+  const navItemClass = scrolled
+    ? "text-white transition hover:text-white"
+    : "text-[#022843] transition hover:text-[#e0b02e]";
+
   return (
     <header className="w-full fixed top-0 z-50">
       <div className="bg-[#e0b02e] text-white text-xs px-4 py-2 flex justify-center gap-6 sm:justify-end sm:gap-8">
@@ -48,24 +52,18 @@ const Header = () => {
               <nav aria-label="Global">
                 <ul className="flex items-center gap-6 text-sm">
                   <li>
-                    <a
-                      className="text-[#022843] transition hover:text-white"
-                      href="/WiciPages"
-                    >
+                    <a className={navItemClass} href="/WiciPages">
                       {t.nav.inicio}
                     </a>
                   </li>
                   <li>
-                    <a
-                      className="text-[#022843] transition hover:text-white"
-                      href="/comites"
-                    >
+                    <a className={navItemClass} href="/comites">
                       {t.nav.comites}
                     </a>
                   </li>
                   <li className="relative group">
                     <button
-                      className="text-[#022843] transition hover:text-white inline-flex items-center"
+                      className={`${navItemClass} inline-flex items-center`}
                       aria-haspopup="true"
                     >
                       {t.nav.cfp}
@@ -100,34 +98,25 @@ const Header = () => {
                       </li>
                     </ul>
                   </li>
-
                   <li>
-                    <a
-                      className="text-[#022843] transition hover:text-white"
-                      href="#"
-                    >
+                    <a className={navItemClass} href="#">
                       {t.nav.envios}
                     </a>
                   </li>
                   <li>
-                    <a
-                      className="text-[#022843] transition hover:text-white"
-                      href="#"
-                    >
+                    <a className={navItemClass} href="#">
                       {t.nav.registro}
                     </a>
                   </li>
                   <li>
-                    <a
-                      className="text-[#022843] transition hover:text-white"
-                      href="/WiciUbicacion"
-                    >
+                    <a className={navItemClass} href="/WiciUbicacion">
                       {t.nav.ubicacion}
                     </a>
                   </li>
                 </ul>
               </nav>
             </div>
+
             <div className="flex items-center gap-4">
               <select
                 value={lang}
@@ -171,6 +160,7 @@ const Header = () => {
           </div>
         </div>
       </div>
+
       {isMobileMenuOpen && (
         <div className="fixed top-0 left-0 w-full h-screen z-[999] bg-[#022843] text-white flex flex-col px-6 py-4">
           <div className="flex justify-end">
@@ -232,7 +222,6 @@ const Header = () => {
                   </li>
                 </ul>
               </li>
-
               <li>
                 <a
                   onClick={handleLinkClick}
@@ -267,4 +256,5 @@ const Header = () => {
     </header>
   );
 };
+
 export default Header;
