@@ -1,6 +1,54 @@
 ---
 import Header from "../components/HeaderAreasTematicas.jsx";
 import Footer from "./Footer.astro";
+
+const AREAS = [
+  {
+    titulo: "Innovación",
+    descripcion: "Ideas disruptivas que transforman industrias y mejoran la vida cotidiana.",
+    imagen: "/img/coicit/areas/12.png",
+  },
+  {
+    titulo: "Cambio Climático",
+    descripcion: "Soluciones y estrategias para enfrentar los retos ambientales del presente y futuro.",
+    imagen: "/img/coicit/areas/13.png",
+  },
+  {
+    titulo: "Desarrollo Social",
+    descripcion: "Impulsando comunidades más justas, inclusivas y resilientes.",
+    imagen: "/img/coicit/areas/14.png",
+  },
+  {
+    titulo: "Infraestructura",
+    descripcion: "Construyendo bases sólidas para el crecimiento y la conectividad.",
+    imagen: "/img/coicit/areas/15.png",
+  },
+  {
+    titulo: "Logística y Transporte",
+    descripcion: "Moviendo el mundo con eficiencia, tecnología y sostenibilidad.",
+    imagen: "/img/coicit/areas/16.png",
+  },
+  {
+    titulo: "Energías",
+    descripcion: "Nuevas fuentes y gestión inteligente para un futuro energético sostenible.",
+    imagen: "/img/coicit/areas/17.png",
+  },
+  {
+    titulo: "Nuevas Tecnologías de Información y Comunicación",
+    descripcion: "Conectando personas y datos en la era digital.",
+    imagen: "/img/coicit/areas/18.png",
+  },
+  {
+    titulo: "Economía Circular",
+    descripcion: "Redefiniendo el valor: reutilizar, reciclar y reducir para un planeta mejor.",
+    imagen: "/img/coicit/areas/19.png",
+  },
+  {
+    titulo: "Ciencias e Ingeniería de Materiales",
+    descripcion: "Innovando en materiales que impulsan el avance tecnológico.",
+    imagen: "/img/coicit/areas/20.png",
+  },
+];
 ---
 
 <div class="page-container">
@@ -8,7 +56,17 @@ import Footer from "./Footer.astro";
 
   <main class="main-content">
     <h1 class="areas-title">Áreas Temáticas</h1>
-    <!-- Aquí puedes agregar más contenido si lo deseas -->
+    <div class="areas-grid">
+      {AREAS.map(area => (
+        <div class="area-card">
+          <div class="area-img-container">
+            <img src={area.imagen} alt={area.titulo} class="area-img" />
+            <div class="area-title">{area.titulo}</div>
+          </div>
+          <div class="area-desc">{area.descripcion}</div>
+        </div>
+      ))}
+    </div>
   </main>
 
   <Footer />
@@ -34,11 +92,12 @@ import Footer from "./Footer.astro";
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    align-items: center;
   }
 
   .areas-title {
     text-align: center;
-    margin-top: 6rem;
+    margin-top: 4rem;
     color: #fff;
     font-size: 2.5rem;
     font-weight: bold;
@@ -47,16 +106,108 @@ import Footer from "./Footer.astro";
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
   }
 
+  .areas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    width: 100%;
+    max-width: 1100px;
+    margin: 3rem auto 0 auto;
+    padding: 0 1rem 3rem 1rem;
+  }
+
+  .area-card {
+    background: rgba(11, 23, 46, 0.85);
+    border-radius: 1.5rem;
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.25);
+    overflow: hidden; /* importante */
+    transition: box-shadow 0.3s, height 0.3s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .area-img-container {
+    position: relative;
+    width: 100%;
+    height: 260px;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background: #222;
+    cursor: pointer;
+  }
+
+  .area-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s cubic-bezier(.23,1.02,.64,.98), filter 0.4s;
+    filter: brightness(0.85) grayscale(10%);
+  }
+
+  .area-title {
+    position: absolute;
+    bottom: 2rem;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 16px #010d1f, 0 1px 0 #000;
+    z-index: 2;
+    transition: bottom 0.4s, color 0.4s;
+    pointer-events: none;
+  }
+
+  .area-desc {
+    color: #fff;
+    font-size: 1.08rem;
+    opacity: 0;
+    max-height: 0;
+    padding: 0 1.2rem;
+    margin-top: 0;
+    text-align: center;
+    transition: opacity 0.4s, max-height 0.4s, margin 0.4s;
+    background: linear-gradient(180deg, transparent 0%, #07182e 100%);
+    border-radius: 0 0 1.5rem 1.5rem;
+    overflow: hidden;
+  }
+
+  /* Hover SOLO en la tarjeta actual */
+  .area-card:hover .area-img,
+  .area-card:focus-within .area-img {
+    transform: scale(1.08);
+    filter: brightness(1) grayscale(0%);
+  }
+
+  .area-card:hover .area-title,
+  .area-card:focus-within .area-title {
+    color: #e0b02e;
+    bottom: 80px;
+    text-shadow: 0 2px 16px #e0b02e, 0 1px 0 #000;
+  }
+
+  .area-card:hover .area-desc,
+  .area-card:focus-within .area-desc {
+    opacity: 1;
+    max-height: 200px;
+    margin: 1.2rem 0 1.5rem 0;
+  }
+
   @media (max-width: 900px) {
     .areas-title {
       font-size: 2rem;
       margin-top: 4rem;
     }
   }
+
   @media (max-width: 600px) {
-    .areas-title {
-      font-size: 1.3rem;
-      margin-top: 3rem;
-    }
+    .areas-title { font-size: 1.3rem; margin-top: 2rem; }
+    .area-img-container { height: 180px; }
+    .areas-grid { gap: 1.2rem; }
   }
 </style>
