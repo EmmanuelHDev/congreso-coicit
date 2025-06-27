@@ -1,0 +1,62 @@
+---
+import Header from "../components/HeaderAreasTematicas.jsx";
+import Footer from "./Footer.astro";
+---
+
+<div class="page-container">
+  <Header client:load />
+
+  <main class="main-content">
+    <h1 class="areas-title">Áreas Temáticas</h1>
+    <!-- Aquí puedes agregar más contenido si lo deseas -->
+  </main>
+
+  <Footer />
+</div>
+
+<style>
+  body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(145deg, #07182e 0%, #0f2946 50%, #17395b 100%);
+  }
+
+  .page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(145deg, #07182e 0%, #0f2946 50%, #17395b 100%);
+  }
+
+  .main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .areas-title {
+    text-align: center;
+    margin-top: 6rem;
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 16px #0f2946, 0 1px 0 #000;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  }
+
+  @media (max-width: 900px) {
+    .areas-title {
+      font-size: 2rem;
+      margin-top: 4rem;
+    }
+  }
+  @media (max-width: 600px) {
+    .areas-title {
+      font-size: 1.3rem;
+      margin-top: 3rem;
+    }
+  }
+</style>
