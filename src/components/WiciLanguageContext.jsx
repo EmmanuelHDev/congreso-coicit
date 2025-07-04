@@ -6,7 +6,7 @@ const translations = { es, en };
 const WiciLanguageContext = createContext();
 
 export function WiciLanguageProvider({ children }) {
-  const [lang, setLang] = useState("es");
+  const [lang, setLang] = useState("en");
   const value = { lang, setLang, t: translations[lang] };
   return (
     <WiciLanguageContext.Provider value={value}>

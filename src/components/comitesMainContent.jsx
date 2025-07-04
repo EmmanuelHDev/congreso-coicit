@@ -10,12 +10,64 @@ const ComitesMainContent = () => {
       comiteOrganizador: "Comité Organizador",
       comiteCientifico: "Comité Científico",
       colaboradores: "Colaboradores",
+      organizador: [
+        "Dr. Cristian Pinzón – Universidad Tecnológica de Panamá",
+        "Dr. Edmanuel Cruz – Universidad Tecnológica de Panamá",
+        "Dr. Mauricio Hooper – Universidad Tecnológica de Panamá",
+        "Dr. Anibal Santos – Universidad Tecnológica de Panamá",
+        "Dr. Elvis Castillo – Universidad Tecnológica de Panamá",
+        "Dr. José Carlos Rangel – Universidad Tecnológica de Panamá",
+      ],
+      cientifico: [
+        "Ivonne Núñez – University of Bern",
+        "Dra. Sherley Portugal – Universidad Tecnológica de Panamá",
+        "Dr. Wedley Tejedor – Universidad Tecnológica de Panamá",
+        "Dr. Vladimir Villarreal – Universidad Tecnológica de Panamá",
+        "Dr. Javier Bajo Pérez – Universidad Politécnica de Madrid",
+        "Dr. Antonio González – Instituto Tecnológico de Costa Rica",
+        "Dr. Juan Francisco De Paz – Universidad de Salamanca",
+        "Dr. Dimas Concepción – Instituto Técnico Superior Especializado",
+        "Dra. Nila Navarro – Universidad Iberoamericana de Panamá",
+        "Fernando De la Prieta Pintado – Universidad de Salamanca",
+        "Álvaro Lozano Murciego – Universidad de Salamanca",
+        "Dr. Cesar De Jesus Pinzon Acosta – Universidad Tecnológica de Panamá",
+        "Dr. Santiago Quintero – Universidad Tecnológica de Panamá",
+        "Dra. Franchesca Gonzalez-Olivardia – Universidad Tecnológica de Panamá",
+        "Dr. Manuel Curado – Universidad de Alicante",
+        "Dr. Jose Abrego – Universidad de Granada",
+      ],
     },
     en: {
       titulo: "Organizing Committees",
       comiteOrganizador: "Organizing Committee",
       comiteCientifico: "Scientific Committee",
       colaboradores: "Collaborators",
+      organizador: [
+        "Dr. Cristian Pinzón – Technological University of Panama",
+        "Dr. Edmanuel Cruz – Technological University of Panama",
+        "Dr. Mauricio Hooper – Technological University of Panama",
+        "Dr. Anibal Santos – Technological University of Panama",
+        "Dr. Elvis Castillo – Technological University of Panama",
+        "Dr. José Carlos Rangel – Technological University of Panama",
+      ],
+      cientifico: [
+        "Ivonne Núñez – University of Bern",
+        "Dr. Sherley Portugal – Technological University of Panama",
+        "Dr. Wedley Tejedor – Technological University of Panama",
+        "Dr. Vladimir Villarreal – Technological University of Panama",
+        "Dr. Javier Bajo Pérez – Polytechnic University of Madrid",
+        "Dr. Antonio González – Costa Rica Institute of Technology",
+        "Dr. Juan Francisco De Paz – University of Salamanca",
+        "Dr. Dimas Concepción – Instituto Técnico Superior Especializado",
+        "Dr. Nila Navarro – Universidad Iberoamericana de Panamá",
+        "Fernando De la Prieta Pintado – University of Salamanca",
+        "Álvaro Lozano Murciego – University of Salamanca",
+        "Dr. Cesar De Jesus Pinzon Acosta – Technological University of Panama",
+        "Dr. Santiago Quintero – Technological University of Panama",
+        "Dra. Franchesca Gonzalez-Olivardia – Technological University of Panama",
+        "Dr. Manuel Curado – University of Alicante",
+        "Dr. Jose Abrego – University of Granada",
+      ],
     },
   }[lang];
 
@@ -37,162 +89,32 @@ const ComitesMainContent = () => {
             {/* Comité Organizador */}
             <div className="w-full max-w-[66rem]">
               <h1 className="text-2xl font-bold text-gray-800 text-left">
-                {t.comiteOrganizador}
+                <strong>{t.comiteOrganizador}</strong>
               </h1>
               <div className="h-[1px] w-full bg-amber-400 mt-1 mb-4"></div>
-              <ul className="list-disc pl-6 text-gray-700 space-y-1">
-                <li>
-                  <strong>Dr. Cristian Pinzón</strong> – Universidad Tecnológica
-                  de Panamá (
-                  <a
-                    href="mailto:cristian.pinzon@utp.ac.pa"
-                    className="text-blue-600 underline"
-                  >
-                    cristian.pinzon@utp.ac.pa
-                  </a>
-                  )
-                </li>
-                <li>
-                  <strong>Dr. Edmanuel Cruz</strong> – Universidad Tecnológica
-                  de Panamá (
-                  <a
-                    href="mailto:edmanuel.cruz@utp.ac.pa"
-                    className="text-blue-600 underline"
-                  >
-                    edmanuel.cruz@utp.ac.pa
-                  </a>
-                  )
-                </li>
-                <li>
-                  <strong>Dr. Mauricio Hooper</strong> – Universidad Tecnológica
-                  de Panamá (
-                  <a
-                    href="mailto:mauricio.hooper@utp.ac.pa"
-                    className="text-blue-600 underline"
-                  >
-                    mauricio.hooper@utp.ac.pa
-                  </a>
-                  )
-                </li>
-                <li>
-                  <strong>Dr. Anibal Santos</strong> – Universidad Tecnológica
-                  de Panamá (
-                  <a
-                    href="mailto:anibal.santos@utp.ac.pa"
-                    className="text-blue-600 underline"
-                  >
-                    anibal.santos@utp.ac.pa
-                  </a>
-                  )
-                </li>
-                <li>
-                  <strong>Dr. Elvis Castillo</strong> – Universidad Tecnológica
-                  de Panamá (
-                  <a
-                    href="mailto:elvis.castillo2@utp.ac.pa"
-                    className="text-blue-600 underline"
-                  >
-                    elvis.castillo2@utp.ac.pa
-                  </a>
-                  )
-                </li>
-                <li>
-                  <strong>Dr. José Carlos Rangel</strong> – Universidad
-                  Tecnológica de Panamá (
-                  <a
-                    href="mailto:jose.rangel@utp.ac.pa"
-                    className="text-blue-600 underline"
-                  >
-                    jose.rangel@utp.ac.pa
-                  </a>
-                  )
-                </li>
+              <ul className="list-disc pl-20 text-gray-700 space-y-1">
+                {t.organizador.map((item, idx) => (
+                  <li key={idx}>
+                    <strong>{item.split("–")[0].trim()}</strong> –{" "}
+                    {item.split("–")[1].trim()}
+                  </li>
+                ))}
               </ul>
             </div>
 
             {/* Comité Científico */}
             <div className="w-full max-w-[66rem] mt-16">
               <h1 className="text-2xl font-bold text-gray-800 text-left">
-                {t.comiteCientifico}
+                <strong>{t.comiteCientifico}</strong>
               </h1>
               <div className="h-[1px] w-full bg-amber-400 mt-1 mb-4"></div>
-              <ul className="list-disc pl-6 text-gray-700 space-y-1">
-                <li>
-                  <strong>Ivonne Núñez</strong> – University of Bern (
-                  <a
-                    href="mailto:ivonne.nunez@unibe.ch"
-                    className="text-blue-600 underline"
-                  >
-                    ivonne.nunez@unibe.ch
-                  </a>
-                  )
-                </li>
-                <li>
-                  <strong>Dra. Sherley Portugal</strong> – Universidad
-                  Tecnológica de Panamá (
-                  <a
-                    href="mailto:sherlie.portugal@utp.ac.pa"
-                    className="text-blue-600 underline"
-                  >
-                    sherlie.portugal@utp.ac.pa
-                  </a>
-                  )
-                </li>
-                <li>
-                  <strong>Dr. Wedley Tejedor</strong> – Universidad Tecnológica
-                  de Panamá (
-                  <a
-                    href="mailto:wedleys.tejedor@utp.ac.pa"
-                    className="text-blue-600 underline"
-                  >
-                    wedleys.tejedor@utp.ac.pa
-                  </a>
-                  )
-                </li>
-                <li>
-                  <strong>Dr. Vladimir Villarreal</strong> – Universidad
-                  Tecnológica de Panamá (
-                  <a
-                    href="mailto:vladimir.villarreal@utp.ac.pa"
-                    className="text-blue-600 underline"
-                  >
-                    vladimir.villarreal@utp.ac.pa
-                  </a>
-                  )
-                </li>
-                <li>
-                  <strong>Dr. Javier Bajo Pérez</strong> – Universidad
-                  Politécnica de Madrid (
-                  <a
-                    href="mailto:jbajo@fi.upm.es"
-                    className="text-blue-600 underline"
-                  >
-                    jbajo@fi.upm.es
-                  </a>
-                  )
-                </li>
-                <li>
-                  <strong>Dr. Antonio González</strong> – Instituto Tecnológico
-                  de Costa Rica (
-                  <a
-                    href="mailto:antonio.gonzalez@itcr.ac.cr"
-                    className="text-blue-600 underline"
-                  >
-                    antonio.gonzalez@itcr.ac.cr
-                  </a>
-                  )
-                </li>
-                <li>
-                  <strong>Dr. Juan Francisco De Paz</strong> – Universidad de
-                  Salamanca (
-                  <a
-                    href="mailto:fcofds@usal.es"
-                    className="text-blue-600 underline"
-                  >
-                    fcofds@usal.es
-                  </a>
-                  )
-                </li>
+              <ul className="list-disc pl-20 text-gray-700 space-y-1">
+                {t.cientifico.map((item, idx) => (
+                  <li key={idx}>
+                    <strong>{item.split("–")[0].trim()}</strong> –{" "}
+                    {item.split("–")[1].trim()}
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
