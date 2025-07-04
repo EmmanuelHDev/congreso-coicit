@@ -93,7 +93,7 @@ const Header = () => {
           {/* Enlaces */}
           <nav className="mt-8" aria-label="Mobile Menu">
             <ul className="flex flex-col gap-6 text-lg">
-              <li><a onClick={handleLinkClick} className="text-white transition hover:text-black" href="#">Inicio</a></li>
+              <li><a onClick={handleLinkClick} className="text-white transition hover:text-black" href="/">Inicio</a></li>
               <li><a onClick={handleLinkClick} className="text-white transition hover:text-black" href="#">Programa</a></li>
               <li><a onClick={handleLinkClick} className="text-white transition hover:text-black" href="/CoicitAreasTematicas">Áreas temáticas</a></li>
               <li><a onClick={handleLinkClick} className="text-white transition hover:text-black" href="/WiciPages">WICI</a></li>
