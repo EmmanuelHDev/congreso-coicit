@@ -31,7 +31,7 @@ const Header = () => {
           href="mailto:congreso.ve@utp.ac.pa"
           className="hover:text-yellow-400 transition"
         >
-          congreso.ve@utp.ac.pa
+          wici.ve@utp.ac.pa
         </a>
       </div>
 
