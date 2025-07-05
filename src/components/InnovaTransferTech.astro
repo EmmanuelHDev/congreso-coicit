@@ -1,0 +1,137 @@
+---
+import Header from "./HeaderITransferT.jsx";
+import Footer from "./Footer.astro";
+---
+
+<div class="page-container">
+  <Header client:load />
+
+  <main class="main-content">
+    <h1 class="areas-title">Innova Transfer Tech</h1>
+    <div class="subtitle">"Impulsando la innovación abierta"</div>
+    <div class="intro-card">
+      <p>
+        <strong>INNOVA TRANSFER TECH</strong> es el puente para experimentar la transferencia de tecnología en Provincias Centrales, somos pioneros en la innovación abierta, impulsando soluciones tecnológicas a empresas, organizaciones e instituciones de la región.
+      </p>
+      <p>
+        <strong>Acompáñanos el jueves 16 de octubre 2025</strong> en la Universidad Tecnológica de Panamá, en la Sala de Conferencias N°1 en horario de <strong>10:00 AM a 3:00 PM</strong>.
+      </p>
+    </div>
+    <div class="terms">
+      <strong>Términos y condiciones:</strong><br />
+      Los participantes serán evaluados y notificados vía correo electrónico para confirmar la participación y lineamientos.
+    </div>
+    <!-- Aquí puedes agregar el contenido que desees para esta página -->
+  </main>
+
+  <Footer />
+</div>
+
+<style>
+  .page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(145deg, #07182e 0%, #0f2946 50%, #17395b 100%);
+  }
+  .main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background: transparent;
+  }
+  .areas-title {
+    text-align: center;
+    margin-top: 4rem;
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 16px #0f2946, 0 1px 0 #000;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  }
+  .subtitle {
+    color: #e0b02e;
+    font-size: 1.3rem;
+    margin-top: 1.2rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    font-weight: 600;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+  }
+  .intro-card {
+    background: rgba(11, 23, 46, 0.92);
+    color: #fff;
+    border-radius: 1.2rem;
+    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.18);
+    max-width: 540px;
+    padding: 2rem 2rem 1.5rem 2rem;
+    margin-bottom: 2.5rem;
+    font-size: 1.08rem;
+    line-height: 1.6;
+    text-align: justify;
+    border-left: none;
+    margin-top: 0.5rem;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  }
+  .intro-card strong {
+    color: #e0b02e;
+    font-weight: 700;
+  }
+  .terms {
+    color: #fff;
+    background: rgba(11, 23, 46, 0.85);
+    border-radius: 0.8rem;
+    max-width: 540px;
+    margin: 0 auto 2.5rem auto;
+    padding: 1.1rem 1.5rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: justify;
+    /* Quitar el borde amarillo */
+    border-left: none;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  }
+  .terms strong {
+    color: #e0b02e;
+    font-weight: 700;
+  }
+  @media (max-width: 900px) {
+    .areas-title {
+      font-size: 2rem;
+      margin-top: 4rem;
+    }
+    .subtitle {
+      font-size: 1.1rem;
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+    }
+    .intro-card, .terms {
+      font-size: 1rem;
+      padding: 1.2rem 1rem 1rem 1rem;
+      max-width: 95vw;
+    }
+  }
+  @media (max-width: 600px) {
+    .areas-title {
+      font-size: 1.3rem;
+      margin-top: 3rem;
+    }
+    .subtitle {
+      font-size: 1rem;
+      margin-top: 0.8rem;
+      margin-bottom: 1.5rem;
+    }
+    .intro-card, .terms {
+      font-size: 0.97rem;
+      padding: 1rem 0.7rem 0.7rem 0.7rem;
+      margin-bottom: 1.5rem;
+      border-radius: 0.8rem;
+      border-left: none;
+    }
+  }
+</style>
+
