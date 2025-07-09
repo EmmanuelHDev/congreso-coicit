@@ -23,6 +23,16 @@ export default {
       PRISMA Tecnológico, revista multidisciplinaria indexada en DOAJ y Latindex, de acceso abierto y revisión
       doble-ciego.`,
   },
+  fechas: {
+    titulo: "Fechas Importantes",
+    items: [
+      "Fecha límite de envío: 1 de septiembre de 2025",
+      "Notificación de aceptación: 29 de septiembre de 2025",
+      "Versión final: 3 de octubre de 2025",
+      "Registro de autores: 8 de octubre de 2025",
+      "Fecha del evento: 16 de octubre de 2025",
+    ],
+  },
   temas: {
     titulo: "Temas de Interés",
     texto:

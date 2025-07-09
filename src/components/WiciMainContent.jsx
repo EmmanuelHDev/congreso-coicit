@@ -65,6 +65,21 @@ const WiciMainContent = () => {
       <section className="px-4 py-8 md:px-8 lg:px-16 bg-white">
         <div className="max-w-screen-md mx-auto">
           <h2 className="text-[#e0b02e] text-2xl font-bold mb-4">
+            {t.fechas.titulo}
+          </h2>
+          <div className="bg-gray-50 rounded-xl shadow p-6 mb-6 border border-gray-200">
+            <ul className="list-disc list-inside space-y-1">
+              {t.fechas.items.map((fecha, idx) => (
+                <li key={idx}>{fecha}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section className="px-4 py-8 md:px-8 lg:px-16 bg-white">
+        <div className="max-w-screen-md mx-auto">
+          <h2 className="text-[#e0b02e] text-2xl font-bold mb-4">
             {t.lugar.titulo}
           </h2>
           <p className="text-gray-800 leading-relaxed">{t.lugar.texto}</p>
