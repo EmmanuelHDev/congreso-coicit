@@ -29,7 +29,7 @@ const texts = {
     ubicacionTexto:
       "El taller se realizará en el Salón Galo Chang, UTP Veraguas, de forma presencial y virtual.",
     contactoTitulo: "Contacto",
-    contactos: ["wici.ve@utp.ac.pa"],
+    contactos: ["mauricio.hooper@utp.ac.pa", "wici.ve@utp.ac.pa"],
     submitTitulo: "Dónde y Cómo Enviar",
     submitTexto:
       "El envío de manuscritos se realizará exclusivamente a través de la plataforma Microsoft CMT. Debe crear una cuenta (si no la tiene) y seguir los pasos indicados. El enlace de envío estará disponible próximamente aquí.",
@@ -68,7 +68,7 @@ const texts = {
     ubicacionTexto:
       "The workshop will take place at the Salón Galo Chang, UTP Veraguas, both onsite and virtually.",
     contactoTitulo: "Contact",
-    contactos: ["wici.ve@utp.ac.pa"],
+    contactos: ["mauricio.hooper@utp.ac.pa", "wici.ve@utp.ac.pa"],
     submitTitulo: "Where and How to Submit",
     submitTexto:
       "Manuscript submission will be done exclusively through the Microsoft CMT platform. Please create an account (if you do not already have one) and follow the submission steps. The submission link will be available here soon.",
@@ -173,17 +173,26 @@ const SubmissionMainContent = () => {
         <div className="max-w-3xl mx-auto mt-8 mb-4">
           <h3 className="text-xl font-semibold mb-3">{t.contactoTitulo}</h3>
           <div className="bg-gray-50 rounded-xl shadow p-6 border border-gray-200">
-            <p className="flex flex-wrap items-center gap-2">
+            <p className="mb-1">
               {lang === "es"
                 ? "Para cualquier consulta, puede escribirnos al siguiente correo electrónico:"
-                : "For further information regarding the workshop, please contact us at:"}{" "}
-              <a
-                href={`mailto:${t.contactos[0]}`}
-                className="text-blue-700 hover:underline break-all"
-              >
-                {t.contactos[0]}
-              </a>
+                : "For further information regarding the workshop, please contact us at:"}
             </p>
+            <div className="flex flex-wrap items-center gap-2">
+              {t.contactos.map((correo, idx) => (
+                <React.Fragment key={correo}>
+                  <a
+                    href={`mailto:${correo}`}
+                    className="text-blue-700 hover:underline break-all"
+                  >
+                    {correo}
+                  </a>
+                  {idx < t.contactos.length - 1 && (
+                    <span className="mx-1">|</span>
+                  )}
+                </React.Fragment>
+              ))}
+            </div>
           </div>
         </div>
       </section>
