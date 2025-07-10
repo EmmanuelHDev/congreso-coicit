@@ -39,7 +39,7 @@ const texts = {
       "Siga las instrucciones y complete su envío según la guía para autores.",
     ],
     cmtTitulo: "Reconocimiento a Microsoft CMT",
-    cmtAck: `The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.`
+    cmtAck: `The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.`,
   },
   en: {
     titulo: "Submission",
@@ -78,7 +78,7 @@ const texts = {
       "Follow the instructions and complete your submission according to the author guidelines.",
     ],
     cmtTitulo: "Microsoft CMT Acknowledgment",
-    cmtAck: `The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.`
+    cmtAck: `The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.`,
   },
 };
 
@@ -173,18 +173,17 @@ const SubmissionMainContent = () => {
         <div className="max-w-3xl mx-auto mt-8 mb-4">
           <h3 className="text-xl font-semibold mb-3">{t.contactoTitulo}</h3>
           <div className="bg-gray-50 rounded-xl shadow p-6 border border-gray-200">
-            <ul>
-              {t.contactos.map((correo, i) => (
-                <li key={i}>
-                  <a
-                    href={`mailto:${correo}`}
-                    className="text-blue-700 hover:underline"
-                  >
-                    {correo}
-                  </a>
-                </li>
-              ))}
-            </ul>
+            <p className="flex flex-wrap items-center gap-2">
+              {lang === "es"
+                ? "Para cualquier consulta, puede escribirnos al siguiente correo electrónico:"
+                : "For further information regarding the workshop, please contact us at:"}{" "}
+              <a
+                href={`mailto:${t.contactos[0]}`}
+                className="text-blue-700 hover:underline break-all"
+              >
+                {t.contactos[0]}
+              </a>
+            </p>
           </div>
         </div>
       </section>
