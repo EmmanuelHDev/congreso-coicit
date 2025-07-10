@@ -77,6 +77,15 @@ const WiciMainContent = () => {
         </div>
       </section>
 
+      <section className="max-w-3xl mx-auto mt-8 mb-8">
+        <h3 className="text-xl font-semibold mb-3">{t.cmt.titulo}</h3>
+        <div className="bg-gray-50 rounded-xl shadow p-6 border border-gray-200">
+          <p style={{ fontWeight: "normal", fontStyle: "normal" }}>
+            {t.cmt.ack}
+          </p>
+        </div>
+      </section>
+
       <section className="px-4 py-8 md:px-8 lg:px-16 bg-white">
         <div className="max-w-screen-md mx-auto">
           <h2 className="text-[#e0b02e] text-2xl font-bold mb-4">

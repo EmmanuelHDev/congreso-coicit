@@ -4,7 +4,7 @@ import { useWiciLanguage } from "./WiciLanguageContext";
 const texts = {
   es: {
     titulo: "Envío de Trabajos",
-    call: "Convocatoria de Artículos",
+    call: "Instrucciones para Autores",
     descripcion1:
       "La Universidad Tecnológica de Panamá (UTP), Centro Regional de Veraguas, invita a la comunidad científica nacional e internacional a enviar manuscritos originales e inéditos para el WICI-UTP ’2025, taller oficial de COICIT 2025.",
     descripcion2:
@@ -30,10 +30,20 @@ const texts = {
       "El taller se realizará en el Salón Galo Chang, UTP Veraguas, de forma presencial y virtual.",
     contactoTitulo: "Contacto",
     contactos: ["wici.ve@utp.ac.pa"],
+    submitTitulo: "Dónde y Cómo Enviar",
+    submitTexto:
+      "El envío de manuscritos se realizará exclusivamente a través de la plataforma Microsoft CMT. Debe crear una cuenta (si no la tiene) y seguir los pasos indicados. El enlace de envío estará disponible próximamente aquí.",
+    submitPasos: [
+      "Regístrese o inicie sesión en la plataforma oficial: ",
+      "Una vez habilitado el portal de envíos, el enlace aparecerá aquí. (Próximamente)",
+      "Siga las instrucciones y complete su envío según la guía para autores.",
+    ],
+    cmtTitulo: "Reconocimiento a Microsoft CMT",
+    cmtAck: `The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.`
   },
   en: {
     titulo: "Submission",
-    call: "Call for Papers",
+    call: "Instructions for Authors",
     descripcion1:
       "La Universidad Tecnológica de Panamá (UTP), Centro Regional de Veraguas, invites the national and international scientific community to submit original, unpublished manuscripts to WICI-UTP ’2025, the official workshop of COICIT 2025.",
     descripcion2:
@@ -59,6 +69,16 @@ const texts = {
       "The workshop will take place at the Salón Galo Chang, UTP Veraguas, both onsite and virtually.",
     contactoTitulo: "Contact",
     contactos: ["wici.ve@utp.ac.pa"],
+    submitTitulo: "Where and How to Submit",
+    submitTexto:
+      "Manuscript submission will be done exclusively through the Microsoft CMT platform. Please create an account (if you do not already have one) and follow the submission steps. The submission link will be available here soon.",
+    submitPasos: [
+      "Register or log in at the official platform: ",
+      "Once the submission portal is open, the direct link will be available here. (Coming soon)",
+      "Follow the instructions and complete your submission according to the author guidelines.",
+    ],
+    cmtTitulo: "Microsoft CMT Acknowledgment",
+    cmtAck: `The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.`
   },
 };
 
@@ -116,6 +136,37 @@ const SubmissionMainContent = () => {
           <h3 className="text-xl font-semibold mb-3">{t.ubicacionTitulo}</h3>
           <div className="bg-gray-50 rounded-xl shadow p-6 mb-6 border border-gray-200">
             <p>{t.ubicacionTexto}</p>
+          </div>
+        </div>
+
+        <div className="max-w-3xl mx-auto mt-12">
+          <h3 className="text-xl font-semibold mb-3">{t.submitTitulo}</h3>
+          <div className="bg-gray-50 rounded-xl shadow p-6 mb-6 border border-gray-200">
+            <p>{t.submitTexto}</p>
+            <ul className="list-decimal list-inside mt-4 space-y-1">
+              <li>
+                {t.submitPasos[0]}
+                <a
+                  href="https://cmt3.research.microsoft.com/CMTSRM"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-700 underline"
+                >
+                  Microsoft CMT
+                </a>
+              </li>
+              <li>{t.submitPasos[1]}</li>
+              <li>{t.submitPasos[2]}</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="max-w-3xl mx-auto mt-8 mb-8">
+          <h3 className="text-xl font-semibold mb-3">{t.cmtTitulo}</h3>
+          <div className="bg-gray-50 rounded-xl shadow p-6 border border-gray-200">
+            <p style={{ fontWeight: "normal", fontStyle: "normal" }}>
+              {t.cmtAck}
+            </p>
           </div>
         </div>
 
