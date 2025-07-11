@@ -2,10 +2,26 @@ import React from "react";
 import { useWiciLanguage } from "./WiciLanguageContext";
 
 const sponsors = [
-  { src: "/img/wici/Patrocinadores/Firma_TEC.webp", alt: "Firma TEC" },
-  { src: "/img/wici/Patrocinadores/Grupo_OEG.webp", alt: "Grupo OEG" },
-  { src: "/img/wici/Patrocinadores/Logo_ESALAB.webp", alt: "ESALAB" },
-  { src: "/img/wici/Patrocinadores/Logo_Robotsis.webp", alt: "Robotsis" },
+  {
+    src: "/img/wici/Patrocinadores/Firma_TEC.webp",
+    alt: "Firma TEC",
+    link: "https://www.tec.ac.cr",
+  },
+  {
+    src: "/img/wici/Patrocinadores/Grupo_OEG.webp",
+    alt: "Grupo OEG",
+    link: "https://oeg.fi.upm.es",
+  },
+  {
+    src: "/img/wici/Patrocinadores/Logo_ESALAB.webp",
+    alt: "ESALAB",
+    link: "https://esalab.es",
+  },
+  {
+    src: "/img/wici/Patrocinadores/Logo_Robotsis.webp",
+    alt: "Robotsis",
+    link: "http://robotsis.utp.ac.pa",
+  },
 ];
 
 const WiciMainContent = () => {
@@ -100,14 +116,21 @@ const WiciMainContent = () => {
         </h2>
         <div className="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 place-items-center">
           {sponsors.map((s, i) => (
-            <div key={i} className="flex items-center justify-center w-full">
+            <a
+              key={i}
+              href={s.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center w-full"
+              title={s.alt}
+            >
               <img
                 src={s.src}
                 alt={s.alt}
                 className="max-h-24 w-auto object-contain transition-transform hover:scale-105"
                 style={{ background: "#fff", borderRadius: 16, padding: 10 }}
               />
-            </div>
+            </a>
           ))}
         </div>
       </section>

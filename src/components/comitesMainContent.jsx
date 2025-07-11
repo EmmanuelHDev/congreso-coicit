@@ -19,23 +19,23 @@ const ComitesMainContent = () => {
         "Dr. José Carlos Rangel – Universidad Tecnológica de Panamá",
       ],
       cientifico: [
-        "Ivonne Núñez – University of Bern",
         "Dra. Sherley Portugal – Universidad Tecnológica de Panamá",
         "Dr. Wedley Tejedor – Universidad Tecnológica de Panamá",
         "Dr. Vladimir Villarreal – Universidad Tecnológica de Panamá",
         "Dr. Javier Bajo Pérez – Universidad Politécnica de Madrid",
         "Dr. Antonio González – Instituto Tecnológico de Costa Rica",
         "Dr. Juan Francisco De Paz – Universidad de Salamanca",
-        "Dr. Dimas Concepción – Instituto Técnico Superior Especializado",
-        "Dra. Nila Navarro – Universidad Iberoamericana de Panamá",
         "Dr. Fernando De la Prieta Pintado – Universidad de Salamanca",
-        "Álvaro Lozano Murciego – Universidad de Salamanca",
+        "Dr. Álvaro Lozano Murciego – Universidad de Salamanca",
         "Dr. Cesar De Jesus Pinzon Acosta – Universidad Tecnológica de Panamá",
         "Dr. Santiago Quintero – Universidad Tecnológica de Panamá",
         "Dra. Franchesca Gonzalez-Olivardia – Universidad Tecnológica de Panamá",
         "Dr. Manuel Curado – Universidad de Alicante",
         "Dr. Jose Abrego – Universidad de Granada",
         "Dra. Sara Rodríguez – Universidad de Salamanca",
+        "MSc. Ivonne Núñez – University of Bern",
+        "MSc. Dimas Concepción – Instituto Técnico Superior Especializado",
+        "MSc. Nila Navarro – Universidad Iberoamericana de Panamá",
       ],
     },
     en: {
@@ -52,33 +52,56 @@ const ComitesMainContent = () => {
         "Dr. José Carlos Rangel – Technological University of Panama",
       ],
       cientifico: [
-        "Ivonne Núñez – University of Bern",
-        "Dra. Sherley Portugal – Technological University of Panama",
-        "Dr. Wedley Tejedor – Technological University of Panama",
-        "Dr. Vladimir Villarreal – Technological University of Panama",
+        "Dra. Sherley Portugal – Universidad Tecnológica de Panamá",
+        "Dr. Wedley Tejedor – Universidad Tecnológica de Panamá",
+        "Dr. Vladimir Villarreal – Universidad Tecnológica de Panamá",
         "Dr. Javier Bajo Pérez – Polytechnic University of Madrid",
         "Dr. Antonio González – Costa Rica Institute of Technology",
         "Dr. Juan Francisco De Paz – University of Salamanca",
-        "Dr. Dimas Concepción – Instituto Técnico Superior Especializado",
-        "Dr. Nila Navarro – Universidad Iberoamericana de Panamá",
         "Dr. Fernando De la Prieta Pintado – University of Salamanca",
-        "Álvaro Lozano Murciego – University of Salamanca",
-        "Dr. Cesar De Jesus Pinzon Acosta – Technological University of Panama",
-        "Dr. Santiago Quintero – Technological University of Panama",
-        "Dra. Franchesca Gonzalez-Olivardia – Technological University of Panama",
+        "Dr. Álvaro Lozano Murciego – University of Salamanca",
+        "Dr. Cesar De Jesus Pinzon Acosta – Universidad Tecnológica de Panamá",
+        "Dr. Santiago Quintero – Universidad Tecnológica de Panamá",
+        "Dra. Franchesca Gonzalez-Olivardia – Universidad Tecnológica de Panamá",
         "Dr. Manuel Curado – University of Alicante",
         "Dr. Jose Abrego – University of Granada",
         "Dra. Sara Rodríguez – University of Salamanca",
+        "MSc. Ivonne Núñez – University of Bern",
+        "MSc. Dimas Concepción – Instituto Técnico Superior Especializado",
+        "MSc. Nila Navarro – Universidad Iberoamericana de Panamá",
       ],
     },
   }[lang];
+
+  // Patrocinadores con enlaces
+  const sponsors = [
+    {
+      src: "/img/wici/Patrocinadores/Firma_TEC.webp",
+      alt: "Firma TEC",
+      link: "https://www.tec.ac.cr",
+    },
+    {
+      src: "/img/wici/Patrocinadores/Grupo_OEG.webp",
+      alt: "Grupo OEG",
+      link: "https://oeg.fi.upm.es",
+    },
+    {
+      src: "/img/wici/Patrocinadores/Logo_ESALAB.webp",
+      alt: "ESALAB",
+      link: "https://esalab.es",
+    },
+    {
+      src: "/img/wici/Patrocinadores/Logo_Robotsis.webp",
+      alt: "Robotsis",
+      link: "http://robotsis.utp.ac.pa",
+    },
+  ];
 
   return (
     <>
       <main className="mt-24 bg-white">
         <section className="relative bg-[url('/img/wici/heroWICI.png')] bg-center bg-no-repeat bg-cover h-[40vh] w-full">
           <div className="absolute inset-0 bg-black/20"></div>
-
           <div className="absolute inset-0 flex items-start justify-start px-4 md:px-32 pt-16">
             <h1 className="text-white text-3xl font-bold bg-black/50 px-4 py-2 w-full md:w-[28rem]">
               {t.titulo}
@@ -122,37 +145,28 @@ const ComitesMainContent = () => {
           </div>
         </section>
 
+        {/* Colaboradores con enlaces */}
         <section className="bg-[#e0b02e] py-12 px-4">
           <h2 className="text-3xl font-bold text-center text-white mb-10">
             {t.colaboradores}
           </h2>
           <div className="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 place-items-center">
-            {[
-              {
-                src: "/img/wici/Patrocinadores/Firma_TEC.webp",
-                alt: "Firma TEC",
-              },
-              {
-                src: "/img/wici/Patrocinadores/Grupo_OEG.webp",
-                alt: "Grupo OEG",
-              },
-              {
-                src: "/img/wici/Patrocinadores/Logo_ESALAB.webp",
-                alt: "ESALAB",
-              },
-              {
-                src: "/img/wici/Patrocinadores/Logo_Robotsis.webp",
-                alt: "Robotsis",
-              },
-            ].map((s, i) => (
-              <div key={i} className="flex items-center justify-center w-full">
+            {sponsors.map((s, i) => (
+              <a
+                key={i}
+                href={s.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center w-full"
+                title={s.alt}
+              >
                 <img
                   src={s.src}
                   alt={s.alt}
                   className="max-h-24 w-auto object-contain transition-transform hover:scale-105"
                   style={{ background: "#fff", borderRadius: 16, padding: 10 }}
                 />
-              </div>
+              </a>
             ))}
           </div>
         </section>

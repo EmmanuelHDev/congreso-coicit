@@ -98,7 +98,7 @@ const Header = () => {
                     </a>
                   </li>
                   <li>
-                    <a className={navItemClass} href="#">
+                    <a className={navItemClass} href="/Registration">
                       {t.nav.registro}
                     </a>
                   </li>
@@ -229,7 +229,7 @@ const Header = () => {
                 <a
                   onClick={handleLinkClick}
                   className="transition hover:text-[#e0b02e]"
-                  href="#"
+                  href="/Registration"
                 >
                   {t.nav.registro}
                 </a>

@@ -44,7 +44,7 @@ import Footer from "./Footer.astro";
   <div class="video-iframe-wrapper-coicit">
     <iframe
       class="video-iframe-coicit"
-      src="https://www.youtube.com/embed/Lun2bLqEUao?si=LnEvKQHQkhwLCaLT" 
+      src="https://www.youtube.com/embed/Lun2bLqEUao?si=LnEvKQHQkhwLCaLT"
       title="Video COICIT 2025"
       frameborder="0"
       allowfullscreen></iframe>
@@ -53,9 +53,12 @@ import Footer from "./Footer.astro";
 
 <section class="programa-coicit-section">
   <div class="max-w-4xl mx-auto px-4 text-center">
-    <h2 class="text-2xl sm:text-3xl font-bold text-white mb-6">Programa del COICIT 2025</h2>
+    <h2 class="text-2xl sm:text-3xl font-bold text-white mb-6">
+      Programa del COICIT 2025
+    </h2>
     <p class="text-white text-lg opacity-80 mb-8">
-      ¡Descubre las actividades académicas, conferencias, workshops y exposiciones que se llevarán a cabo del 14 al 17 de octubre! 
+      ¡Descubre las actividades académicas, conferencias, workshops y
+      exposiciones que se llevarán a cabo del 14 al 17 de octubre!
     </p>
   </div>
 </section>
@@ -241,13 +244,15 @@ import Footer from "./Footer.astro";
   <div class="info-paquetes space-y-4 mb-10 w-full max-w-5xl mx-auto text-left">
     <div class="flex items-center gap-2 border-b border-gray-400 pb-2">
       <span style="font-size:1.5rem;">💵</span>
-      <span class="font-semibold text-yellow-400 italic"
-        >Los precios de los paquetes será hasta el 30 de septiembre. A partir
-        del 01 de octubre todos los paquetes tienen un incremento de B/. 10.00</span
-      >
+      <span class="font-semibold text-green-400 italic">
+        Los precios de los paquetes será hasta el 30 de septiembre. A partir del
+        01 de octubre todos los paquetes tienen un incremento de B/. 10.00
+      </span>
     </div>
   </div>
-  <div class="paquetes-grid-custom mx-auto my-12 grid grid-cols-1 sm:grid-cols-2 gap-10">
+  <div
+    class="paquetes-grid-custom mx-auto my-12 grid grid-cols-1 sm:grid-cols-2 gap-10"
+  >
     <div class="paquete-item">
       <img
         src="/img/coicit/paquetes/Paquete_Docente_TiempoCompleto.webp"
@@ -288,7 +293,6 @@ import Footer from "./Footer.astro";
         <span class="paquete-precio">B/. 75.00</span>
       </div>
     </div>
-  
   </div>
 </section>
 
@@ -303,7 +307,40 @@ import Footer from "./Footer.astro";
   </div>
 </section> -->
 
-<Footer/>
+<section
+  class="patrocinadores-section"
+  style="
+    background: #142c46;
+    padding: 2.1rem 0 2.4rem 0;
+    min-height: 170px;
+  "
+>
+  <div class="text-center mb-7">
+    <h2
+      style="
+      font-family: 'Montserrat', sans-serif; 
+      font-weight: 700; 
+      font-size: 1.7rem; 
+      color: #fff; 
+      margin-bottom: 2rem;
+      letter-spacing: 0.01em;
+      "
+    >
+      Sé parte de nuestros patrocinadores
+    </h2>
+    <a
+      href="mailto:wici.ve@utp.ac.pa?subject=Patrocinio COICIT 2025"
+      class="inline-block text-white font-bold text-lg rounded-2xl px-7 py-2.5
+        bg-[#186ef2] border-2 border-[#86b8ff] hover:bg-[#1253b7] transition-all duration-200
+        shadow"
+      style="font-family: 'Montserrat', sans-serif;"
+    >
+      ¿Cómo patrocinar?
+    </a>
+  </div>
+</section>
+
+<Footer />
 
 <script>
   const countdown = () => {
@@ -340,9 +377,9 @@ import Footer from "./Footer.astro";
 
 <style>
   .programa-coicit-section {
-  background: linear-gradient(145deg, #07182e 0%, #0f2946 50%, #17395b 100%);
-  padding: 4rem 1rem;
-}
+    background: linear-gradient(145deg, #07182e 0%, #0f2946 50%, #17395b 100%);
+    padding: 4rem 1rem;
+  }
 
   .areas-interes-section {
     width: 100%;
@@ -479,7 +516,10 @@ import Footer from "./Footer.astro";
   }
   .paquetes-grid-custom {
     display: grid;
-    grid-template-columns: repeat(2, minmax(150px, 1fr)); /* Siempre 2 columnas */
+    grid-template-columns: repeat(
+      2,
+      minmax(150px, 1fr)
+    ); /* Siempre 2 columnas */
     gap: 2.5rem 2rem;
     justify-content: center;
     align-items: end;
@@ -659,4 +699,3 @@ import Footer from "./Footer.astro";
     }
   }
 </style>
-

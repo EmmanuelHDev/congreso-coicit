@@ -87,116 +87,125 @@ const SubmissionMainContent = () => {
   const t = texts[lang];
 
   return (
-    <main className="mt-24 bg-white">
-      <section className="relative bg-[url('/img/wici/heroWICI.png')] bg-center bg-no-repeat bg-cover h-[40vh] w-full">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="absolute inset-0 flex items-start justify-start px-4 md:px-32 pt-16">
-          <h1 className="text-white text-3xl font-bold bg-black/50 px-4 py-2 w-full md:w-[28rem]">
-            {t.titulo}
-          </h1>
-        </div>
-      </section>
-
-      <section className="px-4 py-12 md:px-8 lg:px-24 bg-white text-gray-800 leading-relaxed">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-[#e0b02e] text-2xl font-bold mb-4">{t.call}</h2>
-          <p>{t.descripcion1}</p>
-          <p className="mt-4">{t.descripcion2}</p>
-        </div>
-
-        <div className="max-w-3xl mx-auto mt-12">
-          <h3 className="text-xl font-semibold mb-3">{t.guiaTitulo}</h3>
-          <div className="bg-gray-50 rounded-xl shadow p-6 mb-6 border border-gray-200 flex flex-col md:flex-row items-center gap-6">
-            <ul className="list-disc list-inside space-y-1 flex-1">
-              {t.guia.map((item, i) => (
-                <li key={i}>{item}</li>
-              ))}
-            </ul>
-            <img
-              src="/img/wici/Prisma.jpg"
-              alt="PRISMA Tecnológico"
-              className="w-40 h-auto rounded-xl border border-gray-200 shadow-md"
-              style={{ background: "#fff" }}
-            />
+    <div className="flex flex-col min-h-screen">
+      <main className="mt-24 bg-white flex-1">
+        <section className="relative bg-[url('/img/wici/heroWICI.png')] bg-center bg-no-repeat bg-cover h-[40vh] w-full">
+          <div className="absolute inset-0 bg-black/20"></div>
+          <div className="absolute inset-0 flex items-start justify-start px-4 md:px-32 pt-16">
+            <h1 className="text-white text-3xl font-bold bg-black/50 px-4 py-2 w-full md:w-[28rem]">
+              {t.titulo}
+            </h1>
           </div>
-        </div>
+        </section>
 
-        <div className="max-w-3xl mx-auto mt-12">
-          <h3 className="text-xl font-semibold mb-3">{t.fechasTitulo}</h3>
-          <div className="bg-gray-50 rounded-xl shadow p-6 mb-6 border border-gray-200">
-            <ul className="space-y-1">
-              {t.fechas.map((item, i) => (
-                <li key={i}>{item}</li>
-              ))}
-            </ul>
+        <section className="px-4 py-12 md:px-8 lg:px-24 bg-white text-gray-800 leading-relaxed">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-[#e0b02e] text-2xl font-bold mb-4">{t.call}</h2>
+            <p>{t.descripcion1}</p>
+            <p className="mt-4">{t.descripcion2}</p>
           </div>
-        </div>
 
-        <div className="max-w-3xl mx-auto mt-12">
-          <h3 className="text-xl font-semibold mb-3">{t.ubicacionTitulo}</h3>
-          <div className="bg-gray-50 rounded-xl shadow p-6 mb-6 border border-gray-200">
-            <p>{t.ubicacionTexto}</p>
-          </div>
-        </div>
-
-        <div className="max-w-3xl mx-auto mt-12">
-          <h3 className="text-xl font-semibold mb-3">{t.submitTitulo}</h3>
-          <div className="bg-gray-50 rounded-xl shadow p-6 mb-6 border border-gray-200">
-            <p>{t.submitTexto}</p>
-            <ul className="list-decimal list-inside mt-4 space-y-1">
-              <li>
-                {t.submitPasos[0]}
-                <a
-                  href="https://cmt3.research.microsoft.com/CMTSRM"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-700 underline"
-                >
-                  Microsoft CMT
-                </a>
-              </li>
-              <li>{t.submitPasos[1]}</li>
-              <li>{t.submitPasos[2]}</li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="max-w-3xl mx-auto mt-8 mb-8">
-          <h3 className="text-xl font-semibold mb-3">{t.cmtTitulo}</h3>
-          <div className="bg-gray-50 rounded-xl shadow p-6 border border-gray-200">
-            <p style={{ fontWeight: "normal", fontStyle: "normal" }}>
-              {t.cmtAck}
-            </p>
-          </div>
-        </div>
-
-        <div className="max-w-3xl mx-auto mt-8 mb-4">
-          <h3 className="text-xl font-semibold mb-3">{t.contactoTitulo}</h3>
-          <div className="bg-gray-50 rounded-xl shadow p-6 border border-gray-200">
-            <p className="mb-1">
-              {lang === "es"
-                ? "Para cualquier consulta, puede escribirnos al siguiente correo electrónico:"
-                : "For further information regarding the workshop, please contact us at:"}
-            </p>
-            <div className="flex flex-wrap items-center gap-2">
-              {t.contactos.map((correo, idx) => (
-                <React.Fragment key={correo}>
-                  <a
-                    href={`mailto:${correo}`}
-                    className="text-blue-700 hover:underline break-all"
-                  >
-                    {correo}
-                  </a>
-                  {idx < t.contactos.length - 1 && (
-                    <span className="mx-1">|</span>
-                  )}
-                </React.Fragment>
-              ))}
+          <div className="max-w-3xl mx-auto mt-12">
+            <h3 className="text-xl font-semibold mb-3">{t.guiaTitulo}</h3>
+            <div className="bg-gray-50 rounded-xl shadow p-6 mb-6 border border-gray-200 flex flex-col md:flex-row items-center gap-6">
+              <ul className="list-disc list-inside space-y-1 flex-1">
+                {t.guia.map((item, i) => (
+                  <li key={i}>{item}</li>
+                ))}
+              </ul>
+              <img
+                src="/img/wici/Prisma.jpg"
+                alt="PRISMA Tecnológico"
+                className="w-40 h-auto rounded-xl border border-gray-200 shadow-md"
+                style={{ background: "#fff" }}
+              />
             </div>
           </div>
+
+          <div className="max-w-3xl mx-auto mt-12">
+            <h3 className="text-xl font-semibold mb-3">{t.fechasTitulo}</h3>
+            <div className="bg-gray-50 rounded-xl shadow p-6 mb-6 border border-gray-200">
+              <ul className="space-y-1">
+                {t.fechas.map((item, i) => (
+                  <li key={i}>{item}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <div className="max-w-3xl mx-auto mt-12">
+            <h3 className="text-xl font-semibold mb-3">{t.ubicacionTitulo}</h3>
+            <div className="bg-gray-50 rounded-xl shadow p-6 mb-6 border border-gray-200">
+              <p>{t.ubicacionTexto}</p>
+            </div>
+          </div>
+
+          <div className="max-w-3xl mx-auto mt-12">
+            <h3 className="text-xl font-semibold mb-3">{t.submitTitulo}</h3>
+            <div className="bg-gray-50 rounded-xl shadow p-6 mb-6 border border-gray-200">
+              <p>{t.submitTexto}</p>
+              <ul className="list-decimal list-inside mt-4 space-y-1">
+                <li>
+                  {t.submitPasos[0]}
+                  <a
+                    href="https://cmt3.research.microsoft.com/CMTSRM"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-700 underline"
+                  >
+                    Microsoft CMT
+                  </a>
+                </li>
+                <li>{t.submitPasos[1]}</li>
+                <li>{t.submitPasos[2]}</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="max-w-3xl mx-auto mt-8 mb-8">
+            <h3 className="text-xl font-semibold mb-3">{t.cmtTitulo}</h3>
+            <div className="bg-gray-50 rounded-xl shadow p-6 border border-gray-200">
+              <p style={{ fontWeight: "normal", fontStyle: "normal" }}>
+                {t.cmtAck}
+              </p>
+            </div>
+          </div>
+
+          <div className="max-w-3xl mx-auto mt-8 mb-4">
+            <h3 className="text-xl font-semibold mb-3">{t.contactoTitulo}</h3>
+            <div className="bg-gray-50 rounded-xl shadow p-6 border border-gray-200">
+              <p className="mb-1">
+                {lang === "es"
+                  ? "Para cualquier consulta, puede escribirnos al siguiente correo electrónico:"
+                  : "For further information regarding the workshop, please contact us at:"}
+              </p>
+              <div className="flex flex-wrap items-center gap-2">
+                {t.contactos.map((correo, idx) => (
+                  <React.Fragment key={correo}>
+                    <a
+                      href={`mailto:${correo}`}
+                      className="text-blue-700 hover:underline break-all"
+                    >
+                      {correo}
+                    </a>
+                    {idx < t.contactos.length - 1 && (
+                      <span className="mx-1">|</span>
+                    )}
+                  </React.Fragment>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer className="bg-[#e0b02e]">
+        <div className="mx-auto max-w-5xl px-4 py-4 sm:px-6 lg:px-8 flex justify-center items-center">
+          <span className="text-white font-medium text-sm text-center w-full">
+            © 2025 Universidad Tecnológica de Panamá | All Rights Reserved by UTP
+          </span>
         </div>
-      </section>
-    </main>
+      </footer>
+    </div>
   );
 };
 
