@@ -93,7 +93,7 @@ const Header = () => {
                     </ul>
                   </li>
                   <li>
-                    <a className={navItemClass} href="#">
+                    <a className={navItemClass} href="/Submission">
                       {t.nav.envios}
                     </a>
                   </li>
@@ -220,7 +220,7 @@ const Header = () => {
                 <a
                   onClick={handleLinkClick}
                   className="transition hover:text-[#e0b02e]"
-                  href="#"
+                  href="/Submission"
                 >
                   {t.nav.envios}
                 </a>

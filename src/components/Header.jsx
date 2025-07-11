@@ -33,7 +33,7 @@ const Header = () => {
           <div className="hidden md:block">
             <nav aria-label="Global">
               <ul className="flex items-center gap-6 text-sm">
-                <li><a className="text-white transition hover:text-[#e0b02e]" href="#">Inicio</a></li>
+                <li><a className="text-white transition hover:text-[#e0b02e]" href="/">Inicio</a></li>
                 <li><a className="text-white transition hover:text-[#e0b02e]" href="#">Programa</a></li>
                 <li><a className="text-white transition hover:text-[#e0b02e]" href="/CoicitAreasTematicas">Áreas temáticas</a></li>
                 <li><a className="text-white transition hover:text-[#e0b02e]" href="/WiciPages">WICI</a></li>
@@ -93,7 +93,7 @@ const Header = () => {
           {/* Enlaces */}
           <nav className="mt-8" aria-label="Mobile Menu">
             <ul className="flex flex-col gap-6 text-lg">
-              <li><a onClick={handleLinkClick} className="text-white transition hover:text-black" href="#">Inicio</a></li>
+              <li><a onClick={handleLinkClick} className="text-white transition hover:text-black" href="/">Inicio</a></li>
               <li><a onClick={handleLinkClick} className="text-white transition hover:text-black" href="#">Programa</a></li>
               <li><a onClick={handleLinkClick} className="text-white transition hover:text-black" href="/CoicitAreasTematicas">Áreas temáticas</a></li>
               <li><a onClick={handleLinkClick} className="text-white transition hover:text-black" href="/WiciPages">WICI</a></li>

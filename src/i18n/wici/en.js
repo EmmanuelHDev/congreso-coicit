@@ -10,17 +10,31 @@ export default {
   hero: {
     titulo: "Workshop on Research in Science and Engineering",
     nombre: "WICI-2025",
-    ubicacion: "UTP | Regional Center of Veraguas | Galo Chang Room",
+    ubicacion: "UTP | Centro Regional de Veraguas | Sala Galo Chang",
     fecha: "October 16, 2025",
   },
   call: {
     titulo: "Call for Papers",
-    texto: `The Technological University of Panama (UTP), Regional Center of Veraguas, invites the
+    texto: `La Universidad Tecnológica de Panamá (UTP), Centro Regional de Veraguas, invites the
       national and international scientific community to submit original articles for
       WICE-UTP2025, the official workshop of COICIT 2025. The objective is to disseminate research,
       development and innovation results aligned with UTP's five priority research areas.
       Accepted contributions will be published in a special issue of PRISMA Tecnológico,
       a multidisciplinary journal indexed in DOAJ and Latindex, open access and double-blind peer review.`,
+  },
+  fechas: {
+    titulo: "Important Dates",
+    items: [
+      "Submission Deadline: September 1, 2025",
+      "Acceptance Notification: September 29, 2025",
+      "Camera-Ready: October 3, 2025",
+      "Author Registration: October 8, 2025",
+      "Workshop Date: October 16, 2025",
+    ],
+  },
+  cmt: {
+    titulo: "Microsoft CMT Acknowledgment",
+    ack: `The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.`,
   },
   temas: {
     titulo: "Topics of Interest",
@@ -67,7 +81,7 @@ export default {
   ],
   lugar: {
     titulo: "Workshop Location",
-    texto: `The Workshop will be held in the Galo Chang Room, Regional Center of Veraguas, UTP,
+    texto: `The Workshop will be held in the Salón Galo Chang, Centro Regional de Veraguas, UTP,
       offering a space for knowledge exchange, experiences, and networking with national and international guests
       in both face-to-face and virtual mode in a motivating environment.`,
   },
