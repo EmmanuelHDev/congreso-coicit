@@ -39,7 +39,7 @@ const Header = () => {
                 <li><a className="text-white transition hover:text-[#e0b02e]" href="/WiciPages">WICI</a></li>
                 <li><a className="text-white transition hover:text-[#e0b02e]" href="/ITransferT">I Transfer T</a></li>
                 <li><a className="text-white transition hover:text-[#e0b02e]" href="#">Tour</a></li>
-                <li><a className="text-white transition hover:text-[#e0b02e]" href="#">Ubicación</a></li>
+                <li><a className="text-white transition hover:text-[#e0b02e]" href="/CoicitUbicacion">Ubicación</a></li>
               </ul>
             </nav>
           </div>
@@ -99,7 +99,7 @@ const Header = () => {
               <li><a onClick={handleLinkClick} className="text-white transition hover:text-black" href="/WiciPages">WICI</a></li>
               <li><a onClick={handleLinkClick} className="text-white transition hover:text-black" href="/ITransferT">I Transfer T</a></li>
               <li><a onClick={handleLinkClick} className="text-white transition hover:text-black" href="#">Tour</a></li>
-              <li><a onClick={handleLinkClick} className="text-white transition hover:text-black" href="#">Ubicación</a></li>
+              <li><a onClick={handleLinkClick} className="text-white transition hover:text-black" href="/CoicitUbicacion">Ubicación</a></li>
             </ul>
           </nav>
         </div>

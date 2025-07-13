@@ -1,0 +1,89 @@
+---
+import Header from "../components/Header.jsx";
+import Footer from "../components/Footer.astro";
+
+const LOCATIONS = [
+  {
+    title: "Universidad Tecnológica de Panamá - Veraguas",
+    address: "Vía Panamericana, San Antonio, Veraguas",
+    website: "https://ve.utp.ac.pa",
+    websiteLabel: "ve.utp.ac.pa",
+    gmapSrc: "https://www.google.com/maps?q=8.0745539,-80.9349979&hl=es&z=17&output=embed",
+  },
+  {
+    title: "Centro de Convenciones COOPEVE",
+    address: "Central de Santiago, Provincia de Veraguas",
+    website: "https://coopeve.com",
+    websiteLabel: "coopeve.com",
+    gmapSrc: "https://www.google.com/maps?q=8.0973494,-80.9743233&hl=es&z=17&output=embed",
+  },
+];
+
+const TOUR_URL = "https://tour.panoee.net/668ae893f1ce484a4bd62a6d/668b0018f1ce486365d62b6e";
+---
+
+<Header client:load />
+
+<main class="min-h-screen pt-28 pb-16 w-full coicit-ubicacion-bg">
+  <div class="max-w-6xl mx-auto px-2 sm:px-6">
+    <h2 class="text-[#e0b02e] text-2xl font-bold mb-10 text-center drop-shadow-lg">
+      Ubicación de las Sedes
+    </h2>
+    <div class="flex flex-col gap-8 md:flex-row md:gap-8 justify-center items-stretch w-full">
+      {LOCATIONS.map((loc) => (
+        <div
+          class="flex-1 bg-white rounded-2xl shadow-lg border-2 border-[#e0b02e] flex flex-col items-center p-4 mx-auto"
+          style="min-width:0;max-width:440px;width:100%;"
+        >
+          <h3 class="text-lg font-bold mb-1 text-center">{loc.title}</h3>
+          <p class="text-sm text-center mb-2 text-gray-800">{loc.address}</p>
+          <div class="text-xs text-center mb-3 text-gray-700">
+            Sitio web: <a href={loc.website} target="_blank" rel="noopener noreferrer" class="text-blue-700 underline">{loc.websiteLabel}</a>
+          </div>
+          <div
+            style="width:100%;aspect-ratio:16/9;border-radius:15px;overflow:hidden;box-shadow:0 6px 24px 0 rgba(0,0,0,0.12);background:#eee;border:none;"
+          >
+            <iframe
+              title={loc.title}
+              src={loc.gmapSrc}
+              width="100%"
+              height="100%"
+              style="border:none;width:100%;height:100%;min-height:230px;background:#eee;display:block;"
+              allowfullscreen
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class="mt-16 flex flex-col items-center">
+      <h2 class="text-[#e0b02e] text-xl md:text-2xl font-bold mb-6 text-center">
+        Tour Virtual UTP Veraguas
+      </h2>
+      <div
+        style="width:100%;max-width:900px;aspect-ratio:16/8;border-radius:20px;overflow:hidden;box-shadow:0 8px 32px 0 rgba(0,0,0,0.12);background:#222;margin:0 auto;border:2px solid #e0b02e;"
+        class="w-full"
+      >
+        <iframe
+          title="Tour Virtual UTP Veraguas"
+          src={TOUR_URL}
+          width="100%"
+          height="100%"
+          style="border:none;width:100%;height:100%;min-height:300px;background:#222;display:block;"
+          allowfullscreen
+          loading="lazy"
+        ></iframe>
+      </div>
+    </div>
+  </div>
+</main>
+
+<Footer />
+
+<style>
+  .coicit-ubicacion-bg {
+    background: linear-gradient(to bottom, #0a1223, #142849, #1d375d);
+  }
+</style>
