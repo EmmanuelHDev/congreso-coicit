@@ -36,6 +36,7 @@ const ComitesMainContent = () => {
         "MSc. Ivonne Núñez – University of Bern",
         "MSc. Dimas Concepción – Instituto Técnico Superior Especializado",
         "MSc. Nila Navarro – Universidad Iberoamericana de Panamá",
+        "Dr. Carlos Barria – Universidad Tecnológica de Panamá",
       ],
     },
     en: {
@@ -69,6 +70,7 @@ const ComitesMainContent = () => {
         "MSc. Ivonne Núñez – University of Bern",
         "MSc. Dimas Concepción – Instituto Técnico Superior Especializado",
         "MSc. Nila Navarro – Universidad Iberoamericana de Panamá",
+        "Dr. Carlos Barria – Universidad Tecnológica de Panamá",
       ],
     },
   }[lang];
