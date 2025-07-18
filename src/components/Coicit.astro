@@ -4,37 +4,50 @@ import Footer from "./Footer.astro";
 ---
 
 <section
-  class="relative min-h-screen overflow-hidden bg-[#010d1f] flex flex-col items-center justify-start"
+  class="relative min-h-screen w-full flex flex-col items-center justify-start overflow-hidden bg-[#010d1f]"
 >
   <Header client:load />
-
+  <div class="banner-fondo-coicit"></div>
+  <div class="banner-overlay"></div>
   <div
-    class="relative w-full min-h-screen flex flex-col items-center justify-center z-10"
+    class="container-hero-coicit flex flex-col lg:flex-row items-center lg:items-center justify-center w-full h-full z-10"
+    style="min-height: 65vh; margin-top: 80px;"
   >
-    <div class="banner-fondo-coicit"></div>
-    <div class="banner-overlay"></div>
-    <h1
-      class="text-lg font-bold text-white sm:text-4xl opacity-90 mt-12 z-10 relative text-center mb-8"
-    >
-      Congreso Internacional de Ciencia,<br />
-      Innovación y Tecnología
-    </h1>
-    <img
-      src="/img/coicit/COICIT-FINAL.webp"
-      alt="logo congreso"
-      class="mx-auto max-w-320px lg:max-w-lg z-10 relative"
-    />
-    <p class="text-lg font-semibold text-white mb-4 opacity-70 z-10 relative">
-      Del 14 al 17 de octubre de 2025
-    </p>
+    <div class="flex items-center justify-center w-full lg:w-1/2 mt-10 lg:mt-0">
+      <img
+        src="/img/coicit/COICIT-FINAL.webp"
+        alt="Logo Congreso COICIT"
+        class="mx-auto block max-w-[520px] lg:max-w-[600px] h-auto"
+        style={{ minWidth: "210px" }}
+      />
+    </div>
+    {/* TEXTO DERECHA */}
     <div
-      id="countdown"
-      class="text-white text-2xl font-bold mb-6 flex justify-center gap-4 z-10 relative"
+      class="flex flex-col items-center justify-center w-full lg:w-1/2 text-center px-2"
     >
-      <div><span id="days">--</span> días</div>
-      <div><span id="hours">--</span> hrs</div>
-      <div><span id="minutes">--</span> min</div>
-      <div><span id="seconds">--</span> seg</div>
+      <h1
+        class="text-white text-3xl md:text-5xl lg:text-6xl font-bold leading-tight mb-3 drop-shadow-lg"
+      >
+        Congreso Internacional<br />
+        <span class="text-[rgb(241,179,15)]">de Ciencia, Innovación y Tecnología</span>
+      </h1>
+      <p class="text-white text-lg md:text-xl font-medium mt-2 mb-1">
+        Del 14 al 17 de octubre de 2025
+      </p>
+      <p class="text-[rgb(241,179,15)] italic text-base md:text-lg font-semibold mb-2">
+        “Impulsando el desarrollo a través del conocimiento”
+      </p>
+      {/* CONTADOR JUSTO DEBAJO */}
+      <div
+        id="countdown"
+        class="text-white text-lg md:text-xl font-bold flex flex-wrap justify-center gap-4 px-6 py-3 rounded-xl bg-[#041c2a]/60 border border-[#29cfff60] shadow-xl backdrop-blur-md mt-2"
+        style={{ maxWidth: "400px", minWidth: "180px" }}
+      >
+        <div><span id="days">--</span> días</div>
+        <div><span id="hours">--</span> hrs</div>
+        <div><span id="minutes">--</span> min</div>
+        <div><span id="seconds">--</span> seg</div>
+      </div>
     </div>
   </div>
 </section>
@@ -305,23 +318,22 @@ import Footer from "./Footer.astro";
   >
     Patrocinadores 2025
   </h2>
-<div
-  class="flex flex-wrap justify-center items-center gap-8 sm:gap-10 max-w-5xl w-full"
->
-  <a
-    href="https://www.logicstudio.net"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="block"
+  <div
+    class="flex flex-wrap justify-center items-center gap-8 sm:gap-10 max-w-5xl w-full"
   >
-    <img
-      src="/img/coicit/logicstudio-1.png"
-      alt="Logic Studio"
-      class="max-h-24 sm:max-h-28 h-auto w-auto object-contain"
-    />
-  </a>
-</div>
-
+    <a
+      href="https://www.logicstudio.net"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="block"
+    >
+      <img
+        src="/img/coicit/logicstudio-1.png"
+        alt="Logic Studio"
+        class="max-h-24 sm:max-h-28 h-auto w-auto object-contain"
+      />
+    </a>
+  </div>
 </section>
 
 <section
@@ -393,6 +405,87 @@ import Footer from "./Footer.astro";
 </script>
 
 <style>
+  .countdown-glow {
+    text-shadow:
+      0 2px 16px #00aaffbb,
+      0 1px 1px #0009;
+    letter-spacing: 0.05em;
+    background: rgba(20, 80, 210, 0.07);
+    border-radius: 1.3rem;
+    padding: 0.65em 1.6em;
+    margin-top: 0.7em;
+    border: 1px solid #22b2e966;
+    box-shadow: 0 0 8px #17e5f355;
+  }
+
+  @media (max-width: 700px) {
+    .hero-animation {
+      max-width: 96vw;
+    }
+    .logo-glow img {
+      max-width: 190px !important;
+      padding: 0.4rem 0.8rem;
+    }
+    .fancy-gradient-title {
+      font-size: 1.25rem !important;
+    }
+    #countdown,
+    .countdown-glow {
+      font-size: 1.18rem !important;
+      padding: 0.38em 0.7em;
+    }
+  }
+
+  .container-hero-coicit {
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+    min-height: 60vh;
+    z-index: 2;
+    position: relative;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    box-sizing: border-box;
+  }
+  @media (min-width: 1024px) {
+    .container-hero-coicit {
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+    }
+    .container-hero-coicit > div {
+      align-items: center !important;
+      justify-content: center !important;
+    }
+    .container-hero-coicit h1,
+    .container-hero-coicit p,
+    #countdown {
+      text-align: center !important;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  @media (max-width: 1024px) {
+    .container-hero-coicit {
+      flex-direction: column !important;
+      gap: 2.5rem;
+      min-height: 55vh;
+    }
+    .container-hero-coicit img {
+      max-width: 250px !important;
+    }
+  }
+  @media (max-width: 640px) {
+    .container-hero-coicit {
+      gap: 1.5rem;
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+    .container-hero-coicit img {
+      max-width: 120px !important;
+    }
+  }
+
   .programa-coicit-section {
     background: linear-gradient(145deg, #07182e 0%, #0f2946 50%, #17395b 100%);
     padding: 4rem 1rem;
@@ -634,7 +727,7 @@ import Footer from "./Footer.astro";
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: url("/img/coicit/Fondofinal.webp") center center no-repeat;
+    background: url("/img/coicit/Fondofinal_1.webp") center center no-repeat;
     background-size: cover;
     opacity: 1;
     z-index: 0;
