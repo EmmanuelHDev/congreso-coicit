@@ -510,16 +510,6 @@ window.addEventListener('resize', ajustarTamañoLogo);
       max-width: 250px;
     }
   }
-  @media (max-width: 640px) {
-    .container-hero-coicit {
-      gap: 1.5rem;
-      padding-left: 0.5rem;
-      padding-right: 0.5rem;
-    }
-    .container-hero-coicit img {
-      max-width: 120px;
-    }
-  }
 
   .programa-coicit-section {
     background: linear-gradient(145deg, #07182e 0%, #0f2946 50%, #17395b 100%);
@@ -843,4 +833,49 @@ window.addEventListener('resize', ajustarTamañoLogo);
       padding: 2rem 0.5rem 1rem 0.5rem;
     }
   }
+
+@media (max-width: 640px) {
+  .container-hero-coicit img[alt="Logo Congreso COICIT"] {
+    max-width: 350px !important;
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 900px) {
+  .container-hero-coicit img[alt="Logo Congreso COICIT"] {
+    max-width: 450px !important;
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1199px) {
+  .container-hero-coicit img[alt="Logo Congreso COICIT"] {
+    max-width: 550px !important;
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 auto;
+    display: block;
+  }
+}
+.sponsors-logos-section img {
+  transition: transform 0.28s cubic-bezier(.45,1.18,.54,1.02);
+  will-change: transform;
+  border: none !important;
+  outline: none !important;
+}
+
+.sponsors-logos-section a:hover img,
+.sponsors-logos-section a:focus img {
+  transform: scale(1.07);
+  border: none;
+  outline: none;
+}
+
+
 </style>

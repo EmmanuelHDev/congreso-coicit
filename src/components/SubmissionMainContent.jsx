@@ -11,7 +11,15 @@ const texts = {
       "Todos los trabajos aceptados serán publicados en un número especial de PRISMA Tecnológico, revista multidisciplinaria de acceso abierto (DOAJ/Latindex) con revisión doble ciego.",
     guiaTitulo: "Guía para Manuscritos",
     guia: [
-      "Extensión máxima: 6 páginas (plantilla Word PRISMA).",
+      [
+        "Extensión máxima: 6 páginas (",
+        {
+          type: "link",
+          text: "plantilla Word PRISMA",
+          url: "https://revistas.utp.ac.pa/public/documentos-prisma/Instrucciones_para_los_autores_2018.pdf",
+        },
+        ").",
+      ],
       "Idiomas: español o inglés. Resúmenes y palabras clave en ambos.",
       "Plantillas disponibles en PRISMA UTP o el sitio del WICI.",
       "Envío vía Microsoft CMT.",
@@ -25,6 +33,9 @@ const texts = {
       "Registro de autores: 8 de octubre de 2025",
       "Fecha del evento: 16 de octubre de 2025",
     ],
+    plataformaTitulo: "Plataforma de Envíos",
+    plataformaTexto:
+      "Los envíos de manuscritos se realizarán a través de la plataforma Microsoft CMT.",
     ubicacionTitulo: "Lugar del Evento",
     ubicacionTexto:
       "El taller se realizará en el Salón Galo Chang, UTP Veraguas, de forma presencial y virtual.",
@@ -50,7 +61,15 @@ const texts = {
       "All accepted papers will be published in a special issue of PRISMA Tecnológico, an open-access, multidisciplinary journal indexed in DOAJ and Latindex with rigorous double-blind peer review.",
     guiaTitulo: "Manuscript Guidelines",
     guia: [
-      "Maximum 6 pages (PRISMA Word template).",
+      [
+        "Maximum 6 pages (",
+        {
+          type: "link",
+          text: "PRISMA Word template",
+          url: "https://revistas.utp.ac.pa/public/documentos-prisma/Instrucciones_para_los_autores_2018.pdf",
+        },
+        ").",
+      ],
       "Languages: Spanish or English. Abstracts and keywords in both.",
       "Templates available on PRISMA UTP or WICI website.",
       "Submission via Microsoft CMT.",
@@ -64,6 +83,9 @@ const texts = {
       "Author Registration: October 8, 2025",
       "Workshop Date: October 16, 2025",
     ],
+    plataformaTitulo: "Submission Platform",
+    plataformaTexto:
+      "Manuscript submissions will be managed through the Microsoft CMT platform.",
     ubicacionTitulo: "Venue",
     ubicacionTexto:
       "The workshop will take place at the Salón Galo Chang, UTP Veraguas, both onsite and virtually.",
@@ -110,7 +132,25 @@ const SubmissionMainContent = () => {
             <div className="bg-gray-50 rounded-xl shadow p-6 mb-6 border border-gray-200 flex flex-col md:flex-row items-center gap-6">
               <ul className="list-disc list-inside space-y-1 flex-1">
                 {t.guia.map((item, i) => (
-                  <li key={i}>{item}</li>
+                  <li key={i}>
+                    {Array.isArray(item)
+                      ? item.map((part, idx) =>
+                          typeof part === "string" ? (
+                            part
+                          ) : (
+                            <a
+                              key={idx}
+                              href={part.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-blue-700 underline font-medium"
+                            >
+                              {part.text}
+                            </a>
+                          )
+                        )
+                      : item}
+                  </li>
                 ))}
               </ul>
               <img
@@ -130,6 +170,21 @@ const SubmissionMainContent = () => {
                   <li key={i}>{item}</li>
                 ))}
               </ul>
+            </div>
+          </div>
+
+          <div className="max-w-3xl mx-auto mt-12">
+            <h3 className="text-xl font-semibold mb-3">{t.plataformaTitulo}</h3>
+            <div className="bg-gray-50 rounded-xl shadow p-6 mb-6 border border-gray-200 flex flex-col md:flex-row items-center gap-6">
+              <img
+                src="/img/wici/logo_cmt.webp"
+                alt="Microsoft CMT Logo"
+                className="w-36 h-auto rounded-md border border-gray-200 shadow-md mb-4 md:mb-0"
+                style={{ background: "#fff" }}
+              />
+              <p className="flex-1 text-gray-800 text-lg">
+                {t.plataformaTexto}
+              </p>
             </div>
           </div>
 
@@ -201,7 +256,8 @@ const SubmissionMainContent = () => {
       <footer className="bg-[#e0b02e]">
         <div className="mx-auto max-w-5xl px-4 py-4 sm:px-6 lg:px-8 flex justify-center items-center">
           <span className="text-white font-medium text-sm text-center w-full">
-            © 2025 Universidad Tecnológica de Panamá | All Rights Reserved by UTP
+            © 2025 Universidad Tecnológica de Panamá | All Rights Reserved by
+            UTP
           </span>
         </div>
       </footer>
