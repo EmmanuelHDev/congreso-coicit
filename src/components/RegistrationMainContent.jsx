@@ -96,7 +96,7 @@ const RegistrationMainContent = () => {
               </tbody>
             </table>
           </div>
-          <p className="text-gray-600 text-center text-xs italic mt-6">{t.nota}</p>
+
         </section>
       </main>
       <footer className="bg-[#e0b02e]">
