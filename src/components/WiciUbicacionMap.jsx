@@ -5,7 +5,7 @@ const LOCATIONS = [
   {
     title: {
       es: "Universidad Tecnológica de Panamá - Veraguas",
-      en: "Technological University of Panama - Veraguas",
+      en: "Universidad Tecnológica de Panamá - Veraguas",
     },
     address: {
       es: "Vía Panamericana, San Antonio, Veraguas",

@@ -3,54 +3,63 @@ import Header from "../components/Header.jsx";
 import Footer from "./Footer.astro";
 ---
 
-<section
-  class="relative min-h-screen w-full flex flex-col items-center justify-start overflow-hidden bg-[#010d1f]"
->
+<section class="relative min-h-screen w-full flex flex-col items-center justify-start overflow-hidden bg-[#010d1f]">
   <Header client:load />
   <div class="banner-fondo-coicit"></div>
   <div class="banner-overlay"></div>
-  <div
-    class="container-hero-coicit flex flex-col lg:flex-row items-center lg:items-center justify-center w-full h-full z-10"
-    style="min-height: 65vh; margin-top: 80px;"
-  >
-    <div class="flex items-center justify-center w-full lg:w-1/2 mt-10 lg:mt-0">
-      <img
-        src="/img/coicit/COICIT-FINAL.webp"
-        alt="Logo Congreso COICIT"
-        class="mx-auto block max-w-[520px] lg:max-w-[600px] h-auto"
-        style={{ minWidth: "210px" }}
-      />
-    </div>
-    {/* TEXTO DERECHA */}
-    <div
-      class="flex flex-col items-center justify-center w-full lg:w-1/2 text-center px-2"
-    >
-      <h1
-        class="text-white text-3xl md:text-5xl lg:text-6xl font-bold leading-tight mb-3 drop-shadow-lg"
-      >
-        Congreso Internacional<br />
-        <span class="text-[rgb(241,179,15)]">de Ciencia, Innovación y Tecnología</span>
-      </h1>
-      <p class="text-white text-lg md:text-xl font-medium mt-2 mb-1">
-        Del 14 al 17 de octubre de 2025
-      </p>
-      <p class="text-[rgb(241,179,15)] italic text-base md:text-lg font-semibold mb-2">
-        “Impulsando el desarrollo a través del conocimiento”
-      </p>
-      {/* CONTADOR JUSTO DEBAJO */}
-      <div
-        id="countdown"
-        class="text-white text-lg md:text-xl font-bold flex flex-wrap justify-center gap-4 px-6 py-3 rounded-xl bg-[#041c2a]/60 border border-[#29cfff60] shadow-xl backdrop-blur-md mt-2"
-        style={{ maxWidth: "400px", minWidth: "180px" }}
-      >
-        <div><span id="days">--</span> días</div>
-        <div><span id="hours">--</span> hrs</div>
-        <div><span id="minutes">--</span> min</div>
-        <div><span id="seconds">--</span> seg</div>
+
+  <div class="container-hero-coicit flex flex-col items-center justify-center w-full h-full z-10" style="min-height: 65vh; margin-top: 80px;">
+    <!-- CONTENIDO SUPERIOR (LOGO + TEXTO) -->
+<div class="flex flex-col lg:flex-row items-center justify-center w-full px-4 sm:px-6 gap-x-4">
+  <!-- LOGO - VERSIÓN FULLY RESPONSIVE -->
+  <div class="w-full lg:w-1/2 flex justify-center items-center px-4 sm:px-6 mt-4 sm:mt-6 lg:mt-0">
+    <img
+      src="/img/coicit/COICIT-FINAL.webp"
+      alt="Logo Congreso COICIT"
+      class="h-auto max-w-full"
+    />
+  </div>
+
+  <!-- TEXTO DERECHA - CENTRADO EN MOBILE -->
+  <div class="flex flex-col items-center lg:items-start justify-center w-full lg:w-1/2 text-center lg:text-left px-0 mt-6 lg:mt-0">
+    <h1 class="text-white text-xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-3 drop-shadow-lg">
+      Congreso Internacional<br />
+      <span class="text-[rgb(241,179,15)]">de Ciencia, Innovación y Tecnología</span>
+    </h1>
+    <p class="text-white text-xl sm:text-2xl md:text-3xl font-medium mt-2 mb-1">
+      Del 14 al 17 de octubre de 2025
+    </p>
+    <p class="text-[rgb(241,179,15)] italic text-base sm:text-lg md:text-xl font-semibold mb-2">
+      “Impulsando el desarrollo a través del conocimiento”
+    </p>
+  </div>
+</div>
+
+    <!-- CONTADOR (MANTENIENDO LA VERSIÓN PERFECTA) -->
+    <div class="w-full flex justify-center mt-8 lg:mt-12 px-4">
+      <div id="countdown" class="text-white text-lg md:text-2xl font-bold flex flex-nowrap justify-around items-center gap-1 md:gap-2 px-2 py-3 rounded-xl bg-[#041c2a]/60 border border-[#29cfff60] shadow-xl backdrop-blur-md w-full max-w-2xl">
+        <div class="flex flex-col items-center flex-1 min-w-[60px]">
+          <span id="days" class="text-2xl md:text-4xl font-extrabold">--</span>
+          <span class="text-sm md:text-base">días</span>
+        </div>
+        <div class="flex flex-col items-center flex-1 min-w-[60px]">
+          <span id="hours" class="text-2xl md:text-4xl font-extrabold">--</span>
+          <span class="text-sm md:text-base">horas</span>
+        </div>
+        <div class="flex flex-col items-center flex-1 min-w-[60px]">
+          <span id="minutes" class="text-2xl md:text-4xl font-extrabold">--</span>
+          <span class="text-sm md:text-base">minutos</span>
+        </div>
+        <div class="flex flex-col items-center flex-1 min-w-[60px]">
+          <span id="seconds" class="text-2xl md:text-4xl font-extrabold">--</span>
+          <span class="text-sm md:text-base">segundos</span>
+        </div>
       </div>
     </div>
   </div>
 </section>
+
+
 
 <section class="video-section-coicit">
   <div class="video-title-coicit">Video COICIT 2025</div>
@@ -402,6 +411,32 @@ import Footer from "./Footer.astro";
 
   setInterval(countdown, 1000);
   countdown();
+
+  // SOLUCION A LA IMAGEN PARA FORZAR EL SIZE EN PANTALLAS CHICAS
+  function ajustarTamañoLogo() {
+  const img = document.querySelector('img[alt="Logo Congreso COICIT"]') as HTMLImageElement;
+
+  if (!img) return;
+
+  const width = window.innerWidth;
+
+  if (width < 640) {
+    img.style.width = '900px !important';
+  } else if (width >= 640 && width < 768) {
+    img.style.width = '800px';
+  } else if (width >= 768 && width < 1024) {
+    img.style.width = '1500px';
+  } else {
+    img.style.width = '700px';
+  }
+}
+
+// Llamar al cargar la página
+ajustarTamañoLogo();
+
+// También en resize
+window.addEventListener('resize', ajustarTamañoLogo);
+
 </script>
 
 <style>
@@ -472,7 +507,7 @@ import Footer from "./Footer.astro";
       min-height: 55vh;
     }
     .container-hero-coicit img {
-      max-width: 250px !important;
+      max-width: 250px;
     }
   }
   @media (max-width: 640px) {
@@ -482,7 +517,7 @@ import Footer from "./Footer.astro";
       padding-right: 0.5rem;
     }
     .container-hero-coicit img {
-      max-width: 120px !important;
+      max-width: 120px;
     }
   }
 
