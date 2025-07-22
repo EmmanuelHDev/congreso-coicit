@@ -307,6 +307,16 @@ import Footer from "./Footer.astro";
     </div>
     <div class="paquete-item">
       <img
+        src="/img/coicit/paquetes/Paquete_Administrativos.webp"
+        alt="Administrativos"
+      />
+      <div class="paquete-info">
+        <span class="paquete-fecha">A partir del 01/10/2025</span>
+        <span class="paquete-precio">B/. 55.00</span>
+      </div>
+    </div>
+    <div class="paquete-item">
+      <img
         src="/img/coicit/paquetes/Paquete_Participantes_Externos.webp"
         alt="Participantes Externos"
       />
@@ -427,7 +437,7 @@ import Footer from "./Footer.astro";
   } else if (width >= 768 && width < 1024) {
     img.style.width = '1500px';
   } else {
-    img.style.width = '700px';
+    img.style.width = '950px';
   }
 }
 
@@ -863,6 +873,8 @@ window.addEventListener('resize', ajustarTamañoLogo);
     display: block;
   }
 }
+
+
 .sponsors-logos-section img {
   transition: transform 0.28s cubic-bezier(.45,1.18,.54,1.02);
   will-change: transform;
