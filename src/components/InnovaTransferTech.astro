@@ -33,7 +33,7 @@ import Footer from "./Footer.astro";
           />
           <span>10:00 AM a 3:00 PM</span>
         </div>
-        <div class="event-hero-date-item">
+        <div class="event-hero-date-item" >
           <img
             src="/img/coicit/ITransferT/location.webp"
             alt="Ubicación"
@@ -41,11 +41,11 @@ import Footer from "./Footer.astro";
           />
           <span
             >Universidad Tecnológica de Panamá Centro Regional de Veraguas, Sala
-            nueva de Conferencia
+            nueva de Conferencia N°1
           </span>
         </div>
       </div>
-      <a href="#registro" class="event-hero-btn-minimal">Registrarse Ahora</a>
+      <a href="//forms.office.com/r/Qr6CiD5Jnm" class="event-hero-btn-minimal">Registrarse Ahora</a>
     </div>
     <div class="event-hero-right-minimal">
       <!-- Contador en dos filas: días/horas arriba, minutos/segundos abajo -->
@@ -87,37 +87,39 @@ import Footer from "./Footer.astro";
   <div class="event-areas-list-container">
     <h2>Áreas de Aplicación</h2>
     <div class="event-areas-list">
-      <div class="event-area-card">
-        <img src="/img/coicit/ITransferT/1.webp" alt="Agroindustrias" />
+      <!-- Agroindustrias -->
+      <div class="event-area-card" onclick="window.open('https://forms.office.com/r/Qr6CiD5Jnm', '_blank')">
+        <img src="/img/coicit/ITransferT/E1.webp" alt="Agroindustrias" />
         <span>Agroindustrias</span>
       </div>
-      <div class="event-area-card">
-        <img src="/img/coicit/ITransferT/3.webp" alt="Educación" />
+      <div class="event-area-card" onclick="window.open('https://forms.office.com/r/Qr6CiD5Jnm', '_blank')">
+        <img src="/img/coicit/ITransferT/E3.webp" alt="Educación" />
         <span>Educación</span>
       </div>
-      <div class="event-area-card">
+      <!-- Tecnología Informática y robótica -->
+      <div class="event-area-card" onclick="window.open('https://forms.office.com/r/Qr6CiD5Jnm', '_blank')">
         <img
-          src="/img/coicit/ITransferT/2.webp"
+          src="/img/coicit/ITransferT/E2.webp"
           alt="Tecnología Informática y robótica"
         />
         <span>Tecnología Informática y robótica</span>
       </div>
-      <div class="event-area-card">
+      <div class="event-area-card" onclick="window.open('https://forms.office.com/r/Qr6CiD5Jnm', '_blank')">
         <img
           src="/img/coicit/ITransferT/4.webp"
           alt="Tecnología Ambiental e Innovación Social"
         />
         <span>Tecnología Ambiental e Innovación Social</span>
       </div>
-      <div class="event-area-card">
+      <div class="event-area-card" onclick="window.open('https://forms.office.com/r/Qr6CiD5Jnm', '_blank')">
         <img src="/img/coicit/ITransferT/5.webp" alt="Turismo Sostenible" />
         <span>Turismo Sostenible</span>
       </div>
-      <div class="event-area-card">
+      <div class="event-area-card" onclick="window.open('https://forms.office.com/r/Qr6CiD5Jnm', '_blank')">
         <img src="/img/coicit/ITransferT/6.webp" alt="Biotecnología" />
         <span>Biotecnología</span>
       </div>
-      <div class="event-area-card">
+      <div class="event-area-card" onclick="window.open('https://forms.office.com/r/Qr6CiD5Jnm', '_blank')">
         <img
           src="/img/coicit/ITransferT/7.webp"
           alt="Innovación en la Salud y Medicina"
@@ -135,7 +137,7 @@ import Footer from "./Footer.astro";
     Selecciona el área de aplicación y participa en el evento más innovador del
     año.
   </p>
-  <a href="#registro" class="event-cta-btn">¡Quiero Participar!</a>
+  <a href="//forms.office.com/r/Qr6CiD5Jnm" class="event-cta-btn">¡Quiero Participar!</a>
 </section>
 
 <!-- Términos y condiciones -->
@@ -143,7 +145,8 @@ import Footer from "./Footer.astro";
   <p>
     <strong>Términos y condiciones:</strong><br />
     Los participantes serán evaluados y notificados vía correo electrónico para confirmar
-    la participación y lineamientos.
+    la participación y lineamientos. <br/>
+    <strong>Contacto:</strong> adiz.acosta@utp.ac.pa
   </p>
 </section>
 
@@ -440,7 +443,12 @@ import Footer from "./Footer.astro";
     border-radius: 2rem;
     z-index: 1;
     transition: transform 0.3s;
-    filter: brightness(0.72);
+    filter: brightness(0.8); 
+  }
+
+  .event-area-card:hover img {
+    transform: scale(1.06);
+    filter: brightness(0.95); 
   }
   .event-area-card::after {
     content: "";
@@ -449,8 +457,8 @@ import Footer from "./Footer.astro";
     border-radius: 2rem;
     background: linear-gradient(
       0deg,
-      rgba(11, 23, 46, 0.6) 60%,
-      rgba(11, 23, 46, 0.18) 100%
+      rgba(11, 23, 46, 0.5) 50%, 
+      rgba(11, 23, 46, 0.1) 100% 
     );
     z-index: 2;
   }
@@ -459,20 +467,25 @@ import Footer from "./Footer.astro";
     z-index: 3;
     color: #fff;
     font-weight: 800;
-    font-size: 2rem;
+    font-size: 1.5rem; 
     text-align: center;
     width: 100%;
-    padding: 0 1rem 2.2rem 1rem;
+    padding: 0 1rem 1.8rem 1rem; 
     text-shadow:
       0 2px 16px #000,
       0 1px 0 #e0b02e;
-    letter-spacing: 1px;
-    line-height: 1.15;
+    letter-spacing: 0.8px; 
+    line-height: 1.1; 
     display: block;
   }
-  .event-area-card:hover img {
-    transform: scale(1.06);
-    filter: brightness(0.85);
+
+  
+  @media (max-width: 700px) {
+    .event-area-card span {
+      font-size: 1.3rem; 
+      padding: 0 0.8rem 1.5rem 0.8rem;
+      letter-spacing: 0.5px;
+    }
   }
 
   /* CTA Section */
