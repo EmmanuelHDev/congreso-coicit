@@ -46,7 +46,7 @@ const texts = {
       "El envío de manuscritos se realizará exclusivamente a través de la plataforma Microsoft CMT. Debe crear una cuenta (si no la tiene) y seguir los pasos indicados. El enlace de envío estará disponible próximamente aquí.",
     submitPasos: [
       "Regístrese o inicie sesión en la plataforma oficial: ",
-      "Una vez habilitado el portal de envíos, el enlace aparecerá aquí. (Próximamente)",
+      "Acceda al portal de envíos aquí: ",
       "Siga las instrucciones y complete su envío según la guía para autores.",
     ],
     cmtTitulo: "Reconocimiento a Microsoft CMT",
@@ -96,7 +96,7 @@ const texts = {
       "Manuscript submission will be done exclusively through the Microsoft CMT platform. Please create an account (if you do not already have one) and follow the submission steps. The submission link will be available here soon.",
     submitPasos: [
       "Register or log in at the official platform: ",
-      "Once the submission portal is open, the direct link will be available here. (Coming soon)",
+      "Access the submission portal here: ",
       "Follow the instructions and complete your submission according to the author guidelines.",
     ],
     cmtTitulo: "Microsoft CMT Acknowledgment",
@@ -127,6 +127,7 @@ const SubmissionMainContent = () => {
             <p className="mt-4">{t.descripcion2}</p>
           </div>
 
+          {/* Guía para manuscritos */}
           <div className="max-w-3xl mx-auto mt-12">
             <h3 className="text-xl font-semibold mb-3">{t.guiaTitulo}</h3>
             <div className="bg-gray-50 rounded-xl shadow p-6 mb-6 border border-gray-200 flex flex-col md:flex-row items-center gap-6">
@@ -162,6 +163,7 @@ const SubmissionMainContent = () => {
             </div>
           </div>
 
+          {/* Fechas importantes */}
           <div className="max-w-3xl mx-auto mt-12">
             <h3 className="text-xl font-semibold mb-3">{t.fechasTitulo}</h3>
             <div className="bg-gray-50 rounded-xl shadow p-6 mb-6 border border-gray-200">
@@ -173,21 +175,29 @@ const SubmissionMainContent = () => {
             </div>
           </div>
 
+          {/* Plataforma de Envíos */}
           <div className="max-w-3xl mx-auto mt-12">
             <h3 className="text-xl font-semibold mb-3">{t.plataformaTitulo}</h3>
             <div className="bg-gray-50 rounded-xl shadow p-6 mb-6 border border-gray-200 flex flex-col md:flex-row items-center gap-6">
-              <img
-                src="/img/wici/logo_cmt.webp"
-                alt="Microsoft CMT Logo"
-                className="w-36 h-auto rounded-md border border-gray-200 shadow-md mb-4 md:mb-0"
-                style={{ background: "#fff" }}
-              />
+              <a
+                href="https://cmt3.research.microsoft.com/WICI2025"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="/img/wici/logo_cmt.webp"
+                  alt="Microsoft CMT Logo"
+                  className="w-36 h-auto rounded-md border border-gray-200 shadow-md mb-4 md:mb-0 hover:scale-105 transition-transform"
+                  style={{ background: "#fff" }}
+                />
+              </a>
               <p className="flex-1 text-gray-800 text-lg">
                 {t.plataformaTexto}
               </p>
             </div>
           </div>
 
+          {/* Lugar del Evento */}
           <div className="max-w-3xl mx-auto mt-12">
             <h3 className="text-xl font-semibold mb-3">{t.ubicacionTitulo}</h3>
             <div className="bg-gray-50 rounded-xl shadow p-6 mb-6 border border-gray-200">
@@ -195,6 +205,7 @@ const SubmissionMainContent = () => {
             </div>
           </div>
 
+          {/* Dónde y cómo enviar */}
           <div className="max-w-3xl mx-auto mt-12">
             <h3 className="text-xl font-semibold mb-3">{t.submitTitulo}</h3>
             <div className="bg-gray-50 rounded-xl shadow p-6 mb-6 border border-gray-200">
@@ -211,12 +222,26 @@ const SubmissionMainContent = () => {
                     Microsoft CMT
                   </a>
                 </li>
-                <li>{t.submitPasos[1]}</li>
+                <li>
+                  {t.submitPasos[1]}
+                  <a
+                    href="https://cmt3.research.microsoft.com/WICI2025"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-700 underline"
+                  >
+                    https://cmt3.research.microsoft.com/WICI2025
+                  </a>
+                  {lang === "es"
+                    ? " (Enlace activo)"
+                    : " (Active link)"}
+                </li>
                 <li>{t.submitPasos[2]}</li>
               </ul>
             </div>
           </div>
 
+          {/* Reconocimiento a CMT */}
           <div className="max-w-3xl mx-auto mt-8 mb-8">
             <h3 className="text-xl font-semibold mb-3">{t.cmtTitulo}</h3>
             <div className="bg-gray-50 rounded-xl shadow p-6 border border-gray-200">
@@ -226,6 +251,7 @@ const SubmissionMainContent = () => {
             </div>
           </div>
 
+          {/* Contacto */}
           <div className="max-w-3xl mx-auto mt-8 mb-4">
             <h3 className="text-xl font-semibold mb-3">{t.contactoTitulo}</h3>
             <div className="bg-gray-50 rounded-xl shadow p-6 border border-gray-200">
