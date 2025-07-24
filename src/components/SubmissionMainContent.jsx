@@ -154,12 +154,20 @@ const SubmissionMainContent = () => {
                   </li>
                 ))}
               </ul>
-              <img
-                src="/img/wici/Prisma.jpg"
-                alt="PRISMA Tecnológico"
-                className="w-40 h-auto rounded-xl border border-gray-200 shadow-md"
-                style={{ background: "#fff" }}
-              />
+              <a
+                href="https://revistas.utp.ac.pa/index.php/prisma"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Ver revista PRISMA Tecnológico"
+                className="focus:outline-none"
+              >
+                <img
+                  src="/img/wici/Prisma.jpg"
+                  alt="PRISMA Tecnológico"
+                  className="w-40 h-auto rounded-xl border border-gray-200 shadow-md hover:scale-105 transition-transform"
+                  style={{ background: "#fff" }}
+                />
+              </a>
             </div>
           </div>
 
@@ -232,9 +240,7 @@ const SubmissionMainContent = () => {
                   >
                     https://cmt3.research.microsoft.com/WICI2025
                   </a>
-                  {lang === "es"
-                    ? " (Enlace activo)"
-                    : " (Active link)"}
+                  {lang === "es" ? " (Enlace activo)" : " (Active link)"}
                 </li>
                 <li>{t.submitPasos[2]}</li>
               </ul>

@@ -116,57 +116,64 @@ const WiciMainContent = () => {
       </section>
 
       <section className="px-4 py-8 md:px-8 lg:px-16 bg-white">
-  <div className="max-w-screen-md mx-auto">
-    <h2 className="text-[#e0b02e] text-2xl font-bold mb-4">
-      {t.fechas.titulo}
-    </h2>
-    <div className="bg-gray-50 rounded-xl shadow p-4 mb-6 border border-gray-200 flex flex-col md:flex-row md:items-start gap-8">
-      {/* Fechas importantes (izquierda) */}
-      <ul className="list-disc list-inside flex-1 space-y-1 md:space-y-2 text-base md:text-lg">
-        {t.fechas.items.map((fecha, idx) => (
-          <li key={idx}>{fecha}</li>
-        ))}
-      </ul>
-      {/* Bloque PRISMA (derecha, imagen y texto centrado vertical al lado) */}
-      <div className="flex flex-row items-center md:w-[290px] gap-4">
-        <img
-          src="/img/wici/Prisma.jpg"
-          alt="PRISMA Tecnológico"
-          className="w-24 md:w-32 h-auto rounded-xl border border-gray-200 shadow"
-          style={{ background: "#fff" }}
-        />
-        <div className="flex flex-col justify-center items-center text-base text-gray-800 text-center leading-tight">
-          {lang === "es" ? (
-            <>
-              <span>Extensión máxima: 6 páginas</span>
+        <div className="max-w-screen-md mx-auto">
+          <h2 className="text-[#e0b02e] text-2xl font-bold mb-4">
+            {t.fechas.titulo}
+          </h2>
+          <div className="bg-gray-50 rounded-xl shadow p-4 mb-6 border border-gray-200 flex flex-col md:flex-row md:items-start gap-8">
+            {/* Fechas importantes (izquierda) */}
+            <ul className="list-disc list-inside flex-1 space-y-1 md:space-y-2 text-base md:text-lg">
+              {t.fechas.items.map((fecha, idx) => (
+                <li key={idx}>{fecha}</li>
+              ))}
+            </ul>
+            {/* Bloque PRISMA (derecha, imagen y texto centrado vertical al lado) */}
+            <div className="flex flex-row items-center md:w-[290px] gap-4">
               <a
-                href="https://revistas.utp.ac.pa/public/documentos-prisma/Instrucciones_para_los_autores_2018.pdf"
+                href="https://revistas.utp.ac.pa/index.php/prisma"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-700 underline font-medium mt-1"
+                title="PRISMA Tecnológico"
+                className="focus:outline-none"
               >
-                plantilla Word PRISMA
+                <img
+                  src="/img/wici/Prisma.jpg"
+                  alt="PRISMA Tecnológico"
+                  className="w-24 md:w-32 h-auto rounded-xl border border-gray-200 shadow hover:scale-105 transition-transform"
+                  style={{ background: "#fff" }}
+                />
               </a>
-            </>
-          ) : (
-            <>
-              <span>Maximum 6 pages</span>
-              <a
-                href="https://revistas.utp.ac.pa/public/documentos-prisma/Instrucciones_para_los_autores_2018.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-700 underline font-medium mt-1"
-              >
-                PRISMA Word template
-              </a>
-            </>
-          )}
+              <div className="flex flex-col justify-center items-center text-base text-gray-800 text-center leading-tight">
+                {lang === "es" ? (
+                  <>
+                    <span>Extensión máxima: 6 páginas</span>
+                    <a
+                      href="https://revistas.utp.ac.pa/public/documentos-prisma/Instrucciones_para_los_autores_2018.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-700 underline font-medium mt-1"
+                    >
+                      plantilla Word PRISMA
+                    </a>
+                  </>
+                ) : (
+                  <>
+                    <span>Maximum 6 pages</span>
+                    <a
+                      href="https://revistas.utp.ac.pa/public/documentos-prisma/Instrucciones_para_los_autores_2018.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-700 underline font-medium mt-1"
+                    >
+                      PRISMA Word template
+                    </a>
+                  </>
+                )}
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-
+      </section>
 
       <section className="max-w-3xl mx-auto mt-8 mb-8">
         <h3 className="text-xl font-semibold mb-3">{t.cmt.titulo}</h3>
