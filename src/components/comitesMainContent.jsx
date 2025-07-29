@@ -37,6 +37,11 @@ const ComitesMainContent = () => {
         "MSc. Dimas Concepción – Instituto Técnico Superior Especializado",
         "MSc. Nila Navarro – Universidad Iberoamericana de Panamá",
         "Dr. Carlos Barria – Universidad Tecnológica de Panamá",
+        "Dr. Luis Guillermo Loria – Universidad Isaac Newton",
+        "Dra. Melisabel Muñoz – Universidad Tecnológica de Panamá",
+        "Dr. Dámaso Domínguez – Universidad Tecnológica de Panamá",
+        "MSC. Edgar Ortega de la Cruz – Universidad de Arkansas",
+        "Dra. Airam Morales – Universidad Tecnológica de Panamá",
       ],
     },
     en: {
@@ -71,6 +76,11 @@ const ComitesMainContent = () => {
         "MSc. Dimas Concepción – Specialized Higher Technical Institute",
         "MSc. Nila Navarro – Ibero-American University of Panama",
         "Dr. Carlos Barria – Universidad Tecnológica de Panamá",
+        "Dr. Luis Guillermo Loria – Universidad Isaac Newton",
+        "Dra. Melisabel Muñoz – Universidad Tecnológica de Panamá",
+        "Dr. Dámaso Domínguez – Universidad Tecnológica de Panamá",
+        "MSC. Edgar Ortega de la Cruz – University of Arkansas",
+        "Dra. Airam Morales – Universidad Tecnológica de Panamá",
       ],
     },
   }[lang];
