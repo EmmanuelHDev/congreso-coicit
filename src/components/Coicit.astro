@@ -1,6 +1,7 @@
 ---
 import Header from "../components/Header.jsx";
 import Footer from "./Footer.astro";
+import PatrocinadoresCoicit from "../components/PatrocinadoresCoicit.jsx";
 ---
 
 <section class="relative min-h-screen w-full flex flex-col items-center justify-start overflow-hidden bg-[#010d1f]">
@@ -328,32 +329,7 @@ import Footer from "./Footer.astro";
   </div>
 </section>
 
-<section
-  class="sponsors-logos-section w-full px-4 py-12 sm:py-16 bg-[#0d1d35] flex flex-col items-center"
->
-  <h2
-    class="text-white text-2xl sm:text-3xl font-bold mb-8"
-    style="font-family:'Montserrat',sans-serif"
-  >
-    Patrocinadores 2025
-  </h2>
-  <div
-    class="flex flex-wrap justify-center items-center gap-8 sm:gap-10 max-w-5xl w-full"
-  >
-    <a
-      href="https://www.logicstudio.net"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="block"
-    >
-      <img
-        src="/img/coicit/logicstudio-1.png"
-        alt="Logic Studio"
-        class="max-h-24 sm:max-h-28 h-auto w-auto object-contain"
-      />
-    </a>
-  </div>
-</section>
+<PatrocinadoresCoicit client:load />
 
 <section
   class="patrocinadores-section"
