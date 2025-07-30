@@ -78,6 +78,10 @@ export default {
       titulo: "Materials Science and Engineering",
       img: "/img/wici/areas_tematicas/09_ingenieria_de_los_materiales.webp",
     },
+    {
+      titulo: "Others Areas",
+      img: "/img/wici/areas_tematicas/10_investigacion.webp",
+    },
   ],
   lugar: {
     titulo: "Workshop Location",

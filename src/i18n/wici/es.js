@@ -79,6 +79,10 @@ export default {
       titulo: "Ciencias e ingenierías de materiales",
       img: "/img/wici/areas_tematicas/09_ingenieria_de_los_materiales.webp",
     },
+    {
+      titulo: "Otras Áreas",
+      img: "/img/wici/areas_tematicas/10_investigacion.webp",
+    },
   ],
   lugar: {
     titulo: "Lugar del Workshop",
