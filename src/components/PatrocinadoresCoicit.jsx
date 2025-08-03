@@ -1,7 +1,14 @@
-import { FaStar, FaAward } from "react-icons/fa";
+import { FaStar, FaAward, FaCrown } from "react-icons/fa";
 
 const sponsors = {
   organizer: [{ name: "UTP", src: "/img/wici/Patrocinadores/Logo_UTP.webp" }],
+  nivel1: [
+    {
+      name: "Ice Electronics",
+      src: "/img/coicit/patrocinadores/Ice_Electronics.webp",
+      label: "Platinium",
+    },
+  ],
   nivel2: [
     {
       name: "Logic Studio",
@@ -17,16 +24,17 @@ const sponsors = {
 };
 
 const LABEL_COLORS = {
+  Platinium: "text-gray-200",
   Gold: "text-yellow-300",
   Bronze: "text-orange-400",
 };
-
 const LABEL_ICONS = {
+  Platinium: <FaCrown className="inline mr-2" size={20} />,
   Gold: <FaStar className="inline mr-2" size={20} />,
   Bronze: <FaAward className="inline mr-2" size={19} />,
 };
-
 const LOGO_HEIGHTS = {
+  Platinium: "h-[110px] sm:h-[120px]",
   Gold: "h-[85px] sm:h-[80px]",
   Bronze: "h-[70px] sm:h-[85px]",
 };
@@ -45,8 +53,7 @@ function Badge({ label }) {
 }
 
 const Category = ({ title, sponsors }) => {
-  // Para asegurar alineación vertical, usa el mismo contenedor para los dos logos
-  const logoBoxHeight = 120; // Máximo, igual a Gold
+  const logoBoxHeight = 120;
   const badgeBoxHeight = 46;
 
   return (
@@ -142,7 +149,11 @@ export default function PatrocinadoresCoicit() {
             {sponsors.organizer[0].name}
           </span>
         </div>
-        {/* DIVISOR */}
+        {/* NIVEL 1 */}
+        <Category
+          title="Diamond, Platinium & Premium Sponsors"
+          sponsors={sponsors.nivel1}
+        />
         <hr className="w-full max-w-4xl border-t-2 border-white/50 my-8 mx-auto" />
         {/* NIVEL 2 */}
         <Category
