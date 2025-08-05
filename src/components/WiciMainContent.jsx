@@ -27,6 +27,11 @@ const sponsors = [
     alt: "Robotsis",
     link: "http://robotsis.utp.ac.pa",
   },
+  {
+    src: "/img/wici/Patrocinadores/Logo_UPSA.webp",
+    alt: "UPSA",
+    link: "https://www.upsa.es/",
+  },
 ];
 
 const WiciMainContent = () => {
@@ -197,50 +202,29 @@ const WiciMainContent = () => {
           <p className="text-gray-800 leading-relaxed">{t.lugar.texto}</p>
         </div>
       </section>
-      <section className="bg-[#e0b02e] py-16 px-4 relative">
-        {/* Línea decorativa sutil arriba */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-1 bg-white rounded-full opacity-20" />
-        <h2 className="text-3xl font-bold text-center text-white mb-12 tracking-tight relative z-10">
+      <section className="bg-[#e0b02e] py-12 px-4">
+        <h2 className="text-3xl font-bold text-center text-white mb-10">
           {lang === "es" ? "Colaboradores" : "Collaborators"}
         </h2>
-        <div
-          className="
-      max-w-6xl mx-auto
-      grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5
-      gap-y-10 gap-x-8
-      place-items-center
-    "
-        >
+        <div className="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 place-items-center">
           {sponsors.map((s, i) => (
             <a
               key={i}
               href={s.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="
-          flex flex-col items-center
-          transition-all
-          hover:scale-110 hover:drop-shadow-2xl
-          focus-visible:scale-110
-        "
+              className="flex items-center justify-center w-full"
               title={s.alt}
-              style={{ minWidth: 0, width: "100%" }}
             >
               <img
                 src={s.src}
                 alt={s.alt}
-                className="object-contain w-24 sm:w-32 md:w-36 h-auto transition-all duration-300"
-                style={{ background: "transparent", maxHeight: 110 }}
+                className="max-h-28 w-auto object-contain transition-transform hover:scale-105"
+                style={{ background: "#fff", borderRadius: 16, padding: 10 }}
               />
-              {/* Nombre debajo solo en desktop si quieres (opcional, puedes quitarlo) */}
-              {/* <span className="mt-3 text-center text-white font-semibold text-sm md:text-base truncate max-w-[8rem] md:max-w-none hidden md:block">
-          {s.alt}
-        </span> */}
             </a>
           ))}
         </div>
-        {/* Línea decorativa sutil abajo */}
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-24 h-1 bg-white rounded-full opacity-20" />
       </section>
 
       <footer className="bg-[#e0b02e]">

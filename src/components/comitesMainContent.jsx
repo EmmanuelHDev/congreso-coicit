@@ -42,6 +42,8 @@ const ComitesMainContent = () => {
         "Dr. Dámaso Domínguez – Universidad Tecnológica de Panamá",
         "MSC. Edgar Ortega de la Cruz – Universidad de Arkansas",
         "Dra. Airam Morales – Universidad Tecnológica de Panamá",
+        "Dr. Carlos Robetto	 – Universidad Tecnológica de Panamá",
+        "Dr. Manuel Martin-Merino Acera	 – Universidad Pontificia de Salamanca",
       ],
     },
     en: {
@@ -81,12 +83,19 @@ const ComitesMainContent = () => {
         "Dr. Dámaso Domínguez – Universidad Tecnológica de Panamá",
         "MSC. Edgar Ortega de la Cruz – University of Arkansas",
         "Dra. Airam Morales – Universidad Tecnológica de Panamá",
+        "Dr. Carlos Robetto	 – Universidad Tecnológica de Panamá",
+        "Dr. Manuel Martin-Merino Acera	 – Universidad Pontificia de Salamanca",
       ],
     },
   }[lang];
 
   // Patrocinadores con enlaces
   const sponsors = [
+    {
+      src: "/img/wici/Patrocinadores/Logo_UTP.webp",
+      alt: "Universidad Tecnológica de Panamá",
+      link: "https://utp.ac.pa",
+    },
     {
       src: "/img/wici/Patrocinadores/Firma_TEC.webp",
       alt: "Firma TEC",
@@ -106,6 +115,11 @@ const ComitesMainContent = () => {
       src: "/img/wici/Patrocinadores/Logo_Robotsis.webp",
       alt: "Robotsis",
       link: "http://robotsis.utp.ac.pa",
+    },
+    {
+      src: "/img/wici/Patrocinadores/Logo_UPSA.webp",
+      alt: "UPSA",
+      link: "https://www.upsa.es/",
     },
   ];
 
@@ -175,7 +189,7 @@ const ComitesMainContent = () => {
                 <img
                   src={s.src}
                   alt={s.alt}
-                  className="max-h-24 w-auto object-contain transition-transform hover:scale-105"
+                  className="max-h-28 w-auto object-contain transition-transform hover:scale-105"
                   style={{ background: "#fff", borderRadius: 16, padding: 10 }}
                 />
               </a>
