@@ -73,8 +73,6 @@ const Header = () => {
                       <li>
                         <a
                           // href="/Call-For-Paper-WICI-UTPVE2025-Español.pdf"
-                          // target="_blank"
-                          // rel="noopener noreferrer"
                           onClick={(e) => e.preventDefault()}
                           className="block px-5 py-3 text-sm text-[#022843] hover:bg-[#e0b02e]/90 hover:text-white transition-all rounded-t-lg cursor-not-allowed"
                         >
@@ -83,11 +81,10 @@ const Header = () => {
                       </li>
                       <li>
                         <a
-                          // href="/Call-For-Paper-WICI-UTPVE2025-English.pdf"
-                          // target="_blank"
-                          // rel="noopener noreferrer"
-                          onClick={(e) => e.preventDefault()}
-                          className="block px-5 py-3 text-sm text-[#022843] hover:bg-[#e0b02e]/90 hover:text-white transition-all rounded-b-lg cursor-not-allowed"
+                          href="/Call-For-Paper-WICI-UTPVE2025-Temp.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block px-5 py-3 text-sm text-[#022843] hover:bg-[#e0b02e]/90 hover:text-white transition-all rounded-b-lg"
                         >
                           English
                         </a>
@@ -206,9 +203,10 @@ const Header = () => {
                   </li>
                   <li>
                     <a
-                      // href="/Call-For-Paper-WICI-UTPVE2025-English.pdf"
-                      onClick={(e) => e.preventDefault()}
-                      className="block text-sm hover:text-[#e0b02e] cursor-not-allowed"
+                      href="/Call-For-Paper-WICI-UTPVE2025-Temp.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block text-sm hover:text-[#e0b02e]"
                     >
                       English
                     </a>
