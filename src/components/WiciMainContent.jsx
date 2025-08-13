@@ -137,7 +137,7 @@ const WiciMainContent = () => {
                 <li key={idx}>{fecha}</li>
               ))}
             </ul>
-            {/* Bloque PRISMA (derecha, imagen y texto centrado vertical al lado) */}
+            {/* Bloque PRISMA (derecha, imagen y texto centrado vertical al lado) 
             <div className="flex flex-row items-center md:w-[290px] gap-4">
               <a
                 href="https://revistas.utp.ac.pa/index.php/prisma"
@@ -180,7 +180,7 @@ const WiciMainContent = () => {
                   </>
                 )}
               </div>
-            </div>
+            </div>*/}
           </div>
         </div>
       </section>

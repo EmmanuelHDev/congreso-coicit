@@ -7,8 +7,8 @@ const texts = {
     call: "Instrucciones para Autores",
     descripcion1:
       "La Universidad Tecnológica de Panamá (UTP), Centro Regional de Veraguas, invita a la comunidad científica nacional e internacional a enviar manuscritos originales e inéditos para el WICI-UTP ’2025, taller oficial de COICIT 2025.",
-    descripcion2:
-      "Todos los trabajos aceptados serán publicados en un número especial de PRISMA Tecnológico, revista multidisciplinaria de acceso abierto (DOAJ/Latindex) con revisión doble ciego.",
+    //descripcion2:
+    //  "Todos los trabajos aceptados serán publicados en un número especial de PRISMA Tecnológico, revista multidisciplinaria de acceso abierto (DOAJ/Latindex) con revisión doble ciego.",
     guiaTitulo: "Guía para Manuscritos",
     guia: [
       [
@@ -21,7 +21,7 @@ const texts = {
         ").",
       ],
       "Idiomas: español o inglés. Resúmenes y palabras clave en ambos.",
-      "Plantillas disponibles en PRISMA UTP o el sitio del WICI.",
+      //"Plantillas disponibles en PRISMA UTP o el sitio del WICI.",
       "Envío vía Microsoft CMT.",
       "Revisión doble ciego por al menos 2 miembros del comité científico.",
     ],
@@ -57,8 +57,8 @@ const texts = {
     call: "Instructions for Authors",
     descripcion1:
       "La Universidad Tecnológica de Panamá (UTP), Centro Regional de Veraguas, invites the national and international scientific community to submit original, unpublished manuscripts to WICI-UTP ’2025, the official workshop of COICIT 2025.",
-    descripcion2:
-      "All accepted papers will be published in a special issue of PRISMA Tecnológico, an open-access, multidisciplinary journal indexed in DOAJ and Latindex with rigorous double-blind peer review.",
+    //descripcion2:
+    //  "All accepted papers will be published in a special issue of PRISMA Tecnológico, an open-access, multidisciplinary journal indexed in DOAJ and Latindex with rigorous double-blind peer review.",
     guiaTitulo: "Manuscript Guidelines",
     guia: [
       [
@@ -71,7 +71,7 @@ const texts = {
         ").",
       ],
       "Languages: Spanish or English. Abstracts and keywords in both.",
-      "Templates available on PRISMA UTP or WICI website.",
+      //"Templates available on PRISMA UTP or WICI website.",
       "Submission via Microsoft CMT.",
       "Double-blind review by at least 2 Scientific Committee members.",
     ],
@@ -146,7 +146,7 @@ const SubmissionMainContent = () => {
                               rel="noopener noreferrer"
                               className="text-blue-700 underline font-medium"
                             >
-                              {part.text}
+                              {/*part.text*/}
                             </a>
                           )
                         )
@@ -154,7 +154,7 @@ const SubmissionMainContent = () => {
                   </li>
                 ))}
               </ul>
-              <a
+              {/*<a
                 href="https://revistas.utp.ac.pa/index.php/prisma"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -167,7 +167,7 @@ const SubmissionMainContent = () => {
                   className="w-40 h-auto rounded-xl border border-gray-200 shadow-md hover:scale-105 transition-transform"
                   style={{ background: "#fff" }}
                 />
-              </a>
+              </a>*/}
             </div>
           </div>
 

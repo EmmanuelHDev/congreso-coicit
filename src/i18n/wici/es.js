@@ -19,9 +19,7 @@ export default {
       comunidad científica nacional e internacional a enviar artículos inéditos para
       WICE-UTP2025, workshop oficial del COICIT 2025. El objetivo es difundir resultados
       de investigación, desarrollo e innovación alineados con las cinco áreas prioritarias de investigación
-      de la UTP. Las contribuciones aceptadas se publicarán en un número especial de la revista
-      PRISMA Tecnológico, revista multidisciplinaria indexada en DOAJ y Latindex, de acceso abierto y revisión
-      doble-ciego.`,
+      de la UTP.`,
   },
   fechas: {
     titulo: "Fechas Importantes",

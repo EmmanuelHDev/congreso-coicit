@@ -18,9 +18,7 @@ export default {
     texto: `La Universidad Tecnológica de Panamá (UTP), Centro Regional de Veraguas, invites the
       national and international scientific community to submit original articles for
       WICE-UTP2025, the official workshop of COICIT 2025. The objective is to disseminate research,
-      development and innovation results aligned with UTP's five priority research areas.
-      Accepted contributions will be published in a special issue of PRISMA Tecnológico,
-      a multidisciplinary journal indexed in DOAJ and Latindex, open access and double-blind peer review.`,
+      development and innovation results aligned with UTP's five priority research areas.`,
   },
   fechas: {
     titulo: "Important Dates",
