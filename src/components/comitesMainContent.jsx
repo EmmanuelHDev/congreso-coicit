@@ -44,6 +44,7 @@ const ComitesMainContent = () => {
         "Dra. Airam Morales – Universidad Tecnológica de Panamá",
         "Dr. Carlos Robetto	 – Universidad Tecnológica de Panamá",
         "Dr. Manuel Martin-Merino Acera	 – Universidad Pontificia de Salamanca",
+        "Dra. Nacari Marin	 – Universidad Tecnológica de Panamá",
       ],
     },
     en: {
@@ -85,6 +86,7 @@ const ComitesMainContent = () => {
         "Dra. Airam Morales – Universidad Tecnológica de Panamá",
         "Dr. Carlos Robetto	 – Universidad Tecnológica de Panamá",
         "Dr. Manuel Martin-Merino Acera	 – Universidad Pontificia de Salamanca",
+        "Dra. Nacari Marin	 – Universidad Tecnológica de Panamá",
       ],
     },
   }[lang];
