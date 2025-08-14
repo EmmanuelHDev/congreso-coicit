@@ -8,7 +8,7 @@ export default {
     ubicacion: "Location",
   },
   hero: {
-    titulo: "Workshop on Research in Science and Engineering",
+    titulo: "Workshop of Research in Science and Engineering",
     nombre: "WICI-2025",
     ubicacion: "UTP | Centro Regional de Veraguas | Sala Galo Chang",
     fecha: "October 16, 2025",
