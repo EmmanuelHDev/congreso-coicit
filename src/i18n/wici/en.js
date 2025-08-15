@@ -19,6 +19,10 @@ export default {
       national and international scientific community to submit original articles for
       WICE-UTP2025, the official workshop of COICIT 2025. The objective is to disseminate research,
       development and innovation results aligned with UTP's five priority research areas.`,
+    texto2: `Publication in extended version in a special volume of the I+D Tecnológico Journal of UTP,
+      the institution’s most prestigious scientific journal. These articles must comply with the journal’s
+      editorial guidelines and review process. Papers that are not published in the journal will be included
+      in the WICI 2025 Proceedings, as a chapter, available in UTP’s institutional repository.`,
   },
   fechas: {
     titulo: "Important Dates",

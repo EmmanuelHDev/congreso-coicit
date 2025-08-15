@@ -84,7 +84,6 @@ const WiciMainContent = () => {
             <p className="text-base mt-2">{t.hero.ubicacion}</p>
             <p className="mt-4 text-lg">{t.hero.fecha}</p>
           </div>
-          {/* Ya NO hay logo aquí */}
         </div>
       </section>
 
@@ -94,6 +93,7 @@ const WiciMainContent = () => {
             {t.call.titulo}
           </h2>
           <p className="text-gray-800 leading-relaxed">{t.call.texto}</p>
+          <p className="text-gray-800 leading-relaxed">{t.call.texto2}</p>
         </div>
       </section>
 
@@ -137,17 +137,17 @@ const WiciMainContent = () => {
                 <li key={idx}>{fecha}</li>
               ))}
             </ul>
-            {/* Bloque PRISMA (derecha, imagen y texto centrado vertical al lado) 
+            {/* Bloque PRISMA (derecha, imagen y texto centrado vertical al lado) */}
             <div className="flex flex-row items-center md:w-[290px] gap-4">
               <a
-                href="https://revistas.utp.ac.pa/index.php/prisma"
+                href="https://revistas.utp.ac.pa/index.php/id-tecnologico"
                 target="_blank"
                 rel="noopener noreferrer"
-                title="PRISMA Tecnológico"
+                title="I + D Tecnológico"
                 className="focus:outline-none"
               >
                 <img
-                  src="/img/wici/Prisma.jpg"
+                  src="/img/wici/I+D.webp"
                   alt="PRISMA Tecnológico"
                   className="w-24 md:w-32 h-auto rounded-xl border border-gray-200 shadow hover:scale-105 transition-transform"
                   style={{ background: "#fff" }}
@@ -158,29 +158,29 @@ const WiciMainContent = () => {
                   <>
                     <span>Extensión máxima: 6 páginas</span>
                     <a
-                      href="https://revistas.utp.ac.pa/public/documentos-prisma/Instrucciones_para_los_autores_2018.pdf"
+                      href="https://ridda2.utp.ac.pa/bitstream/handle/123456789/11527/RIDTEC-Plantilla-manuscrito%20-2025.docx?sequence=4&isAllowed=y"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-blue-700 underline font-medium mt-1"
                     >
-                      plantilla Word PRISMA
+                      Plantilla Word I+D
                     </a>
                   </>
                 ) : (
                   <>
                     <span>Maximum 6 pages</span>
                     <a
-                      href="https://revistas.utp.ac.pa/public/documentos-prisma/Instrucciones_para_los_autores_2018.pdf"
+                      href="https://ridda2.utp.ac.pa/bitstream/handle/123456789/11527/RIDTEC-Plantilla-manuscrito%20-2025.docx?sequence=4&isAllowed=y"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-blue-700 underline font-medium mt-1"
                     >
-                      PRISMA Word template
+                      I+D Word template
                     </a>
                   </>
                 )}
               </div>
-            </div>*/}
+            </div>
           </div>
         </div>
       </section>

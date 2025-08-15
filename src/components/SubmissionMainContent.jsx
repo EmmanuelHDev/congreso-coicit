@@ -7,23 +7,54 @@ const texts = {
     call: "Instrucciones para Autores",
     descripcion1:
       "La Universidad Tecnológica de Panamá (UTP), Centro Regional de Veraguas, invita a la comunidad científica nacional e internacional a enviar manuscritos originales e inéditos para el WICI-UTP ’2025, taller oficial de COICIT 2025.",
-    //descripcion2:
-    //  "Todos los trabajos aceptados serán publicados en un número especial de PRISMA Tecnológico, revista multidisciplinaria de acceso abierto (DOAJ/Latindex) con revisión doble ciego.",
+    descripcion2: (
+      <>
+        Durante el WICI-UTPVE 2025 se seleccionarán los 10 trabajos más
+        sobresalientes para postularlos a su publicación, en versión ampliada,
+        dentro de un volumen especial de la Revista I+D Tecnológico de la UTP,
+        reconocida como la principal publicación científica de la institución.
+        Para su aceptación, los autores deberán ajustarse a las{" "}
+        <a
+          href="https://revistas.utp.ac.pa/index.php/id-tecnologico/politicas_id"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-bold text-blue-700 underline"
+        >
+          directrices y al proceso editorial
+        </a>{" "}
+        establecido por la revista.
+      </>
+    ),
+    descripcion3:
+      "Aquellos trabajos que no sean publicados en la revista se incluirán en la Memoria del WICI 2025, en formato de capítulo, la cual estará disponible en el repositorio institucional de la UTP.",
     guiaTitulo: "Guía para Manuscritos",
     guia: [
       [
         "Extensión máxima: 6 páginas (",
         {
           type: "link",
-          text: "plantilla Word PRISMA",
-          url: "https://revistas.utp.ac.pa/public/documentos-prisma/Instrucciones_para_los_autores_2018.pdf",
+          text: "plantilla Word I+D",
+          url: "https://ridda2.utp.ac.pa/bitstream/handle/123456789/11527/RIDTEC-Plantilla-manuscrito%20-2025.docx?sequence=4&isAllowed=y",
         },
         ").",
       ],
       "Idiomas: español o inglés. Resúmenes y palabras clave en ambos.",
-      //"Plantillas disponibles en PRISMA UTP o el sitio del WICI.",
       "Envío vía Microsoft CMT.",
       "Revisión doble ciego por al menos 2 miembros del comité científico.",
+      "Checklist de envío:",
+      "1) El envío no ha sido publicado previamente ni está en consideración en otra revista (o se explica en Comentarios al editor/a).",
+      "2) El archivo de envío está en formato OpenOffice, Microsoft Word, RTF o WordPerfect.",
+      "3) Siempre que sea posible, se proporcionan direcciones URL para las referencias.",
+      "4) El texto es de interlineado sencillo; fuente de 12 puntos; usa cursiva en lugar de subrayado (excepto URLs); e ilustraciones/figuras/tablas están en su lugar dentro del texto.",
+      [
+        "5) El texto se adhiere a los requisitos estilísticos y bibliográficos resumidos en la plantilla de la revista (",
+        {
+          type: "link",
+          text: "descargar plantilla",
+          url: "https://revistas.utp.ac.pa/public/documentos-prisma/Instrucciones_para_los_autores_2018.pdf",
+        },
+        ").",
+      ],
     ],
     fechasTitulo: "Fechas Importantes",
     fechas: [
@@ -57,23 +88,53 @@ const texts = {
     call: "Instructions for Authors",
     descripcion1:
       "La Universidad Tecnológica de Panamá (UTP), Centro Regional de Veraguas, invites the national and international scientific community to submit original, unpublished manuscripts to WICI-UTP ’2025, the official workshop of COICIT 2025.",
-    //descripcion2:
-    //  "All accepted papers will be published in a special issue of PRISMA Tecnológico, an open-access, multidisciplinary journal indexed in DOAJ and Latindex with rigorous double-blind peer review.",
+    descripcion2: (
+      <>
+        During WICI-UTPVE 2025, the 10 most outstanding papers will be selected
+        for submission, in an extended version, to a special volume of I+D
+        Tecnológico Journal of UTP, recognized as the institution’s leading
+        scientific publication. For acceptance, authors must adhere to the{" "}
+        <a
+          href="https://revistas.utp.ac.pa/index.php/id-tecnologico/politicas_id"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-bold text-blue-700 underline"
+        >
+          guidelines and editorial process
+        </a>{" "}
+        established by the journal.
+      </>
+    ),
+    descripcion3:
+      "Papers that are not published in the journal will be included in the WICI 2025 Proceedings, in chapter format, which will be available in UTP’s institutional repository.",
     guiaTitulo: "Manuscript Guidelines",
     guia: [
       [
         "Maximum 6 pages (",
         {
           type: "link",
-          text: "PRISMA Word template",
-          url: "https://revistas.utp.ac.pa/public/documentos-prisma/Instrucciones_para_los_autores_2018.pdf",
+          text: "I+D Word template",
+          url: "https://ridda2.utp.ac.pa/bitstream/handle/123456789/11527/RIDTEC-Plantilla-manuscrito%20-2025.docx?sequence=4&isAllowed=y",
         },
         ").",
       ],
       "Languages: Spanish or English. Abstracts and keywords in both.",
-      //"Templates available on PRISMA UTP or WICI website.",
       "Submission via Microsoft CMT.",
       "Double-blind review by at least 2 Scientific Committee members.",
+      "Submission Checklist:",
+      "1) The submission has not been previously published nor submitted elsewhere (or this is explained in the Comments to the Editor).",
+      "2) The submission file is in OpenOffice, Microsoft Word, RTF, or WordPerfect format.",
+      "3) URLs are provided for references wherever possible.",
+      "4) The text is single-spaced; 12-point font; italics instead of underlining (except for URLs); and all illustrations/figures/tables appear in-place within the text.",
+      [
+        "5) The text adheres to the stylistic and bibliographic requirements outlined in the journal template (",
+        {
+          type: "link",
+          text: "download template",
+          url: "https://revistas.utp.ac.pa/public/documentos-prisma/Instrucciones_para_los_autores_2018.pdf",
+        },
+        ").",
+      ],
     ],
     fechasTitulo: "Important Dates",
     fechas: [
@@ -125,6 +186,7 @@ const SubmissionMainContent = () => {
             <h2 className="text-[#e0b02e] text-2xl font-bold mb-4">{t.call}</h2>
             <p>{t.descripcion1}</p>
             <p className="mt-4">{t.descripcion2}</p>
+            <p className="mt-4">{t.descripcion3}</p>
           </div>
 
           {/* Guía para manuscritos */}
@@ -146,7 +208,7 @@ const SubmissionMainContent = () => {
                               rel="noopener noreferrer"
                               className="text-blue-700 underline font-medium"
                             >
-                              {/*part.text*/}
+                              {part.text}
                             </a>
                           )
                         )
@@ -154,20 +216,20 @@ const SubmissionMainContent = () => {
                   </li>
                 ))}
               </ul>
-              {/*<a
-                href="https://revistas.utp.ac.pa/index.php/prisma"
+              <a
+                href="https://revistas.utp.ac.pa/index.php/id-tecnologico"
                 target="_blank"
                 rel="noopener noreferrer"
-                title="Ver revista PRISMA Tecnológico"
+                title="Ver revista I+D Tecnológico"
                 className="focus:outline-none"
               >
                 <img
-                  src="/img/wici/Prisma.jpg"
-                  alt="PRISMA Tecnológico"
+                  src="/img/wici/I+D.webp"
+                  alt="Portada I+D Tecnológico"
                   className="w-40 h-auto rounded-xl border border-gray-200 shadow-md hover:scale-105 transition-transform"
                   style={{ background: "#fff" }}
                 />
-              </a>*/}
+              </a>
             </div>
           </div>
 
