@@ -91,22 +91,22 @@ const texts = {
     descripcion2: (
       <>
         During WICI-UTPVE 2025, the 10 most outstanding papers will be selected
-        for submission, in an extended version, to a special volume of I+D
-        Tecnológico Journal of UTP, recognized as the institution’s leading
-        scientific publication. For acceptance, authors must adhere to the{" "}
+        for submission, in extended version, to a special volume of the I+D
+        Tecnológico Journal of UTP, recognized as the institution’s most
+        prestigious scientific journal. To be accepted, these articles must
+        comply with{" "}
         <a
           href="https://revistas.utp.ac.pa/index.php/id-tecnologico/politicas_id"
           target="_blank"
           rel="noopener noreferrer"
           className="font-bold text-blue-700 underline"
         >
-          guidelines and editorial process
+          the journal’s editorial guidelines and review process.
         </a>{" "}
-        established by the journal.
       </>
     ),
     descripcion3:
-      "Papers that are not published in the journal will be included in the WICI 2025 Proceedings, in chapter format, which will be available in UTP’s institutional repository.",
+      "The papers that are not published in the journal will be part of the WICI 2025 Memory, in chapter format, available in the institutional repository of the UTP.",
     guiaTitulo: "Manuscript Guidelines",
     guia: [
       [
@@ -122,12 +122,13 @@ const texts = {
       "Submission via Microsoft CMT.",
       "Double-blind review by at least 2 Scientific Committee members.",
       "Submission Checklist:",
-      "1) The submission has not been previously published nor submitted elsewhere (or this is explained in the Comments to the Editor).",
-      "2) The submission file is in OpenOffice, Microsoft Word, RTF, or WordPerfect format.",
-      "3) URLs are provided for references wherever possible.",
-      "4) The text is single-spaced; 12-point font; italics instead of underlining (except for URLs); and all illustrations/figures/tables appear in-place within the text.",
+      "Manuscript Guidelines",
+      "The submission has not been previously published nor submitted elsewhere (or this is explained in the Comments to the Editor).",
+      "The submission file is in OpenOffice, Microsoft Word, RTF, or WordPerfect format.",
+      "URLs are provided for references wherever possible.",
+      "The text is single-spaced; 12-point font; italics instead of underlining (except for URLs); and all illustrations/figures/tables appear in-place within the text.",
       [
-        "5) The text adheres to the stylistic and bibliographic requirements outlined in the journal template (",
+        "The text adheres to the stylistic and bibliographic requirements outlined in the journal template (",
         {
           type: "link",
           text: "download template",
