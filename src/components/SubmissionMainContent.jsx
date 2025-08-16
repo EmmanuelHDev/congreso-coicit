@@ -195,27 +195,43 @@ const SubmissionMainContent = () => {
             <h3 className="text-xl font-semibold mb-3">{t.guiaTitulo}</h3>
             <div className="bg-gray-50 rounded-xl shadow p-6 mb-6 border border-gray-200 flex flex-col md:flex-row items-center gap-6">
               <ul className="list-disc list-inside space-y-1 flex-1">
-                {t.guia.map((item, i) => (
-                  <li key={i}>
-                    {Array.isArray(item)
-                      ? item.map((part, idx) =>
-                          typeof part === "string" ? (
-                            part
-                          ) : (
-                            <a
-                              key={idx}
-                              href={part.url}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-blue-700 underline font-medium"
-                            >
-                              {part.text}
-                            </a>
+                {t.guia.map((item, i) => {
+                  let isChecklistHeader =
+                    item === "Submission Checklist:" ||
+                    item === "Checklist de envío:";
+
+                  if (!ulHasSeenChecklist) var ulHasSeenChecklist = false;
+                  if (isChecklistHeader) ulHasSeenChecklist = true;
+
+                  if (isChecklistHeader) {
+                    return (
+                      <p key={i} className="font-bold mt-2">
+                        {item}
+                      </p>
+                    );
+                  }
+                  return (
+                    <li key={i} className={ulHasSeenChecklist ? "ml-4" : ""}>
+                      {Array.isArray(item)
+                        ? item.map((part, idx) =>
+                            typeof part === "string" ? (
+                              part
+                            ) : (
+                              <a
+                                key={idx}
+                                href={part.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-blue-700 underline font-medium"
+                              >
+                                {part.text}
+                              </a>
+                            )
                           )
-                        )
-                      : item}
-                  </li>
-                ))}
+                        : item}
+                    </li>
+                  );
+                })}
               </ul>
               <a
                 href="https://revistas.utp.ac.pa/index.php/id-tecnologico"
