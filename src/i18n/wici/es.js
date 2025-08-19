@@ -15,16 +15,17 @@ export default {
   },
   call: {
     titulo: "Call for Papers",
-    texto: `La Universidad Tecnológica de Panamá (UTP), Centro Regional de Veraguas, invita a la
-      comunidad científica nacional e internacional a enviar artículos inéditos para
-      WICE-UTP2025, workshop oficial del COICIT 2025. El objetivo es difundir resultados
-      de investigación, desarrollo e innovación alineados con las cinco áreas prioritarias de investigación
-      de la UTP.`,
-      texto2: `Los 10 mejores trabajos presentados en el WICI-UTPVE 2025 serán seleccionados como candidatos 
-      su publicación en versión extendida en un volumen especial de la Revista I+D Tecnológico de la UTP, 
-      la revista científica de mayor prestigio de la institución. Estos artículos deberán cumplir con las normas 
-      y el proceso editorial de la revista. Los trabajos que no sean publicados en la revista formarán parte de la 
-      Memoria del WICI 2025, en formato de capítulo, disponible en el repositorio institucional de la UTP.`,
+    texto: `La Universidad Tecnológica de Panamá (UTP), Centro Regional de Veraguas, invita a la comunidad 
+    científica nacional e internacional a enviar artículos inéditos para WICI-UTPVE 2025, workshop oficial 
+    del COICIT 2025. El objetivo es difundir resultados de investigación, desarrollo e innovación alineados 
+    con las cinco áreas prioritarias de investigación de la UTP.`,
+    texto2: `Los 10 mejores trabajos presentados en el WICI-UTPVE 2025 serán seleccionados como candidatos 
+    para su publicación, en versión extendida, en un volumen especial de la Revista I+D Tecnológico de 
+    la UTP, la revista científica de mayor prestigio de la Institución.`,
+    texto3: `Estos artículos deberán cumplir con las normas y el proceso editorial de la revista. 
+    Se aceptan artículos tanto en inglés como en español.`,
+    texto4: `Los trabajos que no sean publicados en la revista formarán parte de la Memoria del 
+    WICI 2025, en formato de capítulo, disponible en el repositorio institucional de la UTP.`,
   },
   fechas: {
     titulo: "Fechas Importantes",

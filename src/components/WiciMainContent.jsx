@@ -94,6 +94,8 @@ const WiciMainContent = () => {
           </h2>
           <p className="text-gray-800 leading-relaxed">{t.call.texto}</p>
           <p className="text-gray-800 leading-relaxed">{t.call.texto2}</p>
+          <p className="text-gray-800 leading-relaxed">{t.call.texto3}</p>
+          <p className="text-gray-800 leading-relaxed">{t.call.texto4}</p>
         </div>
       </section>
 

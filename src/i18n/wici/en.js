@@ -15,13 +15,17 @@ export default {
   },
   call: {
     titulo: "Call for Papers",
-    texto: `La Universidad Tecnológica de Panamá (UTP), Centro Regional de Veraguas, invites the
-      national and international scientific community to submit original articles for
-      WICE-UTP2025, the official workshop of COICIT 2025. The objective is to disseminate research,
-      development and innovation results aligned with UTP's five priority research areas.`,
-    texto2: `The top 10 papers will be considered for publication in the special issue of I+D Tecnológico, UTP’s 
-      most prestigious scientific journal. These articles must comply with the journal’s editorial guidelines 
-      and review process.`,
+    texto: `La Universidad Tecnológica de Panamá (UTP), Centro Regional de Veraguas, invites the national and 
+    international scientific community to submit unpublished articles for WICI-UTPVE 2025, the official 
+    workshop of COICIT 2025. The objective is to share research, development, and innovation results aligned 
+    with UTP's five priority research areas.`,
+    texto2: `During WICI-UTPVE 2025, the 10 most outstanding papers will be selected for submission, in extended 
+    version, to a special volume of the I+D Tecnológico Journal of UTP, recognized as the institution’s most 
+    prestigious scientific journal.`,
+    texto3: `To be accepted, these articles must comply with the journal’s editorial 
+    guidelines and review process. Papers are accepted in both English and Spanish.`,
+    texto4: `The papers that are not published in the journal will be part of the WICI 2025 Memory, 
+    in chapter format, available in the institutional repository of the UTP.`,
   },
   fechas: {
     titulo: "Important Dates",
