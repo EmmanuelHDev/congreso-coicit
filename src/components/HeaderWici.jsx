@@ -70,15 +70,16 @@ const Header = () => {
                       </svg>
                     </button>
                     <ul className="absolute top-full left-0 mt-2 min-w-[160px] rounded-lg bg-gradient-to-br from-white to-gray-100 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 border border-gray-200">
-                      {/*<li>
+                      <li>
                         <a
-                          // href="/Call-For-Paper-WICI-UTPVE2025-Español.pdf"
-                          onClick={(e) => e.preventDefault()}
-                          className="block px-5 py-3 text-sm text-[#022843] hover:bg-[#e0b02e]/90 hover:text-white transition-all rounded-t-lg cursor-not-allowed"
+                          href="/WICI-UTPVE´2025-RIDTEC-ESPAÑOL.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block px-5 py-3 text-sm text-[#022843] hover:bg-[#e0b02e]/90 hover:text-white transition-all rounded-t-lg"
                         >
                           Español
                         </a>
-                      </li>*/}
+                      </li>
                       <li>
                         <a
                           href="/Call-For-Paper-WICI-UTPVE2025-English.pdf"
@@ -192,15 +193,16 @@ const Header = () => {
               <li>
                 <span className="text-white font-bold">{t.nav.cfp}</span>
                 <ul className="pl-4 mt-2">
-                  {/*<li>
+                  <li>
                     <a
-                      // href="/Call-For-Paper-WICI-UTPVE2025-Español.pdf"
-                      onClick={(e) => e.preventDefault()}
-                      className="block text-sm hover:text-[#e0b02e] cursor-not-allowed"
+                      href="/WICI-UTPVE´2025-RIDTEC-ESPAÑOL.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block text-sm hover:text-[#e0b02e]"
                     >
                       Español
                     </a>
-                  </li>*/}
+                  </li>
                   <li>
                     <a
                       href="/Call-For-Paper-WICI-UTPVE2025-English.pdf"
