@@ -2,23 +2,46 @@
 import Header from "./Header.jsx";
 import Footer from "./Footer.astro";
 
-const CAMPAIGNS_LEFT = [
+
+type Item = {
+  src: string;        
+  alt: string;
+  href: string;       
+  filename: string;   
+  size: string;
+  reduced?: string;   
+  download?: string;  
+};
+
+type Campaign = {
+  id: string;
+  title: string;
+  description: string;
+  items: Item[];
+};
+
+
+const CAMPAIGNS_LEFT: Campaign[] = [
   {
     id: "coicit",
     title: "COICIT 2025",
     description: "Artes y paquetes oficiales del COICIT.",
     items: [
       {
+        reduced: "/img/coicit/medios/reducidos/afiches_qr.webp",
         src: "/img/coicit/medios/afiches_qr.jpg",
         alt: "COICIT – Afiches con QR",
         href: "/img/coicit/medios/afiches_qr.jpg",
+        download: "/img/coicit/medios/afiches_qr.jpg",
         filename: "coicit-afiches-qr.jpg",
         size: "Poster",
       },
       {
+        reduced: "/img/coicit/medios/reducidos/afiches_paquetes.webp",
         src: "/img/coicit/medios/afiches_paquetes.jpg",
         alt: "COICIT – Afiches de Paquetes",
         href: "/img/coicit/medios/afiches_paquetes.jpg",
+        download: "/img/coicit/medios/afiches_paquetes.jpg",
         filename: "coicit-afiches-paquetes.jpg",
         size: "Poster",
       },
@@ -33,6 +56,7 @@ const CAMPAIGNS_LEFT = [
         src: "/img/coicit/medios/afiche_itransfert.png",
         alt: "COICIT – Afiches de ITransferT",
         href: "/img/coicit/medios/afiche_itransfert.png",
+        // download: "/img/coicit/medios/afiche_itransfert.jpg",
         filename: "coicit-afiches-itransfer.jpg",
         size: "Poster",
       },
@@ -41,33 +65,36 @@ const CAMPAIGNS_LEFT = [
 ];
 
 // 📦 Columna derecha: WICI (Expo Show oculto por ahora)
-const CAMPAIGNS_RIGHT = [
+const CAMPAIGNS_RIGHT: Campaign[] = [
   {
     id: "wici",
     title: "WICI-UTP 2025",
     description: "Artes del taller WICI.",
     items: [
       {
+        // Agrega reduced webp cuando lo generes
         src: "/img/coicit/medios/afiche_wici_cfp_ingles.jpg",
         alt: "WICI – Call for Papers (EN)",
         href: "/img/coicit/medios/afiche_wici_cfp_ingles.jpg",
+        download: "/img/coicit/medios/afiche_wici_cfp_ingles.jpg",
         filename: "wici-cfp-en.jpg",
         size: "Poster",
       },
       {
+        // PNG completo; si generas webp reducido, añádelo en `reduced`
         src: "/img/coicit/medios/afiche_wici_cfp_español.png",
         alt: "WICI – Call for Papers (ES)",
         href: "/img/coicit/medios/afiche_wici_cfp_español.png",
+        // download: "/img/coicit/medios/afiche_wici_cfp_español.jpg",
         filename: "wici-cfp-es.jpg",
         size: "Poster",
       },
     ],
   },
-  // Si más adelante reactivas Expo Show, añádelo aquí como otro objeto
 ];
 
 // 🔀 Emparejar por filas: izquierda/derecha; si falta una, se centra la existente
-const ROWS = Array.from(
+const ROWS: { left?: Campaign; right?: Campaign }[] = Array.from(
   { length: Math.max(CAMPAIGNS_LEFT.length, CAMPAIGNS_RIGHT.length) },
   (_, i) => ({
     left: CAMPAIGNS_LEFT[i],
@@ -106,7 +133,7 @@ const ROWS = Array.from(
                   {row.left.items.map((item) => (
                     <article class="group relative rounded-xl overflow-hidden bg-white/[0.03] border border-white/10 shadow-[0_8px_24px_rgba(0,0,0,0.25)] hover:shadow-[0_12px_32px_rgba(0,0,0,0.35)] transition w-full max-w-[360px]">
                       <div class="aspect-[3/4] overflow-hidden">
-                        <img src={item.src} alt={item.alt} loading="lazy" class="w-full h-full object-contain p-3 transition duration-300 group-hover:scale-[1.02]" />
+                        <img src={item.reduced ?? item.src} alt={item.alt} loading="lazy" class="w-full h-full object-contain p-3 transition duration-300 group-hover:scale-[1.02]" />
                       </div>
                       <div class="p-3 flex items-center justify-between gap-3 bg-gradient-to-r from-[#0f2946]/80 to-[#17395b]/80">
                         <div>
@@ -115,7 +142,7 @@ const ROWS = Array.from(
                         </div>
                         <div class="flex items-center gap-2">
                           <a href={item.href} target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-white/10 text-white hover:bg-white/20 transition" aria-label={`Ver ${item.alt}`}>Ver</a>
-                          <a href={item.href} download={item.filename} class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-[#e0b02e] text-[#07182e] hover:brightness-110 transition" aria-label={`Descargar ${item.filename}`}>Descargar</a>
+                          <a href={item.download ?? item.href} download={item.filename} class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-[#e0b02e] text-[#07182e] hover:brightness-110 transition" aria-label={`Descargar ${item.filename}`}>Descargar</a>
                         </div>
                       </div>
                     </article>
@@ -135,7 +162,7 @@ const ROWS = Array.from(
                   {row.right.items.map((item) => (
                     <article class="group relative rounded-xl overflow-hidden bg-white/[0.03] border border-white/10 shadow-[0_8px_24px_rgba(0,0,0,0.25)] hover:shadow-[0_12px_32px_rgba(0,0,0,0.35)] transition w-full max-w-[360px]">
                       <div class="aspect-[3/4] overflow-hidden">
-                        <img src={item.src} alt={item.alt} loading="lazy" class="w-full h-full object-contain p-3 transition duration-300 group-hover:scale-[1.02]" />
+                        <img src={item.reduced ?? item.src} alt={item.alt} loading="lazy" class="w-full h-full object-contain p-3 transition duration-300 group-hover:scale-[1.02]" />
                       </div>
                       <div class="p-3 flex items-center justify-between gap-3 bg-gradient-to-r from-[#0f2946]/80 to-[#17395b]/80">
                         <div>
@@ -144,7 +171,7 @@ const ROWS = Array.from(
                         </div>
                         <div class="flex items-center gap-2">
                           <a href={item.href} target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-white/10 text-white hover:bg-white/20 transition" aria-label={`Ver ${item.alt}`}>Ver</a>
-                          <a href={item.href} download={item.filename} class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-[#e0b02e] text-[#07182e] hover:brightness-110 transition" aria-label={`Descargar ${item.filename}`}>Descargar</a>
+                          <a href={item.download ?? item.href} download={item.filename} class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-[#e0b02e] text-[#07182e] hover:brightness-110 transition" aria-label={`Descargar ${item.filename}`}>Descargar</a>
                         </div>
                       </div>
                     </article>
@@ -168,7 +195,7 @@ const ROWS = Array.from(
                       {row.left.items.map((item) => (
                         <article class="group relative rounded-xl overflow-hidden bg-white/[0.03] border border-white/10 shadow-[0_8px_24px_rgba(0,0,0,0.25)] hover:shadow-[0_12px_32px_rgba(0,0,0,0.35)] transition w-full max-w-[360px]">
                           <div class="aspect-[3/4] overflow-hidden">
-                            <img src={item.src} alt={item.alt} loading="lazy" class="w-full h-full object-contain p-3 transition duration-300 group-hover:scale-[1.02]" />
+                            <img src={item.reduced ?? item.src} alt={item.alt} loading="lazy" class="w-full h-full object-contain p-3 transition duration-300 group-hover:scale-[1.02]" />
                           </div>
                           <div class="p-3 flex items-center justify-between gap-3 bg-gradient-to-r from-[#0f2946]/80 to-[#17395b]/80">
                             <div>
@@ -177,7 +204,7 @@ const ROWS = Array.from(
                             </div>
                             <div class="flex items-center gap-2">
                               <a href={item.href} target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-white/10 text-white hover:bg-white/20 transition" aria-label={`Ver ${item.alt}`}>Ver</a>
-                              <a href={item.href} download={item.filename} class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-[#e0b02e] text-[#07182e] hover:brightness-110 transition" aria-label={`Descargar ${item.filename}`}>Descargar</a>
+                              <a href={item.download ?? item.href} download={item.filename} class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-[#e0b02e] text-[#07182e] hover:brightness-110 transition" aria-label={`Descargar ${item.filename}`}>Descargar</a>
                             </div>
                           </div>
                         </article>
@@ -199,7 +226,7 @@ const ROWS = Array.from(
                       {row.right.items.map((item) => (
                         <article class="group relative rounded-xl overflow-hidden bg-white/[0.03] border border-white/10 shadow-[0_8px_24px_rgba(0,0,0,0.25)] hover:shadow-[0_12px_32px_rgba(0,0,0,0.35)] transition w-full max-w-[360px]">
                           <div class="aspect-[3/4] overflow-hidden">
-                            <img src={item.src} alt={item.alt} loading="lazy" class="w-full h-full object-contain p-3 transition duration-300 group-hover:scale-[1.02]" />
+                            <img src={item.reduced ?? item.src} alt={item.alt} loading="lazy" class="w-full h-full object-contain p-3 transition duration-300 group-hover:scale-[1.02]" />
                           </div>
                           <div class="p-3 flex items-center justify-between gap-3 bg-gradient-to-r from-[#0f2946]/80 to-[#17395b]/80">
                             <div>
@@ -208,7 +235,7 @@ const ROWS = Array.from(
                             </div>
                             <div class="flex items-center gap-2">
                               <a href={item.href} target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-white/10 text-white hover:bg-white/20 transition" aria-label={`Ver ${item.alt}`}>Ver</a>
-                              <a href={item.href} download={item.filename} class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-[#e0b02e] text-[#07182e] hover:brightness-110 transition" aria-label={`Descargar ${item.filename}`}>Descargar</a>
+                              <a href={item.download ?? item.href} download={item.filename} class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-[#e0b02e] text-[#07182e] hover:brightness-110 transition" aria-label={`Descargar ${item.filename}`}>Descargar</a>
                             </div>
                           </div>
                         </article>
