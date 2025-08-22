@@ -39,6 +39,7 @@ const Header = () => {
                 <li><a className="text-white transition hover:text-[#e0b02e]" href="/WiciPages">WICI</a></li>
                 <li><a className="text-white transition hover:text-[#e0b02e]" href="/ITransferT">I Transfer T</a></li>
                 <li><a className="text-white transition hover:text-[#e0b02e]" href="/Tour">Tour</a></li>
+                <li><a className="text-white transition hover:text-[#e0b02e]" href="/Publicidad">Publicidad</a></li>
                 <li><a className="text-white transition hover:text-[#e0b02e]" href="/CoicitUbicacion">Ubicación</a></li>
               </ul>
             </nav>
