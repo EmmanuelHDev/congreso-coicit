@@ -2,7 +2,6 @@
 import Header from "./Header.jsx";
 import Footer from "./Footer.astro";
 
-
 type Item = {
   src: string;        
   alt: string;
@@ -19,7 +18,6 @@ type Campaign = {
   description: string;
   items: Item[];
 };
-
 
 const CAMPAIGNS_LEFT: Campaign[] = [
   {
@@ -101,7 +99,6 @@ const ROWS: { left?: Campaign; right?: Campaign }[] = Array.from(
 
 <main class="pt-28 pb-16 min-h-[70vh] programa-bg">
   <section class="mx-auto w-full max-w-6xl xl:max-w-7xl px-4 sm:px-6 lg:px-8">
-    <!-- Encabezado -->
     <div class="text-center mb-10">
       <h1 class="text-4xl sm:text-5xl font-extrabold text-[#e0b02e] drop-shadow-lg animate-gradient leading-[1.15] pb-[2px]">
         Divulgación COICIT 2025
@@ -111,7 +108,6 @@ const ROWS: { left?: Campaign; right?: Campaign }[] = Array.from(
       </p>
     </div>
 
-    <!-- Filas emparejadas -->
     {ROWS.map((row) => (
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 mb-10">
         {row.left && row.right ? (
