@@ -28,7 +28,7 @@ const CAMPAIGNS_LEFT: Campaign[] = [
     description: "Artes y paquetes oficiales del COICIT.",
     items: [
       {
-        reduced: "/img/coicit/medios/reducidos/afiches_qr.webp",
+        reduced: "/img/coicit/medios/afiches_qr.jpg",
         src: "/img/coicit/medios/afiches_qr.jpg",
         alt: "COICIT – Afiches con QR",
         href: "/img/coicit/medios/afiches_qr.jpg",
@@ -56,7 +56,6 @@ const CAMPAIGNS_LEFT: Campaign[] = [
         src: "/img/coicit/medios/afiche_itransfert.png",
         alt: "COICIT – Afiches de ITransferT",
         href: "/img/coicit/medios/afiche_itransfert.png",
-        // download: "/img/coicit/medios/afiche_itransfert.jpg",
         filename: "coicit-afiches-itransfer.jpg",
         size: "Poster",
       },
@@ -64,7 +63,6 @@ const CAMPAIGNS_LEFT: Campaign[] = [
   },
 ];
 
-// 📦 Columna derecha: WICI (Expo Show oculto por ahora)
 const CAMPAIGNS_RIGHT: Campaign[] = [
   {
     id: "wici",
@@ -72,28 +70,24 @@ const CAMPAIGNS_RIGHT: Campaign[] = [
     description: "Artes del taller WICI.",
     items: [
       {
-        // Agrega reduced webp cuando lo generes
-        src: "/img/coicit/medios/afiche_wici_cfp_ingles.jpg",
+        src: "/img/coicit/medios/WICI-UTPVE´2025_en.png",
         alt: "WICI – Call for Papers (EN)",
-        href: "/img/coicit/medios/afiche_wici_cfp_ingles.jpg",
-        download: "/img/coicit/medios/afiche_wici_cfp_ingles.jpg",
-        filename: "wici-cfp-en.jpg",
+        href: "/img/coicit/medios/WICI-UTPVE´2025_en.png",
+        download: "/img/coicit/medios/WICI-UTPVE´2025_en.png",
+        filename: "WICI-UTPVE´2025_en.png",
         size: "Poster",
       },
       {
-        // PNG completo; si generas webp reducido, añádelo en `reduced`
-        src: "/img/coicit/medios/afiche_wici_cfp_español.png",
+        src: "/img/coicit/medios/WICI-UTPVE´2025_es.png",
         alt: "WICI – Call for Papers (ES)",
-        href: "/img/coicit/medios/afiche_wici_cfp_español.png",
-        // download: "/img/coicit/medios/afiche_wici_cfp_español.jpg",
-        filename: "wici-cfp-es.jpg",
+        href: "/img/coicit/medios/WICI-UTPVE´2025_es.png",
+        filename: "WICI-UTPVE´2025_es.png",
         size: "Poster",
       },
     ],
   },
 ];
 
-// 🔀 Emparejar por filas: izquierda/derecha; si falta una, se centra la existente
 const ROWS: { left?: Campaign; right?: Campaign }[] = Array.from(
   { length: Math.max(CAMPAIGNS_LEFT.length, CAMPAIGNS_RIGHT.length) },
   (_, i) => ({
