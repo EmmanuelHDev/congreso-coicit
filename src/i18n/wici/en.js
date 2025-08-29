@@ -30,7 +30,11 @@ export default {
   fechas: {
     titulo: "Important Dates",
     items: [
-      "Submission Deadline: September 1, 2025",
+      {
+        label: "Submission Deadline:",
+        old: "September 1, 2025",
+        new: "September 15, 2025",
+      },
       "Acceptance Notification: September 29, 2025",
       "Camera-Ready: October 3, 2025",
       "Author Registration: October 8, 2025",
@@ -47,46 +51,16 @@ export default {
       "The Workshop welcomes original and high-quality presentations in the following areas, including but not limited to:",
   },
   areasTematicas: [
-    {
-      titulo: "Innovation and Technology",
-      img: "/img/wici/areas_tematicas/01_innovación2.webp",
-    },
-    {
-      titulo: "Climate Change",
-      img: "/img/wici/areas_tematicas/02_cambio_climatico.webp",
-    },
-    {
-      titulo: "Social Development",
-      img: "/img/wici/areas_tematicas/03_desarrollo_social-salud2.webp",
-    },
-    {
-      titulo: "Infrastructure",
-      img: "/img/wici/areas_tematicas/04_infrastructure.webp",
-    },
-    {
-      titulo: "Logistics and Transport",
-      img: "/img/wici/areas_tematicas/05_Logistica_y_transporte2.webp",
-    },
-    {
-      titulo: "Energy and Energy Transitions",
-      img: "/img/wici/areas_tematicas/06_energias4.webp",
-    },
-    {
-      titulo: "New Information and Communication Technologies",
-      img: "/img/wici/areas_tematicas/07_Nuevas_tecnologias2.webp",
-    },
-    {
-      titulo: "Circular Economy",
-      img: "/img/wici/areas_tematicas/08_economia_circular.webp",
-    },
-    {
-      titulo: "Materials Science and Engineering",
-      img: "/img/wici/areas_tematicas/09_ingenieria_de_los_materiales.webp",
-    },
-    {
-      titulo: "Others Areas",
-      img: "/img/wici/areas_tematicas/10_investigacion.webp",
-    },
+    { titulo: "Innovation and Technology", img: "/img/wici/areas_tematicas/01_innovación2.webp" },
+    { titulo: "Climate Change", img: "/img/wici/areas_tematicas/02_cambio_climatico.webp" },
+    { titulo: "Social Development", img: "/img/wici/areas_tematicas/03_desarrollo_social-salud2.webp" },
+    { titulo: "Infrastructure", img: "/img/wici/areas_tematicas/04_infrastructure.webp" },
+    { titulo: "Logistics and Transport", img: "/img/wici/areas_tematicas/05_Logistica_y_transporte2.webp" },
+    { titulo: "Energy and Energy Transitions", img: "/img/wici/areas_tematicas/06_energias4.webp" },
+    { titulo: "New Information and Communication Technologies", img: "/img/wici/areas_tematicas/07_Nuevas_tecnologias2.webp" },
+    { titulo: "Circular Economy", img: "/img/wici/areas_tematicas/08_economia_circular.webp" },
+    { titulo: "Materials Science and Engineering", img: "/img/wici/areas_tematicas/09_ingenieria_de_los_materiales.webp" },
+    { titulo: "Others Areas", img: "/img/wici/areas_tematicas/10_investigacion.webp" },
   ],
   lugar: {
     titulo: "Workshop Location",

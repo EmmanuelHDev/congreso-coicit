@@ -16,6 +16,11 @@ const sponsors = {
       label: "Gold",
     },
     {
+      name: "CENTRAL AZUCARERO LA VICTORIA, S.A.",
+      src: "/img/coicit/patrocinadores/la_victoria_azul.png",
+      label: "Gold",
+    },
+    {
       name: "Parmigiana",
       src: "/img/coicit/patrocinadores/parmigiana.png",
       label: "Bronze",
@@ -37,6 +42,7 @@ const LOGO_HEIGHTS = {
   Platinium: "h-[110px] sm:h-[120px]",
   Gold: "h-[85px] sm:h-[80px]",
   Bronze: "h-[70px] sm:h-[85px]",
+  "CENTRAL AZUCARERO LA VICTORIA, S.A.": "h-[200px] sm:h-[105px]"
 };
 
 function Badge({ label }) {
@@ -80,7 +86,7 @@ const Category = ({ title, sponsors }) => {
                   src={src}
                   alt={name}
                   className={`${
-                    LOGO_HEIGHTS[label] || "h-[90px]"
+                    LOGO_HEIGHTS[name] || LOGO_HEIGHTS[label] || "h-[90px]"
                   } object-contain transition-transform duration-200 hover:scale-105`}
                   style={{
                     maxWidth: "260px",
@@ -134,7 +140,6 @@ export default function PatrocinadoresCoicit() {
             }}
           />
         </div>
-        {/* ORGANIZADOR */}
         <div className="flex flex-col items-center mb-24">
           <img
             src={sponsors.organizer[0].src}
@@ -149,13 +154,11 @@ export default function PatrocinadoresCoicit() {
             {sponsors.organizer[0].name}
           </span>
         </div>
-        {/* NIVEL 1 */}
         <Category
           title="Diamond, Platinium & Premium Sponsors"
           sponsors={sponsors.nivel1}
         />
         <hr className="w-full max-w-4xl border-t-2 border-white/50 my-8 mx-auto" />
-        {/* NIVEL 2 */}
         <Category
           title="Gold, Silver & Bronze Sponsors"
           sponsors={sponsors.nivel2}

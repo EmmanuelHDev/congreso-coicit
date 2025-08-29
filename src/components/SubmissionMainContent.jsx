@@ -1,6 +1,19 @@
 import React from "react";
 import { useWiciLanguage } from "./WiciLanguageContext";
 
+const DateItem = ({ item }) => {
+  if (typeof item === "string") return <li>{item}</li>;
+  return (
+    <li className="flex flex-wrap items-center gap-2">
+      <span className="font-medium">{item.label}</span>
+      <span className="line-through text-gray-500">{item.old}</span>
+      <span className="inline-flex items-center rounded-md bg-yellow-100/70 px-2 py-0.5 text-sm font-bold text-yellow-800 shadow-[inset_0_0_0_1px_rgba(0,0,0,.05)]">
+        {item.new}
+      </span>
+    </li>
+  );
+};
+
 const texts = {
   es: {
     titulo: "Envío de Trabajos",
@@ -26,7 +39,7 @@ const texts = {
       </>
     ),
     descripcion3:
-      "Aquellos trabajos que no sean publicados en la revista se incluirán en la Memoria del WICI 2025, en formato de capítulo, la cual estará disponible en el repositorio institucional de la UTP.",
+      "Aquellos trabajos que no sean publicados en la revista se incluirán en la Memoria del WICI 2025, en formato de capítulo, la cual estará disponible en el repositorio institucional de la UTP.",
     guiaTitulo: "Guía para Manuscritos",
     guia: [
       [
@@ -57,8 +70,13 @@ const texts = {
       ],
     ],
     fechasTitulo: "Fechas Importantes",
+    // 👇 Primer ítem como objeto: vieja tachada + nueva resaltada
     fechas: [
-      "Fecha límite de envío: 1 de septiembre de 2025",
+      {
+        label: "Fecha límite de envío:",
+        old: "1 de septiembre de 2025",
+        new: "15 de septiembre de 2025",
+      },
       "Notificación de aceptación: 29 de septiembre de 2025",
       "Versión final: 3 de octubre de 2025",
       "Registro de autores: 8 de octubre de 2025",
@@ -106,7 +124,7 @@ const texts = {
       </>
     ),
     descripcion3:
-      "The papers that are not published in the journal will be part of the WICI 2025 Memory, in chapter format, available in the institutional repository of the UTP.",
+      "The papers that are not published in the journal will be part of the WICI 2025 Memory, in chapter format, available in the institutional repository of the UTP.",
     guiaTitulo: "Manuscript Guidelines",
     guia: [
       [
@@ -139,7 +157,11 @@ const texts = {
     ],
     fechasTitulo: "Important Dates",
     fechas: [
-      "Submission Deadline: September 1, 2025",
+      {
+        label: "Submission Deadline:",
+        old: "September 1, 2025",
+        new: "September 15, 2025",
+      },
       "Acceptance Notification: September 29, 2025",
       "Camera-Ready: October 3, 2025",
       "Author Registration: October 8, 2025",
@@ -254,9 +276,9 @@ const SubmissionMainContent = () => {
           <div className="max-w-3xl mx-auto mt-12">
             <h3 className="text-xl font-semibold mb-3">{t.fechasTitulo}</h3>
             <div className="bg-gray-50 rounded-xl shadow p-6 mb-6 border border-gray-200">
-              <ul className="space-y-1">
+              <ul className="space-y-2">
                 {t.fechas.map((item, i) => (
-                  <li key={i}>{item}</li>
+                  <DateItem key={i} item={item} />
                 ))}
               </ul>
             </div>
@@ -315,7 +337,7 @@ const SubmissionMainContent = () => {
                     href="https://cmt3.research.microsoft.com/WICI2025"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-blue-700 underline"
+                    className="text-blue-700 underline break-all"
                   >
                     https://cmt3.research.microsoft.com/WICI2025
                   </a>
@@ -364,6 +386,7 @@ const SubmissionMainContent = () => {
           </div>
         </section>
       </main>
+
       <footer className="bg-[#e0b02e]">
         <div className="mx-auto max-w-5xl px-4 py-4 sm:px-6 lg:px-8 flex justify-center items-center">
           <span className="text-white font-medium text-sm text-center w-full">
