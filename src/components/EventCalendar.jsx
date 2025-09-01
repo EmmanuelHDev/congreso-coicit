@@ -303,7 +303,7 @@ const EventCalendar = () => {
                 {/* Contenido del evento */}
                 <div className="mb-6">
                   <h3 className="text-lg font-semibold mb-3 leading-tight">
-                    {event.title}
+                    <span className="font-bold text-[#e0b02e]">{event.code}</span> - {event.title}
                   </h3>
                   <p className="text-sm opacity-80 mb-2">
                     Expositor: {event.speaker}
