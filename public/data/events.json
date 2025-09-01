@@ -168,8 +168,6 @@
       "type": "ponencia",
       "status": "disponible"
     },
-
-
     {
       "id": 13,
       "date": {
@@ -212,7 +210,7 @@
       "type": "sesion_experto",
       "status": "disponible"
     },
-      {
+    {
       "id": 16,
       "date": {
         "month": "OCT",
@@ -646,8 +644,6 @@
       "type": "sesion_experto",
       "status": "disponible"
     },
-
-
     {
       "id": 47,
       "date": {
@@ -920,20 +916,6 @@
         "month": "OCT",
         "day": "15"
       },
-      "title": "Taller Demostrativo ICE ELECTRONIC",
-      "speaker": "",
-      "time": "10:00 - 12:00 md",
-      "location": "Salón A-4",
-      "faculty": "Facultad de Ingeniería Eléctrica",
-      "type": "sesion_interactiva",
-      "status": "disponible"
-    },
-    {
-      "id": 67,
-      "date": {
-        "month": "OCT",
-        "day": "15"
-      },
       "title": "Selección de PG para Proyectos de Carretera",
       "speaker": "Dr. Elvis Castillo | UTP",
       "time": "10:00 - 12:00 md",
@@ -943,7 +925,7 @@
       "status": "disponible"
     },
     {
-      "id": 68,
+      "id": 67,
       "date": {
         "month": "OCT",
         "day": "15"
@@ -957,7 +939,7 @@
       "status": "disponible"
     },
     {
-      "id": 69,
+      "id": 68,
       "date": {
         "month": "OCT",
         "day": "15"
@@ -971,7 +953,7 @@
       "status": "disponible"
     },
     {
-      "id": 70,
+      "id": 69,
       "date": {
         "month": "OCT",
         "day": "15"
@@ -985,7 +967,7 @@
       "status": "disponible"
     },
     {
-      "id": 71,
+      "id": 70,
       "date": {
         "month": "OCT",
         "day": "15"
@@ -999,7 +981,7 @@
       "status": "disponible"
     },
     {
-      "id": 72,
+      "id": 71,
       "date": {
         "month": "OCT",
         "day": "15"
@@ -1013,7 +995,7 @@
       "status": "disponible"
     },
     {
-      "id": 73,
+      "id": 72,
       "date": {
         "month": "OCT",
         "day": "15"
@@ -1027,7 +1009,7 @@
       "status": "disponible"
     },
     {
-      "id": 74,
+      "id": 73,
       "date": {
         "month": "OCT",
         "day": "15"
@@ -1041,7 +1023,7 @@
       "status": "disponible"
     },
     {
-      "id": 75,
+      "id": 74,
       "date": {
         "month": "OCT",
         "day": "15"
@@ -1055,7 +1037,7 @@
       "status": "disponible"
     },
     {
-      "id": 76,
+      "id": 75,
       "date": {
         "month": "OCT",
         "day": "15"
@@ -1069,7 +1051,7 @@
       "status": "disponible"
     },
     {
-      "id": 77,
+      "id": 76,
       "date": {
         "month": "OCT",
         "day": "17"
@@ -1083,7 +1065,7 @@
       "status": "disponible"
     },
     {
-      "id": 78,
+      "id": 77,
       "date": {
         "month": "OCT",
         "day": "17"
@@ -1097,7 +1079,7 @@
       "status": "disponible"
     },
     {
-      "id": 79,
+      "id": 78,
       "date": {
         "month": "OCT",
         "day": "17"
@@ -1111,7 +1093,7 @@
       "status": "disponible"
     },
     {
-      "id": 80,
+      "id": 79,
       "date": {
         "month": "OCT",
         "day": "17"
@@ -1125,7 +1107,7 @@
       "status": "disponible"
     },
     {
-      "id": 81,
+      "id": 80,
       "date": {
         "month": "OCT",
         "day": "17"
@@ -1139,7 +1121,7 @@
       "status": "disponible"
     },
     {
-      "id": 82,
+      "id": 81,
       "date": {
         "month": "OCT",
         "day": "17"
@@ -1153,7 +1135,7 @@
       "status": "disponible"
     },
     {
-      "id": 83,
+      "id": 82,
       "date": {
         "month": "OCT",
         "day": "17"
@@ -1167,7 +1149,7 @@
       "status": "disponible"
     },
     {
-      "id": 84,
+      "id": 83,
       "date": {
         "month": "OCT",
         "day": "17"
@@ -1181,7 +1163,7 @@
       "status": "disponible"
     },
     {
-      "id": 85,
+      "id": 84,
       "date": {
         "month": "OCT",
         "day": "17"
@@ -1195,7 +1177,7 @@
       "status": "disponible"
     },
     {
-      "id": 86,
+      "id": 85,
       "date": {
         "month": "OCT",
         "day": "17"
@@ -1209,7 +1191,7 @@
       "status": "disponible"
     },
     {
-      "id": 87,
+      "id": 86,
       "date": {
         "month": "OCT",
         "day": "17"
@@ -1223,7 +1205,7 @@
       "status": "disponible"
     },
     {
-      "id": 88,
+      "id": 87,
       "date": {
         "month": "OCT",
         "day": "17"
@@ -1237,7 +1219,7 @@
       "status": "disponible"
     },
     {
-      "id": 89,
+      "id": 88,
       "date": {
         "month": "OCT",
         "day": "17"
@@ -1251,7 +1233,7 @@
       "status": "disponible"
     },
     {
-      "id": 90,
+      "id": 89,
       "date": {
         "month": "OCT",
         "day": "17"
@@ -1265,7 +1247,7 @@
       "status": "disponible"
     },
     {
-      "id": 91,
+      "id": 90,
       "date": {
         "month": "OCT",
         "day": "17"
@@ -1279,7 +1261,7 @@
       "status": "disponible"
     },
     {
-      "id": 92,
+      "id": 91,
       "date": {
         "month": "OCT",
         "day": "17"
@@ -1292,19 +1274,5 @@
       "type": "sesion_interactiva",
       "status": "disponible"
     }
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
   ]
 }
