@@ -47,7 +47,7 @@ const texts = {
         {
           type: "link",
           text: "plantilla Word I+D",
-          url: "RIDTEC-Plantilla-manuscrito-2025.docx",
+          url: "/RIDTEC-Plantilla-manuscrito-2025.docx",
         },
         ").",
       ],
@@ -132,7 +132,7 @@ const texts = {
         {
           type: "link",
           text: "I+D Word template",
-          url: "RIDTEC-Plantilla-manuscrito-2025.docx",
+          url: "/RIDTEC-Plantilla-manuscrito-2025.docx",
         },
         ").",
       ],

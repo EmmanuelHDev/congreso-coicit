@@ -118,7 +118,7 @@ const WiciMainContent = () => {
                 />
               </a>
               <a
-                href="RIDTEC-Plantilla-manuscrito-2025.docx"
+                href="/RIDTEC-Plantilla-manuscrito-2025.docx"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-700 underline font-medium mt-2"

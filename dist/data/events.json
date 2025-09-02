@@ -1,0 +1,1369 @@
+{
+  "events": [
+    {
+      "id": 1,
+      "code": "PN01",
+      "date": {
+        "month": "OCT",
+        "day": "14"
+      },
+      "title": "Diseño Mecanicista de Pavimentos (virtual desde CR)",
+      "speaker": "Dr. Luis Loria | Universidad Issac Newton",
+      "time": "09:00 - 10:30 a.m.",
+      "location": "Sala Nueva de Conferencias",
+      "faculty": "Facultad de Ingeniería Civil",
+      "type": "ponencia",
+      "status": "disponible"
+    },
+    {
+      "id": 2,
+      "code": "PN04",
+      "date": {
+        "month": "OCT",
+        "day": "14"
+      },
+      "title": "Más allá de la automatización: Industria 4.0. 5.0 y la Era Digital",
+      "speaker": "Festo Didactic | Sebastian Bohórquez Quintero",
+      "time": "10:30 - 12:00 md",
+      "location": "Sala Nueva de Conferencias",
+      "faculty": "Facultad de Ingeniería Eléctrica",
+      "type": "ponencia",
+      "status": "disponible"
+    },
+    {
+      "id": 3,
+      "code": "PN05",
+      "date": {
+        "month": "OCT",
+        "day": "14"
+      },
+      "title": "Mejores prácticas en el aseguramiento de la Inteligencia Artificial",
+      "speaker": "Luis Castro Palo Alto | Panamá",
+      "time": "01:00 - 02:00 p.m.",
+      "location": "Sala Nueva de Conferencias",
+      "faculty": "Facultad de Ingeniería de Sistemas Computacionales",
+      "type": "ponencia",
+      "status": "disponible"
+    },
+    {
+      "id": 4,
+      "code": "PN06",
+      "date": {
+        "month": "OCT",
+        "day": "14"
+      },
+      "title": "Manejo de desechos industriales",
+      "speaker": "Carla Díaz | Nestlé Panamá",
+      "time": "02:30 - 04:00 p.m.",
+      "location": "Sala Nueva de Conferencias",
+      "faculty": "Facultad de Ingeniería Industrial",
+      "type": "ponencia",
+      "status": "disponible"
+    },
+    {
+      "id": 5,
+      "code": "PN02",
+      "date": {
+        "month": "OCT",
+        "day": "15"
+      },
+      "title": "El futuro del Trabajo con IA: ¿Cómo nos preparamos y que necesitamos saber?",
+      "speaker": "Gustavo Cuervo | GBM Panamá",
+      "time": "09:00 - 10:30 a.m.",
+      "location": "Sala Nueva de Conferencias",
+      "faculty": "Facultad de Ingeniería de Sistemas Computacionales",
+      "type": "ponencia",
+      "status": "disponible"
+    },
+    {
+      "id": 6,
+      "code": "PN07",
+      "date": {
+        "month": "OCT",
+        "day": "15"
+      },
+      "title": "Aplicaciones de las máquinas térmicas en la industria",
+      "speaker": "Ing. Carlos Ortíz | Ingenio Santa Rosa",
+      "time": "10:30 - 12:00 md",
+      "location": "Sala Nueva de Conferencias",
+      "faculty": "Facultad de Ingeniería Industrial",
+      "type": "ponencia",
+      "status": "disponible"
+    },
+    {
+      "id": 7,
+      "code": "PN08",
+      "date": {
+        "month": "OCT",
+        "day": "15"
+      },
+      "title": "Desarrollo de Controladores no Lineales para sistemas sub actuados mediante el método directo de Lyapunov",
+      "speaker": "Dra. Deyka García",
+      "time": "01:00 - 02:30 p.m.",
+      "location": "Sala Nueva de Conferencias",
+      "faculty": "Facultad de Ingeniería Mecánica",
+      "type": "ponencia",
+      "status": "disponible"
+    },
+    {
+      "id": 8,
+      "code": "PN09",
+      "date": {
+        "month": "OCT",
+        "day": "15"
+      },
+      "title": "Fundamentos de Física aplicados a la Protección Radiológica",
+      "speaker": "Dr. Mario Rodríguez",
+      "time": "01:00 - 02:30 p.m.",
+      "location": "Salón Galo A. Chang",
+      "faculty": "Facultad de Ciencias y Tecnología",
+      "type": "ponencia",
+      "status": "disponible"
+    },
+    {
+      "id": 9,
+      "code": "PN03",
+      "date": {
+        "month": "OCT",
+        "day": "17"
+      },
+      "title": "Manufactura Aditiva",
+      "speaker": "Ing. Rafael Castillo Watts.  ",
+      "time": "09:00 - 10:30 a.m.",
+      "location": "Sala Nueva de Conferencias",
+      "faculty": "Facultad de Ingeniería Mecánica",
+      "type": "ponencia",
+      "status": "disponible"
+    },
+    {
+      "id": 10,
+      "code": "PN10",
+      "date": {
+        "month": "OCT",
+        "day": "17"
+      },
+      "title": "Aplicaciones de las Estaciones CORS en la georreferenciación de alta precisión",
+      "speaker": "Ing. Lenin E. Guizado | Instituto Tommy Guardia",
+      "time": "10:30 - 12:30 md",
+      "location": "Sala Nueva de Conferencias",
+      "faculty": "Facultad de Ciencias y Tecnología",
+      "type": "ponencia",
+      "status": "disponible"
+    },
+    {
+      "id": 11,
+      "code": "PN11",
+      "date": {
+        "month": "OCT",
+        "day": "17"
+      },
+      "title": "Importancia de la Conectividad de Datos en una Aerolínea-",
+      "speaker": "Ing. Hugo Aquino Navarrete | Director de Servicios de Infraestructura y Operaciones de Tecnología de Copa Airlines",
+      "time": "01:00 - 02:30 p.m.",
+      "location": "Salón Galo A. Chang",
+      "faculty": "Facultad de Ingeniería Eléctrica",
+      "type": "ponencia",
+      "status": "disponible"
+    },
+    {
+      "id": 12,
+      "code": "PN12",
+      "date": {
+        "month": "OCT",
+        "day": "17"
+      },
+      "title": "Ingeniería Financiera aplicada en proyectos residenciales",
+      "speaker": "Ing. Evin Aranda | STEA GROUP S.A",
+      "time": "01:00 - 02:30 p.m.",
+      "location": "Sala Nueva de Conferencias",
+      "faculty": "Facultad de Ingeniería Civil",
+      "type": "ponencia",
+      "status": "disponible"
+    },
+    {
+      "id": 13,
+      "code": "SE01",
+      "date": {
+        "month": "OCT",
+        "day": "14"
+      },
+      "title": "Estandarización de procesos productivos y su impacto en las MiPymes",
+      "speaker": "Ing. Rolando Mora",
+      "time": "09:00 - 10:00 a.m.",
+      "location": "Salón C1",
+      "faculty": "Facultad de Ingeniería Industrial",
+      "type": "sesion_experto",
+      "status": "disponible"
+    },
+    {
+      "id": 14,
+      "code": "SE02",
+      "date": {
+        "month": "OCT",
+        "day": "14"
+      },
+      "title": "Evolución de la Inteligencia artificial, donde estamos y hacia dónde vamos",
+      "speaker": "Dr. Edmanuel Cruz",
+      "time": "09:00 - 10:00 a.m.",
+      "location": "Salón P1",
+      "faculty": "Facultad de Ingeniería de Sistemas Computacionales",
+      "type": "sesion_experto",
+      "status": "disponible"
+    },
+    {
+      "id": 15,
+      "code": "SE03",
+      "date": {
+        "month": "OCT",
+        "day": "14"
+      },
+      "title": "Economía circular",
+      "speaker": "Dr. Pablo Montero | CITT UTP",
+      "time": "09:00 - 10:00 a.m.",
+      "location": "Salón A-13",
+      "faculty": "Facultad de Ingeniería Industrial",
+      "type": "sesion_experto",
+      "status": "disponible"
+    },
+    {
+      "id": 16,
+      "code": "SE04",
+      "date": {
+        "month": "OCT",
+        "day": "14"
+      },
+      "title": "Herramientas de visión artificial basadas en MediaPipe",
+      "speaker": "Gerardo Moreno",
+      "time": "09:00 - 10:00 a.m.",
+      "location": "Salón C3",
+      "faculty": "Facultad de Ingeniería de Sistemas Computacionales",
+      "type": "sesion_experto",
+      "status": "disponible"
+    },
+    {
+      "id": 17,
+      "code": "SE05",
+      "date": {
+        "month": "OCT",
+        "day": "14"
+      },
+      "title": "Energía",
+      "speaker": "Mgtr Cesar Almanza | CITT UTP",
+      "time": "10:00 - 11:00 a.m.",
+      "location": "Salón A-6",
+      "faculty": "Facultad de Ingeniería Industrial",
+      "type": "sesion_experto",
+      "status": "disponible"
+    },
+    {
+      "id": 18,
+      "code": "SE06",
+      "date": {
+        "month": "OCT",
+        "day": "14"
+      },
+      "title": "DevOps en la Banca Digital: Integración continua en plataforma Framebanking",
+      "speaker": "Ing. Marielys Romero",
+      "time": "10:00 - 11:00 a.m.",
+      "location": "Salón P1",
+      "faculty": "Facultad de Ingeniería de Sistemas Computacionales",
+      "type": "sesion_experto",
+      "status": "disponible"
+    },
+    {
+      "id": 19,
+      "code": "SE07",
+      "date": {
+        "month": "OCT",
+        "day": "14"
+      },
+      "title": "Energía renovable y la transición energética en Grupo CALESA",
+      "speaker": "Ing. Carlos Marín | Grupo CALESA",
+      "time": "10:00 - 11:00 a.m.",
+      "location": "Salón A-3",
+      "faculty": "Facultad de Ingeniería Industrial",
+      "type": "sesion_experto",
+      "status": "disponible"
+    },
+    {
+      "id": 20,
+      "code": "SE08",
+      "date": {
+        "month": "OCT",
+        "day": "14"
+      },
+      "title": "RAGs y agentes utilizando LLMs",
+      "speaker": "Steven Pacheco Costa Rica | Instituto Tecnológico de Costa Rica",
+      "time": "10:00 - 11:00 a.m.",
+      "location": "Salón A-14",
+      "faculty": "Facultad de Ingeniería de Sistemas Computacionales",
+      "type": "sesion_experto",
+      "status": "disponible"
+    },
+    {
+      "id": 21,
+      "code": "SE09",
+      "date": {
+        "month": "OCT",
+        "day": "14"
+      },
+      "title": "Cálculo de PCI para carreteras de asfalto y concreto",
+      "speaker": "Dra. Airam Morales | UTP",
+      "time": "01:00 - 02:00 p.m.",
+      "location": "Salón P1",
+      "faculty": "Facultad de Ingeniería Civil",
+      "type": "sesion_experto",
+      "status": "disponible"
+    },
+    {
+      "id": 22,
+      "code": "SE10",
+      "date": {
+        "month": "OCT",
+        "day": "14"
+      },
+      "title": "Modelo Matemático y simulación computacional para ríos y lagos.",
+      "speaker": "Mgrt. Leomar Acosta Ballesteros",
+      "time": "01:00 - 02:00 p.m.",
+      "location": "Salón A-14",
+      "faculty": "Facultad de Ciencias y Tecnología",
+      "type": "sesion_experto",
+      "status": "disponible"
+    },
+    {
+      "id": 23,
+      "code": "SE11",
+      "date": {
+        "month": "OCT",
+        "day": "14"
+      },
+      "title": "Uso de geosintético en Panamá",
+      "speaker": "Ing. Kenneth Thompson | Geo-civil Consulting",
+      "time": "01:00 - 02:00 p.m.",
+      "location": "Salón C3",
+      "faculty": "Facultad de Ingeniería Civil",
+      "type": "sesion_experto",
+      "status": "disponible"
+    },
+    {
+      "id": 24,
+      "code": "SE12",
+      "date": {
+        "month": "OCT",
+        "day": "14"
+      },
+      "title": "Inspector de obras de concreto",
+      "speaker": "Ing. Adan Cogley | UTP",
+      "time": "02:00 - 03:00 p.m.",
+      "location": "Salón P1",
+      "faculty": "Facultad de Ingeniería Civil",
+      "type": "sesion_experto",
+      "status": "disponible"
+    },
+    {
+      "id": 25,
+      "code": "SE13",
+      "date": {
+        "month": "OCT",
+        "day": "14"
+      },
+      "title": "Soluciones Integrales de Redes Wifi: Conectando tu Mundo de Forma Segura y Confiable",
+      "speaker": "Ing. Ronald Abrego",
+      "time": "02:00 - 03:00 p.m.",
+      "location": "Salón A-14",
+      "faculty": "Facultad de Ingeniería Eléctrica",
+      "type": "sesion_experto",
+      "status": "disponible"
+    },
+    {
+      "id": 26,
+      "code": "SE14",
+      "date": {
+        "month": "OCT",
+        "day": "14"
+      },
+      "title": "Diseño de muro de gaviones",
+      "speaker": "Ing. Nicomedes Vergara | GeoGreen, Engineering Inc.",
+      "time": "02:00 - 03:00 p.m.",
+      "location": "Salón C3",
+      "faculty": "Facultad de Ingeniería Civil",
+      "type": "sesion_experto",
+      "status": "disponible"
+    },
+    {
+      "id": 27,
+      "code": "SE15",
+      "date": {
+        "month": "OCT",
+        "day": "15"
+      },
+      "title": "Ciberseguridad Empresarial",
+      "speaker": "Licda. Lessiel Alexandra Castillo Acosta",
+      "time": "09:00 - 10:00 a.m.",
+      "location": "Salón A-6",
+      "faculty": "Facultad de Ciencias y Tecnología",
+      "type": "sesion_experto",
+      "status": "disponible"
+    },
+    {
+      "id": 28,
+      "code": "SE16",
+      "date": {
+        "month": "OCT",
+        "day": "15"
+      },
+      "title": "Aplicación de BIM en el Diseño Hidrosanitario de Edificios de Gran Altura: Integración de Bombas y Tanques de Reserva",
+      "speaker": "Arq. Albis Castillo Camarena",
+      "time": "09:00 - 10:00 a.m.",
+      "location": "Salón P1",
+      "faculty": "Facultad de Ingeniería Mecánica",
+      "type": "sesion_experto",
+      "status": "disponible"
+    },
+    {
+      "id": 29,
+      "code": "SE17",
+      "date": {
+        "month": "OCT",
+        "day": "15"
+      },
+      "title": "Del paper al prompt: la revolución de la IA en la escritura científica y técnica",
+      "speaker": "Mgtr. Daniel Mudara",
+      "time": "09:00 - 10:00 a.m.",
+      "location": "Salón A-13",
+      "faculty": "Facultad de Ciencias y Tecnología",
+      "type": "sesion_experto",
+      "status": "disponible"
+    },
+    {
+      "id": 30,
+      "code": "SE18",
+      "date": {
+        "month": "OCT",
+        "day": "15"
+      },
+      "title": "Aspectos Básicos Operacionales para las Calderas Pirotubulares",
+      "speaker": "Ing. Jimmy Peñaloza",
+      "time": "09:00 - 10:00 a.m.",
+      "location": "Salón C3",
+      "faculty": "Facultad de Ingeniería Mecánica",
+      "type": "sesion_experto",
+      "status": "disponible"
+    },
+    {
+      "id": 31,
+      "code": "SE19",
+      "date": {
+        "month": "OCT",
+        "day": "15"
+      },
+      "title": "Retos Globales para el sistema portuario panameño",
+      "speaker": "Mgrt. Juan Jordan",
+      "time": "10:00 - 11:00 a.m.",
+      "location": "Salón A-3",
+      "faculty": "Facultad de Ciencias y Tecnología",
+      "type": "sesion_experto",
+      "status": "disponible"
+    },
+    {
+      "id": 32,
+      "code": "SE20",
+      "date": {
+        "month": "OCT",
+        "day": "15"
+      },
+      "title": "Diseño Impresión 3D",
+      "speaker": "Josue Robles",
+      "time": "10:00 - 11:00 a.m.",
+      "location": "Salón A-14",
+      "faculty": "Facultad de Ingeniería Mecánica",
+      "type": "sesion_experto",
+      "status": "disponible"
+    },
+    {
+      "id": 33,
+      "code": "SE21",
+      "date": {
+        "month": "OCT",
+        "day": "15"
+      },
+      "title": "Introducción al Business Model Canvas",
+      "speaker": "Mgrt. Adiz Acosta",
+      "time": "10:00 - 11:00 a.m.",
+      "location": "Salón A-17",
+      "faculty": "Facultad de Ciencias y Tecnología",
+      "type": "sesion_experto",
+      "status": "disponible"
+    },
+    {
+      "id": 34,
+      "code": "SE22",
+      "date": {
+        "month": "OCT",
+        "day": "15"
+      },
+      "title": "Gemelos digitales en el contexto de la industria manufacturera panameña",
+      "speaker": "Ing. Víctor Vaca",
+      "time": "10:00 - 11:00 a.m.",
+      "location": "Salón C1",
+      "faculty": "Facultad de Ingeniería Mecánica",
+      "type": "sesion_experto",
+      "status": "disponible"
+    },
+    {
+      "id": 35,
+      "code": "SE23",
+      "date": {
+        "month": "OCT",
+        "day": "15"
+      },
+      "title": "Logística y transporte",
+      "speaker": "Práxedes Torres",
+      "time": "01:00 - 02:00 p.m.",
+      "location": "Salón C1",
+      "faculty": "Facultad de Ingeniería Industrial",
+      "type": "sesion_experto",
+      "status": "disponible"
+    },
+    {
+      "id": 36,
+      "code": "SE24",
+      "date": {
+        "month": "OCT",
+        "day": "15"
+      },
+      "title": "Diseño e Impresión 3D",
+      "speaker": "Victoria Ludeña",
+      "time": "01:00 - 02:00 p.m.",
+      "location": "Salón C3",
+      "faculty": "Facultad de Ingeniería de Sistemas Computacionales",
+      "type": "sesion_experto",
+      "status": "disponible"
+    },
+    {
+      "id": 37,
+      "code": "SE25",
+      "date": {
+        "month": "OCT",
+        "day": "15"
+      },
+      "title": "Economía circular",
+      "speaker": "Dr. Abby Guerra | Grupo CALESA",
+      "time": "02:00 - 03:00 p.m.",
+      "location": "Salón A-13",
+      "faculty": "Facultad de Ingeniería Industrial",
+      "type": "sesion_experto",
+      "status": "disponible"
+    },
+    {
+      "id": 38,
+      "code": "SE26",
+      "date": {
+        "month": "OCT",
+        "day": "15"
+      },
+      "title": "Casos de Uso de IA en el Desarrollo De Software",
+      "speaker": "Ing. Alex Sánchez | Logic Studio",
+      "time": "02:00 - 03:00 p.m.",
+      "location": "Salón A-14",
+      "faculty": "Facultad de Ingeniería de Sistemas Computacionales",
+      "type": "sesion_experto",
+      "status": "disponible"
+    },
+    {
+      "id": 39,
+      "code": "SE27",
+      "date": {
+        "month": "OCT",
+        "day": "17"
+      },
+      "title": "Modelación numérica de fundaciones aisladas",
+      "speaker": "Dr. Aníbal Santos",
+      "time": "09:00 - 10:00 a.m.",
+      "location": "Salón P1",
+      "faculty": "Facultad de Ingeniería Civil",
+      "type": "sesion_experto",
+      "status": "disponible"
+    },
+    {
+      "id": 40,
+      "code": "SE28",
+      "date": {
+        "month": "OCT",
+        "day": "17"
+      },
+      "title": "La Movilidad Eléctrica: Orientado al futuro en América latina (Virtual)",
+      "speaker": "Ing. Jorge Jiménez | Consultor académico y miembro de la Asociación Costarricense de Movilidad Eléctrica (ASOMOVE)",
+      "time": "09:00 - 10:00 a.m.",
+      "location": "Salón A-14",
+      "faculty": "Facultad de Ingeniería Eléctrica",
+      "type": "sesion_experto",
+      "status": "disponible"
+    },
+    {
+      "id": 41,
+      "code": "SE29",
+      "date": {
+        "month": "OCT",
+        "day": "17"
+      },
+      "title": "Modelación de espacios peatonales (Virtual)",
+      "speaker": "Dr. Jorge Quijada Alarcón | UTP",
+      "time": "10:00 - 11:00 a.m.",
+      "location": "Salón P1",
+      "faculty": "Facultad de Ingeniería Civil",
+      "type": "sesion_experto",
+      "status": "disponible"
+    },
+    {
+      "id": 42,
+      "code": "SE30",
+      "date": {
+        "month": "OCT",
+        "day": "17"
+      },
+      "title": "Seguridad y Electricidad en los Proyectos",
+      "speaker": "Arq. Jilma Rojas | Bomberos de Santiago",
+      "time": "10:00 - 11:00 a.m.",
+      "location": "Salón A-14",
+      "faculty": "Facultad de Ingeniería Eléctrica",
+      "type": "sesion_experto",
+      "status": "disponible"
+    },
+    {
+      "id": 43,
+      "code": "SE31",
+      "date": {
+        "month": "OCT",
+        "day": "17"
+      },
+      "title": "Candidatos del futuro: Reclutamiento y selección en tiempos de innovación",
+      "speaker": "Mgrt. Abdiel Saavedra",
+      "time": "01:00 - 02:00 p.m.",
+      "location": "Salón A-13",
+      "faculty": "Facultad de Ciencias y Tecnología",
+      "type": "sesion_experto",
+      "status": "disponible"
+    },
+    {
+      "id": 44,
+      "code": "SE32",
+      "date": {
+        "month": "OCT",
+        "day": "17"
+      },
+      "title": "Biopolímeros  ",
+      "speaker": "Ing. Sergio González Cerrud  ",
+      "time": "01:00 - 02:00 p.m.",
+      "location": "Salón P1",
+      "faculty": "Facultad de Ingeniería Mecánica",
+      "type": "sesion_experto",
+      "status": "disponible"
+    },
+    {
+      "id": 45,
+      "code": "SE33",
+      "date": {
+        "month": "OCT",
+        "day": "17"
+      },
+      "title": "La ciencia forense digital como pilar de la investigación penal: Innovación tecnológica al servicio de la verdad procesal",
+      "speaker": "Lic. Valerio González",
+      "time": "02:00 - 03:00 p.m.",
+      "location": "Salón A-3",
+      "faculty": "Facultad de Ciencias y Tecnología",
+      "type": "sesion_experto",
+      "status": "disponible"
+    },
+    {
+      "id": 46,
+      "code": "SE34",
+      "date": {
+        "month": "OCT",
+        "day": "17"
+      },
+      "title": "Mitos y realidades de los lubricantes  ",
+      "speaker": "Ing. Emerson Camarena (AIMSALUBS)",
+      "time": "02:00 - 03:00 p.m.",
+      "location": "Salón C3",
+      "faculty": "Facultad de Ingeniería Mecánica",
+      "type": "sesion_experto",
+      "status": "disponible"
+    },
+    {
+      "id": 47,
+      "code": "SI01",
+      "date": {
+        "month": "OCT",
+        "day": "14"
+      },
+      "title": "USO DE LAS REDES SOCIALES PARA POTENCIAR UN NEGOCIO",
+      "speaker": "Lic. Edwin Mendieta",
+      "time": "08:00 - 10:00 a.m.",
+      "location": "Lab. Eléctrica (TED)",
+      "faculty": "Facultad de Ciencias y Tecnología",
+      "type": "sesion_interactiva",
+      "status": "disponible"
+    },
+    {
+      "id": 48,
+      "code": "SI02",
+      "date": {
+        "month": "OCT",
+        "day": "14"
+      },
+      "title": "Taller Interactivo de Termografth Transferencia de Calor",
+      "speaker": "Ing. Salvador Barrios",
+      "time": "08:00 - 10:00 a.m.",
+      "location": "Lab. FIM 4.0",
+      "faculty": "Facultad de Ingeniería Mecánica",
+      "type": "sesion_interactiva",
+      "status": "disponible"
+    },
+    {
+      "id": 49,
+      "code": "SI03",
+      "date": {
+        "month": "OCT",
+        "day": "14"
+      },
+      "title": "Introducción a la IA en la educación",
+      "speaker": "Ing. Keithleen Patiño Tejedor",
+      "time": "08:00 - 10:00 a.m.",
+      "location": "Lab. Industrial (A-9)",
+      "faculty": "Facultad de Ciencias y Tecnología",
+      "type": "sesion_interactiva",
+      "status": "disponible"
+    },
+    {
+      "id": 50,
+      "code": "SI04",
+      "date": {
+        "month": "OCT",
+        "day": "14"
+      },
+      "title": "Taller de Diagnóstico Automotriz",
+      "speaker": "Ing. Salvador Barrios (RYMSA)",
+      "time": "08:00 - 10:00 a.m.",
+      "location": "Salón P2",
+      "faculty": "Facultad de Ingeniería Mecánica",
+      "type": "sesion_interactiva",
+      "status": "disponible"
+    },
+    {
+      "id": 51,
+      "code": "SI05",
+      "date": {
+        "month": "OCT",
+        "day": "14"
+      },
+      "title": "Redacción de Artículos Científicos",
+      "speaker": "Dr. Cristian Pinzón",
+      "time": "10:00 - 12:00 md",
+      "location": "Lab. Estructura (A-12)",
+      "faculty": "Facultad de Ciencias y Tecnología",
+      "type": "sesion_interactiva",
+      "status": "disponible"
+    },
+    {
+      "id": 52,
+      "code": "SI06",
+      "date": {
+        "month": "OCT",
+        "day": "14"
+      },
+      "title": "Taller de Soldadura Procesos Especiales de Soldadura",
+      "speaker": "Lic. Andrés García",
+      "time": "10:00 - 12:00 md",
+      "location": "Lab. LAI",
+      "faculty": "Facultad de Ingeniería Mecánica",
+      "type": "sesion_interactiva",
+      "status": "disponible"
+    },
+    {
+      "id": 53,
+      "code": "SI07",
+      "date": {
+        "month": "OCT",
+        "day": "14"
+      },
+      "title": "Gafas de Realidad virtual",
+      "speaker": "Dr. José Carlos Rangel",
+      "time": "10:00 - 12:00 md",
+      "location": "Lab. Eléctrica (TED)",
+      "faculty": "Facultad de Ingeniería de Sistemas Computacionales",
+      "type": "sesion_interactiva",
+      "status": "disponible"
+    },
+    {
+      "id": 54,
+      "code": "SI08",
+      "date": {
+        "month": "OCT",
+        "day": "14"
+      },
+      "title": "Diseño y Costos de la Soldadura",
+      "speaker": "Dr. Alexis Tejedor",
+      "time": "10:00 - 12:00 md",
+      "location": "Lab. FISC",
+      "faculty": "Facultad de Ingeniería Mecánica",
+      "type": "sesion_interactiva",
+      "status": "disponible"
+    },
+    {
+      "id": 55,
+      "code": "SI09",
+      "date": {
+        "month": "OCT",
+        "day": "14"
+      },
+      "title": "Primeros pasos en diseño gráfico con Adobe Illustrator",
+      "speaker": "Jan Barrera",
+      "time": "12:30 - 02:30 pm",
+      "location": "Lab. Industrial (A-9)",
+      "faculty": "Facultad de Ciencias y Tecnología",
+      "type": "sesion_interactiva",
+      "status": "disponible"
+    },
+    {
+      "id": 56,
+      "code": "SI10",
+      "date": {
+        "month": "OCT",
+        "day": "14"
+      },
+      "title": "Taller de Control Numérico Computarizado (CNC) Fresadora TORMACH",
+      "speaker": "Lic. Carlos Adames",
+      "time": "12:30 - 02:30 pm",
+      "location": "Lab. FIM 4.0",
+      "faculty": "Facultad de Ingeniería Mecánica",
+      "type": "sesion_interactiva",
+      "status": "disponible"
+    },
+    {
+      "id": 57,
+      "code": "SI11",
+      "date": {
+        "month": "OCT",
+        "day": "14"
+      },
+      "title": "Decisiones Inteligentes: Análisis de datos con Tabla Dinámica",
+      "speaker": "Dr. Carlos Barría",
+      "time": "12:30 - 02:30 pm",
+      "location": "Lab. Estructura (A-12)",
+      "faculty": "Facultad de Ciencias y Tecnología",
+      "type": "sesion_interactiva",
+      "status": "disponible"
+    },
+    {
+      "id": 58,
+      "code": "SI12",
+      "date": {
+        "month": "OCT",
+        "day": "14"
+      },
+      "title": "Programación de PLC Schneider",
+      "speaker": "Ing. Diego Jaén Electrisa",
+      "time": "12:30 - 02:30 pm",
+      "location": "Salón P2",
+      "faculty": "Facultad de Ingeniería Eléctrica",
+      "type": "sesion_interactiva",
+      "status": "disponible"
+    },
+    {
+      "id": 59,
+      "code": "SI13",
+      "date": {
+        "month": "OCT",
+        "day": "14"
+      },
+      "title": "Herramientas creativas para editores de vídeos",
+      "speaker": "Lic. Melvin Mendoza",
+      "time": "02:30 - 04:30 pm",
+      "location": "Lab. Industrial (A-9)",
+      "faculty": "Facultad de Ciencias y Tecnología",
+      "type": "sesion_interactiva",
+      "status": "disponible"
+    },
+    {
+      "id": 60,
+      "code": "SI14",
+      "date": {
+        "month": "OCT",
+        "day": "14"
+      },
+      "title": "Machine Learning para Todos: De la Teoría a la Práctica",
+      "speaker": "Miguel De Jesús Hidalgo Rodríguez",
+      "time": "02:30 - 04:30 pm",
+      "location": "Lab. Eléctrica (TED)",
+      "faculty": "Facultad de Ciencias y Tecnología",
+      "type": "sesion_interactiva",
+      "status": "disponible"
+    },
+    {
+      "id": 61,
+      "code": "SI15",
+      "date": {
+        "month": "OCT",
+        "day": "15"
+      },
+      "title": "SMath intermedio. Un software para ingenieros",
+      "speaker": "Dr. Gilberto Axel Chang",
+      "time": "08:00 - 10:00 pm",
+      "location": "Lab. FIM 4.0",
+      "faculty": "Facultad de Ingeniería Civil",
+      "type": "sesion_interactiva",
+      "status": "disponible"
+    },
+    {
+      "id": 62,
+      "code": "SI16",
+      "date": {
+        "month": "OCT",
+        "day": "15"
+      },
+      "title": "Automatización: Soluciones Eficientes para la Industria",
+      "speaker": "Ing. Francisco Pineda",
+      "time": "08:00 - 10:00 pm",
+      "location": "Lab. Eléctrica (TED)",
+      "faculty": "Facultad de Ingeniería Eléctrica",
+      "type": "sesion_interactiva",
+      "status": "disponible"
+    },
+    {
+      "id": 63,
+      "code": "SI17",
+      "date": {
+        "month": "OCT",
+        "day": "15"
+      },
+      "title": "La fotogrametría con drones",
+      "speaker": "Dr. Martín Candanedo | UTP",
+      "time": "08:00 - 10:00 pm",
+      "location": "Lab. FISC",
+      "faculty": "Facultad de Ingeniería Civil",
+      "type": "sesion_interactiva",
+      "status": "disponible"
+    },
+    {
+      "id": 64,
+      "code": "SI18",
+      "date": {
+        "month": "OCT",
+        "day": "15"
+      },
+      "title": "Centro de Desarrollo Multidisciplinario de Equipos didácticos de laboratorios",
+      "speaker": "Dr. Marcelo Coronado",
+      "time": "08:00 - 10:00 pm",
+      "location": "Salón P2",
+      "faculty": "Facultad de Ingeniería Mecánica",
+      "type": "sesion_interactiva",
+      "status": "disponible"
+    },
+    {
+      "id": 65,
+      "code": "SI19",
+      "date": {
+        "month": "OCT",
+        "day": "15"
+      },
+      "title": "Cálculo de Cantidad de Materiales y Presupuesto Utilizando Revit",
+      "speaker": "Ing. Ariel Urieta | UTP",
+      "time": "10:00 - 12:00 md",
+      "location": "Lab. FIM 4.0",
+      "faculty": "Facultad de Ingeniería Civil",
+      "type": "sesion_interactiva",
+      "status": "disponible"
+    },
+    {
+      "id": 66,
+      "code": "SI20",
+      "date": {
+        "month": "OCT",
+        "day": "15"
+      },
+      "title": "Selección de PG para Proyectos de Carretera",
+      "speaker": "Dr. Elvis Castillo | UTP",
+      "time": "10:00 - 12:00 md",
+      "location": "Lab. FISC",
+      "faculty": "Facultad de Ingeniería Civil",
+      "type": "sesion_interactiva",
+      "status": "disponible"
+    },
+    {
+      "id": 67,
+      "code": "SI21",
+      "date": {
+        "month": "OCT",
+        "day": "15"
+      },
+      "title": "Taller Sistemas Especiales: Soluciones de video vigilancia avanzadas para la Industria",
+      "speaker": "Ing. Wilfredo Uribe | Seth Technologies",
+      "time": "10:00 - 12:00 md",
+      "location": "Salón P2",
+      "faculty": "Facultad de Ingeniería Eléctrica",
+      "type": "sesion_interactiva",
+      "status": "disponible"
+    },
+    {
+      "id": 68,
+      "code": "SI22",
+      "date": {
+        "month": "OCT",
+        "day": "15"
+      },
+      "title": "Modelación Hidráulica con HEC-RAS 2D – Parte 2: Simulación Hidráulica",
+      "speaker": "Dr. Mauricio Hooper",
+      "time": "12:30 - 02:30 pm",
+      "location": "Lab. FIM 4.0",
+      "faculty": "Facultad de Ingeniería Civil",
+      "type": "sesion_interactiva",
+      "status": "disponible"
+    },
+    {
+      "id": 69,
+      "code": "SI23",
+      "date": {
+        "month": "OCT",
+        "day": "15"
+      },
+      "title": "Caso Práctico: Industria 5.0 y Robótica Colaborativa",
+      "speaker": "Ing. Daniel Camos | ICE Electronics",
+      "time": "12:30 - 02:30 pm",
+      "location": "Lab. Eléctrica (TED)",
+      "faculty": "Facultad de Ingeniería Eléctrica",
+      "type": "sesion_interactiva",
+      "status": "disponible"
+    },
+    {
+      "id": 70,
+      "code": "SI24",
+      "date": {
+        "month": "OCT",
+        "day": "15"
+      },
+      "title": "Tecnología en la Construcción",
+      "speaker": "Dr. Oscar Wong",
+      "time": "12:30 - 02:30 pm",
+      "location": "Lab. FISC",
+      "faculty": "Facultad de Ingeniería Civil",
+      "type": "sesion_interactiva",
+      "status": "disponible"
+    },
+    {
+      "id": 71,
+      "code": "SI25",
+      "date": {
+        "month": "OCT",
+        "day": "15"
+      },
+      "title": "Diseño de bomba de ariete hidráulico",
+      "speaker": "Ing. Luis Ortega",
+      "time": "02:30 - 04:30 pm",
+      "location": "Lab. FIM 4.0",
+      "faculty": "Facultad de Ingeniería Civil",
+      "type": "sesion_interactiva",
+      "status": "disponible"
+    },
+    {
+      "id": 72,
+      "code": "SI26",
+      "date": {
+        "month": "OCT",
+        "day": "15"
+      },
+      "title": "Creación de Planos y Modelos en AutoCAD: Un seminario Práctico",
+      "speaker": "Ing. Edwin González",
+      "time": "02:30 - 04:30 pm",
+      "location": "Lab. Eléctrica (TED)",
+      "faculty": "Facultad de Ingeniería Eléctrica",
+      "type": "sesion_interactiva",
+      "status": "disponible"
+    },
+    {
+      "id": 73,
+      "code": "SI27",
+      "date": {
+        "month": "OCT",
+        "day": "15"
+      },
+      "title": "Diseño estructural usando Robot Structural Analysis",
+      "speaker": "Ing. Israel Him",
+      "time": "02:30 - 04:30 pm",
+      "location": "Lab. FISC",
+      "faculty": "Facultad de Ingeniería Civil",
+      "type": "sesion_interactiva",
+      "status": "disponible"
+    },
+    {
+      "id": 74,
+      "code": "SI28",
+      "date": {
+        "month": "OCT",
+        "day": "15"
+      },
+      "title": "Diseño y construcción de transformadores de potencia",
+      "speaker": "Ing. Gabriel Correa | Empresa PRODELCA",
+      "time": "04:00 - 06:00 pm",
+      "location": "Salón P2",
+      "faculty": "Facultad de Ingeniería Eléctrica",
+      "type": "sesion_interactiva",
+      "status": "disponible"
+    },
+    {
+      "id": 75,
+      "code": "SI29",
+      "date": {
+        "month": "OCT",
+        "day": "15"
+      },
+      "title": "Forense Exprés: ¿cómo no arruinar la evidencia digital?",
+      "speaker": "Eric Enrique Pérez",
+      "time": "06:00 - 08:00 pm",
+      "location": "Lab. FISC",
+      "faculty": "Facultad de Ingeniería de Sistemas Computacionales",
+      "type": "sesion_interactiva",
+      "status": "disponible"
+    },
+    {
+      "id": 76,
+      "code": "SI30",
+      "date": {
+        "month": "OCT",
+        "day": "17"
+      },
+      "title": "Power BI",
+      "speaker": "Ing. Izael Urieta | UTP sede",
+      "time": "08:00 - 10:00 a.m.",
+      "location": "Salón P2",
+      "faculty": "Facultad de Ingeniería Industrial",
+      "type": "sesion_interactiva",
+      "status": "disponible"
+    },
+    {
+      "id": 77,
+      "code": "SI31",
+      "date": {
+        "month": "OCT",
+        "day": "17"
+      },
+      "title": "Automatización y Análisis de Datos con Python",
+      "speaker": "Ing. Carmen Cortés",
+      "time": "08:00 - 10:00 a.m.",
+      "location": "Lab. FISC",
+      "faculty": "Facultad de Ingeniería de Sistemas Computacionales",
+      "type": "sesion_interactiva",
+      "status": "disponible"
+    },
+    {
+      "id": 78,
+      "code": "SI32",
+      "date": {
+        "month": "OCT",
+        "day": "17"
+      },
+      "title": "Flexsim",
+      "speaker": "Ing. Ricardo Serrano | UTP",
+      "time": "08:00 - 10:00 a.m.",
+      "location": "Lab. Industrial (A-9)",
+      "faculty": "Facultad de Ingeniería Industrial",
+      "type": "sesion_interactiva",
+      "status": "disponible"
+    },
+    {
+      "id": 79,
+      "code": "SI33",
+      "date": {
+        "month": "OCT",
+        "day": "17"
+      },
+      "title": "Imagina, Simula, Crea: Tu proyecto IoT nace con Wokwi",
+      "speaker": "Ing. Ronald Juárez",
+      "time": "08:00 - 10:00 a.m.",
+      "location": "Lab. LAI",
+      "faculty": "Facultad de Ingeniería de Sistemas Computacionales",
+      "type": "sesion_interactiva",
+      "status": "disponible"
+    },
+    {
+      "id": 80,
+      "code": "SI34",
+      "date": {
+        "month": "OCT",
+        "day": "17"
+      },
+      "title": "Uso de SPSS",
+      "speaker": "Ing. Bolívar Bernal | UTP Azuero",
+      "time": "10:00 - 12:00 md",
+      "location": "Lab. FIM 4.0",
+      "faculty": "Facultad de Ingeniería Industrial",
+      "type": "sesion_interactiva",
+      "status": "disponible"
+    },
+    {
+      "id": 81,
+      "code": "SI35",
+      "date": {
+        "month": "OCT",
+        "day": "17"
+      },
+      "title": "Paquete Office 365",
+      "speaker": "Ing. Vanessa Núñez M.",
+      "time": "10:00 - 12:00 md",
+      "location": "Lab. FISC",
+      "faculty": "Facultad de Ingeniería de Sistemas Computacionales",
+      "type": "sesion_interactiva",
+      "status": "disponible"
+    },
+    {
+      "id": 82,
+      "code": "SI36",
+      "date": {
+        "month": "OCT",
+        "day": "17"
+      },
+      "title": "Indicadores Logísticos",
+      "speaker": "Ing. Rafael Grimas Superintendencia de Seguros",
+      "time": "10:00 - 12:00 md",
+      "location": "Lab. Estructura (A-12)",
+      "faculty": "Facultad de Ingeniería Industrial",
+      "type": "sesion_interactiva",
+      "status": "disponible"
+    },
+    {
+      "id": 83,
+      "code": "SI37",
+      "date": {
+        "month": "OCT",
+        "day": "17"
+      },
+      "title": "Creación de aplicaciones móviles con uso de inteligencia artificial y firebase Studio",
+      "speaker": "José Gómez",
+      "time": "10:00 - 12:00 md",
+      "location": "Lab. LAI",
+      "faculty": "Facultad de Ingeniería de Sistemas Computacionales",
+      "type": "sesion_interactiva",
+      "status": "disponible"
+    },
+    {
+      "id": 84,
+      "code": "SI38",
+      "date": {
+        "month": "OCT",
+        "day": "17"
+      },
+      "title": "Power BI",
+      "speaker": "Ing. Izael Urieta | UTP sede",
+      "time": "12:30 - 02:30 p.m.",
+      "location": "Salón P2",
+      "faculty": "Facultad de Ingeniería Industrial",
+      "type": "sesion_interactiva",
+      "status": "disponible"
+    },
+    {
+      "id": 85,
+      "code": "SI39",
+      "date": {
+        "month": "OCT",
+        "day": "17"
+      },
+      "title": "Implementación de aplicaciones con Docker",
+      "speaker": "Ing. Rodolfo Salazar",
+      "time": "12:30 - 02:30 p.m.",
+      "location": "Lab. FISC",
+      "faculty": "Facultad de Ingeniería de Sistemas Computacionales",
+      "type": "sesion_interactiva",
+      "status": "disponible"
+    },
+    {
+      "id": 86,
+      "code": "SI40",
+      "date": {
+        "month": "OCT",
+        "day": "17"
+      },
+      "title": "Flexsim",
+      "speaker": "Ing. Ricardo Serrano | UTP",
+      "time": "12:30 - 02:30 p.m.",
+      "location": "Lab. Industrial (A-9)",
+      "faculty": "Facultad de Ingeniería Industrial",
+      "type": "sesion_interactiva",
+      "status": "disponible"
+    },
+    {
+      "id": 87,
+      "code": "SI41",
+      "date": {
+        "month": "OCT",
+        "day": "17"
+      },
+      "title": "Programación en Python para Ingeniería",
+      "speaker": "Marvin Xavier González Caballero",
+      "time": "12:30 - 02:30 p.m.",
+      "location": "Lab. LAI",
+      "faculty": "Facultad de Ciencias y Tecnología",
+      "type": "sesion_interactiva",
+      "status": "disponible"
+    },
+    {
+      "id": 88,
+      "code": "SI42",
+      "date": {
+        "month": "OCT",
+        "day": "17"
+      },
+      "title": "Uso de SPSS",
+      "speaker": "Ing. Bolívar Bernal | UTP Azuero",
+      "time": "02:30 - 04:30 p.m.",
+      "location": "Lab. Estructura (A-12)",
+      "faculty": "Facultad de Ingeniería Industrial",
+      "type": "sesion_interactiva",
+      "status": "disponible"
+    },
+    {
+      "id": 89,
+      "code": "SI43",
+      "date": {
+        "month": "OCT",
+        "day": "17"
+      },
+      "title": "Herramientas de inteligencia artificial en el aula",
+      "speaker": "Priscila Vélez Bal",
+      "time": "02:30 - 04:30 p.m.",
+      "location": "Lab. FISC",
+      "faculty": "Facultad de Ingeniería de Sistemas Computacionales",
+      "type": "sesion_interactiva",
+      "status": "disponible"
+    },
+    {
+      "id": 90,
+      "code": "SI44",
+      "date": {
+        "month": "OCT",
+        "day": "17"
+      },
+      "title": "Uso de Project",
+      "speaker": "Adán Cogley | UTP",
+      "time": "02:30 - 04:30 p.m.",
+      "location": "Lab. FIM 4.0",
+      "faculty": "Facultad de Ingeniería Industrial",
+      "type": "sesion_interactiva",
+      "status": "disponible"
+    },
+    {
+      "id": 91,
+      "code": "SI45",
+      "date": {
+        "month": "OCT",
+        "day": "17"
+      },
+      "title": "Implementación de Backends Autónomos con Pocket Base: Un Enfoque Rápido y Escalable",
+      "speaker": "Jean Gómez",
+      "time": "02:30 - 04:30 p.m.",
+      "location": "Lab. LAI",
+      "faculty": "Facultad de Ingeniería de Sistemas Computacionales",
+      "type": "sesion_interactiva",
+      "status": "disponible"
+    }
+  ]
+}
