@@ -1,39 +1,31 @@
 ---
 import Header from "./Header.jsx";
 import Footer from "./Footer.astro";
+import EventCalendar from "./EventCalendar.jsx";
 ---
 
 <Header client:load />
 
-<main class="pt-28 pb-16 min-h-[70vh] programa-bg flex flex-col items-center justify-center">
-  <div class="flex flex-col items-center justify-center w-full max-w-2xl">
-    <h1 class="text-4xl sm:text-5xl font-bold text-[#e0b02e] drop-shadow-lg mb-6 animate-gradient">
-      ¡Próximamente!
+<main class="pt-28 pb-16 min-h-screen programa-bg">
+  <div class="flex flex-col items-center justify-center w-full max-w-2xl mx-auto mb-16">
+    <h1 class="text-4xl sm:text-5xl font-bold text-[#e0b02e] drop-shadow-lg mb-6 animate-gradient py-2">
+      Programas COICIT 2025
     </h1>
     <p class="text-white text-xl sm:text-2xl mb-4 opacity-85 text-center font-semibold tracking-wide">
-      Los Programas del COICIT 2025<br />
-      estarán disponible muy pronto.
+      Descubre nuestros eventos<br />
+      y forma parte del futuro tecnológico.
     </p>
-    <div class="mt-8 flex flex-col items-center">
-      <span class="text-6xl animate-bounce text-[#e0b02e]">⏳</span>
-      <span class="block mt-4 text-white text-base opacity-60 text-center">¡Mantente<br />atento!</span>
-    </div>
   </div>
+  
+  <!-- Calendario de eventos -->
+  <EventCalendar client:load />
 </main>
-
 
 <Footer />
 
 <style>
   .programa-bg {
     background: linear-gradient(145deg, #07182e 0%, #0f2946 50%, #17395b 100%);
-  }
-  .animate-bounce {
-    animation: bounce 1.2s infinite;
-  }
-  @keyframes bounce {
-    0%, 100% { transform: translateY(0);}
-    50% { transform: translateY(-20px);}
   }
   .animate-gradient {
     background: linear-gradient(90deg, #e0b02e 20%, #f5e384 40%, #e0b02e 60%);
@@ -42,6 +34,8 @@ import Footer from "./Footer.astro";
     background-clip: text;
     -webkit-background-clip: text;
     animation: gradient-move 2.2s linear infinite;
+    line-height: 1.2;
+    padding: 0.25rem 0;
   }
   @keyframes gradient-move {
     0% { background-position: 0% 50%; }
