@@ -47,7 +47,7 @@ const texts = {
         {
           type: "link",
           text: "plantilla Word I+D",
-          url: "https://ridda2.utp.ac.pa/bitstream/handle/123456789/11527/RIDTEC-Plantilla-manuscrito%20-2025.docx?sequence=4&isAllowed=y",
+          url: "RIDTEC-Plantilla-manuscrito-2025.docx",
         },
         ").",
       ],
@@ -132,7 +132,7 @@ const texts = {
         {
           type: "link",
           text: "I+D Word template",
-          url: "https://ridda2.utp.ac.pa/bitstream/handle/123456789/11527/RIDTEC-Plantilla-manuscrito%20-2025.docx?sequence=4&isAllowed=y",
+          url: "RIDTEC-Plantilla-manuscrito-2025.docx",
         },
         ").",
       ],
