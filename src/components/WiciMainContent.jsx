@@ -123,7 +123,7 @@ const WiciMainContent = () => {
                 rel="noopener noreferrer"
                 className="text-blue-700 underline font-medium mt-2"
               >
-                {lang === "es" ? "Plantilla Word I+D" : "I+D Word template"}
+                {lang === "es" ? "Descargar Plantilla Word I+D" : "Download I+D Word template"}
               </a>
             </div>
           </div>
