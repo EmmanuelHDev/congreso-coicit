@@ -136,7 +136,7 @@ const EventCalendar = () => {
     <section className="py-16 px-4" style={{ background: 'linear-gradient(135deg, #1e3c72 0%, #2a5298 100%)' }}>
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl font-bold text-white mb-8 text-center">
-          Eventos COICIT 2025
+          Programas COICIT 2025
         </h2>
         <p className="text-white/80 text-center mb-8">
           Del 14 al 17 de Octubre de 2025
@@ -259,7 +259,7 @@ const EventCalendar = () => {
         {/* Contador de eventos */}
         <div className="text-center mb-6">
           <p className="text-white/80">
-            Mostrando {filteredEvents.length} de {events.length} eventos
+            Mostrando {filteredEvents.length} de {events.length} actividades
           </p>
         </div>
         
