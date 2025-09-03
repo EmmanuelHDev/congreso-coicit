@@ -27,47 +27,81 @@
 
         <form 
           id="contact-form"
-          action="https://formspree.io/f/xldwoejw" 
+          action="https://formspree.io/f/mnnboqoq" 
           method="POST"
           class="mx-auto mt-6 max-w-md bg-[#010d1f] p-6 rounded-lg shadow-lg flex flex-col gap-4"
+          novalidate
         >
           <!-- Campos ocultos para configurar el envío -->
           <input type="hidden" name="_subject" value="Nuevo mensaje desde COICIT 2025" />
+          <!-- Campo honeypot para prevenir spam -->
+          <input type="text" name="_gotcha" style="display:none !important" tabindex="-1" autocomplete="off" />
+          <!-- Token anti-CSRF -->
+          <input type="hidden" name="_next" value="https://tu-sitio.com/contacto#contacto" />
+          <input type="hidden" name="_replyto" value="" id="reply-to-field" />
           
           <input
             type="text"
             name="nombre"
+            id="nombre"
             required
+            maxlength="100"
             placeholder="Nombre"
+            autocomplete="name"
             class="w-full px-4 py-2 rounded bg-[#0a1a36] text-white placeholder-gray-400 border border-[#e0b02e] focus:outline-none focus:border-[#e0b02e]"
           />
           <input
             type="email"
             name="correo"
+            id="correo"
             required
+            maxlength="254"
             placeholder="Correo electrónico"
+            autocomplete="email"
             class="w-full px-4 py-2 rounded bg-[#0a1a36] text-white placeholder-gray-400 border border-[#e0b02e] focus:outline-none focus:border-[#e0b02e]"
           />
           <input
             type="tel"
             name="telefono"
+            id="telefono"
             required
+            maxlength="20"
+            pattern="[0-9\-\+\s\(\)]+"
             placeholder="Teléfono"
+            autocomplete="tel"
             class="w-full px-4 py-2 rounded bg-[#0a1a36] text-white placeholder-gray-400 border border-[#e0b02e] focus:outline-none focus:border-[#e0b02e]"
           />
           <input
             type="text"
             name="asunto"
+            id="asunto"
             required
+            maxlength="200"
             placeholder="Asunto"
             class="w-full px-4 py-2 rounded bg-[#0a1a36] text-white placeholder-gray-400 border border-[#e0b02e] focus:outline-none focus:border-[#e0b02e]"
           />
           <textarea
             name="mensaje"
+            id="mensaje"
             rows="3"
+            maxlength="1000"
             placeholder="Ingresa tu mensaje aquí (opcional)"
             class="w-full px-4 py-2 rounded bg-[#0a1a36] text-white placeholder-gray-400 border border-[#e0b02e] focus:outline-none focus:border-[#e0b02e]"
           ></textarea>
+          
+          <!-- Simple CAPTCHA -->
+          <div class="flex items-center gap-2">
+            <label class="text-white text-sm">¿Cuánto es <span id="captcha-question"></span>?</label>
+            <input
+              type="number"
+              id="captcha-answer"
+              required
+              min="0"
+              max="20"
+              class="w-20 px-2 py-1 rounded bg-[#0a1a36] text-white border border-[#e0b02e] focus:outline-none focus:border-[#e0b02e]"
+            />
+          </div>
+          
           <button
             type="submit"
             id="submit-btn"
@@ -186,14 +220,117 @@ document.addEventListener('DOMContentLoaded', function() {
   var successMessage = document.getElementById('success-message');
   var errorMessage = document.getElementById('error-message');
   var submitBtn = document.getElementById('submit-btn');
+  var replyToField = document.getElementById('reply-to-field');
+  var correoField = document.getElementById('correo');
+  
+  // Variables para CAPTCHA y rate limiting
+  var captchaQuestion = document.getElementById('captcha-question');
+  var captchaAnswer = document.getElementById('captcha-answer');
+  var correctAnswer;
+  var lastSubmission = 0;
+  var submissionCount = 0;
+  var maxSubmissions = 3;
+  var cooldownPeriod = 300000; // 5 minutos
+
+  // Generar CAPTCHA simple
+  function generateCaptcha() {
+    var num1 = Math.floor(Math.random() * 10) + 1;
+    var num2 = Math.floor(Math.random() * 10) + 1;
+    correctAnswer = num1 + num2;
+    captchaQuestion.textContent = num1 + ' + ' + num2;
+  }
+
+  // Sanitizar entrada de texto
+  function sanitizeInput(input) {
+    return input.trim()
+      .replace(/[<>]/g, '') // Remover caracteres peligrosos básicos
+      .substring(0, 1000); // Limitar longitud
+  }
+
+  // Validar email
+  function isValidEmail(email) {
+    var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email) && email.length <= 254;
+  }
+
+  // Validar teléfono
+  function isValidPhone(phone) {
+    var re = /^[0-9\-\+\s\(\)]+$/;
+    return re.test(phone) && phone.length >= 7 && phone.length <= 20;
+  }
+
+  // Rate limiting
+  function checkRateLimit() {
+    var now = Date.now();
+    
+    // Reset contador si ha pasado el período de cooldown
+    if (now - lastSubmission > cooldownPeriod) {
+      submissionCount = 0;
+    }
+    
+    // Verificar si se excedió el límite
+    if (submissionCount >= maxSubmissions) {
+      return false;
+    }
+    
+    return true;
+  }
+
+  // Inicializar CAPTCHA
+  generateCaptcha();
 
   if (form && submitBtn) {
     form.addEventListener('submit', function(e) {
       e.preventDefault();
       
+      // Verificar rate limiting
+      if (!checkRateLimit()) {
+        showError('Demasiados intentos. Por favor, espera 5 minutos antes de intentar de nuevo.');
+        return;
+      }
+      
       // Ocultar mensajes previos
       if (successMessage) successMessage.classList.add('hidden');
       if (errorMessage) errorMessage.classList.add('hidden');
+      
+      // Validaciones del lado cliente
+      var nombre = sanitizeInput(document.getElementById('nombre').value);
+      var correo = document.getElementById('correo').value.trim();
+      var telefono = document.getElementById('telefono').value.trim();
+      var asunto = sanitizeInput(document.getElementById('asunto').value);
+      var mensaje = sanitizeInput(document.getElementById('mensaje').value);
+      var userCaptcha = parseInt(captchaAnswer.value);
+      
+      // Validaciones
+      if (!nombre || nombre.length < 2) {
+        showError('Por favor, ingresa un nombre válido (mínimo 2 caracteres).');
+        return;
+      }
+      
+      if (!isValidEmail(correo)) {
+        showError('Por favor, ingresa un correo electrónico válido.');
+        return;
+      }
+      
+      if (!isValidPhone(telefono)) {
+        showError('Por favor, ingresa un número de teléfono válido.');
+        return;
+      }
+      
+      if (!asunto || asunto.length < 3) {
+        showError('Por favor, ingresa un asunto válido (mínimo 3 caracteres).');
+        return;
+      }
+      
+      if (userCaptcha !== correctAnswer) {
+        showError('Respuesta incorrecta. Por favor, resuelve la operación matemática.');
+        generateCaptcha(); // Generar nuevo CAPTCHA
+        captchaAnswer.value = '';
+        return;
+      }
+      
+      // Configurar reply-to para que Formspree responda al remitente
+      replyToField.value = correo;
       
       // Cambiar texto del botón
       submitBtn.textContent = 'Enviando...';
@@ -201,7 +338,11 @@ document.addEventListener('DOMContentLoaded', function() {
       
       var formData = new FormData(form);
       
-      // Enviar formulario usando XMLHttpRequest para mejor compatibilidad
+      // Actualizar contadores de rate limiting
+      submissionCount++;
+      lastSubmission = Date.now();
+      
+      // Enviar formulario
       var xhr = new XMLHttpRequest();
       xhr.open('POST', form.getAttribute('action'));
       xhr.setRequestHeader('Accept', 'application/json');
@@ -215,41 +356,52 @@ document.addEventListener('DOMContentLoaded', function() {
             successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
           }
           
-          // Volver a mostrar el formulario después de 5 segundos
+          // Volver a mostrar el formulario después de 10 segundos
           setTimeout(function() {
             form.style.display = 'flex';
             form.reset();
+            generateCaptcha(); // Nuevo CAPTCHA
             if (successMessage) successMessage.classList.add('hidden');
             submitBtn.textContent = 'Enviar';
             submitBtn.removeAttribute('disabled');
-          }, 5000);
+          }, 10000);
           
         } else {
-          showError();
+          showError('Error del servidor. Por favor, intenta más tarde.');
         }
       };
       
       xhr.onerror = function() {
-        showError();
+        showError('Error de conexión. Por favor, verifica tu conexión a internet.');
       };
       
-      function showError() {
-        if (errorMessage) {
-          errorMessage.classList.remove('hidden');
-          errorMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
-          
-          // Ocultar mensaje de error después de 3 segundos
-          setTimeout(function() {
-            if (errorMessage) errorMessage.classList.add('hidden');
-          }, 3000);
-        }
-        
-        submitBtn.textContent = 'Enviar';
-        submitBtn.removeAttribute('disabled');
-      }
+      xhr.ontimeout = function() {
+        showError('Tiempo de espera agotado. Por favor, intenta de nuevo.');
+      };
       
+      xhr.timeout = 10000; // 10 segundos de timeout
       xhr.send(formData);
     });
+  }
+  
+  function showError(message) {
+    var errorDiv = errorMessage.querySelector('p');
+    if (errorDiv) {
+      errorDiv.textContent = message || 'Hubo un problema al enviar tu mensaje. Por favor, intenta de nuevo.';
+    }
+    
+    if (errorMessage) {
+      errorMessage.classList.remove('hidden');
+      errorMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      
+      // Ocultar mensaje de error después de 5 segundos
+      setTimeout(function() {
+        if (errorMessage) errorMessage.classList.add('hidden');
+      }, 5000);
+    }
+    
+    submitBtn.textContent = 'Enviar';
+    submitBtn.removeAttribute('disabled');
   }
 });
 </script>
