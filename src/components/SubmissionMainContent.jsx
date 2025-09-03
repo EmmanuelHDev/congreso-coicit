@@ -43,11 +43,11 @@ const texts = {
     guiaTitulo: "Guía para Manuscritos",
     guia: [
       [
-        "Extensión máxima: 6 páginas (",
+        "Recomendado: 6 páginas (",
         {
           type: "link",
-          text: "plantilla Word I+D",
-          url: "https://ridda2.utp.ac.pa/bitstream/handle/123456789/11527/RIDTEC-Plantilla-manuscrito%20-2025.docx?sequence=4&isAllowed=y",
+          text: "Descargar plantilla Word I+D",
+          url: "/RIDTEC-Plantilla-manuscrito-2025.docx",
         },
         ").",
       ],
@@ -128,11 +128,11 @@ const texts = {
     guiaTitulo: "Manuscript Guidelines",
     guia: [
       [
-        "Maximum 6 pages (",
+        "Recommended: 6 pages (",
         {
           type: "link",
-          text: "I+D Word template",
-          url: "https://ridda2.utp.ac.pa/bitstream/handle/123456789/11527/RIDTEC-Plantilla-manuscrito%20-2025.docx?sequence=4&isAllowed=y",
+          text: "Download I+D Word template",
+          url: "/RIDTEC-Plantilla-manuscrito-2025.docx",
         },
         ").",
       ],
