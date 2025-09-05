@@ -9,7 +9,6 @@ const ComitesMainContent = () => {
       titulo: "Comités Organizadores",
       comiteOrganizador: "Comité Organizador",
       comiteCientifico: "Comité Científico",
-      colaboradores: "Colaboradores",
       organizador: [
         "Dr. Cristian Pinzón – Universidad Tecnológica de Panamá",
         "Dr. Edmanuel Cruz – Universidad Tecnológica de Panamá",
@@ -51,7 +50,6 @@ const ComitesMainContent = () => {
       titulo: "Organizing Committees",
       comiteOrganizador: "Organizing Committee",
       comiteCientifico: "Scientific Committee",
-      colaboradores: "Collaborators",
       organizador: [
         "Dr. Cristian Pinzón – Universidad Tecnológica de Panamá",
         "Dr. Edmanuel Cruz – Universidad Tecnológica de Panamá",
@@ -90,40 +88,6 @@ const ComitesMainContent = () => {
       ],
     },
   }[lang];
-
-  // Patrocinadores con enlaces
-  const sponsors = [
-    {
-      src: "/img/wici/Patrocinadores/Logo_UTP.webp",
-      alt: "Universidad Tecnológica de Panamá",
-      link: "https://utp.ac.pa",
-    },
-    {
-      src: "/img/wici/Patrocinadores/Firma_TEC.webp",
-      alt: "Firma TEC",
-      link: "https://www.tec.ac.cr",
-    },
-    {
-      src: "/img/wici/Patrocinadores/Grupo_OEG.webp",
-      alt: "Grupo OEG",
-      link: "https://oeg.fi.upm.es",
-    },
-    {
-      src: "/img/wici/Patrocinadores/Logo_ESALAB.webp",
-      alt: "ESALAB",
-      link: "https://esalab.es",
-    },
-    {
-      src: "/img/wici/Patrocinadores/Logo_Robotsis.webp",
-      alt: "Robotsis",
-      link: "http://robotsis.utp.ac.pa",
-    },
-    {
-      src: "/img/wici/Patrocinadores/Logo_UPSA.webp",
-      alt: "UPSA",
-      link: "https://www.upsa.es/",
-    },
-  ];
 
   return (
     <>
@@ -172,42 +136,7 @@ const ComitesMainContent = () => {
             </div>
           </div>
         </section>
-
-        {/* Colaboradores con enlaces */}
-        <section className="bg-[#e0b02e] py-12 px-4">
-          <h2 className="text-3xl font-bold text-center text-white mb-10">
-            {t.colaboradores}
-          </h2>
-          <div className="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 place-items-center">
-            {sponsors.map((s, i) => (
-              <a
-                key={i}
-                href={s.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center w-full"
-                title={s.alt}
-              >
-                <img
-                  src={s.src}
-                  alt={s.alt}
-                  className="max-h-28 w-auto object-contain transition-transform hover:scale-105"
-                  style={{ background: "#fff", borderRadius: 16, padding: 10 }}
-                />
-              </a>
-            ))}
-          </div>
-        </section>
       </main>
-
-      <footer className="bg-[#e0b02e]">
-        <div className="mx-auto max-w-5xl px-4 py-4 sm:px-6 lg:px-8 flex justify-center items-center">
-          <span className="text-white font-medium text-sm text-center w-full">
-            © 2025 Universidad Tecnológica de Panamá | All Rights Reserved by
-            UTP
-          </span>
-        </div>
-      </footer>
     </>
   );
 };

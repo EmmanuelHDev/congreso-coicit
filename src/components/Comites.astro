@@ -2,8 +2,10 @@
 import { WiciLanguageProvider } from '../components/WiciLanguageContext.jsx';
 import Header from '../components/HeaderWici.jsx';
 import ComitesMainContent from '../components/comitesMainContent.jsx';
+import Footer from "./FooterWici.jsx";
 ---
 <WiciLanguageProvider>
   <Header client:load />
   <ComitesMainContent client:load />
+  <Footer client:load />
 </WiciLanguageProvider>
