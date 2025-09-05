@@ -37,7 +37,7 @@ const WiciUbicacionMap = () => {
               </h3>
               <div className="bg-white rounded-2xl shadow-lg border-2 border-[#e0b02e] p-4 w-full h-full flex flex-col">
                 <img
-                  src="/img/wici/galo.jpg"
+                  src="/img/wici/galo.webp"
                   alt={lang === "es" ? "Salón Galo Chang - Workshop de Investigación" : "Galo Chang Room - Research Workshop"}
                   className="w-full rounded-xl shadow-lg object-cover"
                   style={{ height: "200px" }}

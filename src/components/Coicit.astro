@@ -10,9 +10,7 @@ import PatrocinadoresCoicit from "../components/PatrocinadoresCoicit.jsx";
   <div class="banner-overlay"></div>
 
   <div class="container-hero-coicit flex flex-col items-center justify-center w-full h-full z-10" style="min-height: 65vh; margin-top: 80px;">
-    <!-- CONTENIDO SUPERIOR (LOGO + TEXTO) -->
 <div class="flex flex-col lg:flex-row items-center justify-center w-full px-4 sm:px-6 gap-x-4">
-  <!-- LOGO - VERSIÓN FULLY RESPONSIVE -->
   <div class="w-full lg:w-1/2 flex justify-center items-center px-4 sm:px-6 mt-4 sm:mt-6 lg:mt-0">
     <img
       src="/img/coicit/COICIT-FINAL.webp"
@@ -21,7 +19,6 @@ import PatrocinadoresCoicit from "../components/PatrocinadoresCoicit.jsx";
     />
   </div>
 
-  <!-- TEXTO DERECHA - CENTRADO EN MOBILE -->
   <div class="flex flex-col items-center lg:items-start justify-center w-full lg:w-1/2 text-center lg:text-left px-0 mt-6 lg:mt-0">
     <h1 class="text-white text-xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-3 drop-shadow-lg">
       Congreso Internacional<br />
@@ -31,12 +28,11 @@ import PatrocinadoresCoicit from "../components/PatrocinadoresCoicit.jsx";
       Del 14 al 17 de octubre de 2025
     </p>
     <p class="text-[rgb(241,179,15)] italic text-base sm:text-lg md:text-xl font-semibold mb-2">
-      “Impulsando el desarrollo a través del conocimiento”
+      "Impulsando el desarrollo a través del conocimiento"
     </p>
   </div>
 </div>
 
-    <!-- CONTADOR (MANTENIENDO LA VERSIÓN PERFECTA) -->
     <div class="w-full flex justify-center mt-8 lg:mt-12 px-4">
       <div id="countdown" class="text-white text-lg md:text-2xl font-bold flex flex-nowrap justify-around items-center gap-1 md:gap-2 px-2 py-3 rounded-xl bg-[#041c2a]/60 border border-[#29cfff60] shadow-xl backdrop-blur-md w-full max-w-2xl">
         <div class="flex flex-col items-center flex-1 min-w-[60px]">
@@ -60,8 +56,6 @@ import PatrocinadoresCoicit from "../components/PatrocinadoresCoicit.jsx";
   </div>
 </section>
 
-
-
 <section class="video-section-coicit">
   <div class="video-title-coicit">Video COICIT 2025</div>
   <div class="video-iframe-wrapper-coicit">
@@ -83,6 +77,29 @@ import PatrocinadoresCoicit from "../components/PatrocinadoresCoicit.jsx";
       ¡Descubre las actividades académicas, conferencias, workshops y
       exposiciones que se llevarán a cabo del 14 al 17 de octubre!
     </p>
+    
+    <div class="mt-8">
+      <a
+        href="/Programas"
+        class="programa-cta-button group relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white bg-gradient-to-r from-[#e0b02e] to-[#f1b315] rounded-2xl border-2 border-[#f1b315] shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 overflow-hidden"
+      >
+        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+        
+        <div class="relative flex items-center gap-3">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25A8.966 8.966 0 0118 3.75c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0118 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+          </svg>
+          <span>Inscribición al COICIT 2025</span>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+          </svg>
+        </div>
+      </a>
+      
+      <p class="text-white/80 text-sm mt-4 italic">
+        Descubre las actividades de educación continua de todas las facultades
+      </p>
+    </div>
   </div>
 </section>
 
@@ -260,6 +277,7 @@ import PatrocinadoresCoicit from "../components/PatrocinadoresCoicit.jsx";
     </div>
   </div>
 </section>
+
 <section class="paquetes-section">
   <div class="max-w-prose mx-auto text-center">
     <h2 class="text-2xl font-bold text-white mb-6 mt-12">Precio de Paquetes</h2>
@@ -269,7 +287,7 @@ import PatrocinadoresCoicit from "../components/PatrocinadoresCoicit.jsx";
       <span style="font-size:1.5rem;">💵</span>
       <span class="font-semibold text-green-400 italic">
         Los precios de los paquetes será hasta el 30 de septiembre. A partir del
-        01 de octubre todos los paquetes tienen un incremento de B/. 10.00
+        01 de octubre todos los paquetes tienen un incremento de B/. 10.00
       </span>
     </div>
   </div>
@@ -399,7 +417,6 @@ import PatrocinadoresCoicit from "../components/PatrocinadoresCoicit.jsx";
   setInterval(countdown, 1000);
   countdown();
 
-  // SOLUCION A LA IMAGEN PARA FORZAR EL SIZE EN PANTALLAS CHICAS
   function ajustarTamañoLogo() {
   const img = document.querySelector('img[alt="Logo Congreso COICIT"]') as HTMLImageElement;
 
@@ -418,10 +435,8 @@ import PatrocinadoresCoicit from "../components/PatrocinadoresCoicit.jsx";
   }
 }
 
-// Llamar al cargar la página
 ajustarTamañoLogo();
 
-// También en resize
 window.addEventListener('resize', ajustarTamañoLogo);
 
 </script>
@@ -440,6 +455,28 @@ window.addEventListener('resize', ajustarTamañoLogo);
     box-shadow: 0 0 8px #17e5f355;
   }
 
+  .programa-cta-button {
+    position: relative;
+    background: linear-gradient(135deg, #e0b02e 0%, #f1b315 50%, #daa520 100%);
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    box-shadow: 
+      0 4px 15px rgba(224, 176, 46, 0.3),
+      0 2px 8px rgba(0,0,0,0.1),
+      inset 0 1px 0 rgba(255,255,255,0.2);
+  }
+
+  .programa-cta-button:hover {
+    background: linear-gradient(135deg, #f1b315 0%, #e0b02e 50%, #c99a1f 100%);
+    box-shadow: 
+      0 8px 25px rgba(224, 176, 46, 0.4),
+      0 4px 15px rgba(0,0,0,0.2),
+      inset 0 1px 0 rgba(255,255,255,0.3);
+  }
+
+  .programa-cta-button:active {
+    transform: scale(0.98) !important;
+  }
+
   @media (max-width: 700px) {
     .hero-animation {
       max-width: 96vw;
@@ -455,6 +492,15 @@ window.addEventListener('resize', ajustarTamañoLogo);
     .countdown-glow {
       font-size: 1.18rem !important;
       padding: 0.38em 0.7em;
+    }
+
+    .programa-cta-button {
+      padding: 12px 20px;
+      font-size: 16px;
+    }
+    
+    .programa-cta-button span {
+      font-size: 14px;
     }
   }
 
@@ -641,11 +687,11 @@ window.addEventListener('resize', ajustarTamañoLogo);
     grid-template-columns: repeat(
       2,
       minmax(150px, 1fr)
-    ); /* Siempre 2 columnas */
+    );
     gap: 2.5rem 2rem;
     justify-content: center;
     align-items: end;
-    max-width: 900px; /* Opcional: ajusta el ancho máximo */
+    max-width: 900px;
   }
   .paquete-item {
     display: flex;

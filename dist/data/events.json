@@ -743,7 +743,7 @@
         "day": "14"
       },
       "title": "Taller de Diagnóstico Automotriz",
-      "speaker": "Ing. Salvador Barrios (RYMSA)",
+      "speaker": "Técn. Gaspar Arauz",
       "time": "08:00 - 10:00 a.m.",
       "location": "Salón P2",
       "faculty": "Facultad de Ingeniería Mecánica",
@@ -1363,6 +1363,50 @@
       "location": "Lab. LAI",
       "faculty": "Facultad de Ingeniería de Sistemas Computacionales",
       "type": "sesion_interactiva",
+      "status": "disponible"
+    },
+    {
+      "id": 92,
+      "code": "",
+      "date": { "month": "OCT", "day": "16" },
+      "title": "WorkShop de Investigación (WICI 2025)",
+      "descripcion": "Espacio para presentación de trabajo de investigación científica",
+      "time": "A partir de las 09:00 a.m.",
+      "location": "Salón Galo A. Chang",
+      "type": " WorkShop",
+      "status": "disponible"
+    },
+    {
+      "id": 93,
+      "code": "",
+      "date": { "month": "OCT", "day": "16" },
+      "title": "Expo Show COICIT: Conectando Éxitos",
+      "descripcion": "Feria de stands de empresas aliadas",
+      "time": "A partir de las 09:00 a.m.",
+      "location": "Espacios del centro regional de Veraguas",
+      "type": "Showroom COICIT",
+      "status": "disponible"
+    },
+    {
+      "id": 94,
+      "code": "",
+      "date": { "month": "OCT", "day": "16" },
+      "title": "Innova Transfer Tech",
+      "descripcion": "Espacio para promoción de emprendedores tecnológicos",
+      "time": "10:00 a.m - 03:00 p.m.",
+      "location": "Sala Nueva de Conferencias",
+      "type": "Espacio Tecnológico",
+      "status": "disponible"
+    },
+    {
+      "id": 95,
+      "code": "",
+      "date": { "month": "OCT", "day": "16" },
+      "title": "Tours empresariales",
+      "descripcion": "Giras técnicas a empresas aliadas del congreso",
+      "time": "",
+      "location": "Centro regional de Veraguas",
+      "type": "Giras Técnicas",
       "status": "disponible"
     }
   ]
