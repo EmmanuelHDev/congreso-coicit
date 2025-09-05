@@ -292,10 +292,14 @@ const EventCalendar = () => {
 
                 {/* Badges */}
                 <div className="mb-3 flex flex-wrap gap-2">
-                  <span className="inline-block bg-[#e0b02e] text-white text-xs px-2 py-1 rounded-full font-medium">
-                    {getFacultyShortName(event.faculty)}
-                  </span>
-                  <span className={`inline-block text-white text-xs px-2 py-1 rounded-full font-medium ${getTypeColor(event.type)}`}>
+                  {!(event.date?.day === "16" && event.descripcion) && (
+                    <span className="inline-block bg-[#e0b02e] text-white text-xs px-2 py-1 rounded-full font-medium">
+                      {getFacultyShortName(event.faculty)}
+                    </span>
+                  )}
+                  <span className={`inline-block text-white text-xs px-2 py-1 rounded-full font-medium ${
+                    event.date?.day === "16" && event.descripcion ? 'bg-[#ff69b4]' : getTypeColor(event.type)
+                  }`}>
                     {getTypeLabel(event.type)}
                   </span>
                 </div>
@@ -303,11 +307,24 @@ const EventCalendar = () => {
                 {/* Contenido del evento */}
                 <div className="mb-6">
                   <h3 className="text-lg font-semibold mb-3 leading-tight">
-                    <span className="font-bold text-[#e0b02e]">{event.code}</span> - {event.title}
+                    {event.date?.day === "16" && event.descripcion
+                      ? event.title
+                      : (
+                        <>
+                          <span className="font-bold text-[#e0b02e]">{event.code}</span> - {event.title}
+                        </>
+                      )
+                    }
                   </h3>
-                  <p className="text-sm opacity-80 mb-2">
-                    Expositor: {event.speaker}
-                  </p>
+                  {event.date?.day === "16" && event.descripcion ? (
+                    <p className="text-sm opacity-80 mb-2">
+                      <span className="font-bold">Descripción:</span> {event.descripcion}
+                    </p>
+                  ) : (
+                    <p className="text-sm opacity-80 mb-2">
+                      Expositor: {event.speaker}
+                    </p>
+                  )}
                   <p className="text-xs opacity-70 mb-3 flex items-center">
                     <svg className="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
