@@ -176,7 +176,7 @@ const Header = () => {
                 <a
                   onClick={handleLinkClick}
                   className="transition hover:text-[#e0b02e]"
-                  href="#"
+                  href="/WiciPages"
                 >
                   {t.nav.inicio}
                 </a>
