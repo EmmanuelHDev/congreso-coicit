@@ -10,20 +10,20 @@ const EventCalendar = () => {
 
   const faculties = [
     { value: 'all', label: 'Todas las Facultades' },
-    { value: 'Facultad de Ciencias y Tecnología', label: 'FCT' },
-    { value: 'Facultad de Ingeniería Civil', label: 'FIC' },
-    { value: 'Facultad de Ingeniería Eléctrica', label: 'FIE' },
-    { value: 'Facultad de Ingeniería Industrial', label: 'FII' },
-    { value: 'Facultad de Ingeniería Mecánica', label: 'FIM' },
-    { value: 'Facultad de Ingeniería de Sistemas Computacionales', label: 'FISC' }
+    { value: 'Facultad de Ciencias y Tecnología', label: 'Facultad de Ciencias y Tecnología' },
+    { value: 'Facultad de Ingeniería Civil', label: 'Facultad de Ingeniería Civil' },
+    { value: 'Facultad de Ingeniería Eléctrica', label: 'Facultad de Ingeniería Eléctrica' },
+    { value: 'Facultad de Ingeniería Industrial', label: 'Facultad de Ingeniería Industrial' },
+    { value: 'Facultad de Ingeniería Mecánica', label: 'Facultad de Ingeniería Mecánica' },
+    { value: 'Facultad de Ingeniería de Sistemas Computacionales', label: 'Facultad de Ingeniería de Sistemas Computacionales' }
   ];
 
   const days = [
     { value: 'all', label: 'Todos los días' },
-    { value: '14', label: 'Lunes 14 Oct' },
-    { value: '15', label: 'Martes 15 Oct' },
-    { value: '16', label: 'Miércoles 16 Oct' },
-    { value: '17', label: 'Jueves 17 Oct' }
+    { value: '14', label: 'Martes 14 Oct' },
+    { value: '15', label: 'Miércoles 15 Oct' },
+    { value: '16', label: 'Jueves 16 Oct' },
+    { value: '17', label: 'Viernes 17 Oct' }
   ];
 
   const categories = [
