@@ -7,7 +7,7 @@
         "month": "OCT",
         "day": "14"
       },
-      "title": "Diseño Mecanicista de Pavimentos (virtual desde CR)",
+      "title": "Diseño Mecanicista de Pavimentos (virtual)",
       "speaker": "Dr. Luis Loria | Universidad Issac Newton",
       "time": "09:00 - 10:30 a.m.",
       "location": "Sala Nueva de Conferencias",
@@ -37,8 +37,8 @@
         "month": "OCT",
         "day": "14"
       },
-      "title": "Mejores prácticas en el aseguramiento de la Inteligencia Artificial",
-      "speaker": "Luis Castro Palo Alto | Panamá",
+      "title": "Mejores prácticas en el aseguramiento de la Inteligencia Artificial (Virtual)",
+      "speaker": "Luis Castro | Palo Alto Networks",
       "time": "01:00 - 02:00 p.m.",
       "location": "Sala Nueva de Conferencias",
       "faculty": "Facultad de Ingeniería de Sistemas Computacionales",
@@ -292,8 +292,8 @@
         "month": "OCT",
         "day": "14"
       },
-      "title": "RAGs y agentes utilizando LLMs",
-      "speaker": "Steven Pacheco Costa Rica | Instituto Tecnológico de Costa Rica",
+      "title": "RAGs y agentes utilizando LLMs (Virtual)",
+      "speaker": "Steven Pacheco | Instituto Tecnológico de Costa Rica",
       "time": "10:00 - 11:00 a.m.",
       "location": "Salón A-14",
       "faculty": "Facultad de Ingeniería de Sistemas Computacionales",
@@ -743,7 +743,7 @@
         "day": "14"
       },
       "title": "Taller de Diagnóstico Automotriz",
-      "speaker": "Técn. Gaspar Arauz",
+      "speaker": "Tec. Gaspar Arauz | RYMSA",
       "time": "08:00 - 10:00 a.m.",
       "location": "Salón P2",
       "faculty": "Facultad de Ingeniería Mecánica",
@@ -772,7 +772,7 @@
         "month": "OCT",
         "day": "14"
       },
-      "title": "Taller de Soldadura Procesos Especiales de Soldadura",
+      "title": "Taller de Soldadura - Procesos Especiales de Soldadura (MMA,MIG,TIG) ",
       "speaker": "Lic. Andrés García",
       "time": "10:00 - 12:00 md",
       "location": "Lab. LAI",
