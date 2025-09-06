@@ -122,6 +122,20 @@ const EventCalendar = () => {
     setSelectedCategory('all');
   };
 
+  // Separar conferencias de apertura y clausura
+  const conferenciasPrincipales = filteredEvents.filter(
+    (event) =>
+      event.type === "conferencia_apertura" ||
+      event.type === "conferencia_clausura"
+  );
+
+  // El resto de eventos
+  const otrosEventos = filteredEvents.filter(
+    (event) =>
+      event.type !== "conferencia_apertura" &&
+      event.type !== "conferencia_clausura"
+  );
+
   if (loading) {
     return (
       <section className="py-16 px-4" style={{ background: 'linear-gradient(135deg, #1e3c72 0%, #2a5298 100%)' }}>
@@ -135,12 +149,8 @@ const EventCalendar = () => {
   return (
     <section className="py-16 px-4" style={{ background: 'linear-gradient(135deg, #1e3c72 0%, #2a5298 100%)' }}>
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl font-bold text-white mb-8 text-center">
-          Programas COICIT 2025
-        </h2>
-        <p className="text-white/80 text-center mb-8">
-          Del 14 al 17 de Octubre de 2025
-        </p>
+        
+        
         
         {/* Filtros compactos */}
         <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 mb-6 shadow-lg">
@@ -256,17 +266,79 @@ const EventCalendar = () => {
           </div>
         </div>
 
-        {/* Contador de eventos */}
+        {/* Conferencias principales arriba CON distintivo */}
+        {conferenciasPrincipales.length > 0 && (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-10">
+            {conferenciasPrincipales.map((event) => (
+              <div
+                key={event.id}
+                className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-white hover:bg-white/20 transition-all duration-300 hover:scale-105 relative"
+              >
+                {/* Estado en esquina inferior derecha */}
+                <div className="absolute bottom-3 right-3">
+                  <span className={`inline-block text-white text-xs px-2 py-1 rounded-full font-medium ${getStatusColor(event.status)}`}>
+                    {getStatusLabel(event.status)}
+                  </span>
+                </div>
+
+                {/* Fecha */}
+                <div className="mb-4">
+                  <div className="text-sm opacity-80 uppercase tracking-wider">
+                    {event.date.month}
+                  </div>
+                  <div className="text-4xl font-bold">
+                    {event.date.day}
+                  </div>
+                </div>
+
+                {/* Distintivo de tipo de conferencia */}
+                <div className="mb-3 flex flex-wrap gap-2">
+                  <span className={`inline-block text-white text-xs px-2 py-1 rounded-full font-medium ${
+                    event.type === "conferencia_apertura"
+                      ? " bg-green-700"
+                      : " bg-red-700"
+                  }`}>
+                    {event.type === "conferencia_apertura"
+                      ? "Conferencia Apertura"
+                      : "Conferencia Clausura"}
+                  </span>
+                </div>
+
+                {/* Título */}
+                <div className="mb-6">
+                  <h3 className="text-lg font-semibold mb-3 leading-tight">
+                  <span className="font-bold text-[#e0b02e]">{event.code}</span> - {event.title}
+                  </h3>
+                  <p className="text-sm opacity-80 mb-2">
+                    Expositor: {event.speaker}
+                  </p>
+                  <p className="text-xs opacity-70 mb-3 flex items-center">
+                    <svg className="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                    </svg>
+                    {event.location}
+                  </p>
+                  <div className="flex items-center text-sm opacity-80">
+                    <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
+                    </svg>
+                    {event.time}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+
+        {/* Eventos normales */}
         <div className="text-center mb-6">
           <p className="text-white/80">
-            Mostrando {filteredEvents.length} de {events.length} actividades
+            Mostrando {otrosEventos.length} de {events.length} actividades
           </p>
         </div>
-        
-        {/* Contenedor con scroll para eventos */}
         <div className="h-[850px] overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-white/20 scrollbar-track-transparent">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {filteredEvents.map((event) => (
+            {otrosEventos.map((event) => (
               <div 
                 key={event.id}
                 className={`bg-white/10 backdrop-blur-sm rounded-lg p-6 text-white hover:bg-white/20 transition-all duration-300 hover:scale-105 relative ${
