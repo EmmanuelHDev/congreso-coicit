@@ -21,6 +21,11 @@ const sponsors = {
       label: "Gold",
     },
     {
+      name: "AM",
+      src: "/img/coicit/patrocinadores/am.png",
+      label: "Silver",
+    },
+    {
       name: "Parmigiana",
       src: "/img/coicit/patrocinadores/parmigiana.png",
       label: "Bronze",
@@ -31,16 +36,19 @@ const sponsors = {
 const LABEL_COLORS = {
   Platinium: "text-gray-200",
   Gold: "text-yellow-300",
+  Silver: "text-gray-300",
   Bronze: "text-orange-400",
 };
 const LABEL_ICONS = {
   Platinium: <FaCrown className="inline mr-2" size={20} />,
   Gold: <FaStar className="inline mr-2" size={20} />,
+  Silver: <FaStar className="inline mr-2" size={18} />,
   Bronze: <FaAward className="inline mr-2" size={19} />,
 };
 const LOGO_HEIGHTS = {
   Platinium: "h-[110px] sm:h-[120px]",
   Gold: "h-[85px] sm:h-[80px]",
+  Silver: "h-[75px] sm:h-[80px]",
   Bronze: "h-[70px] sm:h-[85px]",
   "CENTRAL AZUCARERO LA VICTORIA, S.A.": "h-[200px] sm:h-[105px]"
 };
