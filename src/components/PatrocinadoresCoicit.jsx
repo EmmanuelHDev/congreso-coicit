@@ -22,7 +22,7 @@ const sponsors = {
     },
     {
       name: "AM",
-      src: "/img/coicit/patrocinadores/am.png",
+      src: "/img/coicit/patrocinadores/am1.png",
       label: "Silver",
     },
     {
