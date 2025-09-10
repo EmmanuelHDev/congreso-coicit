@@ -1247,7 +1247,7 @@
     },
     {
       "id": 84,
-      "code": "SI38",
+      "code": "SI43",
       "date": {
         "month": "OCT",
         "day": "17"
@@ -1262,7 +1262,7 @@
     },
     {
       "id": 85,
-      "code": "SI39",
+      "code": "SI38",
       "date": {
         "month": "OCT",
         "day": "17"
@@ -1277,7 +1277,7 @@
     },
     {
       "id": 86,
-      "code": "SI40",
+      "code": "SI44",
       "date": {
         "month": "OCT",
         "day": "17"
@@ -1292,7 +1292,7 @@
     },
     {
       "id": 87,
-      "code": "SI41",
+      "code": "SI39",
       "date": {
         "month": "OCT",
         "day": "17"
@@ -1307,7 +1307,7 @@
     },
     {
       "id": 88,
-      "code": "SI42",
+      "code": "SI45",
       "date": {
         "month": "OCT",
         "day": "17"
@@ -1322,7 +1322,7 @@
     },
     {
       "id": 89,
-      "code": "SI43",
+      "code": "SI40",
       "date": {
         "month": "OCT",
         "day": "17"
@@ -1337,7 +1337,7 @@
     },
     {
       "id": 90,
-      "code": "SI44",
+      "code": "SI41",
       "date": {
         "month": "OCT",
         "day": "17"
@@ -1352,12 +1352,12 @@
     },
     {
       "id": 91,
-      "code": "SI45",
+      "code": "SI42",
       "date": {
         "month": "OCT",
         "day": "17"
       },
-      "title": "Implementación de Backends Autónomos con Pocket Base: Un Enfoque Rápido y Escalable",
+      "title": "Backend as a Service: acelerando el desarrollo moderno",
       "speaker": "Jean Gómez",
       "time": "02:30 - 04:30 p.m.",
       "location": "Lab. LAI",
