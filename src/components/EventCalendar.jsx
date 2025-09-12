@@ -30,7 +30,9 @@ const EventCalendar = () => {
     { value: 'all', label: 'Todas las Categorías' },
     { value: 'ponencia', label: 'Ponencias' },
     { value: 'sesion_experto', label: 'Sesión de Expertos' },
-    { value: 'sesion_interactiva', label: 'Sesión Interactiva' }
+    { value: 'sesion_interactiva', label: 'Sesión Interactiva' },
+    { value: ' WorkShop', label: 'WorkShop' },  // Agregar el espacio
+    { value: 'Espacio Tecnológico', label: 'Innova Transfer Tech' }
   ];
 
   useEffect(() => {
@@ -86,7 +88,9 @@ const EventCalendar = () => {
     const typeLabels = {
       'ponencia': 'Ponencia',
       'sesion_experto': 'Sesión de Expertos',
-      'sesion_interactiva': 'Sesión Interactiva'
+      'sesion_interactiva': 'Sesión Interactiva',
+      ' WorkShop': 'WorkShop',  
+      'Espacio Tecnológico': 'Innova Transfer Tech'
     };
     return typeLabels[type] || type;
   };
@@ -95,7 +99,9 @@ const EventCalendar = () => {
     const typeColors = {
       'ponencia': 'bg-blue-500',
       'sesion_experto': 'bg-orange-500',
-      'sesion_interactiva': 'bg-purple-500'
+      'sesion_interactiva': 'bg-purple-500',
+      ' WorkShop': 'bg-green-500',  
+      'Espacio Tecnológico': 'bg-cyan-500'
     };
     return typeColors[type] || 'bg-gray-500';
   };
@@ -409,6 +415,34 @@ const EventCalendar = () => {
                     </svg>
                     {event.time}
                   </div>
+
+                  {/* Botones especiales para WorkShop e Innova Transfer Tech */}
+                  {event.date?.day === "16" && event.descripcion && (
+                    <div className="mt-3">
+                      {event.type === " WorkShop" && (
+                        <a
+                          href="/WiciPages"
+                          className="inline-flex items-center gap-2 bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 transform hover:scale-105"
+                        >
+                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                          </svg>
+                          Ir a WICI 2025
+                        </a>
+                      )}
+                      {event.type === "Espacio Tecnológico" && (
+                        <a
+                          href="/ITransferT"
+                          className="inline-flex items-center gap-2 bg-gray-400 hover:bg-gray-500 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 transform hover:scale-105"
+                        >
+                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                          </svg>
+                          Ir a Innova Transfer Tech
+                        </a>
+                      )}
+                    </div>
+                  )}
                 </div>
               </div>
             ))}
