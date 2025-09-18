@@ -793,7 +793,7 @@
       "location": "Lab. Eléctrica (TED)",
       "faculty": "Facultad de Ingeniería de Sistemas Computacionales",
       "type": "sesion_interactiva",
-      "status": "disponible"
+      "status": "sin_cupos"
     },
     {
       "id": 54,
@@ -909,7 +909,7 @@
       },
       "title": "SMath intermedio. Un software para ingenieros",
       "speaker": "Dr. Gilberto Axel Chang | UTP",
-      "time": "08:00 - 10:00 pm",
+      "time": "08:00 - 10:00 a.m.",
       "location": "Lab. FIM 4.0",
       "faculty": "Facultad de Ingeniería Civil",
       "type": "sesion_interactiva",
@@ -939,7 +939,7 @@
       },
       "title": "La fotogrametría con drones",
       "speaker": "Dr. Martín Candanedo | UTP",
-      "time": "08:00 - 10:00 pm",
+      "time": "08:00 - 10:00 a.m.",
       "location": "Lab. FISC",
       "faculty": "Facultad de Ingeniería Civil",
       "type": "sesion_interactiva",
@@ -1451,6 +1451,17 @@
       "time": "08:00 - 09:00 p.m.",
       "location": "Centro de Convenciones COOPEVE",
       "type": "conferencia_clausura",
+      "status": "disponible"
+    },
+    {
+      "id": 100,
+      "code": "",
+      "date": { "month": "OCT", "day": "16" },
+      "title": "Panel Empresarial",
+      "descripcion": "Espacio en el que destacados empresarios de la provincia comparten sus experiencias",
+      "time": "06:00 p.m - 08:00 p.m.",
+      "location": "Sala Nueva de Conferencias",
+      "type": "Panel",
       "status": "disponible"
     }
   ]
