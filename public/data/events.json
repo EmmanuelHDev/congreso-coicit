@@ -1452,6 +1452,17 @@
       "location": "Centro de Convenciones COOPEVE",
       "type": "conferencia_clausura",
       "status": "disponible"
+    },
+    {
+      "id": 100,
+      "code": "",
+      "date": { "month": "OCT", "day": "16" },
+      "title": "Panel Empresarial",
+      "descripcion": "Espacio en el que destacados empresarios de la provincia comparten sus experiencias",
+      "time": "06:00 p.m - 08:00 p.m.",
+      "location": "Sala Nueva de Conferencias",
+      "type": "Panel",
+      "status": "disponible"
     }
   ]
 }

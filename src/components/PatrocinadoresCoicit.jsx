@@ -26,9 +26,20 @@ const sponsors = {
       label: "Silver",
     },
     {
+      name: "PAOLAS GOURMET",
+      src: "/img/coicit/patrocinadores/Paolas-Gourmet-Silver.jpg",
+      label: "Silver",
+    },
+    {
       name: "Parmigiana",
       src: "/img/coicit/patrocinadores/parmigiana.png",
       label: "Bronze",
+    },
+  ],
+  empresasAliadas: [
+    {
+      name: "Berlina Estate",
+      src: "/img/coicit/patrocinadores/Berlina_Estate.png",
     },
   ],
 };
@@ -50,7 +61,8 @@ const LOGO_HEIGHTS = {
   Gold: "h-[85px] sm:h-[80px]",
   Silver: "h-[75px] sm:h-[80px]",
   Bronze: "h-[70px] sm:h-[85px]",
-  "CENTRAL AZUCARERO LA VICTORIA, S.A.": "h-[200px] sm:h-[105px]"
+  "CENTRAL AZUCARERO LA VICTORIA, S.A.": "h-[200px] sm:h-[105px]",
+  "Berlina Estate": "h-[120px] sm:h-[130px]"
 };
 
 function Badge({ label }) {
@@ -73,7 +85,11 @@ const Category = ({ title, sponsors }) => {
   return (
     sponsors.length > 0 && (
       <div className="mb-20 w-full">
-        <h3 className="text-white text-2xl font-bold mb-10 text-center">
+        <h3 className={`text-white font-bold mb-10 text-center ${
+          title === "Empresas Aliadas" 
+            ? "text-3xl sm:text-4xl" 
+            : "text-2xl"
+        }`}>
           {title}
         </h3>
         <div className="flex flex-row flex-wrap justify-center gap-x-24 gap-y-14">
@@ -170,6 +186,11 @@ export default function PatrocinadoresCoicit() {
         <Category
           title="Gold, Silver & Bronze Sponsors"
           sponsors={sponsors.nivel2}
+        />
+        <hr className="w-full max-w-4xl border-t-2 border-white/50 my-8 mx-auto" />
+        <Category
+          title="Empresas Aliadas"
+          sponsors={sponsors.empresasAliadas}
         />
       </div>
     </section>

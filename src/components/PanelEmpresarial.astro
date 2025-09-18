@@ -1,49 +1,557 @@
 ---
-import Header from "./Header.jsx";
+import Header from "../components/Header.jsx";
 import Footer from "./Footer.astro";
 ---
 
 <Header client:load />
 
-<main class="pt-28 pb-16 min-h-[70vh] programa-bg flex flex-col items-center justify-center">
-  <div class="flex flex-col items-center justify-center w-full max-w-2xl">
-    <h1 class="text-4xl sm:text-5xl font-bold text-[#e0b02e] drop-shadow-lg mb-6 animate-gradient">
-      ¡Próximamente!
-    </h1>
-    <p class="text-white text-xl sm:text-2xl mb-4 opacity-85 text-center font-semibold tracking-wide">
-      El Panel Empresarial del COICIT 2025<br />
-      estará disponible muy pronto.
-    </p>
-    <div class="mt-8 flex flex-col items-center">
-      <span class="text-6xl animate-bounce text-[#e0b02e]">⏳</span>
-      <span class="block mt-4 text-white text-base opacity-60 text-center">¡Mantente<br />atento!</span>
+<!-- Hero Banner -->
+<section class="event-hero-banner">
+  <div class="event-hero-bg">
+    <div class="event-hero-overlay"></div>
+  </div>
+  <div class="event-hero-flex-minimal">
+    <div class="event-hero-left-minimal">
+      <h1 class="event-hero-title-minimal">Panel Empresarial</h1>
+      <div class="event-hero-lema-minimal">
+        <span>VISIÓN, EXPERIENCIA Y APRENDIZAJES EN EL MUNDO EMPRESARIAL</span>
+      </div>
+      <div class="event-hero-date-row-minimal">
+        <div class="event-hero-date-item">
+          <img
+            src="/img/coicit/ITransferT/calendar.webp"
+            alt="Calendario"
+            class="event-hero-date-icon"
+          />
+          <span>Jueves 16 de octubre 2025</span>
+        </div>
+        <div class="event-hero-date-item">
+          <img
+            src="/img/coicit/ITransferT/clock.webp"
+            alt="Hora"
+            class="event-hero-date-icon"
+          />
+          <span>06:00 p.m. – 08:00 p.m.</span>
+        </div>
+        <div class="event-hero-date-item" >
+          <img
+            src="/img/coicit/ITransferT/location.webp"
+            alt="Ubicación"
+            class="event-hero-date-icon"
+          />
+          <span>Sala Nueva de Conferencias | Centro Regional de Veraguas</span>
+        </div>
+      </div>
+      <a href="https://forms.gle/MBtid7prVBRo4mBe7" target="_blank" rel="noopener noreferrer" class="event-hero-btn-minimal">Registrarse Ahora</a>
+    </div>
+    <div class="event-hero-right-minimal">
+      <!-- Contador en dos filas: días/horas arriba, minutos/segundos abajo -->
+      <div id="countdown" class="event-countdown-minimal">
+        <div class="countdown-row">
+          <span id="days" class="countdown-num-minimal">00</span>
+          <span class="countdown-label-minimal">DÍAS</span>
+          <span class="countdown-sep-minimal">|</span>
+          <span id="hours" class="countdown-num-minimal">00</span>
+          <span class="countdown-label-minimal">HORAS</span>
+        </div>
+        <div class="countdown-row">
+          <span id="minutes" class="countdown-num-minimal">00</span>
+          <span class="countdown-label-minimal">MIN</span>
+          <span class="countdown-sep-minimal">|</span>
+          <span id="seconds" class="countdown-num-minimal">00</span>
+          <span class="countdown-label-minimal">SEG</span>
+        </div>
+      </div>
     </div>
   </div>
-</main>
+</section>
 
+<!-- About Section - Objetivo General -->
+<section class="event-about">
+  <div class="event-about-content">
+    <h2>Objetivo General</h2>
+    <p>
+      El Panel Empresarial busca ofrecer un espacio en el que destacados empresarios de la provincia compartan, de manera cercana y reflexiva, las experiencias que han marcado su trayectoria. La intención es que estudiantes, docentes y participantes del <strong>COICIT 2025</strong> conozcan de primera mano los retos, estrategias y aprendizajes del sector productivo, fortaleciendo así el vínculo entre la universidad y la empresa.
+    </p>
+  </div>
+</section>
+
+<!-- Areas Section - Descripción General -->
+<section class="event-areas">
+  <div class="event-areas-list-container">
+    <h2>Descripción General</h2>
+    <div class="event-description-content">
+      <p>
+        El Panel Empresarial se concibe como un espacio de encuentro entre la academia y el sector productivo, donde empresarios de la provincia compartirán sus vivencias, retos y logros alcanzados a lo largo de su trayectoria profesional. A través de este diálogo abierto, los participantes del COICIT 2025 tendrán la oportunidad de conocer de primera mano cómo la innovación, la toma de decisiones estratégicas y la resiliencia han sido factores clave en el desarrollo empresarial. Este intercambio busca inspirar a estudiantes, docentes y profesionales, al tiempo que fortalece la vinculación entre la universidad y la empresa como motores del progreso regional.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Call to Action -->
+<section class="event-cta">
+  <h2>¿Quieres participar del Panel Empresarial?</h2>
+  <p>
+    Únete a este encuentro único entre la academia y el sector empresarial de la provincia.
+  </p>
+  <a class="event-cta-btn" href="https://forms.gle/MBtid7prVBRo4mBe7" target="_blank" rel="noopener noreferrer">¡Quiero Participar!</a>
+</section>
+
+<!-- Información Importante -->
+<section class="event-terms">
+  <p>
+    <strong>Información importante:</strong><br />
+    El Panel Empresarial es un evento gratuito dirigido a estudiantes, docentes y profesionales interesados en el intercambio de experiencias empresariales. <strong>Cupos limitados.</strong> <br/>
+    <strong>Contacto:</strong> congreso.ve@utp.ac.pa
+  </p>
+</section>
+
+<!-- Footer -->
 <Footer />
 
+<script>
+  const countdown = () => {
+    const targetDate = new Date("2025-10-16T18:00:00").getTime(); // 6:00 PM
+    const now = new Date().getTime();
+    const difference = targetDate - now;
+
+    if (difference <= 0) {
+      const countdownEl = document.getElementById("countdown");
+      if (countdownEl) {
+        countdownEl.innerHTML = "¡Ya comenzó el Panel Empresarial!";
+      }
+      return;
+    }
+
+    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((difference / 1000 / 60) % 60);
+    const seconds = Math.floor((difference / 1000) % 60);
+
+    const daysEl = document.getElementById("days");
+    if (daysEl) daysEl.innerText = days.toString();
+    const hoursEl = document.getElementById("hours");
+    if (hoursEl) hoursEl.innerText = hours.toString().padStart(2, "0");
+    const minutesEl = document.getElementById("minutes");
+    if (minutesEl) minutesEl.innerText = minutes.toString().padStart(2, "0");
+    const secondsEl = document.getElementById("seconds");
+    if (secondsEl) secondsEl.innerText = seconds.toString().padStart(2, "0");
+  };
+
+  setInterval(countdown, 1000);
+  countdown();
+</script>
+
 <style>
-  .programa-bg {
-    background: linear-gradient(145deg, #07182e 0%, #0f2946 50%, #17395b 100%);
+  body {
+    background-color: #fdf7f0;
+    color: #181a1b;
   }
-  .animate-bounce {
-    animation: bounce 1.2s infinite;
+
+  .event-areas-list-container {
+    max-width: 1100px;
+    margin: 0 auto;
   }
-  @keyframes bounce {
-    0%, 100% { transform: translateY(0);}
-    50% { transform: translateY(-20px);}
+
+  .event-description-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
   }
-  .animate-gradient {
-    background: linear-gradient(90deg, #e0b02e 20%, #f5e384 40%, #e0b02e 60%);
-    background-size: 200% auto;
-    color: transparent;
-    background-clip: text;
-    -webkit-background-clip: text;
-    animation: gradient-move 2.2s linear infinite;
+
+  .event-description-content p {
+    color: #fff;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    text-align: justify;
   }
-  @keyframes gradient-move {
-    0% { background-position: 0% 50%; }
-    100% { background-position: 100% 50%; }
+
+  /* Hero Banner */
+  .event-hero-banner {
+    position: relative;
+    width: 100%;
+    min-height: 420px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    background: #181a1b;
+    overflow: hidden;
+    z-index: 1;
+  }
+  .event-hero-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: #181a1b !important;
+  }
+  .event-hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.18;
+    filter: blur(1px);
+  }
+  .event-hero-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(145deg, #181a1b 0%, #23272a 100%) !important;
+    opacity: 0.85 !important;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+  .event-hero-flex-minimal {
+    position: relative;
+    z-index: 3;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem 2rem 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+  }
+  .event-hero-left-minimal {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-right: 2rem;
+  }
+  .event-hero-title-minimal {
+    color: #fff;
+    font-size: 2.7rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin-bottom: 1.2rem;
+    text-shadow:
+      0 2px 16px #000,
+      0 1px 0 #e0b02e;
+  }
+  .event-hero-lema-minimal {
+    color: #e0b02e;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+    letter-spacing: 1px;
+    text-shadow: 0 1px 8px #000;
+  }
+  .event-hero-date-row-minimal {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 2rem auto 1.5rem auto;
+    max-width: 700px;
+  }
+  .event-hero-date-item {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    font-size: 1.15rem;
+    color: #fff;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    background: none;
+    border: none;
+    padding: 0.2rem 0;
+    text-shadow: 0 1px 8px #000;
+  }
+  .event-hero-date-icon {
+    width: 24px;
+    height: 24px;
+    opacity: 0.95;
+    filter: drop-shadow(0 2px 6px #e0b02e99);
+  }
+  .event-hero-btn-minimal {
+    margin-top: 1.2rem;
+    background: #e0b02e;
+    color: #181a1b;
+    font-weight: bold;
+    font-size: 1.15rem;
+    border-radius: 1rem;
+    padding: 0.8rem 2.2rem;
+    text-decoration: none;
+    box-shadow: 0 2px 12px 0 #e0b02e55;
+    transition:
+      background 0.2s,
+      color 0.2s,
+      border 0.2s;
+    box-sizing: border-box;
+    border: 2px solid transparent;
+    cursor: pointer;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    display: inline-block;
+  }
+
+  .event-hero-btn-minimal:hover {
+    background: #fdf7f0;
+    color: #e0b02e;
+    border-color: #e0b02e;
+  }
+
+  /* About Section */
+  .event-about {
+    background: linear-gradient(135deg, #f8fafc 80%, #e0e7ef 100%);
+    border-radius: 1.5rem;
+    box-shadow:
+      0 8px 48px 0 rgba(11, 23, 46, 0.13),
+      0 1.5px 0 #e0b02e;
+    max-width: 900px;
+    margin: 3.5rem auto 2rem auto;
+    padding: 2.5rem 2rem 2rem 2rem;
+    position: relative;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    border: 1.5px solid #e0b02e22;
+  }
+  .event-about-content {
+    background: transparent;
+  }
+  .event-about-content h2 {
+    color: #17395b;
+    font-size: 1.7rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    min-width: 220px;
+  }
+  .event-about-content p {
+    color: #17395b;
+    font-size: 1.08rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+  .event-about-content strong {
+    color: #e0b02e;
+    font-weight: 700;
+  }
+
+  /* Areas Section */
+  .event-areas {
+    width: 100%;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    background: rgba(11, 23, 46, 0.96);
+    border-radius: 0;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.18);
+    text-align: center;
+  }
+
+  .event-areas h2 {
+    color: #e0b02e;
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+  }
+
+  /* CTA Section */
+  .event-cta {
+    max-width: 900px;
+    margin: 2rem auto 2rem auto;
+    padding: 2rem 1rem;
+    background: #e0b02e;
+    border-radius: 1.2rem;
+    text-align: center;
+    color: #17395b;
+    box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.1);
+  }
+  .event-cta h2 {
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+  }
+  .event-cta-btn {
+    background: #17395b;
+    color: #fdf7f0;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border-radius: 1rem;
+    padding: 0.7rem 2rem;
+    text-decoration: none;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease-in-out;
+    border: 2px solid transparent;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 1rem;
+    max-width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .event-cta-btn:hover {
+    background: #fdf7f0;
+    color: #17395b;
+    border-color: #17395b;
+  }
+
+  /* Terms Section */
+  .event-terms {
+    max-width: 900px;
+    margin: 2rem auto 2rem auto;
+    padding: 1.2rem 1rem;
+    background: #fffbe6;
+    border-radius: 1rem;
+    color: #17395b;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    border: 1px solid #e0b02e;
+  }
+  .event-terms strong {
+    font-weight: 700;
+  }
+
+  /* Countdown */
+  .event-countdown-minimal {
+    margin: 2.5rem 0 0 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.2rem;
+    background: transparent;
+    border-radius: 1.2rem;
+    padding: 0.5rem 0;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+    width: fit-content;
+  }
+  .countdown-num-minimal {
+    color: #fff;
+    font-size: 1.7rem;
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 8px #00000055;
+  }
+  .countdown-label-minimal {
+    color: #e0b02e;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    opacity: 0.85;
+    margin-bottom: 0;
+  }
+  .countdown-sep-minimal {
+    color: #fff;
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin: 0 0.7rem;
+    opacity: 0.7;
+    align-self: center;
+  }
+
+  .event-hero-right-minimal {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    min-width: 340px;
+    max-width: 500px;
+    padding-left: 2rem;
+  }
+
+  @media (max-width: 700px) {
+    .event-hero-flex-minimal {
+      padding-top: 3.5rem !important;
+    }
+    .event-hero-title-minimal {
+      margin-top: 1rem;
+    }
+    .event-countdown-minimal {
+      gap: 0.5rem;
+      font-size: 1rem;
+    }
+    .countdown-num-minimal {
+      font-size: 1.4rem;
+      padding: 0.3rem 0.6rem;
+      text-align: center;
+    }
+
+    .countdown-label-minimal {
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    .countdown-sep-minimal {
+      display: none;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .event-hero-flex-minimal {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 2rem 0.7rem;
+    }
+    .event-hero-left-minimal,
+    .event-hero-right-minimal {
+      min-width: 100%;
+      max-width: 100%;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+    }
+    .event-countdown-minimal {
+      margin: 2rem 0 0 0;
+      justify-content: flex-start;
+    }
+    .event-hero-title-minimal,
+    .event-hero-lema-minimal {
+      text-align: left;
+      align-items: flex-start;
+      justify-content: flex-start;
+      width: 100%;
+    }
+    .event-hero-date-row-minimal {
+      justify-content: flex-start;
+      width: 100%;
+    }
+  }
+  @media (max-width: 700px) {
+    .event-countdown-minimal {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 1rem;
+      font-size: 1rem;
+      width: 100%;
+    }
+
+    .countdown-row {
+      display: flex;
+      gap: 0.4rem;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .countdown-num-minimal {
+      font-size: 1.4rem;
+      padding: 0.3rem 0.6rem;
+      text-align: center;
+    }
+
+    .countdown-label-minimal {
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    .countdown-sep-minimal {
+      display: none;
+    }
   }
 </style>
