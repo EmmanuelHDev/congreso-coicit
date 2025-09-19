@@ -523,7 +523,7 @@
       "location": "Salón C1",
       "faculty": "Facultad de Ingeniería Industrial",
       "type": "sesion_experto",
-      "status": "disponible"
+      "status": "sin_cupos"
     },
     {
       "id": 36,
