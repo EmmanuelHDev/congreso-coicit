@@ -73,7 +73,7 @@
       "location": "Sala Nueva de Conferencias",
       "faculty": "Facultad de Ingeniería de Sistemas Computacionales",
       "type": "ponencia",
-      "status": "disponible"
+      "status": "sin_cupos"
     },
     {
       "id": 6,
