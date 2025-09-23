@@ -64,6 +64,10 @@ const sponsors = {
       name: "AES PANAMA",
       src: "/img/coicit/patrocinadores/Logo AES PANAMA.png",
     },
+    {
+      name: "Consorcio Manhattan",
+      src: "/img/coicit/patrocinadores/Consorcio Manhattan.jpg",
+    },
   ],
 };
 
