@@ -1228,7 +1228,7 @@
       "location": "Lab. Estructura (A-12)",
       "faculty": "Facultad de Ingeniería Industrial",
       "type": "sesion_interactiva",
-      "status": "disponible"
+      "status": "sin_cupos"
     },
     {
       "id": 83,

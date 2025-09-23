@@ -143,7 +143,7 @@
         "day": "17"
       },
       "title": "Aplicaciones de las Estaciones CORS en la georreferenciación de alta precisión",
-      "speaker": "Ing. Lenin E. Guizado | Instituto Tommy Guardia",
+      "speaker": "Ing. Javier Posam| Instituto Tommy Guardia",
       "time": "10:30 - 12:30 md",
       "location": "Sala Nueva de Conferencias",
       "faculty": "Facultad de Ciencias y Tecnología",
@@ -523,7 +523,7 @@
       "location": "Salón C1",
       "faculty": "Facultad de Ingeniería Industrial",
       "type": "sesion_experto",
-      "status": "disponible"
+      "status": "sin_cupos"
     },
     {
       "id": 36,
@@ -1228,7 +1228,7 @@
       "location": "Lab. Estructura (A-12)",
       "faculty": "Facultad de Ingeniería Industrial",
       "type": "sesion_interactiva",
-      "status": "disponible"
+      "status": "sin_cupos"
     },
     {
       "id": 83,
