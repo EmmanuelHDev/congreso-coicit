@@ -8,6 +8,11 @@ const sponsors = {
       src: "/img/coicit/patrocinadores/Ice_Electronics.webp",
       label: "Platinium",
     },
+    {
+      name: "COOPEVE",
+      src: "/img/coicit/patrocinadores/logo_blanco_COOPEVE.png",
+      label: "Premium",
+    },
   ],
   nivel2: [
     {
@@ -30,9 +35,19 @@ const sponsors = {
       src: "/img/coicit/patrocinadores/Paolas-Gourmet-Silver.jpg",
       label: "Silver",
     },
+     {
+      name: "AEFC",
+      src: "/img/coicit/patrocinadores/Logo_AEFC.png",
+      label: "Silver",
+    },
     {
       name: "Parmigiana",
       src: "/img/coicit/patrocinadores/parmigiana.png",
+      label: "Bronze",
+    },
+    {
+      name: "Acosta Reyes",
+      src: "/img/coicit/patrocinadores/ARAI-T.png",
       label: "Bronze",
     },
   ],
@@ -41,31 +56,54 @@ const sponsors = {
       name: "Berlina Estate",
       src: "/img/coicit/patrocinadores/Berlina_Estate.png",
     },
+    {
+      name: "Panama Digital Gateway",
+      src: "/img/coicit/patrocinadores/Panama_Digital_GateWay.jpg",
+    },
+    {
+      name: "AES PANAMA",
+      src: "/img/coicit/patrocinadores/Logo AES PANAMA.png",
+    },
   ],
 };
 
 const LABEL_COLORS = {
   Platinium: "text-gray-200",
+  Premium: "text-yellow-400", // base para el icono
   Gold: "text-yellow-300",
   Silver: "text-gray-300",
   Bronze: "text-orange-400",
 };
+
+const GRADIENT_TEXT = {
+  Premium:
+    "bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-500 bg-clip-text text-transparent",
+  Platinium:
+    "bg-gradient-to-r from-gray-100 via-gray-200 to-gray-300 bg-clip-text text-transparent",
+};
+
 const LABEL_ICONS = {
   Platinium: <FaCrown className="inline mr-2" size={20} />,
+  Premium: <FaCrown className="inline mr-2" size={20} />,
   Gold: <FaStar className="inline mr-2" size={20} />,
   Silver: <FaStar className="inline mr-2" size={18} />,
   Bronze: <FaAward className="inline mr-2" size={19} />,
 };
 const LOGO_HEIGHTS = {
   Platinium: "h-[110px] sm:h-[120px]",
+  Premium: "h-[110px] sm:h-[120px]",
   Gold: "h-[85px] sm:h-[80px]",
   Silver: "h-[75px] sm:h-[80px]",
   Bronze: "h-[70px] sm:h-[85px]",
   "CENTRAL AZUCARERO LA VICTORIA, S.A.": "h-[200px] sm:h-[105px]",
-  "Berlina Estate": "h-[120px] sm:h-[130px]"
+  "Berlina Estate": "h-[120px] sm:h-[130px]",
+  // Ajustes puntuales
+  "AEFC": "h-[100px] sm:h-[110px]",
+  "Acosta Reyes": "h-[100px] sm:h-[112px]",
 };
 
 function Badge({ label }) {
+  const gradientClass = GRADIENT_TEXT[label];
   return (
     <span
       className={`flex items-center justify-center gap-2 text-lg font-semibold uppercase tracking-widest select-none ${
@@ -73,7 +111,7 @@ function Badge({ label }) {
       }`}
     >
       {LABEL_ICONS[label] || null}
-      {label}
+      {gradientClass ? <span className={gradientClass}>{label}</span> : label}
     </span>
   );
 }
