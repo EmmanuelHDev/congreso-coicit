@@ -123,10 +123,11 @@ function Badge({ label }) {
 const Category = ({ title, sponsors }) => {
   const logoBoxHeight = 120;
   const badgeBoxHeight = 46;
+  const isLastCategory = title === "Empresas Aliadas";
 
   return (
     sponsors.length > 0 && (
-      <div className="mb-20 w-full">
+      <div className={`w-full ${isLastCategory ? "mb-4" : "mb-20"}`}>
         <h3 className={`text-white font-bold mb-10 text-center ${
           title === "Empresas Aliadas" 
             ? "text-3xl sm:text-4xl" 
@@ -185,7 +186,7 @@ const Category = ({ title, sponsors }) => {
 export default function PatrocinadoresCoicit() {
   return (
     <section
-      className="py-36 w-full flex flex-col items-center"
+      className="pt-20 pb-0 w-full flex flex-col items-center"
       style={{
         background:
           "linear-gradient(145deg, #07182e 0%, #0f2946 50%, #17395b 100%)",
