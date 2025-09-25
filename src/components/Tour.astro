@@ -1,23 +1,103 @@
 ---
 import Header from "./Header.jsx";
 import Footer from "./Footer.astro";
+
+// Importar las giras desde su propio archivo JSON
+import girasData from '../../public/data/giras.json';
+
+const girasTecnicas = girasData.giras || [];
+
+// Función para obtener las iniciales de la facultad (mismo patrón que EventCalendar.jsx)
+const getFacultyShortName = (facultad: string) => {
+  const shortNames: { [key: string]: string } = {
+    'Facultad de Ciencias y Tecnología': 'FCT',
+    'Facultad de Ingeniería Civil': 'FIC',
+    'Facultad de Ingeniería Eléctrica': 'FIE',
+    'Facultad de Ingeniería Industrial': 'FII',
+    'Facultad de Ingeniería Mecánica': 'FIM',
+    'Facultad de Ingeniería de Sistemas Computacionales': 'FISC',
+  };
+  return shortNames[facultad] || facultad;
+};
 ---
 
 <Header client:load />
 
-<main class="pt-28 pb-16 min-h-[70vh] programa-bg flex flex-col items-center justify-center">
-  <div class="flex flex-col items-center justify-center w-full max-w-2xl">
-    <h1 class="text-4xl sm:text-5xl font-bold text-[#e0b02e] drop-shadow-lg mb-6 animate-gradient">
-      ¡Próximamente!
-    </h1>
-    <p class="text-white text-xl sm:text-2xl mb-4 opacity-85 text-center font-semibold tracking-wide">
-      Los Tours del COICIT 2025<br />
-      estarán disponible muy pronto.
-    </p>
-    <div class="mt-8 flex flex-col items-center">
-      <span class="text-6xl animate-bounce text-[#e0b02e]">⏳</span>
-      <span class="block mt-4 text-white text-base opacity-60 text-center">¡Mantente<br />atento!</span>
+<main class="pt-28 pb-16 min-h-screen programa-bg">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="text-center mb-12">
+      <h1 class="text-4xl sm:text-5xl font-bold text-[#e0b02e] drop-shadow-lg mb-6 animate-gradient">
+        Giras Técnicas COICIT 2025
+      </h1>
+      <p class="text-white text-lg sm:text-xl mb-6 opacity-90 font-medium max-w-4xl mx-auto">
+        Giras para los primeros 24 participantes que han cancelado el <span class="text-[#e0b02e] font-bold">PAQUETE COMPLETO</span> de cada Facultad
+      </p>
+      <div class="w-24 h-1 bg-gradient-to-r from-[#e0b02e] to-[#f1b315] mx-auto rounded-full"></div>
     </div>
+
+    {girasTecnicas && girasTecnicas.length > 0 ? (
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {girasTecnicas.map((gira) => (
+          <div class="event-card bg-gradient-to-br from-[#2c4f7c] to-[#1e3a5f] rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border border-[#3a5a7a]">
+            <div class="flex items-start justify-between mb-4">
+              <div class="date-section text-center">
+                <div class="text-white text-sm font-medium opacity-90">OCT</div>
+                <div class="text-white text-4xl font-bold leading-none">{gira.date?.day || '16'}</div>
+              </div>
+              <div class="badges-section flex gap-2">
+                <div class="bg-[#e0b02e] text-[#0f1924] px-3 py-1 rounded-full text-xs font-bold">
+                  {getFacultyShortName(gira.facultad)}
+                </div>
+                <div class="bg-[#4a90e2] text-white px-3 py-1 rounded-full text-xs font-bold">
+                  Gira
+                </div>
+              </div>
+            </div>
+
+            <div class="event-info mb-4">
+              <h3 class="text-lg font-bold mb-1">
+                <span class="text-[#e0b02e]">{gira.code}</span>
+                <span class="text-white"> - {gira.title}</span>
+              </h3>
+              <p class="text-white text-sm mb-3 opacity-90">
+                {gira.facultad}
+              </p>
+              
+              <div class="flex items-center text-white text-sm opacity-80">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 mr-2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                {gira.time}
+              </div>
+            </div>
+
+            <div class="flex justify-end">
+              <div class={`status-badge px-4 py-2 rounded-full text-sm font-bold ${
+                gira.status === 'disponible' 
+                  ? 'bg-[#28a745] text-white' 
+                  : 'bg-[#dc3545] text-white'
+              }`}>
+                {gira.status === 'disponible' ? 'Disponible' : 'Sin Cupos'}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    ) : (
+      <div class="flex flex-col items-center justify-center w-full max-w-2xl mx-auto">
+        <h2 class="text-4xl sm:text-5xl font-bold text-[#e0b02e] drop-shadow-lg mb-6 animate-gradient">
+          ¡Próximamente!
+        </h2>
+        <p class="text-white text-xl sm:text-2xl mb-4 opacity-85 text-center font-semibold tracking-wide">
+          Los Tours del COICIT 2025<br />
+          estarán disponibles muy pronto.
+        </p>
+        <div class="mt-8 flex flex-col items-center">
+          <span class="text-6xl animate-bounce text-[#e0b02e]">⏳</span>
+          <span class="block mt-4 text-white text-base opacity-60 text-center">¡Mantente<br />atento!</span>
+        </div>
+      </div>
+    )}
   </div>
 </main>
 
@@ -27,13 +107,30 @@ import Footer from "./Footer.astro";
   .programa-bg {
     background: linear-gradient(145deg, #07182e 0%, #0f2946 50%, #17395b 100%);
   }
+
+  .event-card {
+    background: linear-gradient(135deg, #2c4f7c 0%, #1e3a5f 100%);
+    transition: all 0.3s ease;
+  }
+
+  .event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  }
+
+  .date-section {
+    min-width: 60px;
+  }
+
   .animate-bounce {
     animation: bounce 1.2s infinite;
   }
+
   @keyframes bounce {
     0%, 100% { transform: translateY(0);}
     50% { transform: translateY(-20px);}
   }
+
   .animate-gradient {
     background: linear-gradient(90deg, #e0b02e 20%, #f5e384 40%, #e0b02e 60%);
     background-size: 200% auto;
@@ -42,8 +139,38 @@ import Footer from "./Footer.astro";
     -webkit-background-clip: text;
     animation: gradient-move 2.2s linear infinite;
   }
+
   @keyframes gradient-move {
     0% { background-position: 0% 50%; }
     100% { background-position: 100% 50%; }
+  }
+
+  .status-badge {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  @media (max-width: 768px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .event-card {
+      margin-bottom: 1rem;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .badges-section {
+      flex-direction: column;
+      gap: 4px;
+    }
+    
+    .date-section {
+      min-width: 50px;
+    }
+    
+    .date-section .text-4xl {
+      font-size: 2rem;
+    }
   }
 </style>

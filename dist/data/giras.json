@@ -1,0 +1,87 @@
+{
+  "giras": [
+    {
+      "id": 1,
+      "code": "GR01",
+      "date": {
+        "day": "16"
+      },
+      "title": "TOURS ACADÉMICO -  Manhattan PM Panamá, Inc.",
+      "facultad": "Facultad de Ingeniería Civil",
+      "time": "03:00 a.m.",
+      "status": "disponible"
+    },
+    {
+      "id": 2,
+      "code": "GR02",
+      "date": {
+        "day": "16"
+      },
+      "title": "TOURS ACADÉMICO - AES Panamá",
+      "facultad": "Facultad de Ingeniería Eléctrica",
+      "time": "03:00 a.m.",
+      "status": "disponible"
+    },
+    {
+      "id": 3,
+      "code": "GR03",
+      "date": {
+        "day": "16"
+      },
+      "title": "TOURS ACADÉMICO - Panama Digital Gateway",
+      "facultad": "Facultad de Ingeniería de Sistemas Computacionales",
+      "time": "03:00 a.m.",
+      "status": "disponible"
+    },
+    {
+      "id": 4,
+      "code": "GR04",
+      "date": {
+        "day": "16"
+      },
+      "title": "TOURS ACADÉMICO - Corporación Azucarero La Victoria",
+      "facultad": "Facultad de Ingeniería Industrial",
+      "time": "08:00 a.m.",
+      "status": "disponible"
+    },
+    {
+      "id": 5,
+      "code": "GR05",
+      "date": {
+        "day": "16"
+      },
+      "title": "TOURS ACADÉMICO - Centro de Mantenimiento Copa Airlines ",
+      "facultad": "Facultad de Ingeniería Mecánica",
+      "time": "03:00 a.m.",
+      "status": "disponible"
+    },
+    {
+      "id": 6,
+      "code": "GR06",
+      "date": {
+        "day": "16"
+      },
+      "title": "TOURS ACADÉMICO - Planta de Suministro - Cerveceria Nacional ",
+      "facultad": "Facultad de Ciencias y Tecnología",
+      "time": "03:00 a.m.",
+      "status": "disponible"
+    },
+    {
+      "id": 7,
+      "code": "GR07",
+      "date": {
+        "day": "16"
+      },
+      "title": "TOURS ACADÉMICO - Berlina Estate Coffee",
+      "facultad": "Facultad de Ingeniería Industrial",
+      "time": "03:00 a.m.",
+      "status": "disponible"
+    }
+  ],
+  "eventInfo": {
+    "code": "{gira.code}",
+    "title": "{gira.title}",
+    "facultad": "{gira.facultad}",
+    "time": "{gira.time}"
+  }
+}
