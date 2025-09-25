@@ -208,7 +208,7 @@
       "location": "Salón P1",
       "faculty": "Facultad de Ingeniería de Sistemas Computacionales",
       "type": "sesion_experto",
-      "status": "disponible"
+      "status": "sin_cupos"
     },
     {
       "id": 15,
@@ -1123,7 +1123,7 @@
       "location": "Lab. FISC",
       "faculty": "Facultad de Ingeniería de Sistemas Computacionales",
       "type": "sesion_interactiva",
-      "status": "disponible"
+      "status": "sin_cupos"
     },
     {
       "id": 76,
@@ -1418,7 +1418,7 @@
       "time": "06:30 - 07:30 p.m.",
       "location": "Centro de Convenciones COOPEVE",
       "type": "conferencia_apertura",
-      "status": "disponible"
+      "status": "sin_cupos"
     },
     {
       "id": 97,
@@ -1429,7 +1429,7 @@
       "time": "08:00 - 09:00 p.m.",
       "location": "Centro de Convenciones COOPEVE",
       "type": "conferencia_apertura",
-      "status": "disponible"
+      "status": "sin_cupos"
     },
     {
       "id": 98,
@@ -1440,7 +1440,7 @@
       "time": "06:30 - 07:30 p.m.",
       "location": "Centro de Convenciones COOPEVE",
       "type": "conferencia_clausura",
-      "status": "disponible"
+      "status": "sin_cupos"
     },
     {
       "id": 99,
@@ -1451,7 +1451,7 @@
       "time": "08:00 - 09:00 p.m.",
       "location": "Centro de Convenciones COOPEVE",
       "type": "conferencia_clausura",
-      "status": "disponible"
+      "status": "sin_cupos"
     },
     {
       "id": 100,

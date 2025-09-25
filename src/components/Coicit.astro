@@ -81,16 +81,16 @@ import PatrocinadoresCoicit from "../components/PatrocinadoresCoicit.jsx";
     <div class="mt-8">
       <a
         href="/Programas"
-        class="programa-cta-button group relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white bg-gradient-to-r from-[#e0b02e] to-[#f1b315] rounded-2xl border-2 border-[#f1b315] shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 overflow-hidden"
+        class="programa-cta-button group relative inline-flex items-center justify-center px-6 py-4 text-base sm:text-lg font-bold text-white bg-gradient-to-r from-[#e0b02e] to-[#f1b315] rounded-2xl border-2 border-[#f1b315] shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 overflow-hidden max-w-sm mx-auto"
       >
         <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
         
-        <div class="relative flex items-center gap-3">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+        <div class="relative flex items-center gap-2 sm:gap-3">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 sm:w-6 sm:h-6">
             <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25A8.966 8.966 0 0118 3.75c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0118 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
           </svg>
-          <span>Programa del COICIT 2025</span>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300">
+          <span class="whitespace-nowrap">Programa del COICIT 2025</span>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform duration-300">
             <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
           </svg>
         </div>
@@ -284,64 +284,77 @@ import PatrocinadoresCoicit from "../components/PatrocinadoresCoicit.jsx";
   </div>
   <div class="info-paquetes space-y-4 mb-10 w-full max-w-5xl mx-auto text-left">
     <div class="flex items-center gap-2 border-b border-gray-400 pb-2">
-      <span style="font-size:1.5rem;">💵</span>
-      <span class="font-semibold text-green-400 italic">
-        Los precios de los paquetes será hasta el 30 de septiembre. A partir del
-        01 de octubre todos los paquetes tienen un incremento de B/. 10.00
+      <span style="font-size:1.5rem;">⚠️</span>
+      <span class="font-semibold text-red-400 italic">
+        Todos los <span class="text-yellow-400">paquetes completos</span> están agotados. Consulte opciones de inscripción por paquete básico o por actividad individual.
       </span>
     </div>
   </div>
-  <div
-    class="paquetes-grid-custom mx-auto my-12 grid grid-cols-1 sm:grid-cols-2 gap-10"
-  >
+  <div class="paquetes-grid-custom mx-auto my-12 grid grid-cols-1 sm:grid-cols-2 gap-10">
     <div class="paquete-item">
-      <img
-        src="/img/coicit/paquetes/Paquete_Docente_TiempoCompleto.webp"
-        alt="Docente Tiempo Completo"
-      />
-      <div class="paquete-info">
-        <span class="paquete-fecha">A partir del 01/10/2025</span>
-        <span class="paquete-precio">B/. 70.00</span>
+      <div class="paquete-image-container">
+        <img
+          src="/img/coicit/paquetes/Paquete_Docente_TiempoCompleto.webp"
+          alt="Docente Tiempo Completo"
+        />
+        <div class="paquete-agotado-overlay">AGOTADO</div>
+      </div>
+      <div class="paquete-agotado-text">AGOTADO</div>
+    </div>
+    <div class="paquete-item">
+      <div class="paquete-image-container">
+        <img
+          src="/img/coicit/paquetes/Paquete_Docente_TiempoParcial.webp"
+          alt="Docente Tiempo Parcial"
+        />
+        <div class="paquete-agotado-overlay">AGOTADO</div>
+      </div>
+      <div class="paquete-agotado-text">AGOTADO</div>
+    </div>
+    <div class="paquete-item">
+      <div class="paquete-image-container">
+        <img
+          src="/img/coicit/paquetes/Paquete_Estudiante_Egresado.webp"
+          alt="Estudiante/Egresado"
+        />
+        <div class="paquete-agotado-overlay">AGOTADO</div>
+      </div>
+      <div class="paquete-agotado-text">AGOTADO</div>
+    </div>
+    <div class="paquete-item">
+      <div class="paquete-image-container">
+        <img
+          src="/img/coicit/paquetes/Paquete_Administrativos.webp"
+          alt="Administrativos"
+        />
+        <div class="paquete-agotado-overlay">AGOTADO</div>
+      </div>
+      <div class="paquete-agotado-text">AGOTADO</div>
+    </div>
+    <div class="paquete-item">
+      <div class="paquete-image-container">
+        <img
+          src="/img/coicit/paquetes/Paquete_Participantes_Externos.webp"
+          alt="Participantes Externos"
+        />
+        <div class="paquete-agotado-overlay">AGOTADO</div>
+      </div>
+      <div class="paquete-agotado-text">AGOTADO</div>
+    </div>
+    <div class="paquete-item">
+      <div class="paquete-image-container">
+        <img
+          src="/img/coicit/paquetes/Paquete_BasicoC.webp"
+          alt="Participantes Externos"
+        />
       </div>
     </div>
     <div class="paquete-item">
-      <img
-        src="/img/coicit/paquetes/Paquete_Docente_TiempoParcial.webp"
-        alt="Docente Tiempo Parcial"
-      />
-      <div class="paquete-info">
-        <span class="paquete-fecha">A partir del 01/10/2025</span>
-        <span class="paquete-precio">B/. 60.00</span>
-      </div>
-    </div>
-    <div class="paquete-item">
-      <img
-        src="/img/coicit/paquetes/Paquete_Estudiante_Egresado.webp"
-        alt="Estudiante/Egresado"
-      />
-      <div class="paquete-info">
-        <span class="paquete-fecha">A partir del 01/10/2025</span>
-        <span class="paquete-precio">B/. 55.00</span>
-      </div>
-    </div>
-    <div class="paquete-item">
-      <img
-        src="/img/coicit/paquetes/Paquete_Administrativos.webp"
-        alt="Administrativos"
-      />
-      <div class="paquete-info">
-        <span class="paquete-fecha">A partir del 01/10/2025</span>
-        <span class="paquete-precio">B/. 55.00</span>
-      </div>
-    </div>
-    <div class="paquete-item">
-      <img
-        src="/img/coicit/paquetes/Paquete_Participantes_Externos.webp"
-        alt="Participantes Externos"
-      />
-      <div class="paquete-info">
-        <span class="paquete-fecha">A partir del 01/10/2025</span>
-        <span class="paquete-precio">B/. 75.00</span>
+      <div class="paquete-image-container">
+        <img
+          src="/img/coicit/paquetes/Paquete_IndividualC.webp"
+          alt="Participantes Externos"
+        />
       </div>
     </div>
   </div>
@@ -465,42 +478,103 @@ window.addEventListener('resize', ajustarTamañoLogo);
       inset 0 1px 0 rgba(255,255,255,0.2);
   }
 
-  .programa-cta-button:hover {
-    background: linear-gradient(135deg, #f1b315 0%, #e0b02e 50%, #c99a1f 100%);
-    box-shadow: 
-      0 8px 25px rgba(224, 176, 46, 0.4),
-      0 4px 15px rgba(0,0,0,0.2),
-      inset 0 1px 0 rgba(255,255,255,0.3);
+  .paquete-image-container {
+    position: relative;
+    width: 100%;
+    max-width: 320px;
+    display: block;
+  }
+  
+  .paquete-agotado-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(220, 38, 38, 0.95);
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 900;
+    padding: 0.6rem 1.2rem;
+    border-radius: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    z-index: 20;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    display: block;
   }
 
-  .programa-cta-button:active {
-    transform: scale(0.98) !important;
+  /* Texto debajo para móvil */
+  .paquete-agotado-text {
+    display: none;
+    color: #ff4444;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 0.5rem;
   }
 
-  @media (max-width: 700px) {
-    .hero-animation {
-      max-width: 96vw;
+  /* Ajustes responsive para el overlay */
+  @media (max-width: 1023px) {
+    .paquete-agotado-overlay {
+      font-size: 1.2rem;
+      padding: 0.5rem 1rem;
+      letter-spacing: 0.8px;
     }
-    .logo-glow img {
-      max-width: 190px !important;
-      padding: 0.4rem 0.8rem;
-    }
-    .fancy-gradient-title {
-      font-size: 1.25rem !important;
-    }
-    #countdown,
-    .countdown-glow {
-      font-size: 1.18rem !important;
-      padding: 0.38em 0.7em;
-    }
+  }
 
-    .programa-cta-button {
-      padding: 12px 20px;
-      font-size: 16px;
+  @media (max-width: 640px) {
+    .paquete-agotado-overlay {
+      display: none; /* Ocultar overlay en móvil */
     }
     
-    .programa-cta-button span {
-      font-size: 14px;
+    .paquete-agotado-text {
+      display: block; /* Mostrar texto debajo en móvil */
+    }
+
+    .paquete-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .paquete-image-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+
+    /* Centrar específicamente las dos últimas imágenes y alinearlas */
+    .paquetes-grid-custom {
+      grid-template-columns: 1fr;
+      justify-items: center;
+    }
+
+    .paquete-item:nth-child(6) {
+      max-width: 180px;
+      width: 100%;
+      align-self: start;
+    }
+
+    .paquete-item:nth-child(7) {
+      max-width: 180px;
+      width: 100%;
+      align-self: start;
+    }
+  }
+
+  @media (min-width: 641px) {
+    .paquete-agotado-overlay {
+      display: block; /* Mostrar overlay en desktop */
+    }
+    
+    .paquete-agotado-text {
+      display: none; /* Ocultar texto en desktop */
     }
   }
 
@@ -738,6 +812,14 @@ window.addEventListener('resize', ajustarTamañoLogo);
     text-align: center;
     margin-top: 0.2rem;
   }
+  .paquete-agotado {
+    color: #ff6b6b;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
   @media (max-width: 1023px) {
     .paquetes-grid-custom {
       grid-template-columns: repeat(2, minmax(150px, 1fr));
@@ -911,5 +993,3 @@ window.addEventListener('resize', ajustarTamañoLogo);
   border: none;
   outline: none;
 }
-
-</style>
