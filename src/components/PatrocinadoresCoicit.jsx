@@ -35,9 +35,14 @@ const sponsors = {
       src: "/img/coicit/patrocinadores/Paolas-Gourmet-Silver.jpg",
       label: "Silver",
     },
-     {
+    {
       name: "AEFC",
       src: "/img/coicit/patrocinadores/Logo_AEFC.png",
+      label: "Silver",
+    },
+    {
+      name: "INNOBUC",
+      src: "/img/coicit/patrocinadores/innobuc logo 2020-16.png",
       label: "Silver",
     },
     {
@@ -65,8 +70,8 @@ const sponsors = {
       src: "/img/coicit/patrocinadores/Consorcio Manhattan.jpg",
     },
     {
-      name: "MONZAD",
-      src: "/img/coicit/patrocinadores/LOGO Monzad PNG.png",
+      name: "CONTINEX",
+      src: "/img/coicit/patrocinadores/Logo Continex Int.jpeg",
     },
     {
       name: "AES PANAMA",
@@ -75,6 +80,12 @@ const sponsors = {
     {
       name: "Grupo Shahani",
       src: "/img/coicit/patrocinadores/LOGO_DE_GS._PNG-Grupo_Shahany-SF.png",
+    },
+  ],
+  AliadosInnova: [
+   {
+      name: "MONZAD",
+      src: "/img/coicit/patrocinadores/LOGO Monzad PNG.png",
     },
     {
       name: "ECOFIL",
@@ -282,6 +293,10 @@ export default function PatrocinadoresCoicit() {
         <Category
           title="Empresas Aliadas"
           sponsors={sponsors.empresasAliadas}
+        />
+        <hr className="w-full max-w-4xl border-t-2 border-white/50 my-8 mx-auto" />
+        <Category
+          sponsors={sponsors.AliadosInnova}
         />
       </div>
     </section>
