@@ -68,6 +68,10 @@ const sponsors = {
       name: "Consorcio Manhattan",
       src: "/img/coicit/patrocinadores/Consorcio Manhattan.jpg",
     },
+    {
+      name: "Grupo Shahani",
+      src: "/img/coicit/patrocinadores/LOGO_DE_GS._PNG-Grupo_Shahany-SF.png",
+    },
   ],
 };
 
@@ -104,6 +108,7 @@ const LOGO_HEIGHTS = {
   // Ajustes puntuales
   "AEFC": "h-[100px] sm:h-[110px]",
   "Acosta Reyes": "h-[100px] sm:h-[112px]",
+  "Grupo Shahani": "h-[110px] sm:h-[120px]", // Logo más grande
 };
 
 function Badge({ label }) {
