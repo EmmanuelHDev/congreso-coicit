@@ -163,7 +163,7 @@
       "location": "Salón Galo A. Chang",
       "faculty": "Facultad de Ingeniería Eléctrica",
       "type": "ponencia",
-      "status": "disponible"
+      "status": "sin_cupos"
     },
     {
       "id": 12,
@@ -1447,7 +1447,7 @@
       "code": "CC02",
       "date": { "month": "OCT", "day": "17" },
       "title": "Navegando en el Cambio Climático: Agua, Innovación y resiliencia en el Canal de Panamá",
-      "speaker": "Autoridad del Canal de Panamá",
+      "speaker": "Mgrt. Gloria Arrocha | Autoridad del Canal de Panamá",
       "time": "08:00 - 09:00 p.m.",
       "location": "Centro de Convenciones COOPEVE",
       "type": "conferencia_clausura",

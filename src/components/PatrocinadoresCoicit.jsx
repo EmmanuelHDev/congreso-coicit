@@ -61,16 +61,40 @@ const sponsors = {
       src: "/img/coicit/patrocinadores/Panama_Digital_GateWay.jpg",
     },
     {
-      name: "AES PANAMA",
-      src: "/img/coicit/patrocinadores/Logo AES PANAMA.png",
-    },
-    {
       name: "Consorcio Manhattan",
       src: "/img/coicit/patrocinadores/Consorcio Manhattan.jpg",
     },
     {
+      name: "MONZAD",
+      src: "/img/coicit/patrocinadores/LOGO Monzad PNG.png",
+    },
+    {
+      name: "AES PANAMA",
+      src: "/img/coicit/patrocinadores/Logo AES PANAMA.png",
+    },
+    {
       name: "Grupo Shahani",
       src: "/img/coicit/patrocinadores/LOGO_DE_GS._PNG-Grupo_Shahany-SF.png",
+    },
+    {
+      name: "ECOFIL",
+      src: "/img/coicit/patrocinadores/Ecofil_logo.png",
+    },
+    {
+      name: "NATURANY",
+      src: "/img/coicit/patrocinadores/Naturany-SF.png",
+    },
+    {
+      name: "GREENPRINT",
+      src: "/img/coicit/patrocinadores/Greenprint_logo.png",
+    },
+    {
+      name: "DRONOIS",
+      src: "/img/coicit/patrocinadores/Dronois_logo.png",
+    },
+    {
+      name: "SILICON",
+      src: "/img/coicit/patrocinadores/Silicon_logo.png",
     },
   ],
 };
@@ -108,7 +132,10 @@ const LOGO_HEIGHTS = {
   // Ajustes puntuales
   "AEFC": "h-[100px] sm:h-[110px]",
   "Acosta Reyes": "h-[100px] sm:h-[112px]",
-  "Grupo Shahani": "h-[110px] sm:h-[120px]", // Logo más grande
+  "Grupo Shahani": "h-[110px] sm:h-[120px]", 
+  "MONZAD": "h-[110px] sm:h-[130px]",
+  "ECOFIL": "h-[90px] sm:h-[140px]", 
+  "NATURANY": "h-[120px] sm:h-[140px]",
 };
 
 function Badge({ label }) {
@@ -140,7 +167,11 @@ const Category = ({ title, sponsors }) => {
         }`}>
           {title}
         </h3>
-        <div className="flex flex-row flex-wrap justify-center gap-x-24 gap-y-14">
+        <div className={`${
+          isLastCategory 
+            ? "grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8 justify-items-center max-w-5xl mx-auto"
+            : "flex flex-row flex-wrap justify-center gap-x-24 gap-y-14"
+        }`}>
           {sponsors.map(({ name, src, label }, i) => (
             <div
               key={name + i}
@@ -158,15 +189,18 @@ const Category = ({ title, sponsors }) => {
                   src={src}
                   alt={name}
                   className={`${
-                    LOGO_HEIGHTS[name] || LOGO_HEIGHTS[label] || "h-[90px]"
-                  } object-contain transition-transform duration-200 hover:scale-105`}
+                    LOGO_HEIGHTS[name] || LOGO_HEIGHTS[label] || "h-[110px]"
+                  } object-contain transition-transform duration-200 hover:scale-105 ${
+                    name === "MONZAD" ? "bg-white rounded-lg p-4" : ""
+                  }`}
                   style={{
                     maxWidth: "260px",
                     minWidth: "80px",
                     width: "100%",
-                    background: "none",
+                    background: name === "MONZAD" ? "white" : "none",
                     marginBottom: 0,
-                    borderRadius: "0px",
+                    borderRadius: name === "MONZAD" ? "8px" : "0px",
+                    padding: name === "MONZAD" ? "16px" : "0",
                   }}
                 />
               </div>
