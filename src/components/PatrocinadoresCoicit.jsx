@@ -96,6 +96,14 @@ const sponsors = {
       name: "SILICON",
       src: "/img/coicit/patrocinadores/Silicon_logo.png",
     },
+    {
+      name: "AGRINCO",
+      src: "/img/coicit/patrocinadores/agrinco_logo.png",
+    },
+    {
+      name: "BNC LAB",
+      src: "/img/coicit/patrocinadores/BNClab_logo-SF.png",
+    },
   ],
 };
 
@@ -135,7 +143,8 @@ const LOGO_HEIGHTS = {
   "Grupo Shahani": "h-[110px] sm:h-[120px]", 
   "MONZAD": "h-[110px] sm:h-[130px]",
   "ECOFIL": "h-[90px] sm:h-[140px]", 
-  "NATURANY": "h-[120px] sm:h-[140px]",
+  "NATURANY": "h-[150px] sm:h-[150px]",
+  "BNC LAB": "h-[200px] sm:h-[220px]", 
 };
 
 function Badge({ label }) {
