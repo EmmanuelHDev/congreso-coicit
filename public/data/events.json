@@ -748,7 +748,7 @@
       "location": "Salón P2",
       "faculty": "Facultad de Ingeniería Mecánica",
       "type": "sesion_interactiva",
-      "status": "disponible"
+      "status": "sin_cupos"
     },
     {
       "id": 51,
