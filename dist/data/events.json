@@ -28,7 +28,7 @@
       "location": "Sala Nueva de Conferencias",
       "faculty": "Facultad de Ingeniería Eléctrica",
       "type": "ponencia",
-      "status": "disponible"
+      "status": "sin_cupos"
     },
     {
       "id": 3,
@@ -68,7 +68,7 @@
         "day": "15"
       },
       "title": "El futuro del Trabajo con IA: ¿Cómo nos preparamos y que necesitamos saber?",
-      "speaker": "Por definir",
+      "speaker": "Licdo. Iván Castillero | GBM Panamá",
       "time": "09:00 - 10:30 a.m.",
       "location": "Sala Nueva de Conferencias",
       "faculty": "Facultad de Ingeniería de Sistemas Computacionales",
@@ -248,7 +248,7 @@
         "day": "14"
       },
       "title": "Energía",
-      "speaker": "Mgtr Cesar Almanza | CITT UTP",
+      "speaker": "Mgtr. Cesar Almanza | CITT UTP",
       "time": "10:00 - 11:00 a.m.",
       "location": "Salón A-6",
       "faculty": "Facultad de Ingeniería Industrial",
