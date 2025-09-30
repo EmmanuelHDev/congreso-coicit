@@ -1078,7 +1078,7 @@
       "location": "Lab. Eléctrica (TED)",
       "faculty": "Facultad de Ingeniería Eléctrica",
       "type": "sesion_interactiva",
-      "status": "disponible"
+      "status": "sin_cupos"
     },
     {
       "id": 73,
