@@ -31,8 +31,9 @@ const EventCalendar = () => {
     { value: 'ponencia', label: 'Ponencias' },
     { value: 'sesion_experto', label: 'Sesión de Expertos' },
     { value: 'sesion_interactiva', label: 'Sesión Interactiva' },
-    { value: ' WorkShop', label: 'WorkShop' },  // Agregar el espacio
-    { value: 'Espacio Tecnológico', label: 'Innova Transfer Tech' }
+    { value: ' WorkShop', label: 'WorkShop' },
+    { value: 'Espacio Tecnológico', label: 'Innova Transfer Tech' },
+    { value: 'Conversatorio', label: 'Conversatorio BlockChain' }
   ];
 
   useEffect(() => {
@@ -90,7 +91,8 @@ const EventCalendar = () => {
       'sesion_experto': 'Sesión de Expertos',
       'sesion_interactiva': 'Sesión Interactiva',
       ' WorkShop': 'WorkShop',  
-      'Espacio Tecnológico': 'Innova Transfer Tech'
+      'Espacio Tecnológico': 'Innova Transfer Tech',
+      'Conversatorio': 'Conversatorio'
     };
     return typeLabels[type] || type;
   };
@@ -101,7 +103,8 @@ const EventCalendar = () => {
       'sesion_experto': 'bg-orange-500',
       'sesion_interactiva': 'bg-purple-500',
       ' WorkShop': 'bg-green-500',  
-      'Espacio Tecnológico': 'bg-cyan-500'
+      'Espacio Tecnológico': 'bg-cyan-500',
+      'Conversatorio': 'bg-purple-600'
     };
     return typeColors[type] || 'bg-gray-500';
   };
@@ -387,6 +390,8 @@ const EventCalendar = () => {
                   <h3 className="text-lg font-semibold mb-3 leading-tight">
                     {event.date?.day === "16" && event.descripcion
                       ? event.title
+                      : event.date?.day === "15" && event.type === "Conversatorio"
+                      ? event.title
                       : (
                         <>
                           <span className="font-bold text-[#e0b02e]">{event.code}</span> - {event.title}
@@ -395,9 +400,20 @@ const EventCalendar = () => {
                     }
                   </h3>
                   {event.date?.day === "16" && event.descripcion ? (
-                    <p className="text-sm opacity-80 mb-2">
-                      <span className="font-bold">Descripción:</span> {event.descripcion}
-                    </p>
+                    <>
+                      <p className="text-sm opacity-80 mb-2">
+                        <span className="font-bold">Descripción:</span> {event.descripcion}
+                      </p>
+                    </>
+                  ) : event.date?.day === "15" && event.type === "Conversatorio" ? (
+                    <>
+                      <p className="text-sm opacity-80 mb-2">
+                        Expositor: {event.speaker}
+                      </p>
+                      <p className="text-sm opacity-80 mb-2">
+                        <span className="font-bold">Descripción:</span> {event.descripcion}
+                      </p>
+                    </>
                   ) : (
                     <p className="text-sm opacity-80 mb-2">
                       Expositor: {event.speaker}
@@ -417,7 +433,7 @@ const EventCalendar = () => {
                   </div>
 
                   {/* Botones especiales para WorkShop e Innova Transfer Tech */}
-                  {event.date?.day === "16" && event.descripcion && (
+                  {(event.date?.day === "16" || (event.date?.day === "15" && event.type === "Conversatorio")) && event.descripcion && (
                     <div className="mt-3">
                       {event.type === " WorkShop" && (
                         <a
@@ -454,13 +470,26 @@ const EventCalendar = () => {
                       )}
                       {event.type === "Giras Técnicas" && (
                         <a
-                          href="/Tour"
+                          href="/Tours"
                           className="inline-flex items-center gap-2 bg-pink-300 hover:bg-pink-400 text-gray-800 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 transform hover:scale-105"
                         >
                           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                           </svg>
                           Ver Giras Técnicas
+                        </a>
+                      )}
+                      {event.type === "Conversatorio" && (
+                        <a
+                          href="https://forms.office.com/Pages/ResponsePage.aspx?id=rkB78Au2D06-vq-0L8TcaVtmd5Rw1HtMkGi-3pJB9hpUQ0kzNlpGOEdORVVVWUJWVzIzSEJKQThLVi4u&origin=QRCode"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 bg-purple-500 hover:bg-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 transform hover:scale-105"
+                        >
+                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                          </svg>
+                          Inscribirse al Conversatorio
                         </a>
                       )}
                     </div>

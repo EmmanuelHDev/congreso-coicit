@@ -5,8 +5,8 @@ import { useWiciLanguage } from "./WiciLanguageContext";
 const texts = {
   es: {
     titulo: "Registro de Participantes",
-    desc: "El registro para el WICI 2025 será totalmente gratuito para todas las categorías. Pronto estará disponible el formulario de inscripción y las instrucciones completas.",
-    boton: "Próximamente",
+    desc: "El registro para el WICI 2025 será totalmente gratuito para todas las categorías. Completa el formulario de inscripción siguiendo las instrucciones.",
+    boton: "Regístrate",
     tablaTitulo: "Categoría de Registro",
     tablaVirtual: "Costo",
     fila1: "General",
@@ -18,8 +18,8 @@ const texts = {
   },
   en: {
     titulo: "Registration",
-    desc: "Registration for WICI 2025 will be completely free for all categories. The registration form and full instructions will be available soon.",
-    boton: "Coming soon",
+    desc: "Registration for WICI 2025 will be completely free for all categories. Complete the registration form following the instructions.",
+    boton: "Register",
     tablaTitulo: "Registration Category",
     tablaVirtual: "Fee",
     fila1: "General",
@@ -49,20 +49,22 @@ const RegistrationMainContent = () => {
         <section className="max-w-3xl mx-auto w-full py-12 px-4">
           <p className="text-gray-700 text-center text-lg mb-8">{t.desc}</p>
           <div className="flex justify-center mb-8">
-            <button
+            <a
+              href="https://forms.office.com/Pages/ResponsePage.aspx?id=rkB78Au2D06-vq-0L8TcaTlNxl5SizNHhsDwrMjAuERUQktTSEVHMlAyTU81MzZDN1IyTUZGM1E0VS4u"
+              target="_blank"
+              rel="noopener noreferrer"
               className={`
                 font-bold text-xl rounded-xl px-10 py-4
                 bg-[#f5e0a3] text-white shadow
                 transition-all duration-200
                 border-2 border-[#f5e0a3]
                 hover:bg-transparent hover:text-[#d1b255] hover:border-[#d1b255]
-                animate-pulse
+                inline-block text-center
+                hover:scale-105 transform
               `}
-              disabled
-              style={{ cursor: "not-allowed", opacity: 1 }}
             >
               {t.boton}
-            </button>
+            </a>
           </div>
           <div className="overflow-x-auto">
             <table className="min-w-[350px] w-full bg-white shadow-md rounded-lg">

@@ -36,18 +36,7 @@
       "location": "Ciudad de Panamá",
       "status": "disponible"
     },
-    {
-      "id": 4,
-      "code": "GR04",
-      "date": {
-        "day": "16"
-      },
-      "title": "TOURS ACADÉMICO - Corporación Azucarero La Victoria",
-      "facultad": "Facultad de Ingeniería Industrial",
-      "time": "08:00 a.m.",
-      "location": "Ingenio La Victoria",
-      "status": "disponible"
-    },
+    
     {
       "id": 5,
       "code": "GR05",
@@ -60,18 +49,7 @@
       "location": "Ciudad de Panamá",
       "status": "disponible"
     },
-    {
-      "id": 6,
-      "code": "GR06",
-      "date": {
-        "day": "16"
-      },
-      "title": "TOURS ACADÉMICO - Planta de Suministro - Cerveceria Nacional ",
-      "facultad": "Facultad de Ciencias y Tecnología",
-      "time": "03:00 a.m.",
-      "location": "Ciudad de Panamá",
-      "status": "disponible"
-    },
+    
     {
       "id": 7,
       "code": "GR07",

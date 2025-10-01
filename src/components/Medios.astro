@@ -59,6 +59,21 @@ const CAMPAIGNS_LEFT: Campaign[] = [
       },
     ],
   },
+  {
+    id: "conversatorio-blockchain",
+    title: "Conversatorio BlockChain",
+    description: "Artes promocionales del Conversatorio sobre tecnología BlockChain.",
+    items: [
+      {
+        src: "/img/coicit/medios/Blockchain Construyendo Confianza Digital.png",
+        alt: "Conversatorio BlockChain – Construyendo Confianza Digital",
+        href: "/img/coicit/medios/Blockchain Construyendo Confianza Digital.png",
+        download: "/img/coicit/medios/Blockchain Construyendo Confianza Digital.png",
+        filename: "conversatorio-blockchain.jpg",
+        size: "Poster",
+      },
+    ],
+  },
 ];
 
 const CAMPAIGNS_RIGHT: Campaign[] = [
@@ -99,7 +114,6 @@ const CAMPAIGNS_RIGHT: Campaign[] = [
     ],
   },
 ];
-
 const ROWS: { left?: Campaign; right?: Campaign }[] = Array.from(
   { length: Math.max(CAMPAIGNS_LEFT.length, CAMPAIGNS_RIGHT.length) },
   (_, i) => ({

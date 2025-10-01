@@ -1463,6 +1463,19 @@
       "location": "Sala Nueva de Conferencias",
       "type": "Panel",
       "status": "gratuito"
-    } 
+    },
+    {
+      "id": 101,
+      "code": "CV01",
+      "date": { "month": "OCT", "day": "15" },
+      "title": "Blockchain construyendo confianza digital",
+      "speaker": "Jose Francisco Vega | Estudiantes de 3er año de Ingeniería FISC",
+      "descripcion": "Conversatorio sobre tecnología blockchain y su impacto en la construcción de sistemas digitales.",
+      "time": "06:00 p.m - 08:00 p.m.",
+      "location": "Salón Galo A. Chang",
+      "faculty": "Facultad de Ingeniería de Sistemas Computacionales",
+      "type": "Conversatorio",
+      "status": "gratuito"
+    }
   ]
 }
