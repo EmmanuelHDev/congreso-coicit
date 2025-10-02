@@ -81,6 +81,10 @@ const sponsors = {
       name: "Grupo Shahani",
       src: "/img/coicit/patrocinadores/LOGO_DE_GS._PNG-Grupo_Shahany-SF.png",
     },
+    {
+      name: "Grupo HANNA",
+      src: "/img/coicit/patrocinadores/GRUPO_HANNA-SF.png",
+    },
   ],
   AliadosInnova: [
    {
@@ -156,6 +160,7 @@ const LOGO_HEIGHTS = {
   "ECOFIL": "h-[90px] sm:h-[140px]", 
   "NATURANY": "h-[150px] sm:h-[150px]",
   "BNC LAB": "h-[200px] sm:h-[220px]", 
+  "Grupo HANNA": "h-[120px] sm:h-[130px]",
 };
 
 function Badge({ label }) {

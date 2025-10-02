@@ -10,6 +10,7 @@
       "facultad": "Facultad de Ingeniería Civil",
       "time": "03:00 a.m.",
       "location": "Ciudad de Panamá",
+      "price": "$10.00",
       "status": "disponible"
     },
     {
@@ -22,6 +23,7 @@
       "facultad": "Facultad de Ingeniería Eléctrica",
       "time": "03:00 a.m.",
       "location": "Ciudad de Panamá",
+      "price": "$10.00",
       "status": "disponible"
     },
     {
@@ -34,9 +36,9 @@
       "facultad": "Facultad de Ingeniería de Sistemas Computacionales",
       "time": "03:00 a.m.",
       "location": "Ciudad de Panamá",
+      "price": "$10.00",
       "status": "disponible"
     },
-    
     {
       "id": 5,
       "code": "GR05",
@@ -47,9 +49,9 @@
       "facultad": "Facultad de Ingeniería Mecánica",
       "time": "03:00 a.m.",
       "location": "Ciudad de Panamá",
+      "price": "$10.00",
       "status": "disponible"
     },
-    
     {
       "id": 7,
       "code": "GR07",
@@ -60,6 +62,7 @@
       "facultad": "Facultad de Ingeniería Industrial",
       "time": "03:00 a.m.",
       "location": "Chiriquí",
+      "price": "$10.00",
       "status": "disponible"
     }
   ],
@@ -68,6 +71,7 @@
     "title": "{gira.title}",
     "facultad": "{gira.facultad}",
     "time": "{gira.time}",
-    "location": "{gira.location}"
+    "location": "{gira.location}",
+    "price": "{gira.price}"
   }
 }
