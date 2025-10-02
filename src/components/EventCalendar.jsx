@@ -471,7 +471,7 @@ const EventCalendar = () => {
                       {event.type === "Giras Técnicas" && (
                         <div className="space-y-2">
                           <a
-                            href="/Tours"
+                            href="/Tour"
                             className="inline-flex items-center gap-2 bg-pink-300 hover:bg-pink-400 text-gray-800 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 transform hover:scale-105"
                           >
                             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
