@@ -92,6 +92,10 @@ const sponsors = {
       src: "/img/coicit/patrocinadores/LOGO Monzad PNG.png",
     },
     {
+      name: "ZOE MARKET",
+      src: "/img/coicit/patrocinadores/LOGO ZOE MARKET AND SERVICE.png",
+    },
+    {
       name: "ECOFIL",
       src: "/img/coicit/patrocinadores/Ecofil_logo.png",
     },
@@ -118,6 +122,14 @@ const sponsors = {
     {
       name: "BNC LAB",
       src: "/img/coicit/patrocinadores/BNClab_logo-SF.png",
+    },
+    {
+      name: "COFFEE SOLUTIONS",
+      src: "/img/coicit/patrocinadores/CoffeeSolutions.png",
+    },
+    {
+      name: "TALLER GARCIA",
+      src: "/img/coicit/patrocinadores/TallerGarcia-SF.png",
     },
   ],
 };
@@ -156,11 +168,14 @@ const LOGO_HEIGHTS = {
   "AEFC": "h-[100px] sm:h-[110px]",
   "Acosta Reyes": "h-[100px] sm:h-[112px]",
   "Grupo Shahani": "h-[110px] sm:h-[120px]", 
-  "MONZAD": "h-[110px] sm:h-[130px]",
+  "MONZAD": "h-[130px] sm:h-[130px]",
   "ECOFIL": "h-[90px] sm:h-[140px]", 
-  "NATURANY": "h-[150px] sm:h-[150px]",
+  "NATURANY": "h-[160px] sm:h-[150px]",
   "BNC LAB": "h-[200px] sm:h-[220px]", 
   "Grupo HANNA": "h-[120px] sm:h-[130px]",
+  "COFFEE SOLUTIONS": "h-[100px] sm:h-[190px]",
+  "TALLER GARCIA": "h-[170px] sm:h-[180px]", 
+  "ZOE MARKET": "h-[130px] sm:h-[130px]",
 };
 
 function Badge({ label }) {
@@ -180,20 +195,22 @@ function Badge({ label }) {
 const Category = ({ title, sponsors }) => {
   const logoBoxHeight = 120;
   const badgeBoxHeight = 46;
-  const isLastCategory = title === "Empresas Aliadas";
+  const isResponsiveSection = title === "Empresas Aliadas" || title === "Aliados Innova";
 
   return (
     sponsors.length > 0 && (
-      <div className={`w-full ${isLastCategory ? "mb-4" : "mb-20"}`}>
-        <h3 className={`text-white font-bold mb-10 text-center ${
-          title === "Empresas Aliadas" 
-            ? "text-3xl sm:text-4xl" 
-            : "text-2xl"
-        }`}>
-          {title}
-        </h3>
+      <div className={`w-full ${isResponsiveSection ? "mb-4" : "mb-20"}`}>
+        {title && (
+          <h3 className={`text-white font-bold mb-10 text-center ${
+            isResponsiveSection
+              ? "text-3xl sm:text-4xl" 
+              : "text-2xl"
+          }`}>
+            {title}
+          </h3>
+        )}
         <div className={`${
-          isLastCategory 
+          isResponsiveSection
             ? "grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8 justify-items-center max-w-5xl mx-auto"
             : "flex flex-row flex-wrap justify-center gap-x-24 gap-y-14"
         }`}>
