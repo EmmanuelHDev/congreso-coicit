@@ -568,7 +568,7 @@
       "location": "Salón A-14",
       "faculty": "Facultad de Ingeniería de Sistemas Computacionales",
       "type": "sesion_experto",
-      "status": "disponible"
+      "status": "sin_cupos"
     },
     {
       "id": 39,
