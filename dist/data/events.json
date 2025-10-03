@@ -1050,21 +1050,7 @@
       "type": "sesion_interactiva",
       "status": "disponible"
     },
-    {
-      "id": 71,
-      "code": "SI25",
-      "date": {
-        "month": "OCT",
-        "day": "15"
-      },
-      "title": "Diseño de bomba de ariete hidráulico",
-      "speaker": "Ing. Luis Ortega",
-      "time": "02:30 - 04:30 pm",
-      "location": "Lab. FIM 4.0",
-      "faculty": "Facultad de Ingeniería Civil",
-      "type": "sesion_interactiva",
-      "status": "disponible"
-    },
+    
     {
       "id": 72,
       "code": "SI26",
