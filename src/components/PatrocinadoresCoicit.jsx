@@ -46,6 +46,11 @@ const sponsors = {
       label: "Silver",
     },
     {
+      name: "ECOCASA",
+      src: "/img/coicit/patrocinadores/GRUPO ECOCASA (1).png",
+      label: "Silver",
+    },
+    {
       name: "Parmigiana",
       src: "/img/coicit/patrocinadores/parmigiana.png",
       label: "Bronze",
