@@ -628,7 +628,7 @@
       "location": "Salón A-14",
       "faculty": "Facultad de Ingeniería Eléctrica",
       "type": "sesion_experto",
-      "status": "disponible"
+      "status": "sin_cupos"
     },
     {
       "id": 43,
@@ -868,7 +868,7 @@
       "location": "Salón P2",
       "faculty": "Facultad de Ingeniería Eléctrica",
       "type": "sesion_interactiva",
-      "status": "disponible"
+      "status": "sin_cupos"
     },
     {
       "id": 59,
@@ -943,7 +943,7 @@
       "location": "Lab. FISC",
       "faculty": "Facultad de Ingeniería Civil",
       "type": "sesion_interactiva",
-      "status": "disponible"
+      "status": "sin_cupos"
     },
     {
       "id": 64,
