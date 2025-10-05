@@ -26,15 +26,17 @@ const EventCalendar = () => {
     { value: '17', label: 'Viernes 17 Oct' }
   ];
 
-  const categories = [
-    { value: 'all', label: 'Todas las Categorías' },
-    { value: 'ponencia', label: 'Ponencias' },
-    { value: 'sesion_experto', label: 'Sesión de Expertos' },
-    { value: 'sesion_interactiva', label: 'Sesión Interactiva' },
-    { value: ' WorkShop', label: 'WorkShop' },
-    { value: 'Espacio Tecnológico', label: 'Innova Transfer Tech' },
-    { value: 'Conversatorio', label: 'Conversatorio BlockChain' }
-  ];
+ const categories = [
+  { value: 'all', label: 'Todas las Categorías' },
+  { value: 'ponencia', label: 'Ponencias' },
+  { value: 'sesion_experto', label: 'Sesión de Expertos' },
+  { value: 'sesion_interactiva', label: 'Sesión Interactiva' },
+  { value: ' WorkShop', label: 'WICI-2025' },
+  { value: 'Espacio Tecnológico', label: 'Innova Transfer Tech' },
+  { value: 'Conversatorio', label: 'Conversatorio BlockChain' },
+  { value: 'Giras Técnicas', label: 'Tours Empresariales' },
+  { value: 'Panel', label: 'Panel Empresarial' }
+];
 
   useEffect(() => {
     // Cargar eventos desde el archivo JSON
