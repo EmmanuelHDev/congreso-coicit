@@ -51,6 +51,11 @@ const sponsors = {
       label: "Silver",
     },
     {
+      name: "DELIGRECIA",
+      src: "/img/coicit/patrocinadores/Deli Grecia.png",
+      label: "Silver",
+    },
+    {
       name: "Parmigiana",
       src: "/img/coicit/patrocinadores/parmigiana.png",
       label: "Bronze",
@@ -77,6 +82,10 @@ const sponsors = {
     {
       name: "CONTINEX",
       src: "/img/coicit/patrocinadores/Logo Continex Int.jpeg",
+    },
+    {
+      name: "CANAL DE PANAMA",
+      src: "/img/coicit/patrocinadores/CANAL.jpg",
     },
     {
       name: "AES PANAMA",
@@ -174,13 +183,14 @@ const LOGO_HEIGHTS = {
   "Acosta Reyes": "h-[100px] sm:h-[112px]",
   "Grupo Shahani": "h-[110px] sm:h-[120px]", 
   "MONZAD": "h-[130px] sm:h-[130px]",
-  "ECOFIL": "h-[90px] sm:h-[140px]", 
+  "ECOFIL": "h-[90px] sm:h-[110px]", 
   "NATURANY": "h-[160px] sm:h-[150px]",
   "BNC LAB": "h-[200px] sm:h-[220px]", 
   "Grupo HANNA": "h-[120px] sm:h-[130px]",
   "COFFEE SOLUTIONS": "h-[100px] sm:h-[190px]",
   "TALLER GARCIA": "h-[170px] sm:h-[180px]", 
   "ZOE MARKET": "h-[130px] sm:h-[130px]",
+  "DELIGRECIA": "h-[100px] sm:h-[120px]",
 };
 
 function Badge({ label }) {

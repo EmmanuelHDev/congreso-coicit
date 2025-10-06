@@ -583,7 +583,7 @@
       "location": "Salón P1",
       "faculty": "Facultad de Ingeniería Civil",
       "type": "sesion_experto",
-      "status": "disponible"
+      "status": "sin_cupos"
     },
     {
       "id": 40,
@@ -1050,7 +1050,21 @@
       "type": "sesion_interactiva",
       "status": "disponible"
     },
-    
+    {
+      "id": 71,
+      "code": "SI25",
+      "date": {
+        "month": "OCT",
+        "day": "15"
+      },
+      "title": "Por Definir",
+      "speaker": "Por definir",
+      "time": "02:30 - 04:30 pm",
+      "location": "Lab. FIM 4.0",
+      "faculty": "Facultad de Ingeniería Civil",
+      "type": "sesion_interactiva",
+      "status": "disponible"
+    },
     {
       "id": 72,
       "code": "SI26",
