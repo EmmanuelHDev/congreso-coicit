@@ -114,7 +114,9 @@ const EventCalendar = () => {
   const getStatusLabel = (status) => {
     const statusLabels = {
       'disponible': 'Disponible',
-      'sin_cupos': 'Sin cupos'
+      'sin_cupos': 'Sin Cupos',
+      'gratuito': 'Gratuito',
+      'eliminado': 'Eliminado'
     };
     return statusLabels[status] || status;
   };
@@ -122,7 +124,9 @@ const EventCalendar = () => {
   const getStatusColor = (status) => {
     const statusColors = {
       'disponible': 'bg-green-500',
-      'sin_cupos': 'bg-red-500'
+      'sin_cupos': 'bg-red-500',
+      'gratuito': 'bg-blue-500',
+      'eliminado': 'bg-gray-500'
     };
     return statusColors[status] || 'bg-gray-500';
   };
@@ -134,17 +138,16 @@ const EventCalendar = () => {
   };
 
   // Separar conferencias de apertura y clausura
-  const conferenciasPrincipales = filteredEvents.filter(
-    (event) =>
-      event.type === "conferencia_apertura" ||
-      event.type === "conferencia_clausura"
+  const conferenciasPrincipales = filteredEvents.filter(event => 
+    event.status !== 'eliminado' && 
+    (event.type === 'conferencia_apertura' || event.type === 'conferencia_clausura')
   );
 
   // El resto de eventos
-  const otrosEventos = filteredEvents.filter(
-    (event) =>
-      event.type !== "conferencia_apertura" &&
-      event.type !== "conferencia_clausura"
+  const otrosEventos = filteredEvents.filter(event => 
+    event.status !== 'eliminado' && 
+    event.type !== 'conferencia_apertura' && 
+    event.type !== 'conferencia_clausura'
   );
 
   if (loading) {

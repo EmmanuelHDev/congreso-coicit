@@ -508,7 +508,7 @@
       "location": "Salón C1",
       "faculty": "Facultad de Ingeniería Mecánica",
       "type": "sesion_experto",
-      "status": "disponible"
+      "status": "eliminado"
     },
     {
       "id": 35,
@@ -613,7 +613,7 @@
       "location": "Salón P1",
       "faculty": "Facultad de Ingeniería Civil",
       "type": "sesion_experto",
-      "status": "disponible"
+      "status": "eliminado"
     },
     {
       "id": 42,
@@ -658,7 +658,7 @@
       "location": "Salón P1",
       "faculty": "Facultad de Ingeniería Mecánica",
       "type": "sesion_experto",
-      "status": "disponible"
+      "status": "eliminado"
     },
     {
       "id": 45,
@@ -958,7 +958,7 @@
       "location": "Salón P2",
       "faculty": "Facultad de Ingeniería Mecánica",
       "type": "sesion_interactiva",
-      "status": "disponible"
+      "status": "eliminado"
     },
     {
       "id": 65,
@@ -1028,7 +1028,7 @@
         "day": "15"
       },
       "title": "Caso Práctico: Industria 5.0 y Robótica Colaborativa",
-      "speaker": "Ing. Daniel Camos | ICE Electronics",
+      "speaker": "Ing. Daniel Campos | ICE Electronics",
       "time": "12:30 - 02:30 pm",
       "location": "Lab. Eléctrica (TED)",
       "faculty": "Facultad de Ingeniería Eléctrica",
@@ -1213,7 +1213,7 @@
       "location": "Lab. FISC",
       "faculty": "Facultad de Ingeniería de Sistemas Computacionales",
       "type": "sesion_interactiva",
-      "status": "disponible"
+      "status": "eliminado"
     },
     {
       "id": 82,
