@@ -553,7 +553,7 @@
       "location": "Salón A-13",
       "faculty": "Facultad de Ingeniería Industrial",
       "type": "sesion_experto",
-      "status": "disponible"
+      "status": "eliminado"
     },
     {
       "id": 38,
@@ -1063,7 +1063,7 @@
       "location": "Lab. FIM 4.0",
       "faculty": "Facultad de Ingeniería Civil",
       "type": "sesion_interactiva",
-      "status": "disponible"
+      "status": "eliminado"
     },
     {
       "id": 72,
@@ -1168,7 +1168,7 @@
       "location": "Lab. Industrial (A-9)",
       "faculty": "Facultad de Ingeniería Industrial",
       "type": "sesion_interactiva",
-      "status": "disponible"
+      "status": "eliminado"
     },
     {
       "id": 79,
