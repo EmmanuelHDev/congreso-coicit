@@ -973,7 +973,7 @@
       "location": "Lab. FIM 4.0",
       "faculty": "Facultad de Ingeniería Civil",
       "type": "sesion_interactiva",
-      "status": "disponible"
+      "status": "sin_cupos"
     },
     {
       "id": 66,
