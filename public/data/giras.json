@@ -50,7 +50,7 @@
       "time": "03:00 a.m.",
       "location": "Ciudad de Panamá",
       "price": "$10.00",
-      "status": "disponible"
+      "status": "sin_cupos"
     },
     {
       "id": 7,
