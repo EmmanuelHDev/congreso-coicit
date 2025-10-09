@@ -1258,7 +1258,7 @@
       "location": "Salón P2",
       "faculty": "Facultad de Ingeniería Industrial",
       "type": "sesion_interactiva",
-      "status": "disponible"
+      "status": "sin_cupos"
     },
     {
       "id": 85,
