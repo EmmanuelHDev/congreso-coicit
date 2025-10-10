@@ -99,6 +99,14 @@ const sponsors = {
       name: "Grupo HANNA",
       src: "/img/coicit/patrocinadores/GRUPO_HANNA-SF.png",
     },
+    {
+      name: "CENTRO DE CONVENCIONES COOPEVE",
+      src: "/img/coicit/patrocinadores/CEC logo variantes.png",
+    },
+    {
+      name: "HOTEL MYKONOS",
+      src: "/img/coicit/patrocinadores/Mykono_Logo.webp",
+    },
   ],
   AliadosInnova: [
    {
@@ -191,6 +199,7 @@ const LOGO_HEIGHTS = {
   "TALLER GARCIA": "h-[170px] sm:h-[180px]", 
   "ZOE MARKET": "h-[130px] sm:h-[130px]",
   "DELIGRECIA": "h-[100px] sm:h-[120px]",
+  "CENTRO DE CONVENCIONES COOPEVE": "h-[110px] sm:h-[130px]",
 };
 
 function Badge({ label }) {
