@@ -10,12 +10,12 @@ const ComitesMainContent = () => {
       comiteOrganizador: "Comité Organizador",
       comiteCientifico: "Comité Científico",
       organizador: [
-        "Dr. Cristian Pinzón – Universidad Tecnológica de Panamá",
-        "Dr. Edmanuel Cruz – Universidad Tecnológica de Panamá",
-        "Dr. Mauricio Hooper – Universidad Tecnológica de Panamá",
-        "Dr. Anibal Santos – Universidad Tecnológica de Panamá",
-        "Dr. Elvis Castillo – Universidad Tecnológica de Panamá",
-        "Dr. José Carlos Rangel – Universidad Tecnológica de Panamá",
+        { rol: "Presidente del Comité Editorial", nombre: "Dr. Cristian Pinzón", institucion: "Universidad Tecnológica de Panamá" },
+        { rol: "Editor Invitado", nombre: "Dr. Mauricio Hooper", institucion: "Universidad Tecnológica de Panamá" },
+        { rol: "Editor Asociado", nombre: "Dr. Edmanuel Cruz", institucion: "Universidad Tecnológica de Panamá" },
+        { rol: "Coordinador de Revisiones", nombre: "Dr. José Carlos Rangel", institucion: "Universidad Tecnológica de Panamá" },
+        { rol: "Gestor de Publicaciones", nombre: "Dr. Elvis Castillo", institucion: "Universidad Tecnológica de Panamá" },
+        { rol: "Gestor de Publicaciones", nombre: "Dr. Anibal Santos", institucion: "Universidad Tecnológica de Panamá" },
       ],
       cientifico: [
         "Dra. Sherley Portugal – Universidad Tecnológica de Panamá",
@@ -51,12 +51,12 @@ const ComitesMainContent = () => {
       comiteOrganizador: "Organizing Committee",
       comiteCientifico: "Scientific Committee",
       organizador: [
-        "Dr. Cristian Pinzón – Universidad Tecnológica de Panamá",
-        "Dr. Edmanuel Cruz – Universidad Tecnológica de Panamá",
-        "Dr. Mauricio Hooper – Universidad Tecnológica de Panamá",
-        "Dr. Anibal Santos – Universidad Tecnológica de Panamá",
-        "Dr. Elvis Castillo – Universidad Tecnológica de Panamá",
-        "Dr. José Carlos Rangel – Universidad Tecnológica de Panamá",
+        { rol: "Editorial Committee President", nombre: "Dr. Cristian Pinzón", institucion: "Universidad Tecnológica de Panamá" },
+        { rol: "Guest Editor", nombre: "Dr. Mauricio Hooper", institucion: "Universidad Tecnológica de Panamá" },
+        { rol: "Associate Editor", nombre: "Dr. Edmanuel Cruz", institucion: "Universidad Tecnológica de Panamá" },
+        { rol: "Review Coordinator", nombre: "Dr. José Carlos Rangel", institucion: "Universidad Tecnológica de Panamá" },
+        { rol: "Publications Manager", nombre: "Dr. Elvis Castillo", institucion: "Universidad Tecnológica de Panamá" },
+        { rol: "Publications Manager", nombre: "Dr. Anibal Santos", institucion: "Universidad Tecnológica de Panamá" },
       ],
       cientifico: [
         "Dra. Sherley Portugal – Universidad Tecnológica de Panamá",
@@ -112,8 +112,8 @@ const ComitesMainContent = () => {
               <ul className="list-disc pl-20 text-gray-700 space-y-1">
                 {t.organizador.map((item, idx) => (
                   <li key={idx}>
-                    <strong>{item.split("–")[0].trim()}</strong> –{" "}
-                    {item.split("–")[1].trim()}
+                    {item.rol}: <strong>{item.nombre}</strong> –{" "}
+                    {item.institucion}
                   </li>
                 ))}
               </ul>
