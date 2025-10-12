@@ -253,7 +253,7 @@ const ExposicionesMainContent = () => {
                     onClick={() => setSelectedRoom(option.key)}
                     className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 shadow-md hover:shadow-lg ${
                       selectedRoom === option.key
-                        ? 'bg-[yellow] text-black transform scale-105'
+                        ? 'bg-[#e0b02e] text-black transform scale-105'
                         : 'bg-blue-50 text-[#1e40af] border-2 border-blue-200 hover:bg-[#1e40af] hover:text-white hover:border-[#1e40af]'
                     }`}
                   >
