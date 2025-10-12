@@ -69,4 +69,8 @@ export default {
       offering a space for knowledge exchange, experiences, and networking with national and international guests
       in both face-to-face and virtual mode in a motivating environment.`,
   },
+  exposiciones: {
+  programa_titulo: "WICI 2025 Program",
+  programa_descripcion: "WICI will feature parallel sessions in three thematic rooms. Each presentation lasts 14 minutes (11 presentation + 3 questions). It includes inaugural, intermediate and closing talks"
+ },
 };

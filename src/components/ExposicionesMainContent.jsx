@@ -202,10 +202,10 @@ const ExposicionesMainContent = () => {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-[#022843] mb-4">
-              Programa del WICI 2025 
+                {t.exposiciones?.programa_titulo || 'Programa del WICI 2025'}
               </h2>
               <p className="text-gray-600 text-lg mb-8">
-               El WICI contará con sesiones paralelas en tres Salas temáticas. Cada ponencia tiene una duración de 14 minutos (11 exposición + 3 preguntas). Se incluyen las charlas inaugurales, intermedia y de cierre
+                {t.exposiciones?.programa_descripcion || 'El WICI contará con sesiones paralelas en tres Salas temáticas. Cada ponencia tiene una duración de 14 minutos (11 exposición + 3 preguntas). Se incluyen las charlas inaugurales, intermedia y de cierre'}
               </p>
               
               {/* Información de las salas */}
