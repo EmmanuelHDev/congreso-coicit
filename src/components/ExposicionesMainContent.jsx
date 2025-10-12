@@ -228,7 +228,7 @@ const ExposicionesMainContent = () => {
                           backgroundColor: '#6b46c1',
                           color: 'white'
                         }}
-                        className="w-full px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 flex items-center justify-center gap-2 transform hover:scale-105 active:scale-95 shadow-md hover:shadow-lg animate-pulse hover:animate-none"
+                        className="w-full px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 flex items-center justify-center gap-2 transform hover:scale-105 active:scale-95 shadow-md hover:shadow-lg"
                         onMouseEnter={(e) => e.target.style.backgroundColor = '#553c9a'}
                         onMouseLeave={(e) => e.target.style.backgroundColor = '#6b46c1'}
                       >
