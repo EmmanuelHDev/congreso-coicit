@@ -5,6 +5,7 @@ export default {
     cfp: "CFP WICI",
     envios: "Submissions",
     registro: "Registration",
+    exposiciones: "Exhibitions",
     ubicacion: "Location",
   },
   hero: {

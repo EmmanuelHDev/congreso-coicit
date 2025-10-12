@@ -1,0 +1,372 @@
+{
+  "rooms": {
+    "galo_chang": {
+      "name": "Sala Galo Chang",
+      "theme": "IA / ML / DL",
+      "chair": "Victoria Ludeña",
+      "teamsLink": "https://WICI.short.gy/GaloChang",
+      "events": [
+        {
+          "paper_id": "Paper ID: 13",
+          "titulo": "Smart Agriculture in Panama: Conceptualizing the Use of Quadruped Robots in Precision Farming",
+          "autores": ["Dimas Concepción", "Alexis Espinosa", "Dora Castillo", "Nila Navarro", "Ivonne Nuñez"],
+          "dia": "16",
+          "hora": "9:00 - 09:14 a.m.",
+          "tipo": "Ponencia",
+          "id": 1
+        },
+        {
+          "paper_id": "Paper ID: 28",
+          "titulo": "Plataforma inteligente georreferenciada para la detección y prevención de riesgos en aceras para peatones vulnerables que transitan por la avenida central de Santiago",
+          "autores": ["José Camarena, Emmanuel Herrera, Carlos Gil"],
+          "dia": "16",
+          "hora": "09:14 - 09:28   a.m.",
+          "tipo": "Ponencia",
+          "id": 2
+        },
+        {
+          "paper_id": "Paper ID: 31",
+          "titulo": "Aplicación móvil para la gestión inteligente de fincas de café",
+          "autores": ["Elia Cano, Jorge Centeno, Aracelly Vega, José Gallardo, Carlos Rovetto"],
+          "dia": "16",
+          "hora": "09:28 - 09:42 a.m.",
+          "tipo": "Ponencia",
+          "id": 3
+        },
+        {
+          "paper_id": "Paper ID: 1",
+          "titulo": "Prototipo de un Traductor de Lengua de Señas Panameña al Español mediante Redes Neuronales Artificiales Profundas Preentrenadas",
+          "autores": ["Johan Guardia, Juan Aranda, Mario Aranda"],
+          "dia": "16",
+          "hora": "10:20 - 10:34 a.m.",
+          "tipo": "Ponencia",
+          "id": 4
+        },
+        {
+          "paper_id": "Paper ID: 25",
+          "titulo": "Current Trends in Computer Vision and Artificial Intelligence for Poultry Farming in Panama",
+          "autores": ["Keyla Boniche"],
+          "dia": "16",
+          "hora": "10:34 - 10:48 a.m.",
+          "tipo": "Ponencia",
+          "id": 5
+        },
+        {
+          "paper_id": "Paper ID: 26",
+          "titulo": "Geolocated Application Using Neural Networks for Monitoring and Reporting Vulnerable Animals in Veraguas",
+          "autores": ["Cristian J. Pinzón, Victoria Ludeña, Jean Goméz"],
+          "dia": "16",
+          "hora": "10:48 - 11:02 a.m.",
+          "tipo": "Ponencia",
+          "id": 6
+        },
+        {
+          "paper_id": "Paper ID: 19",
+          "titulo": "Educación ambiental asistida por inteligencia artificial: identificación automática de aves en Panamá",
+          "autores": ["Ricardo Jimenez, Cristian Pinzon"],
+          "dia": "16",
+          "hora": "11:02 - 11:16 a.m.",
+          "tipo": "Ponencia",
+          "id": 7
+        },
+        {
+          "paper_id": "Paper ID: 18",
+          "titulo": "Sistema de reconocimiento facial con tecnología de visión artificial para el registro y control de asistencia en ambientes controlados",
+          "autores": ["David Rodríguez, Fausto Rivera Julio, Miguel Hidalgo-Rodríguez, Jose Carlos Rangel, Oscar Rodríguez"],
+          "dia": "16",
+          "hora": "11:16 - 11:30 a.m.",
+          "tipo": "Ponencia",
+          "id": 8
+        },
+        {
+          "paper_id": "Paper ID: 24",
+          "titulo": "Predicción del abandono en la plataforma de educación digital ProFuturo utilizando técnicas de Machine Learning y análisis de datos",
+          "autores": ["Alejandro Prieto Ramírez, Manuel Martín-Merino Acera, Oscar Pérez Del Oso, Manuel J Ruiz García, Carmen Rodríguez Hernández"],
+          "dia": "16",
+          "hora": "11:30 - 11:44 a.m.",
+          "tipo": "Ponencia",
+          "id": 9
+        },
+        {
+          "paper_id": "Paper ID: 23",
+          "titulo": "Innovation in public health: Chagas vector detection using convolutional neural networks",
+          "autores": ["Victoria Ludeña, Ricardo Jiménez, Cristian Pinzón"],
+          "dia": "16",
+          "hora": "11:44 - 11:58 a.m.",
+          "tipo": "Ponencia",
+          "id": 10
+        },
+        {
+          "paper_id": "Paper ID: 35",
+          "titulo": "Utilizing Machine Learning to Predict Cardiac Issues from Wearable Device Data",
+          "autores": ["Vinicius de Aquino Piai, Luis Silva Zendron, Raimundo C. G. Teive, Anita Fernandes , Wemerson D. Parreira"],
+          "dia": "16",
+          "hora": "11:58 a.m. - 12:12 p.m.",
+          "tipo": "Ponencia",
+          "id": 11
+        },
+        {
+          "paper_id": "Paper ID: 21",
+          "titulo": "Evaluation of the performance of object detection models under conditions of visual degradation",
+          "autores": ["Rubén Herrero Pérez, Arturo Álvarez Sánchez, Sergio García González, David Cruz García, Gabriel Villarrubia González , William Gouvea Buratto"],
+          "dia": "16",
+          "hora": "12:12 - 12:26 p.m.",
+          "tipo": "Ponencia",
+          "id": 12
+        }
+      ]
+    },
+    "c3": {
+      "name": "Sala C3", 
+      "theme": "Ciberseguridad/Electrónica/Logística",
+      "chair": "Dr. Elvis Castillo",
+      "teamsLink": "https://WICI.short.gy/SalaC3",
+      "events": [
+        {
+          "paper_id": "Paper ID: 10",
+          "titulo": "Order management with smart shelves: Innovation in logistics and distribution",
+          "autores": ["Sergio García González, David Cruz García, Arturo Álvarez Sánchez, William Gouvea Buratto, Gabriel Villarrubia González"],
+          "dia": "16",
+          "hora": "9:00 - 09:14 a.m.",
+          "tipo": "Ponencia",
+          "id": 13
+        },
+        {
+          "paper_id": "Paper ID: 14",
+          "titulo": "SafeTrack: Real-time monitoring to enhance industrial safety",
+          "autores": ["David Cruz García, Sergio García González, Arturo Álvarez Sánchez, William Gouvea Buratto, Gabriel Villarrubia González"],
+          "dia": "16",
+          "hora": "09:14 - 09:28 a.m.",
+          "tipo": "Ponencia",
+          "id": 14
+        },
+        {
+          "paper_id": "Paper ID: 11",
+          "titulo": "Federated Learning for Energy Load Forecasting in Smart Homes",
+          "autores": ["Ivonne Nuñez, Eric Samikwa, Carlos Rovetto, Torsten Braun"],
+          "dia": "16",
+          "hora": "09:28 - 09:42 a.m.",
+          "tipo": "Ponencia",
+          "id": 15
+        },
+        {
+          "paper_id": "Paper ID: 9",
+          "titulo": "DN25: An adaptive quantum cryptography protocol for secure and efficient communication",
+          "autores": ["Darlan Noetzold, Jorge Luis Victória Barbosa, Juan Francisco de Paz Santana, Valderi Reis Quietinho Leithardt"],
+          "dia": "16",
+          "hora": "10:20 - 10:34 a.m.",
+          "tipo": "Ponencia",
+          "id": 16
+        },
+        {
+          "paper_id": "Paper ID: 4",
+          "titulo": "Arquitectura modular de flujos automatizados con LLM y OSINT en n8n para aplicaciones de ciberseguridad",
+          "autores": [" Gilberto Ramos, Muriel Jaramillo, Agustín Sánchez"],
+          "dia": "16",
+          "hora": "10:34 - 10:48 a.m.",
+          "tipo": "Ponencia",
+          "id": 17
+        },
+        {
+          "paper_id": "Paper ID: 12",
+          "titulo": "Using blockchain and smart contracts to enhance patient traceability and safeguard sensitive data in rehabilitation environments",
+          "autores": ["Arturo Álvarez Sánchez, Sergio García González, David Cruz García"],
+          "dia": "16",
+          "hora": "10:48 - 11:02 a.m.",
+          "tipo": "Ponencia",
+          "id": 18
+        },
+        {
+          "paper_id": "Paper ID: 32",
+          "titulo": "Estrategias de reconstrucción de imágenes esparzas utilizando sensado compresivo: optimización vs redes neuronales",
+          "autores": ["Maytee Zambrano De Rojas"],
+          "dia": "16",
+          "hora": "11:02 - 11:16 a.m.",
+          "tipo": "Ponencia",
+          "id": 19
+        },
+        {
+          "paper_id": "Paper ID: 33",
+          "titulo": "Detectores hiperespectrales: configuraciones ópticas mediante enfoques reflectivos y transmisivos",
+          "autores": ["Maytee Zambrano De Rojas"],
+          "dia": "16",
+          "hora": "11:16 - 11:30 a.m.",
+          "tipo": "Ponencia",
+          "id": 20
+        },
+        {
+          "paper_id": "Paper ID: 34",
+          "titulo": "Design and Validation of ASIC for UART Communication and MEMS Device Control",
+          "autores": [" Diego Bouche, Edwin Acevedo, Maytee Zambrano, Fernando Arias, Edson Galagarza"],
+          "dia": "16",
+          "hora": "11:30 - 11:44 a.m.",
+          "tipo": "Ponencia",
+          "id": 21
+        },
+        {
+          "paper_id": "Paper ID: 7",
+          "titulo": "Gemelos digitales y simulación en el contexto de la industria manufacturera panameña",
+          "autores": ["Victor Vaca"],
+          "dia": "16",
+          "hora": "11:44 - 11:58 a.m.",
+          "tipo": "Ponencia",
+          "id": 22
+        },
+        {
+          "paper_id": "Paper ID: 36",
+          "titulo": "A Feature Space Maturity Model for ABM Frameworks",
+          "autores": ["Luis Carlos Lara-Lopez, José Helo-Guzmán, Santiago Núñez-Corrales"],
+          "dia": "16",
+          "hora": "11:58 a.m. - 12:12 p.m.",
+          "tipo": "Ponencia",
+          "id": 23
+        }
+      ]
+    },
+    "p1": {
+      "name": "Sala P1",
+      "theme": "Sostenibilidad y Energías Renovables", 
+      "chair": "Ing. Vanessa Núñez",
+      "teamsLink": "https://WICI.short.gy/SalaP1",
+      "events": [
+        {
+          "paper_id": "Paper ID: 6",
+          "titulo": "Predicción del cumplimiento del Servicio Social Universitario con variables institucionales",
+          "autores": ["Rolando Mora"],
+          "dia": "16",
+          "hora": "9:00 - 09:14 a.m.",
+          "tipo": "Ponencia",
+          "id": 24
+        },
+        {
+          "paper_id": "Paper ID: 16",
+          "titulo": "Realidad virtual aplicada a la educación en ingeniería: una perspectiva de género",
+          "autores": ["Antonio del Bosque"],
+          "dia": "16",
+          "hora": "09:14 - 09:28 a.m.",
+          "tipo": "Ponencia",
+          "id": 25
+        },
+        {
+          "paper_id": "Paper ID: 5",
+          "titulo": "Inteligencia artificial generativa en la educación superior: estado del arte y perspectivas",
+          "autores": ["Nila Navarro, Dimas Concepción, Ivonne Nuñez"],
+          "dia": "16",
+          "hora": "09:28 - 09:42 a.m.",
+          "tipo": "Ponencia",
+          "id": 26
+        },
+        {
+          "paper_id": "Paper ID: 15",
+          "titulo": "Competencias blandas en docentes universitarios de América: brecha de género",
+          "autores": ["Pablo Fernández-Arias, Diego Vergara, Álvaro Antón-Sancho, María Sánchez-Jiménez, María Nieto-Sobrino, Antonio del Bosque"],
+          "dia": "16",
+          "hora": "10:20 - 10:34 a.m.",
+          "tipo": "Ponencia",
+          "id": 27
+        },
+        {
+          "paper_id": "Paper ID: 3",
+          "titulo": "Prototipo de Aplicación Inteligente para Bibliotecas Universitarias con Recomendación Automatizada y Acceso Offline: Caso CRUBA",
+          "autores": ["Carlos Nuñez, Dimas Concepción, Nila Navarro, Ivonne Nuñez"],
+          "dia": "16",
+          "hora": "10:34 - 10:48 a.m.",
+          "tipo": "Ponencia",
+          "id": 28
+        },
+        {
+          "paper_id": "Paper ID: 22",
+          "titulo": "Tools to provide faster decarbonization in buildings and industries with multi-agents and optimization algorithms: A review",
+          "autores": ["William Buratto, Sérgio García González, David Cruz García, Arturo Álvarez-Sánchez, Rubén Herrero Pérez, Gabriel Villarrubia González"],
+          "dia": "16",
+          "hora": "10:48 - 11:02 a.m.",
+          "tipo": "Ponencia",
+          "id": 29
+        },
+        {
+          "paper_id": "Paper ID: 17",
+          "titulo": "Sistema IoT para monitoreo y visualización de radiación solar UV en tiempo real",
+          "autores": ["Carmen Tenorio, Encarnacion Castillo, Cristian Pinzón"],
+          "dia": "16",
+          "hora": "11:02 - 11:16 a.m.",
+          "tipo": "Ponencia",
+          "id": 30
+        },
+        {
+          "paper_id": "Paper ID: 37",
+          "titulo": "Eco13: La Calidad del Aire y su Impacto Demográfico en el oriente de Santiago de Cali",
+          "autores": ["Maria de los Angeles Amú, Mariana Mera, Manuela Mayorga Rojas, Juan Núñez, Sara Rodriguez"],
+          "dia": "16",
+          "hora": "11:16 - 11:30 a.m.",
+          "tipo": "Ponencia",
+          "id": 31
+        },
+        {
+          "paper_id": "Paper ID: 30",
+          "titulo": "Predicciones globales del consumo de combustibles marítimos mediante aprendizaje automático",
+          "autores": [" Milva Eileen Justavino-Castillo, Dimas Hernán Concepción Patiño, Elia Esther Cano Acosta, Marco Fernando Villarroel Puma, Carlos Rovetto"],
+          "dia": "16",
+          "hora": "11:30 - 11:44 a.m.",
+          "tipo": "Ponencia",
+          "id": 32
+        },
+        {
+          "paper_id": "Paper ID: 29",
+          "titulo": "Machine Learning aplicado a la predicción de emisiones en el tránsito marítimo del Canal de Panamá",
+          "autores": ["Brandon Martinez"],
+          "dia": "16",
+          "hora": "11:44 - 11:58 a.m.",
+          "tipo": "Ponencia",
+          "id": 33
+        },
+        {
+          "paper_id": "Paper ID: 8",
+          "titulo": "Modelado Predictivo para la Gestión Energética de Urbanizaciones con Enfoque en Energía Cero en Panamá",
+          "autores": ["Javier Jimenez, Miguel Chen, Javier Sanchez-Gala"],
+          "dia": "16",
+          "hora": "11:58 a.m. - 12:12 p.m.",
+          "tipo": "Ponencia",
+          "id": 34
+        },
+        {
+          "paper_id": "Paper ID: 27",
+          "titulo": "Review of Implemented Models on Photovoltaic Forecasting with an Approach on the Data Origin",
+          "autores": ["Josep Atencio, Fernando Arias, Maytee Zambrano, Edson Galagarza"],
+          "dia": "16",
+          "hora": "12:12 - 12:26 p.m.",
+          "tipo": "Ponencia",
+          "id": 35
+        }
+      ]
+    }
+  },
+  "keynotes": [
+    {
+      "ponente": "Antonio González Torres",
+      "institucion": "TEC | Tecnologico de Costa Rica",
+      "dia": "16",
+      "hora": "08:30 - 09:00 a.m.",
+      "tipo": "Keynote",
+      "categoria": "Inauguración",
+      "id": 36
+    },
+    {
+      "ponente": "Ing. Ignacio Trejos",
+      "institucion": "Universidad CENFOTEC & TEC, Costa Rica",
+      "dia": "16",
+      "hora": "9:42 - 10:10 a.m.",
+      "tipo": "Keynote",
+      "categoria": "Intermedio",
+      "id": 37
+    },
+    {
+      "ponente": "Miguel Hidalgo",
+      "institucion": "Universidad Tecnológica de Panamá",
+      "dia": "16",
+      "hora": "12:30 - 1:00 p.m.",
+      "tipo": "Keynote",
+      "categoria": "Clausura",
+      "id": 38
+    }
+  ]
+}

@@ -150,6 +150,10 @@ const sponsors = {
       src: "/img/coicit/patrocinadores/CoffeeSolutions.png",
     },
     {
+      name: "AIRES",
+      src: "/img/coicit/patrocinadores/AIRes logo.png",
+    },
+    {
       name: "TALLER GARCIA",
       src: "/img/coicit/patrocinadores/TallerGarcia-SF.png",
     },

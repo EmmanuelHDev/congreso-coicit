@@ -104,6 +104,11 @@ const Header = () => {
                     </a>
                   </li>
                   <li>
+                    <a className={navItemClass} href="/Exposiciones">
+                      {t.nav.exposiciones}
+                    </a>
+                  </li>
+                  <li>
                     <a className={navItemClass} href="/WiciUbicacion">
                       {t.nav.ubicacion}
                     </a>
@@ -232,6 +237,15 @@ const Header = () => {
                   href="/Registration"
                 >
                   {t.nav.registro}
+                </a>
+              </li>
+              <li>
+                <a
+                  onClick={handleLinkClick}
+                  className="transition hover:text-[#e0b02e]"
+                  href="/Exposiciones"
+                >
+                  {t.nav.exposiciones}
                 </a>
               </li>
               <li>
