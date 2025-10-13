@@ -19,6 +19,15 @@ const DateItem = ({ item }) => {
           </span>
         </div>
       </div>
+
+      {!item.isKeynote && item.autores && item.autores.length > 0 && (
+        <div className="text-white text-sm mb-4 group-hover:text-gray-100 transition-colors duration-300">
+          <strong className="text-white group-hover:text-blue-200 transition-colors duration-300">
+            Autores:
+          </strong>{" "}
+          <span className="font-bold">{item.autores.join(", ")}</span>
+        </div>
+      )}
     </li>
   );
 };
@@ -44,7 +53,8 @@ const WiciMainContent = () => {
         >
           <div className="flex-1 flex flex-col justify-center md:pr-4">
             <h1 className="text-2xl md:text-4xl font-bold leading-snug">
-              {t.hero.titulo} <strong className="text-[#e0b02e]">{t.hero.nombre}</strong>
+              {t.hero.titulo}{" "}
+              <strong className="text-[#e0b02e]">{t.hero.nombre}</strong>
             </h1>
             <p className="text-base mt-2">{t.hero.ubicacion}</p>
             <p className="mt-4 text-lg">{t.hero.fecha}</p>
@@ -54,7 +64,9 @@ const WiciMainContent = () => {
 
       <section className="px-4 py-8 md:px-8 lg:px-16 bg-white">
         <div className="max-w-screen-md mx-auto">
-          <h2 className="text-[#e0b02e] text-2xl font-bold mb-4">{t.call.titulo}</h2>
+          <h2 className="text-[#e0b02e] text-2xl font-bold mb-4">
+            {t.call.titulo}
+          </h2>
           <p className="text-gray-800 leading-relaxed">{t.call.texto}</p>
           <p className="text-gray-800 leading-relaxed">{t.call.texto2}</p>
           <p className="text-gray-800 leading-relaxed">{t.call.texto3}</p>
@@ -64,14 +76,25 @@ const WiciMainContent = () => {
 
       <section className="px-4 py-8 md:px-8 lg:px-16 bg-white">
         <div className="max-w-screen-md mx-auto">
-          <h2 className="text-[#e0b02e] text-2xl font-bold mb-4">{t.temas.titulo}</h2>
+          <h2 className="text-[#e0b02e] text-2xl font-bold mb-4">
+            {t.temas.titulo}
+          </h2>
           <p className="text-gray-800 leading-relaxed">{t.temas.texto}</p>
           <ul className="mt-8 grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
             {t.areasTematicas.map((area, i) => (
-              <li key={i} className="flex flex-col items-center overflow-hidden">
-                <img src={area.img} alt={area.titulo} className="w-16 h-16 object-contain" />
+              <li
+                key={i}
+                className="flex flex-col items-center overflow-hidden"
+              >
+                <img
+                  src={area.img}
+                  alt={area.titulo}
+                  className="w-16 h-16 object-contain"
+                />
                 <div className="relative bg-white pt-3">
-                  <h3 className="text-center text-gray-800 font-semibold leading-relaxed">{area.titulo}</h3>
+                  <h3 className="text-center text-gray-800 font-semibold leading-relaxed">
+                    {area.titulo}
+                  </h3>
                 </div>
               </li>
             ))}
@@ -81,7 +104,9 @@ const WiciMainContent = () => {
 
       <section className="px-4 py-8 md:px-8 lg:px-16 bg-white">
         <div className="max-w-screen-md mx-auto">
-          <h2 className="text-[#e0b02e] text-2xl font-bold mb-4">{t.fechas.titulo}</h2>
+          <h2 className="text-[#e0b02e] text-2xl font-bold mb-4">
+            {t.fechas.titulo}
+          </h2>
 
           <div className="bg-gray-50 rounded-xl shadow p-4 mb-6 border border-gray-200
                           flex flex-col md:flex-row md:items-start gap-8">
@@ -114,7 +139,9 @@ const WiciMainContent = () => {
                 rel="noopener noreferrer"
                 className="text-blue-700 underline font-medium mt-2"
               >
-                {lang === "es" ? "Descargar Plantilla Word I+D" : "Download I+D Word template"}
+                {lang === "es"
+                  ? "Descargar Plantilla Word I+D"
+                  : "Download I+D Word template"}
               </a>
             </div>
           </div>
@@ -124,13 +151,17 @@ const WiciMainContent = () => {
       <section className="max-w-3xl mx-auto mt-8 mb-8">
         <h3 className="text-xl font-semibold mb-3">{t.cmt.titulo}</h3>
         <div className="bg-gray-50 rounded-xl shadow p-6 border border-gray-200">
-          <p style={{ fontWeight: "normal", fontStyle: "normal" }}>{t.cmt.ack}</p>
+          <p style={{ fontWeight: "normal", fontStyle: "normal" }}>
+            {t.cmt.ack}
+          </p>
         </div>
       </section>
 
       <section className="px-4 py-8 md:px-8 lg:px-16 bg-white">
         <div className="max-w-screen-md mx-auto">
-          <h2 className="text-[#e0b02e] text-2xl font-bold mb-4">{t.lugar.titulo}</h2>
+          <h2 className="text-[#e0b02e] text-2xl font-bold mb-4">
+            {t.lugar.titulo}
+          </h2>
           <p className="text-gray-800 leading-relaxed">{t.lugar.texto}</p>
         </div>
       </section>
