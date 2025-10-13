@@ -88,6 +88,10 @@ const sponsors = {
       src: "/img/coicit/patrocinadores/CANAL.jpg",
     },
     {
+      name: "DATASYS",
+      src: "/img/coicit/patrocinadores/DatasysLogo.png",
+    },
+    {
       name: "AES PANAMA",
       src: "/img/coicit/patrocinadores/Logo AES PANAMA.png",
     },
@@ -204,6 +208,7 @@ const LOGO_HEIGHTS = {
   "ZOE MARKET": "h-[130px] sm:h-[130px]",
   "DELIGRECIA": "h-[100px] sm:h-[120px]",
   "CENTRO DE CONVENCIONES COOPEVE": "h-[110px] sm:h-[130px]",
+  "DATASYS": "h-[110px] sm:h-[120px]",
 };
 
 function Badge({ label }) {
