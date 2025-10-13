@@ -246,7 +246,7 @@ const ExposicionesMainContent = () => {
 
             {/* Filtros por sala */}
             <div className="mb-8">
-              <div className="flex flex-wrap justify-center gap-3">
+              <div className="flex flex-wrap justify-center gap-3 items-center">
                 {roomOptions.map((option) => (
                   <button
                     key={option.key}
@@ -260,6 +260,17 @@ const ExposicionesMainContent = () => {
                     {option.label}
                   </button>
                 ))}
+                
+                {/* Botón de descarga PDF */}
+                <button
+                  onClick={() => window.open('/WICI_PONENCIAS_FINAL.pdf', '_blank')}
+                  className="inline-flex items-center gap-2 bg-gradient-to-r from-[#e0b02e]/20 via-[#f1b315]/25 to-[#e0b02e]/20 hover:from-[#e0b02e]/40 hover:via-[#f1b315]/45 hover:to-[#e0b02e]/40 text-[#e0b02e] hover:text-[#f1b315] px-5 py-2.5 rounded-lg font-semibold text-sm transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl border border-[#e0b02e]/30 hover:border-[#f1b315]/50 backdrop-blur-sm group"
+                >
+                  <svg className="w-4 h-4 transition-transform duration-200 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                  <span className="tracking-wide">Descargar programa WICI 2025</span>
+                </button>
               </div>
             </div>
 

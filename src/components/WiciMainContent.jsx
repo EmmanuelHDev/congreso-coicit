@@ -64,6 +64,31 @@ const WiciMainContent = () => {
 
       <section className="px-4 py-8 md:px-8 lg:px-16 bg-white">
         <div className="max-w-screen-md mx-auto">
+          {/* Botones arriba del Call for Papers */}
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-8">
+            {/* Botón para ir a Exposiciones */}
+            <a
+              href="/Exposiciones"
+              className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#e0b02e]/20 via-[#f1b315]/25 to-[#e0b02e]/20 hover:from-[#e0b02e]/40 hover:via-[#f1b315]/45 hover:to-[#e0b02e]/40 text-[#e0b02e] hover:text-[#f1b315] px-3 py-2 sm:px-5 sm:py-2.5 rounded-lg font-semibold text-xs sm:text-sm transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl border border-[#e0b02e]/30 hover:border-[#f1b315]/50 backdrop-blur-sm group w-full sm:w-auto min-w-0"
+            >
+              <svg className="w-3 h-3 sm:w-4 sm:h-4 transition-transform duration-200 group-hover:scale-110 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              <span className="tracking-wide text-center truncate">{t.botones?.ver_exposiciones || 'Ver Exposiciones'}</span>
+            </a>
+
+            {/* Botón para descargar PDF */}
+            <button
+              onClick={() => window.open('/WICI_PONENCIAS_FINAL.pdf', '_blank')}
+              className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#e0b02e]/20 via-[#f1b315]/25 to-[#e0b02e]/20 hover:from-[#e0b02e]/40 hover:via-[#f1b315]/45 hover:to-[#e0b02e]/40 text-[#e0b02e] hover:text-[#f1b315] px-3 py-2 sm:px-5 sm:py-2.5 rounded-lg font-semibold text-xs sm:text-sm transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl border border-[#e0b02e]/30 hover:border-[#f1b315]/50 backdrop-blur-sm group w-full sm:w-auto min-w-0"
+            >
+              <svg className="w-3 h-3 sm:w-4 sm:h-4 transition-transform duration-200 group-hover:scale-110 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              <span className="tracking-wide text-center truncate">{t.botones?.descargar_programa || 'Descargar Programa WICI 2025'}</span>
+            </button>
+          </div>
+
           <h2 className="text-[#e0b02e] text-2xl font-bold mb-4">
             {t.call.titulo}
           </h2>

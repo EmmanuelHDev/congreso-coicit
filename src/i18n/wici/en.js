@@ -73,4 +73,8 @@ export default {
   programa_titulo: "WICI 2025 Program",
   programa_descripcion: "WICI will feature parallel sessions in three thematic rooms. Each presentation lasts 14 minutes (11 presentation + 3 questions). It includes inaugural, intermediate and closing talks"
  },
+ botones: {
+  ver_exposiciones: "View Presentations", 
+  descargar_programa: "Download WICI 2025 Program"
+},
 };
