@@ -221,8 +221,87 @@ const ExposicionesMainContent = () => {
                       {/* Botón de Teams fuera de la tarjeta */}
                       <button 
                         onClick={() => {
-                          console.log('Abriendo Teams:', room.teamsLink);
-                          window.open(room.teamsLink, '_blank');
+                          // Crear un modal personalizado en lugar de alert básico
+                          const modal = document.createElement('div');
+                          modal.innerHTML = `
+                            <div style="
+                              position: fixed;
+                              top: 0;
+                              left: 0;
+                              width: 100%;
+                              height: 100%;
+                              background: rgba(0, 0, 0, 0.6);
+                              display: flex;
+                              justify-content: center;
+                              align-items: center;
+                              z-index: 9999;
+                              backdrop-filter: blur(5px);
+                            ">
+                              <div style="
+                                background: white;
+                                padding: 2rem;
+                                border-radius: 12px;
+                                max-width: 400px;
+                                margin: 1rem;
+                                box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+                                text-align: center;
+                                transform: scale(0.9);
+                                transition: transform 0.3s ease;
+                              ">
+                                <div style="
+                                  width: 60px;
+                                  height: 60px;
+                                  background: linear-gradient(135deg, #e0b02e, #f1b315);
+                                  border-radius: 50%;
+                                  margin: 0 auto 1rem;
+                                  display: flex;
+                                  align-items: center;
+                                  justify-content: center;
+                                ">
+                                  <svg width="24" height="24" fill="white" viewBox="0 0 24 24">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                  </svg>
+                                </div>
+                                <h3 style="
+                                  color: #022843;
+                                  font-size: 1.25rem;
+                                  font-weight: bold;
+                                  margin-bottom: 0.5rem;
+                                ">¡Próximamente Disponible!</h3>
+                                <p style="
+                                  color: #666;
+                                  margin-bottom: 1.5rem;
+                                  line-height: 1.5;
+                                ">Los enlaces de Teams serán habilitados pronto.</p>
+                                <button onclick="this.closest('div').parentElement.remove()" style="
+                                  background: linear-gradient(135deg, #e0b02e, #f1b315);
+                                  color: white;
+                                  border: none;
+                                  padding: 0.75rem 2rem;
+                                  border-radius: 8px;
+                                  font-weight: 600;
+                                  cursor: pointer;
+                                  transition: all 0.3s ease;
+                                  box-shadow: 0 4px 12px rgba(224, 176, 46, 0.3);
+                                " onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 20px rgba(224, 176, 46, 0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(224, 176, 46, 0.3)'">
+                                  Entendido
+                                </button>
+                              </div>
+                            </div>
+                          `;
+                          document.body.appendChild(modal);
+                          
+                          // Animación de entrada
+                          setTimeout(() => {
+                            modal.querySelector('div > div').style.transform = 'scale(1)';
+                          }, 10);
+                          
+                          // Cerrar al hacer clic en el fondo
+                          modal.addEventListener('click', (e) => {
+                            if (e.target === modal) {
+                              modal.remove();
+                            }
+                          });
                         }}
                         style={{
                           backgroundColor: '#6b46c1',
