@@ -71,11 +71,14 @@ export default {
       un entorno enriquecedor y motivador.`,
   },
   exposiciones: {
-  programa_titulo: "Programa del WICI 2025",
-  programa_descripcion: "El WICI contará con sesiones paralelas en tres Salas temáticas. Cada ponencia tiene una duración de 14 minutos (11 exposición + 3 preguntas). Se incluyen las charlas inaugural, intermedia y de cierre"
- },
- botones: {
-  ver_exposiciones: "Ver Exposiciones",
-  descargar_programa: "Descargar Programa WICI 2025"
-},
+    programa_titulo: "Programa del WICI 2025",
+    programa_descripcion: "El WICI contará con sesiones paralelas en tres Salas temáticas. Se incluyen las charlas inaugural, intermedia y de cierre",
+    unirse_jitsi: "Unirse a Jitsi Meet",
+    indicaciones_titulo: "Indicaciones para Expositores Virtuales",
+    indicaciones_mensaje: "El tiempo asignado para cada exposición es de 10 a 12 minutos, con 3 minutos adicionales para preguntas. Se solicita a los expositores ajustar su presentación a este lapso para mantener la logística y el orden del programa, iniciando puntualmente y compartiendo su pantalla con la presentación lista al momento de su intervención.",
+  },
+  botones: {
+    ver_exposiciones: "Ver Exposiciones",
+    descargar_programa: "Descargar Programa WICI 2025"
+  },
 };

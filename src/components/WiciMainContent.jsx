@@ -78,7 +78,7 @@ const WiciMainContent = () => {
             </a>
 
             {/* Botón para descargar PDF */}
-            <button
+            {/* <button
               onClick={() => window.open('/WICI_PONENCIAS_FINAL.pdf', '_blank')}
               className="inline-flex items-center justify-center gap-2 bg-[#e0b02e] hover:bg-[#f1b315] text-white hover:text-white px-4 py-3 sm:px-6 sm:py-4 rounded-lg font-semibold text-sm sm:text-base transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl group w-full sm:w-auto min-w-0"
             >
@@ -86,7 +86,7 @@ const WiciMainContent = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
               </svg>
               <span className="tracking-wide text-center truncate">{t.botones?.descargar_programa || 'Descargar Programa WICI 2025'}</span>
-            </button>
+            </button> */}
           </div>
 
           <h2 className="text-[#e0b02e] text-2xl font-bold mb-4">

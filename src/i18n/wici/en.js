@@ -71,7 +71,10 @@ export default {
   },
   exposiciones: {
   programa_titulo: "WICI 2025 Program",
-  programa_descripcion: "WICI will feature parallel sessions in three thematic rooms. Each presentation lasts 14 minutes (11 presentation + 3 questions). It includes inaugural, intermediate and closing talks"
+  programa_descripcion: "WICI will feature parallel sessions in three thematic rooms. It includes inaugural, intermediate and closing talks",
+  unirse_jitsi: "Join Jitsi Meet",
+  indicaciones_titulo: "Instructions for Virtual Presenters",
+  indicaciones_mensaje: "The allocated time for each presentation is 10 to 12 minutes, with an additional 3 minutes for questions. Presenters are requested to adjust their presentation to this timeframe to maintain the logistics and order of the program, starting punctually and sharing their screen with the presentation ready at the time of their intervention."
  },
  botones: {
   ver_exposiciones: "View Presentations", 

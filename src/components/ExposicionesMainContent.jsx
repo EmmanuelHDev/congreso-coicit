@@ -221,106 +221,48 @@ const ExposicionesMainContent = () => {
                       {/* Botón de Teams fuera de la tarjeta */}
                       <button 
                         onClick={() => {
-                          // Crear un modal personalizado en lugar de alert básico
-                          const modal = document.createElement('div');
-                          modal.innerHTML = `
-                            <div style="
-                              position: fixed;
-                              top: 0;
-                              left: 0;
-                              width: 100%;
-                              height: 100%;
-                              background: rgba(0, 0, 0, 0.6);
-                              display: flex;
-                              justify-content: center;
-                              align-items: center;
-                              z-index: 9999;
-                              backdrop-filter: blur(5px);
-                            ">
-                              <div style="
-                                background: white;
-                                padding: 2rem;
-                                border-radius: 12px;
-                                max-width: 400px;
-                                margin: 1rem;
-                                box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-                                text-align: center;
-                                transform: scale(0.9);
-                                transition: transform 0.3s ease;
-                              ">
-                                <div style="
-                                  width: 60px;
-                                  height: 60px;
-                                  background: linear-gradient(135deg, #e0b02e, #f1b315);
-                                  border-radius: 50%;
-                                  margin: 0 auto 1rem;
-                                  display: flex;
-                                  align-items: center;
-                                  justify-content: center;
-                                ">
-                                  <svg width="24" height="24" fill="white" viewBox="0 0 24 24">
-                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                                  </svg>
-                                </div>
-                                <h3 style="
-                                  color: #022843;
-                                  font-size: 1.25rem;
-                                  font-weight: bold;
-                                  margin-bottom: 0.5rem;
-                                ">¡Próximamente Disponible!</h3>
-                                <p style="
-                                  color: #666;
-                                  margin-bottom: 1.5rem;
-                                  line-height: 1.5;
-                                ">Los enlaces de Teams serán habilitados pronto.</p>
-                                <button onclick="this.closest('div').parentElement.remove()" style="
-                                  background: linear-gradient(135deg, #e0b02e, #f1b315);
-                                  color: white;
-                                  border: none;
-                                  padding: 0.75rem 2rem;
-                                  border-radius: 8px;
-                                  font-weight: 600;
-                                  cursor: pointer;
-                                  transition: all 0.3s ease;
-                                  box-shadow: 0 4px 12px rgba(224, 176, 46, 0.3);
-                                " onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 20px rgba(224, 176, 46, 0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(224, 176, 46, 0.3)'">
-                                  Entendido
-                                </button>
-                              </div>
-                            </div>
-                          `;
-                          document.body.appendChild(modal);
-                          
-                          // Animación de entrada
-                          setTimeout(() => {
-                            modal.querySelector('div > div').style.transform = 'scale(1)';
-                          }, 10);
-                          
-                          // Cerrar al hacer clic en el fondo
-                          modal.addEventListener('click', (e) => {
-                            if (e.target === modal) {
-                              modal.remove();
-                            }
-                          });
+                          if (room.jitsiLink) {
+                            window.open(room.jitsiLink, '_blank');
+                          }
                         }}
                         style={{
-                          backgroundColor: '#6b46c1',
+                          backgroundColor: '#06b6d4',
                           color: 'white'
                         }}
                         className="w-full px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 flex items-center justify-center gap-2 transform hover:scale-105 active:scale-95 shadow-md hover:shadow-lg"
-                        onMouseEnter={(e) => e.target.style.backgroundColor = '#553c9a'}
-                        onMouseLeave={(e) => e.target.style.backgroundColor = '#6b46c1'}
+                        onMouseEnter={(e) => e.target.style.backgroundColor = '#0891b2'}
+                        onMouseLeave={(e) => e.target.style.backgroundColor = '#06b6d4'}
                       >
                         <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
-                          <path d="M20.25 2.25H10.5a1.5 1.5 0 0 0-1.5 1.5v7.5H1.5a1.5 1.5 0 0 0-1.5 1.5v9a1.5 1.5 0 0 0 1.5 1.5h9a1.5 1.5 0 0 0 1.5-1.5V15h8.25a1.5 1.5 0 0 0 1.5-1.5V3.75a1.5 1.5 0 0 0-1.5-1.5zM8 19H3v-6h5v6zm0-8V5h10v6H8z"/>
-                          <circle cx="13.5" cy="8" r="1.5"/>
+                          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm3.5 6L12 10.5 8.5 8 12 5.5 15.5 8zM8.5 16L12 13.5 15.5 16 12 18.5 8.5 16z"/>
                         </svg>
-                        Unirse a Teams
+                        {t.exposiciones?.unirse_jitsi || 'Unirse a Jitsi Meet'}
                       </button>
                     </div>
                   ))}
                 </div>
               )}
+              
+              {/* Indicaciones para Expositores Virtuales */}
+              <div className="bg-amber-50 border-l-4 border-amber-400 p-4 mb-8 rounded-r-lg">
+                <div className="flex items-start">
+                  <div className="flex-shrink-0">
+                    <svg className="h-5 w-5 text-amber-400" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <div className="ml-3">
+                    <h3 className="text-sm font-medium text-amber-800">
+                      {t.exposiciones?.indicaciones_titulo || 'Indicaciones para Expositores Virtuales'}
+                    </h3>
+                    <div className="mt-2 text-sm text-amber-700">
+                      <p>
+                        {t.exposiciones?.indicaciones_mensaje || 'El tiempo asignado para cada exposición es de 10 a 12 minutos, con 3 minutos adicionales para preguntas. Se solicita a los expositores ajustar su presentación a este lapso para mantener la logística y el orden del programa, iniciando puntualmente y compartiendo su pantalla con la presentación lista al momento de su intervención.'}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* Filtros por sala */}
@@ -341,7 +283,7 @@ const ExposicionesMainContent = () => {
                 ))}
                 
                 {/* Botón de descarga PDF */}
-                <button
+                {/* <button
                   onClick={() => window.open('/WICI_PONENCIAS_FINAL.pdf', '_blank')}
                   className="inline-flex items-center gap-2 bg-gradient-to-r from-[#e0b02e]/20 via-[#f1b315]/25 to-[#e0b02e]/20 hover:from-[#e0b02e]/40 hover:via-[#f1b315]/45 hover:to-[#e0b02e]/40 text-[#e0b02e] hover:text-[#f1b315] px-5 py-2.5 rounded-lg font-semibold text-sm transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl border border-[#e0b02e]/30 hover:border-[#f1b315]/50 backdrop-blur-sm group"
                 >
@@ -349,7 +291,7 @@ const ExposicionesMainContent = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                   </svg>
                   <span className="tracking-wide">Descargar programa WICI 2025</span>
-                </button>
+                </button> */}
               </div>
             </div>
 
