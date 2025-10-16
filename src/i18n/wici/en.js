@@ -74,7 +74,7 @@ export default {
   programa_descripcion: "WICI will feature parallel sessions in three thematic rooms. It includes inaugural, intermediate and closing talks",
   unirse_jitsi: "Join Jitsi Meet",
   indicaciones_titulo: "Instructions for Virtual Presenters",
-  indicaciones_mensaje: "The allocated time for each presentation is 10 to 12 minutes, with an additional 3 minutes for questions. Presenters are requested to adjust their presentation to this timeframe to maintain the logistics and order of the program, starting punctually and sharing their screen with the presentation ready at the time of their intervention."
+  indicaciones_mensaje: "The allocated time for each presentation is 10 to 12 minutes, with an additional 3 minutes for questions. Presenters are kindly requested to adjust their presentations to this timeframe in order to maintain the program’s schedule and order, starting punctually and sharing their screen with the presentation ready at the time of their participation."
  },
  botones: {
   ver_exposiciones: "View Presentations", 
