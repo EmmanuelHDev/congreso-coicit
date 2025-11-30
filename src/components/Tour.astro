@@ -86,13 +86,7 @@ const getFacultyShortName = (facultad: string) => {
             </div>
 
             <div class="flex justify-end">
-              <div class={`status-badge px-4 py-2 rounded-full text-sm font-bold ${
-                gira.status === 'disponible' 
-                  ? 'bg-[#28a745] text-white' 
-                  : 'bg-[#dc3545] text-white'
-              }`}>
-                {gira.status === 'disponible' ? 'Disponible' : 'Sin Cupos'}
-              </div>
+              <!-- Status badge eliminado -->
             </div>
           </div>
         ))}
@@ -157,10 +151,6 @@ const getFacultyShortName = (facultad: string) => {
   @keyframes gradient-move {
     0% { background-position: 0% 50%; }
     100% { background-position: 100% 50%; }
-  }
-
-  .status-badge {
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   }
 
   @media (max-width: 768px) {

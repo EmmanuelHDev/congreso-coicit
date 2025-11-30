@@ -34,24 +34,7 @@ import PatrocinadoresCoicit from "../components/PatrocinadoresCoicit.jsx";
 </div>
 
     <div class="w-full flex justify-center mt-8 lg:mt-12 px-4">
-      <div id="countdown" class="text-white text-lg md:text-2xl font-bold flex flex-nowrap justify-around items-center gap-1 md:gap-2 px-2 py-3 rounded-xl bg-[#041c2a]/60 border border-[#29cfff60] shadow-xl backdrop-blur-md w-full max-w-2xl">
-        <div class="flex flex-col items-center flex-1 min-w-[60px]">
-          <span id="days" class="text-2xl md:text-4xl font-extrabold">--</span>
-          <span class="text-sm md:text-base">días</span>
-        </div>
-        <div class="flex flex-col items-center flex-1 min-w-[60px]">
-          <span id="hours" class="text-2xl md:text-4xl font-extrabold">--</span>
-          <span class="text-sm md:text-base">horas</span>
-        </div>
-        <div class="flex flex-col items-center flex-1 min-w-[60px]">
-          <span id="minutes" class="text-2xl md:text-4xl font-extrabold">--</span>
-          <span class="text-sm md:text-base">minutos</span>
-        </div>
-        <div class="flex flex-col items-center flex-1 min-w-[60px]">
-          <span id="seconds" class="text-2xl md:text-4xl font-extrabold">--</span>
-          <span class="text-sm md:text-base">segundos</span>
-        </div>
-      </div>
+      <!-- Contador removido -->
     </div>
   </div>
 </section>
@@ -284,10 +267,7 @@ import PatrocinadoresCoicit from "../components/PatrocinadoresCoicit.jsx";
   </div>
   <div class="info-paquetes space-y-4 mb-10 w-full max-w-5xl mx-auto text-left">
     <div class="flex items-center gap-2 border-b border-gray-400 pb-2">
-      <span style="font-size:1.5rem;">⚠️</span>
-      <span class="font-semibold text-red-400 italic">
-        Todos los <span class="text-yellow-400">paquetes completos</span> están agotados. Consulte opciones de inscripción por paquete básico o por actividad individual.
-      </span>
+      
     </div>
   </div>
   <div class="paquetes-grid-custom mx-auto my-12 grid grid-cols-1 sm:grid-cols-2 gap-10">
@@ -297,9 +277,7 @@ import PatrocinadoresCoicit from "../components/PatrocinadoresCoicit.jsx";
           src="/img/coicit/paquetes/Paquete_Docente_TiempoCompleto.webp"
           alt="Docente Tiempo Completo"
         />
-        <div class="paquete-agotado-overlay">AGOTADO</div>
       </div>
-      <div class="paquete-agotado-text">AGOTADO</div>
     </div>
     <div class="paquete-item">
       <div class="paquete-image-container">
@@ -307,9 +285,7 @@ import PatrocinadoresCoicit from "../components/PatrocinadoresCoicit.jsx";
           src="/img/coicit/paquetes/Paquete_Docente_TiempoParcial.webp"
           alt="Docente Tiempo Parcial"
         />
-        <div class="paquete-agotado-overlay">AGOTADO</div>
       </div>
-      <div class="paquete-agotado-text">AGOTADO</div>
     </div>
     <div class="paquete-item">
       <div class="paquete-image-container">
@@ -317,9 +293,7 @@ import PatrocinadoresCoicit from "../components/PatrocinadoresCoicit.jsx";
           src="/img/coicit/paquetes/Paquete_Estudiante_Egresado.webp"
           alt="Estudiante/Egresado"
         />
-        <div class="paquete-agotado-overlay">AGOTADO</div>
       </div>
-      <div class="paquete-agotado-text">AGOTADO</div>
     </div>
     <div class="paquete-item">
       <div class="paquete-image-container">
@@ -327,9 +301,7 @@ import PatrocinadoresCoicit from "../components/PatrocinadoresCoicit.jsx";
           src="/img/coicit/paquetes/Paquete_Administrativos.webp"
           alt="Administrativos"
         />
-        <div class="paquete-agotado-overlay">AGOTADO</div>
       </div>
-      <div class="paquete-agotado-text">AGOTADO</div>
     </div>
     <div class="paquete-item">
       <div class="paquete-image-container">
@@ -337,9 +309,7 @@ import PatrocinadoresCoicit from "../components/PatrocinadoresCoicit.jsx";
           src="/img/coicit/paquetes/Paquete_Participantes_Externos.webp"
           alt="Participantes Externos"
         />
-        <div class="paquete-agotado-overlay">AGOTADO</div>
       </div>
-      <div class="paquete-agotado-text">AGOTADO</div>
     </div>
     <div class="paquete-item">
       <div class="paquete-image-container">
@@ -399,58 +369,29 @@ import PatrocinadoresCoicit from "../components/PatrocinadoresCoicit.jsx";
 <Footer />
 
 <script>
-  const countdown = () => {
-    const targetDate = new Date("2025-10-14T00:00:00").getTime();
-    const now = new Date().getTime();
-    const difference = targetDate - now;
-
-    if (difference <= 0) {
-      const countdownEl = document.getElementById("countdown");
-      if (countdownEl) {
-        countdownEl.innerHTML = "¡Ya comenzó el congreso!";
-      }
-      return;
-    }
-
-    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
-    const minutes = Math.floor((difference / 1000 / 60) % 60);
-    const seconds = Math.floor((difference / 1000) % 60);
-
-    const daysEl = document.getElementById("days");
-    if (daysEl) daysEl.innerText = days.toString();
-    const hoursEl = document.getElementById("hours");
-    if (hoursEl) hoursEl.innerText = hours.toString().padStart(2, "0");
-    const minutesEl = document.getElementById("minutes");
-    if (minutesEl) minutesEl.innerText = minutes.toString().padStart(2, "0");
-    const secondsEl = document.getElementById("seconds");
-    if (secondsEl) secondsEl.innerText = seconds.toString().padStart(2, "0");
-  };
-
-  setInterval(countdown, 1000);
-  countdown();
-
-  function ajustarTamañoLogo() {
-  const img = document.querySelector('img[alt="Logo Congreso COICIT"]') as HTMLImageElement;
-
-  if (!img) return;
-
-  const width = window.innerWidth;
-
-  if (width < 640) {
-    img.style.width = '900px !important';
-  } else if (width >= 640 && width < 768) {
-    img.style.width = '800px';
-  } else if (width >= 768 && width < 1024) {
-    img.style.width = '1500px';
-  } else {
-    img.style.width = '950px';
-  }
-}
-
-ajustarTamañoLogo();
-
-window.addEventListener('resize', ajustarTamañoLogo);
+  // Contador removido. Se conserva el ajuste del logo más abajo.
+ 
+   function ajustarTamañoLogo() {
+   const img = document.querySelector('img[alt="Logo Congreso COICIT"]') as HTMLImageElement;
+ 
+   if (!img) return;
+ 
+   const width = window.innerWidth;
+ 
+   if (width < 640) {
+     img.style.width = '900px !important';
+   } else if (width >= 640 && width < 768) {
+     img.style.width = '800px';
+   } else if (width >= 768 && width < 1024) {
+     img.style.width = '1500px';
+   } else {
+     img.style.width = '950px';
+   }
+ }
+ 
+ ajustarTamañoLogo();
+ 
+ window.addEventListener('resize', ajustarTamañoLogo);
 
 </script>
 
@@ -485,25 +426,6 @@ window.addEventListener('resize', ajustarTamañoLogo);
     display: block;
   }
   
-  .paquete-agotado-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgba(220, 38, 38, 0.95);
-    color: white;
-    font-size: 1.4rem;
-    font-weight: 900;
-    padding: 0.6rem 1.2rem;
-    border-radius: 0.5rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    z-index: 20;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    display: block;
-  }
-
   /* Texto debajo para móvil */
   .paquete-agotado-text {
     display: none;
@@ -759,14 +681,11 @@ window.addEventListener('resize', ajustarTamañoLogo);
   }
   .paquetes-grid-custom {
     display: grid;
-    grid-template-columns: repeat(
-      2,
-      minmax(150px, 1fr)
-    );
+    grid-template-columns: repeat(3, minmax(150px, 1fr));
     gap: 2.5rem 2rem;
     justify-content: center;
     align-items: end;
-    max-width: 900px;
+    max-width: 1200px;
   }
   .paquete-item {
     display: flex;
@@ -828,13 +747,14 @@ window.addEventListener('resize', ajustarTamañoLogo);
     .paquete-item img {
       max-width: 260px;
     }
-    .paquetes-grid-custom > .paquete-item:last-child:nth-child(odd) {
+    .paquetes-grid-custom > .paquete-item:last-child {
       grid-column: 1 / -1;
       justify-self: center;
     }
   }
   @media (max-width: 640px) {
     .paquetes-grid-custom {
+      grid-template-columns: repeat(2, minmax(150px, 1fr));
       gap: 1rem;
       padding: 0 0.5rem;
       max-width: 100%;
@@ -857,7 +777,7 @@ window.addEventListener('resize', ajustarTamañoLogo);
     .paquete-precio {
       font-size: 1.1rem;
     }
-    .paquetes-grid-custom > .paquete-item:last-child:nth-child(odd) {
+    .paquetes-grid-custom > .paquete-item:last-child {
       grid-column: 1 / -1;
       justify-self: center;
     }

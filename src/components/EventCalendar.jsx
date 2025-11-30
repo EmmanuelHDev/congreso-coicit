@@ -113,8 +113,6 @@ const EventCalendar = () => {
 
   const getStatusLabel = (status) => {
     const statusLabels = {
-      'disponible': 'Disponible',
-      'sin_cupos': 'Sin Cupos',
       'gratuito': 'Gratuito',
       'eliminado': 'Eliminado'
     };
@@ -123,8 +121,6 @@ const EventCalendar = () => {
 
   const getStatusColor = (status) => {
     const statusColors = {
-      'disponible': 'bg-green-500',
-      'sin_cupos': 'bg-red-500',
       'gratuito': 'bg-blue-500',
       'eliminado': 'bg-gray-500'
     };
@@ -288,12 +284,14 @@ const EventCalendar = () => {
                 key={event.id}
                 className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-white hover:bg-white/20 transition-all duration-300 hover:scale-105 relative"
               >
-                {/* Estado en esquina inferior derecha */}
-                <div className="absolute bottom-3 right-3">
-                  <span className={`inline-block text-white text-xs px-2 py-1 rounded-full font-medium ${getStatusColor(event.status)}`}>
-                    {getStatusLabel(event.status)}
-                  </span>
-                </div>
+                {/* Estado en esquina inferior derecha - solo si es gratuito */}
+                {event.status === 'gratuito' && (
+                  <div className="absolute bottom-3 right-3">
+                    <span className={`inline-block text-white text-xs px-2 py-1 rounded-full font-medium ${getStatusColor(event.status)}`}>
+                      {getStatusLabel(event.status)}
+                    </span>
+                  </div>
+                )}
 
                 {/* Fecha */}
                 <div className="mb-4">
@@ -355,16 +353,16 @@ const EventCalendar = () => {
             {otrosEventos.map((event) => (
               <div 
                 key={event.id}
-                className={`bg-white/10 backdrop-blur-sm rounded-lg p-6 text-white hover:bg-white/20 transition-all duration-300 hover:scale-105 relative ${
-                  event.status === 'sin_cupos' ? 'opacity-60' : ''
-                }`}
+                className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-white hover:bg-white/20 transition-all duration-300 hover:scale-105 relative"
               >
-                {/* Estado en esquina inferior derecha */}
-                <div className="absolute bottom-3 right-3">
-                  <span className={`inline-block text-white text-xs px-2 py-1 rounded-full font-medium ${getStatusColor(event.status)}`}>
-                    {getStatusLabel(event.status)}
-                  </span>
-                </div>
+                {/* Estado en esquina inferior derecha - solo si es gratuito */}
+                {event.status === 'gratuito' && (
+                  <div className="absolute bottom-3 right-3">
+                    <span className={`inline-block text-white text-xs px-2 py-1 rounded-full font-medium ${getStatusColor(event.status)}`}>
+                      {getStatusLabel(event.status)}
+                    </span>
+                  </div>
+                )}
 
                 {/* Fecha */}
                 <div className="mb-4">
